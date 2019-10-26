@@ -1,0 +1,83 @@
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(.5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-.5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes typewriter {
+    0% {
+      width: 0;
+    }
+  
+    40% {
+      width: 100%;
+    }
+  
+    90% {
+      width: 100%;
+    }
+  
+    98% {
+      width: 0;
+    }
+  
+    100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes blinkTextCursor {
+    0% {
+      color: rgba(255, 255, 255, .75);
+    }
+  
+    50% {
+      color: rgba(255, 255, 255, .75);
+    }
+  
+    51% {
+      color: transparent;
+    }
+  
+    100% {
+      color: transparent;
+    }
+  }

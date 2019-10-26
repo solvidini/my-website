@@ -1,0 +1,13 @@
+.logo {
+    position: fixed;
+    z-index: 200;
+    background: url("../../assets/images/logo.png");
+    background-size: cover;
+    filter: invert(80%);
+
+    height: 3rem;
+    width: 3rem;
+
+    padding: 1rem;
+    margin: 1rem;
+}

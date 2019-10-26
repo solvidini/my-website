@@ -1,0 +1,54 @@
+.header {
+  height: 90vh;
+  width: 100%;
+  background-image: linear-gradient(to right bottom, #fd3333ad, #cf38f5a2), url(../../../assets/images/earth.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  transition: background-image 1s ease-out;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+  }
+
+  &__header__logo-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.heading-primary {
+  display: block;
+  font-size: 6rem;
+  font-weight: 100;
+  letter-spacing: 1.3rem;
+  margin-bottom: 1rem;
+  animation: moveInLeft 2s ease-out;
+}
+
+.typewriter-container {
+  display: block;
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0 auto;
+  width: 50%;
+  min-width: 50rem;
+  letter-spacing: 0.5rem;
+  animation: moveInRight 2s ease-out;
+}

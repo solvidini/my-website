@@ -1,83 +1,104 @@
 @keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
 
-    80% {
-        transform: translateX(.5rem);
-    }
+  80% {
+    transform: translateX(1rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 @keyframes moveInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(20rem);
+  }
 
-    80% {
-        transform: translateX(-.5rem);
-    }
+  80% {
+    transform: translateX(-1rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    color: black;
+    transform: translateY(-10rem);
+  }
+
+  80% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 @keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(10rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
+  80% {
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 @keyframes typewriter {
-    0% {
-      width: 0;
-    }
-  
-    40% {
-      width: 100%;
-    }
-  
-    90% {
-      width: 100%;
-    }
-  
-    98% {
-      width: 0;
-    }
-  
-    100% {
-      width: 0;
-    }
+  0% {
+    width: 0;
   }
-  
-  @keyframes blinkTextCursor {
-    0% {
-      color: rgba(255, 255, 255, .75);
-    }
-  
-    50% {
-      color: rgba(255, 255, 255, .75);
-    }
-  
-    51% {
-      color: transparent;
-    }
-  
-    100% {
-      color: transparent;
-    }
+
+  40% {
+    width: 100%;
   }
+
+  90% {
+    width: 100%;
+  }
+
+  98% {
+    width: 0;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blinkTextCursor {
+  0% {
+    color: rgba(255, 255, 255, .75);
+  }
+
+  50% {
+    color: rgba(255, 255, 255, .75);
+  }
+
+  51% {
+    color: transparent;
+  }
+
+  100% {
+    color: transparent;
+  }
+}

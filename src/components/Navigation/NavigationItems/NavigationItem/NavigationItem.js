@@ -1,24 +1,26 @@
 import React from "react";
-// import { Link } from "react-scroll";
+import { Link } from "react-scroll";
 
 import "./NavigationItem.scss";
 
 const NavigationItem = props => (
   <li className="navigation-item">
-    <a href={props.to}
+    <Link
       className="navigation-item__link"
-      // to={props.to}
-      // spy={true}
-      // smooth={true}
-      // hashSpy={true}
-      // duration={500}
-      // isDynamic={true}
-      // offset={-15}
-      // ignoreCancelEvents={false}
-      // onClick={props.clicked}
+      data-hover={props.children}
+      to={props.to}
+      spy={true}
+      smooth={true}
+      hashSpy={true}
+      duration={500}
+      isDynamic={true}
+      offset={-10}
+      activeClass="navigation-item--active"
+      ignoreCancelEvents={false}
+      onClick={props.clicked}
     >
       {props.children}
-    </a>
+    </Link>
   </li>
 );
 

@@ -5,14 +5,17 @@ import NavigationItem from "./NavigationItem/NavigationItem";
 
 const NavigationItems = props => (
   <ul className="navigation-items">
-    <NavigationItem to="#section-header" clicked={props.clicked}>
+    <NavigationItem to="top" clicked={props.clicked}>
       Home
     </NavigationItem>
-    <NavigationItem to="#section-about" clicked={props.clicked}>
-      About
+    <NavigationItem to="section-about" clicked={props.clicked}>
+      O mnie
     </NavigationItem>
-    <NavigationItem to="#section-info" clicked={props.clicked}>
-      Info
+    <NavigationItem to="section-portfolio" clicked={props.clicked}>
+      Portfolio
+    </NavigationItem>
+    <NavigationItem to="section-contact" clicked={props.clicked}>
+      Kontakt
     </NavigationItem>
   </ul>
 );

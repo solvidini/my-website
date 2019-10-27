@@ -5,6 +5,8 @@ import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
 import Header from "../../components/Content/Header/Header";
 import Footer from "../../components/Content/Footer/Footer";
+import { animateScroll } from "react-scroll";
+import ArrowUp from "../../components/UI/ArrowUp/ArrowUp";
 
 const Layout = props => {
   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
@@ -55,6 +57,11 @@ const Layout = props => {
       {/* <SideDrawer open={sideDrawerIsVisible} closed={sideDrawerClosedHandler} /> */}
       {props.children}
       <Footer />
+      {stickyToolbar && (
+        <div onClick={animateScroll.scrollToTop} className="arrow-top">
+          <ArrowUp />
+        </div>
+      )}
     </React.Fragment>
   );
 };

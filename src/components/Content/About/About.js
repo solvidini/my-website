@@ -4,8 +4,8 @@ import "./About.scss";
 
 const Contact = props => {
   return (
-    <section id="section-about">
-      <div className="about">about</div>
+    <section className="about" name="section-about">
+        <div className="card">about</div>
     </section>
   );
 };

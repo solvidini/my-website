@@ -1,13 +1,21 @@
+@import "./../../../sass/variables";
+@import "./../../../sass/animations";
+@import "./../../../sass/mixins";
+
 .header {
-  height: 90vh;
+  height: 95vh;
   width: 100%;
-  background-image: linear-gradient(to right bottom, #fd3333ad, #cf38f5a2), url(../../../assets/images/earth.jpg);
+  background-image: linear-gradient(to right bottom,
+      rgba($color-secondary, .4),
+      rgba($color-primary, .8)),
+    url(../../../assets/images/earth.jpg);
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 
-  transition: background-image 1s ease-out;
+  overflow: hidden;
 
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -20,35 +28,90 @@
     text-align: center;
     color: #fff;
     width: 80%;
-    text-transform: uppercase;
     backface-visibility: hidden;
   }
 
-  &__header__logo-box {
+  &__logo-box {
     position: absolute;
     top: 0;
     left: 0;
     width: 5rem;
     height: 5rem;
   }
+
+  &__arrow-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .heading-primary {
+  text-transform: uppercase;
   display: block;
-  font-size: 6rem;
+  font-size: 8rem;
   font-weight: 100;
   letter-spacing: 1.3rem;
   margin-bottom: 1rem;
-  animation: moveInLeft 2s ease-out;
+  // animation: moveInTop 3s ease-out;
+
+  @include respond(phone) {
+    font-size: 4.5rem;
+  }
+}
+
+.anim-move-in {
+  display: inline-block;
+
+  &:not(:last-of-type) {
+    margin-right: 3rem;
+
+    @include respond(tab-land) {
+      margin: 0;
+    }
+  }
+
+  &--left {
+    animation: moveInLeft 3s ease-out;
+  }
+
+  &--right {
+    animation: moveInRight 3s ease-out;
+  }
+
+
+}
+
+.heading-paragraph {
+  text-transform: uppercase;
+  display: block;
+  font-size: 4rem;
+  font-weight: 300;
+  margin: 0 auto;
+  letter-spacing: 1rem;
+  animation: moveInTop 3s ease-out;
+
+  @include respond(tab-land) {
+    margin-top: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 3rem;
+  }
 }
 
 .typewriter-container {
   display: block;
   font-size: 3rem;
   font-weight: 300;
-  margin: 0 auto;
-  width: 50%;
-  min-width: 50rem;
-  letter-spacing: 0.5rem;
-  animation: moveInRight 2s ease-out;
+  margin: 4rem auto;
 }

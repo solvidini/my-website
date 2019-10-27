@@ -1,7 +1,8 @@
 import React from "react";
 
 import About from "./About/About";
-import Info from "./Info/Info";
+import Portfolio from "./Portfolio/Portfolio";
+import Contact from "./Contact/Contact";
 
 import "./Content.scss";
 
@@ -10,7 +11,8 @@ const Content = () => {
     <div className="content">
       <main>
         <About />
-        <Info />
+        <Portfolio />
+        <Contact />
       </main>
     </div>
   );

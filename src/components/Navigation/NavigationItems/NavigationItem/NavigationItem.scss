@@ -1,18 +1,54 @@
+@import '../../../../sass/variables';
+
 .navigation-item {
     height: 100%;
-    width: auto;
+    width: 100%;
     padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .5s ease-out;
+
+    white-space: nowrap;
+    overflow: hidden;
 
     &__link,
     &__link:link,
     &__link:visited {
+        position: relative;
+
         color: white;
         display: block;
         text-decoration: none;
         padding: 1rem;
+        transition: all .4s cubic-bezier(0.680, -0.6, 0.265, 1.5);
+    }
+    
+    &__link:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        content: attr(data-hover);
+        color: white;
+        display: block;
+        text-decoration: none;
+        padding: 1rem;
+        transform: translateY(-100%);
+
+        font-weight: 400;
+    }
+
+    &:hover &__link {
+        cursor: pointer;
+        transform: translateY(100%);
+        border-bottom: 3px solid $color-primary-dark;
+    }
+    // &:hover {
+    //     border-bottom: 3px solid $color-primary-dark;
+    // }
+    &--active {
+        border-bottom: 3px solid $color-primary-dark;
     }
 
 }

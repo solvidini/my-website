@@ -1,11 +1,11 @@
 import React from "react";
 
-import "./Info.scss";
+import "./Contact.scss";
 
 const Contact = props => {
   return (
-    <section id="section-info">
-      <div className="info">info</div>
+    <section name="section-contact" className="section-contact">
+      Kontakt
     </section>
   );
 };

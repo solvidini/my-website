@@ -1,11 +1,77 @@
 import React from "react";
 
 import "./About.scss";
+import justMe from "../../../assets/images/just-me.png";
 
 const Contact = props => {
   return (
-    <section className="about" name="section-about">
-        <div className="card">about</div>
+    <section className="section-about" name="section-about">
+      <div className="section-about__content">
+        <h3 className="section-about__header">
+          <span className="section-about__header__pre">Kilka słów o mnie</span>
+          <span className="section-about__header__name">
+            Samuel Kędziora -
+          </span>{" "}
+          <span className="no-wrap">Frontend Developer</span>
+        </h3>
+        <div className="about-me">
+          <div className="about-me__image">
+            <img className="image" src={justMe} alt="Just me" />
+          </div>
+          <div className="about-me__text">
+            <p className="about-me__text__paragraph">
+              Jestem studentem trzeciego roku informatyki na Uniwersytecie
+              Śląskim, chętnym do rozpoczęcia swojej kariery w IT.
+            </p>
+            <p className="about-me__text__paragraph">
+              Moim celem jest zdobywanie praktycznego doświadczenia w różnych
+              technologiach webowych. Interesują mnie trendy z zakresu tworzenia
+              stron www, aplikacji webowych, blogów oraz sklepów internetowych,
+              jak i zagadnień z UI oraz UX. Głównie rozwijam swoje umiejętności ze
+              strony front-end'u, ale nie odpuszczam i back-end’u.
+            </p>
+            <p className="about-me__text__paragraph">
+              Osobiście jestem bardzo pracowitą osobą, która pasjonuje się
+              nowymi technologiami i koncentruje na rozwoju osobistym. Umiem
+              pracować samodzielnie jak i w zespole.
+            </p>
+          </div>
+        </div>
+        <div className="skills">
+          <div className="skills__row">
+            <h3 className="skills__row__title">Technologie główne</h3>
+            <ul className="skills__row__list">
+              <li className="skills__row__list__item">React</li>
+              <li className="skills__row__list__item">JavaScript / JQuery</li>
+              <li className="skills__row__list__item">CSS / Sass</li>
+              <li className="skills__row__list__item">
+                RWD <span className="no-wrap">(Responsive Web Design)</span>
+              </li>
+              <li className="skills__row__list__item">UI Design</li>
+              <li className="skills__row__list__item">Git</li>
+            </ul>
+          </div>
+          <div className="skills__row">
+            <h3 className="skills__row__title">Inne technologie</h3>
+            <ul className="skills__row__list">
+              <li className="skills__row__list__item">Java</li>
+              <li className="skills__row__list__item">Symfony 4</li>
+              <li className="skills__row__list__item">php</li>
+              <li className="skills__row__list__item">SQL</li>
+              <li className="skills__row__list__item">UX design</li>
+              <li className="skills__row__list__item">C++</li>
+            </ul>
+          </div>
+          <div className="skills__row">
+            <h3 className="skills__row__title">Oprogramowanie</h3>
+            <ul className="skills__row__list">
+              <li className="skills__row__list__item">Visual Studio Code</li>
+              <li className="skills__row__list__item">Photoshop</li>
+              <li className="skills__row__list__item">PhpStorm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

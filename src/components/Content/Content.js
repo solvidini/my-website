@@ -4,17 +4,13 @@ import About from "./About/About";
 import Portfolio from "./Portfolio/Portfolio";
 import Contact from "./Contact/Contact";
 
-import "./Content.scss";
-
 const Content = () => {
   return (
-    <div className="content">
       <main>
         <About />
         <Portfolio />
-        <Contact />
+        {/* <Contact /> */}
       </main>
-    </div>
   );
 };
 

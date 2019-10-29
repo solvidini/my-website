@@ -1,13 +1,21 @@
+@import '../../sass/mixins';
+
 .logo {
     position: fixed;
     z-index: 200;
     background: url("../../assets/images/logo.png");
     background-size: cover;
-    filter: brightness(95%);
 
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
 
-    padding: 1rem;
-    margin: 1rem;
+    padding: .5rem;
+    margin: .5rem;
+
+    @include respond(phone) {
+        height: 5rem;
+        width: 5rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
 }

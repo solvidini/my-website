@@ -1,6 +1,6 @@
-@import "./../../../sass/variables";
-@import "./../../../sass/animations";
-@import "./../../../sass/mixins";
+@import "./../../sass/variables";
+@import "./../../sass/animations";
+@import "./../../sass/mixins";
 
 .header {
   height: 95vh;
@@ -8,7 +8,7 @@
   background-image: linear-gradient(to right bottom,
       rgba($color-secondary, .4),
       rgba($color-primary, .8)),
-    url(../../../assets/images/earth.jpg);
+    url(../../assets/images/earth.jpg);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -26,17 +26,9 @@
     left: 50%;
     transform: translate(-50%, -30%);
     text-align: center;
-    color: #fff;
+    color: $color-white;
     width: 80%;
     backface-visibility: hidden;
-  }
-
-  &__logo-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5rem;
-    height: 5rem;
   }
 
   &__arrow-down {
@@ -49,6 +41,7 @@
     align-items: center;
     width: 6rem;
     height: 6rem;
+    z-index: 1000;
 
     &:hover {
       cursor: pointer;
@@ -67,6 +60,7 @@
 
   @include respond(phone) {
     font-size: 4.5rem;
+    letter-spacing: 1rem;
   }
 }
 

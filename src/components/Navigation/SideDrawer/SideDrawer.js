@@ -1,25 +1,25 @@
 import React, { Fragment } from "react";
 
-// import Logo from "../../Logo/Logo";
+import logo from "../../../assets/images/logo.png";
 import NavigationItems from "../NavigationItems/NavigationItems";
-import classes from "./SideDrawer.scss";
+import "./SideDrawer.scss";
 import Backdrop from "../../UI/Backdrop/Backdrop";
 
 const SideDrawer = props => {
-  let attachedClasses = [classes.SideDrawer, classes.Close];
-  if (props.open) {
-    attachedClasses = [classes.SideDrawer, classes.Open];
+  let sideDrawerClasses = ["side-drawer", "side-drawer--closed"];
+  if (props.opened) {
+    sideDrawerClasses = ["side-drawer", "side-drawer--opened"];
   }
   return (
     <Fragment>
-      <Backdrop show={props.open} clicked={props.closed} />
-      <div className={attachedClasses.join(" ")} onClick={props.closed}>
-        <div className={classes.Logo}>
-          {/* <Logo /> */}
-        </div>
+      <Backdrop show={props.opened} clicked={props.closed} />
+      <div className={sideDrawerClasses.join(" ")} onClick={props.closed}>
         <nav>
-          <NavigationItems clicked={props.closed}/>
+          <NavigationItems clicked={props.closed} opened={props.opened} />
         </nav>
+        <div className="side-drawer__logo">
+          <img src={logo} alt="Logo" />
+        </div>
       </div>
     </Fragment>
   );

@@ -102,3 +102,37 @@
     color: transparent;
   }
 }
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+}
+
+@keyframes sideDrawerSlide {
+  0% {
+    transform: translateX(-100rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

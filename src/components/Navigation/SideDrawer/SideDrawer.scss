@@ -1,4 +1,7 @@
-.SideDrawer {
+@import '../../../sass/mixins';
+
+.side-drawer {
+    display: none;
     position: fixed;
     width: 280px;
     max-width: 60%;
@@ -6,27 +9,38 @@
     left: 0;
     top: 0;
     z-index: 200;
-    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, .8);
+    @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+      }
     padding: 32px 16;
     box-sizing: border-box;
     transition: transform 0.3s ease-out;
-}
 
-// @media (min-width: 601px) {
-//     .SideDrawer {
-//         display: none;
-//     }
-// }
+    &--opened {
+        transform: translateX(0);
+    }
 
-.Open {
-    transform: translateX(0);
-}
+    &--closed {
+        transform: translateX(-101%);
+    }
 
-.Close {
-    transform: translateX(-101%);
-}
+    @include respond(phone) {
+        display: block;
+    }
 
-.Logo {
-    height: 11%;
-    margin-bottom: 32px;
+    &__logo {
+        width: 28rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+        opacity: .05;
+        filter: invert(100%);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }

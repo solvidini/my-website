@@ -1,25 +1,81 @@
-.DrawerToggle {
-    width: 5rem;
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+
+.drawer-toggle__button {
+    display: none;
+    position: relative;
     height: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0.5rem 0;
-    margin: 1rem 0;
-    box-sizing: border-box;
-    font-size: 1.6rem;
+    z-index: 1000;
     cursor: pointer;
+
+    @include respond(phone) {
+        display: block;
+    }
 }
 
-.DrawerToggle div {
-    width: 90%;
-    height: 3px;
-    background-color: #fff;
-}
+.drawer-toggle__icon {
+    position: relative;
+    margin-top: 2.4rem;
+    z-index: 900;
 
-// @media (min-width: 601px) {
-//     .DrawerToggle {
-//         display: none;
-//     }
-// }
+    @include respond(phone) {
+        margin-top: 3.3rem;
+    }
+
+    &,
+    &::before,
+    &::after {
+        width: 4rem;
+        height: .2rem;
+        background-color: $color-white;
+        display: inline-block;
+
+        @include respond(phone) {
+            width: 6rem;
+            height: .3rem;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
+    }
+
+    &::before {
+        top: -1rem;
+        @include respond(phone) {
+            top: -1.25rem;
+        }
+    }
+
+    &::after {
+        top: 1rem;
+        @include respond(phone) {
+            top: 1.25rem;
+        }
+    }
+
+    &--active {
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+
+        & {
+            background-color: transparent;
+        }
+
+        &::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+
+    }
+}

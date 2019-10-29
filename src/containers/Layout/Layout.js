@@ -3,16 +3,19 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Layout.scss";
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
-import Header from "../../components/Content/Header/Header";
-import Footer from "../../components/Content/Footer/Footer";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import { animateScroll } from "react-scroll";
 import ArrowUp from "../../components/UI/ArrowUp/ArrowUp";
+import { CSSTransition } from "react-transition-group";
+import Logo from "../../components/Logo/Logo";
 
 const Layout = props => {
   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [stickyToolbar, setStickyToolbar] = useState(false);
-  const ref = useRef(null);
+  const headerRef = useRef(null);
+  const toolbarRef = useRef(null);
 
   const yOffset = () => {
     setScrollY(window.pageYOffset);
@@ -29,7 +32,11 @@ const Layout = props => {
   });
 
   useEffect(() => {
-    const height = ref.current ? ref.current.offsetHeight - 50 : 0;
+    const toolbarHeight = toolbarRef.current ? toolbarRef.current.offsetHeight : 50 ;
+    console.log(toolbarHeight)
+    const height = headerRef.current
+      ? headerRef.current.offsetHeight - toolbarHeight
+      : 0;
 
     if (scrollY > height) {
       setStickyToolbar(true);
@@ -48,20 +55,32 @@ const Layout = props => {
 
   return (
     <React.Fragment>
-      <Header refe={ref}>
+      {!sideDrawerIsVisible && <Logo />}
+      <Header headerRef={headerRef}>
         <Toolbar
+          toolbarRef={toolbarRef}
           sideDrawerToggleClicked={sideDrawerToggleHandler}
+          sideDrawerIsVisible={sideDrawerIsVisible}
           sticky={stickyToolbar}
         />
       </Header>
-      {/* <SideDrawer open={sideDrawerIsVisible} closed={sideDrawerClosedHandler} /> */}
+      <SideDrawer
+        opened={sideDrawerIsVisible}
+        closed={sideDrawerClosedHandler}
+      />
       {props.children}
       <Footer />
-      {stickyToolbar && (
+      <CSSTransition
+        in={stickyToolbar}
+        mountOnEnter
+        unmountOnExit
+        timeout={500}
+        classNames="fade"
+      >
         <div onClick={animateScroll.scrollToTop} className="arrow-top">
           <ArrowUp />
         </div>
-      )}
+      </CSSTransition>
     </React.Fragment>
   );
 };

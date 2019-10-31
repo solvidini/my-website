@@ -28,7 +28,7 @@
         width: 4rem;
         height: .2rem;
         background-color: $color-white;
-        display: inline-block;
+        display: block;
 
         @include respond(phone) {
             width: 6rem;
@@ -59,8 +59,8 @@
     }
 
     &--active {
-        position: fixed;
-        overflow: visible;
+        position: fixed; 
+        z-index: 1000;
         top: 2rem;
         right: 2rem;
 

@@ -60,9 +60,10 @@
 
     &--active {
         position: fixed; 
+        display: block;
         z-index: 1000;
-        top: 2rem;
-        right: 2rem;
+        top: 1.5rem;
+        right: 1.5rem;
 
         & {
             background-color: transparent;

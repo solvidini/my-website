@@ -9,7 +9,7 @@ const DrawerToggle = props => {
   }
   return (
     <div onClick={props.clicked} className="drawer-toggle__button">
-      <div class={iconClasses.join(" ")}>&nbsp;</div>
+      <div className={iconClasses.join(" ")}>&nbsp;</div>
     </div>
   );
 };

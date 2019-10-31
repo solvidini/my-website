@@ -33,7 +33,6 @@ const Layout = props => {
 
   useEffect(() => {
     const toolbarHeight = toolbarRef.current ? toolbarRef.current.offsetHeight : 50 ;
-    console.log(toolbarHeight)
     const height = headerRef.current
       ? headerRef.current.offsetHeight - toolbarHeight
       : 0;

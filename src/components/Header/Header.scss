@@ -3,7 +3,7 @@
 @import "./../../sass/mixins";
 
 .header {
-  height: 95vh;
+  min-height: 95vh;
   width: 100%;
   background-image: linear-gradient(to right bottom,
       rgba($color-secondary, .4),
@@ -41,7 +41,7 @@
     align-items: center;
     width: 6rem;
     height: 6rem;
-    z-index: 1000;
+    z-index: 250;
 
     &:hover {
       cursor: pointer;

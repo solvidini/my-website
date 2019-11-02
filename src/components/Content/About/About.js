@@ -7,13 +7,13 @@ const Contact = props => {
   return (
     <section className="section-about" name="section-about">
       <div className="section-about__content">
-        <h3 className="section-about__header">
-          <span className="section-about__header__pre">Kilka słów o mnie</span>
-          <span className="section-about__header__name">
+        <h2 className="section-header">
+          <span className="section-header__pre">Kilka słów o mnie</span>
+          <span className="section-header__name">
             Samuel Kędziora -
           </span>{" "}
           <span className="no-wrap">Frontend Developer</span>
-        </h3>
+        </h2>
         <div className="about-me">
           <div className="about-me__image">
             <img className="image" src={justMe} alt="Just me" />
@@ -42,7 +42,7 @@ const Contact = props => {
             <h3 className="skills__row__title">Technologie główne</h3>
             <ul className="skills__row__list">
               <li className="skills__row__list__item">React</li>
-              <li className="skills__row__list__item">JavaScript / JQuery</li>
+              <li className="skills__row__list__item">ES6 / JS / JQuery</li>
               <li className="skills__row__list__item">CSS / Sass</li>
               <li className="skills__row__list__item">
                 RWD <span className="no-wrap">(Responsive Web Design)</span>
@@ -54,11 +54,12 @@ const Contact = props => {
           <div className="skills__row">
             <h3 className="skills__row__title">Inne technologie</h3>
             <ul className="skills__row__list">
+              <li className="skills__row__list__item">REST API</li>
+              <li className="skills__row__list__item">Spring / Spring Boot</li>
               <li className="skills__row__list__item">Java</li>
               <li className="skills__row__list__item">Symfony 4</li>
               <li className="skills__row__list__item">php</li>
               <li className="skills__row__list__item">SQL</li>
-              <li className="skills__row__list__item">UX design</li>
               <li className="skills__row__list__item">C++</li>
             </ul>
           </div>

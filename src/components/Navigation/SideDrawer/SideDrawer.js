@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 
-import logo from "../../../assets/images/logo.png";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import "./SideDrawer.scss";
 import Backdrop from "../../UI/Backdrop/Backdrop";
@@ -17,9 +16,6 @@ const SideDrawer = props => {
         <nav>
           <NavigationItems clicked={props.closed} opened={props.opened} />
         </nav>
-        <div className="side-drawer__logo">
-          <img src={logo} alt="Logo" />
-        </div>
       </div>
     </Fragment>
   );

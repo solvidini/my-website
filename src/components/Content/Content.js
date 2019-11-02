@@ -2,14 +2,14 @@ import React from "react";
 
 import About from "./About/About";
 import Portfolio from "./Portfolio/Portfolio";
-import Contact from "./Contact/Contact";
+import Offer from "./Offer/Offer";
 
 const Content = () => {
   return (
       <main>
         <About />
+        <Offer />
         <Portfolio />
-        {/* <Contact /> */}
       </main>
   );
 };

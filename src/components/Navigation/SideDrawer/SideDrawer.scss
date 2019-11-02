@@ -1,9 +1,10 @@
 @import '../../../sass/mixins';
+@import '../../../sass/animations';
 
 .side-drawer {
     display: none;
     position: fixed;
-    width: 280px;
+    width: 28rem;
     max-width: 60%;
     height: 100%;
     left: 0;
@@ -17,10 +18,10 @@
       }
     padding: 32px 16;
     box-sizing: border-box;
-    transition: transform 0.3s ease-out;
+    transition: all 0.5s cubic-bezier(.25,.72,.46,.99);
 
     &--opened {
-        transform: translateX(0);
+        transform: translate(0);
     }
 
     &--closed {
@@ -29,18 +30,5 @@
 
     @include respond(phone) {
         display: block;
-    }
-
-    &__logo {
-        width: 28rem;
-        margin: 0 auto;
-        margin-top: 2rem;
-        opacity: .05;
-        filter: invert(100%);
-
-        img {
-            width: 100%;
-            height: auto;
-        }
     }
 }

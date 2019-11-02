@@ -43,6 +43,52 @@ code {
 }
 
 ::selection {
-    background-color: rgba($color-primary-dark, .5);
+    background-color: rgba($color-primary, .8);
     color: $color-white;
+}
+
+.section-header {
+    text-align: center;
+    font-size: 3rem;
+    // margin-bottom: 10rem;
+    font-weight: 400;
+    padding: 0 2rem;
+
+    @include respond(tab-port) {
+        margin-bottom: 6rem;
+    }
+
+    @include respond(phone) {
+        margin-bottom: 2rem;
+    }
+
+    &__pre {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: .7rem;
+    }
+
+    &__post {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+
+        line-height: 1.5;
+    }
+
+    &__name {
+        font-weight: 300;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        font-size: 4rem;
+    }
 }

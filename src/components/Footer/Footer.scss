@@ -1,32 +1,77 @@
 @import '../../sass/variables';
+@import '../../sass/mixins';
 
 .footer {
   width: 100%;
   background-color: rgb(37, 37, 41);
+
   &__top {
     padding: 10rem 0 3rem 0;
     background-color: rgb(37, 37, 41);
+    z-index: 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
 
+    @include respond(phone) {
+      flex-flow: column wrap;
+      padding: 3rem 0;
+    }
+
     &__logo {
+      z-index: -1;
+      background-image: url("../../assets/images/logo.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
       position: absolute;
+      opacity: .1;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -30%);
+      width: 100%;
+      height: 100%;
       max-width: 30rem;
+
+      @include respond(phone) {
+        max-width: 40rem;
+        transform: translate(-50%, -44%);
+      }
     }
 
     &__item {
       display: flex;
       flex-flow: column wrap;
-      color: $color-white;
+      color: rgb(218, 218, 218);
       line-height: 1.5;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       letter-spacing: .2rem;
       text-align: center;
+
+      h4 {
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+      }
+
+      @include respond(phone) {
+        margin-top: 5rem;
+      }
+
+      a,
+      a:link,
+      a:visited {
+        color: $color-white;
+        text-decoration: none;
+        transition: all .2s ease;
+
+        &:hover {
+          text-decoration: underline;
+          transform: scale(1.05);
+        }
+      }
+
     }
   }
 
@@ -44,26 +89,29 @@
     &__link,
     &__link:link,
     &__link:visited {
+      text-decoration: none;
       width: 6rem;
       height: 6rem;
       border-radius: 50%;
       background-color: #1e1e21;
       display: flex;
-      text-align: center;
+      align-items: center;
       justify-content: center;
       z-index: 1;
-    }
+      font-size: 4.4rem;
+      color: $color-white;
+      transition: all .9s ease;
 
-    &__icon {
-      fill: $color-white !important;
-      filter: invert(100%);
-      width: 3.5rem;
+      &:hover {
+        color: white;
+        transform: rotate(360deg);
+      }
     }
   }
 
   &__copyright {
     padding: 5rem;
-    background: #141414;
+    background: $color-dark;
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-size: 1.3rem;
@@ -73,6 +121,11 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+
+    @include respond(phone) {
+      letter-spacing: .1rem;
+      font-size: 1.1rem;
+    }
 
     span {
       margin: 0 .5rem;

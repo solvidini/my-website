@@ -32,7 +32,9 @@ const Layout = props => {
   });
 
   useEffect(() => {
-    const toolbarHeight = toolbarRef.current ? toolbarRef.current.offsetHeight : 50 ;
+    const toolbarHeight = toolbarRef.current
+      ? toolbarRef.current.offsetHeight
+      : 50;
     const height = headerRef.current
       ? headerRef.current.offsetHeight - toolbarHeight
       : 0;
@@ -43,6 +45,15 @@ const Layout = props => {
       setStickyToolbar(false);
     }
   }, [setStickyToolbar, scrollY]);
+
+  // useEffect(() => {
+  //   if (sideDrawerIsVisible) {
+  //     document.body.style.overflow = "hidden";
+  //   }
+  //   return () => {
+  //     document.body.style.overflow = "unset";
+  //   };
+  // }, [sideDrawerIsVisible]);
 
   const sideDrawerToggleHandler = () => {
     setSideDrawerIsVisible(!sideDrawerIsVisible);

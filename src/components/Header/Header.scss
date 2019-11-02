@@ -6,8 +6,8 @@
   min-height: 95vh;
   width: 100%;
   background-image: linear-gradient(to right bottom,
-      rgba($color-secondary, .4),
-      rgba($color-primary, .8)),
+      rgba($color-secondary, .3),
+      rgba($color-primary, .7)),
     url(../../assets/images/earth.jpg);
   background-position: center;
   background-attachment: fixed;
@@ -29,13 +29,17 @@
     color: $color-white;
     width: 80%;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      width: 94%;
+    }
   }
 
   &__arrow-down {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -125%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,6 +49,10 @@
 
     &:hover {
       cursor: pointer;
+    }
+
+    @include respond(phone) {
+      transform: translate(-50%, -50%);
     }
   }
 }
@@ -104,8 +112,17 @@
 }
 
 .typewriter-container {
-  display: block;
+  display: inline-block;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 94%;
   font-size: 3rem;
   font-weight: 300;
   margin: 4rem auto;
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 }

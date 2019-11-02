@@ -13,7 +13,7 @@ const Header = React.memo(props => {
   ];
 
   return (
-    <header className="header" id="top" ref={props.headerRef}>
+    <header className="header" name="top" ref={props.headerRef}>
       <div className="header__text-box">
         <h1 className="heading-primary">
           <div className="anim-move-in anim-move-in--left">Front-end</div>

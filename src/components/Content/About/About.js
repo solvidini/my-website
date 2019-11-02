@@ -20,20 +20,20 @@ const Contact = props => {
           </div>
           <div className="about-me__text">
             <p className="about-me__text__paragraph">
-              Jestem studentem trzeciego roku informatyki na Uniwersytecie
-              Śląskim, chętnym do rozpoczęcia swojej kariery w IT.
+              Jestem studentem trzeciego roku informatyki na&nbsp;Uniwersytecie
+              Śląskim, chętnym do&nbsp;rozpoczęcia swojej kariery w IT.
             </p>
             <p className="about-me__text__paragraph">
               Moim celem jest zdobywanie praktycznego doświadczenia w różnych
               technologiach webowych. Interesują mnie trendy z zakresu tworzenia
-              stron www, aplikacji webowych, blogów oraz sklepów internetowych,
-              jak i zagadnień z UI oraz UX. Głównie rozwijam swoje umiejętności ze
-              strony front-end'u, ale nie odpuszczam i back-end’u.
+              stron www, aplikacji webowych, blogów oraz&nbsp;sklepów internetowych,
+              jak i&nbsp;zagadnień z UI oraz&nbsp;UX. Głównie rozwijam swoje umiejętności ze
+              strony front-end'u, ale nie odpuszczam i&nbsp;back-end’u.
             </p>
             <p className="about-me__text__paragraph">
               Osobiście jestem bardzo pracowitą osobą, która pasjonuje się
-              nowymi technologiami i koncentruje na rozwoju osobistym. Umiem
-              pracować samodzielnie jak i w zespole.
+              nowymi technologiami i&nbsp;koncentruje na&nbsp;rozwoju osobistym. Umiem
+              pracować samodzielnie jak i&nbsp;w zespole.
             </p>
           </div>
         </div>
@@ -44,6 +44,7 @@ const Contact = props => {
               <li className="skills__row__list__item">React</li>
               <li className="skills__row__list__item">ES6 / JS / JQuery</li>
               <li className="skills__row__list__item">CSS / Sass</li>
+              <li className="skills__row__list__item">Redux</li>
               <li className="skills__row__list__item">
                 RWD <span className="no-wrap">(Responsive Web Design)</span>
               </li>

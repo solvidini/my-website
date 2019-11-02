@@ -9,8 +9,8 @@
 
     @include respond(phone) {
         flex-flow: column;
-        width: 100%;
-        margin-top: 18rem;
+        height: auto;
+        width: 100%;  
     }
 }
 

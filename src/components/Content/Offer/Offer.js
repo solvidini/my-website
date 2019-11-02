@@ -8,12 +8,12 @@ import ui from "../../../assets/images/ui-color.png";
 const Offer = props => {
   return (
     <section name="section-offer" className="section-offer">
-       <h2 className="section-header">
-          <span className="section-header__title">
-            Oferta
-          </span>
-          <span className="section-header__post">Co oferuję i na co zwracam uwagę?</span>
-        </h2>
+      <h2 className="section-header">
+        <span className="section-header__title">Oferta</span>
+        <span className="section-header__post">
+          Co oferuję i&nbsp;na&nbsp;co zwracam uwagę?
+        </span>
+      </h2>
       <div className="offer-content">
         <div className="offer-content__item">
           <img
@@ -23,7 +23,11 @@ const Offer = props => {
           />
           <h3 className="offer-content__item__title">Tworzenie stron</h3>
           <p className="offer-content__item__description">
-            Do tworzenia stron używam najnowszych rozwiązań oraz technologii. Kieruję się współczesnymi trendami, spełniając przy tym wszelkie obecne standardy. Zarówno wygląd jak i układ stron opieram o intuicyjny, ładny interfejs jak i responsywny design.
+            Do tworzenia stron używam najnowszych rozwiązań
+            oraz&nbsp;technologii. Kieruję się współczesnymi trendami,
+            spełniając przy tym wszelkie obecne standardy. Zarówno wygląd jak
+            i&nbsp;układ stron opieram o intuicyjny, ładny interfejs jak
+            i&nbsp;responsywny design.
           </p>
         </div>
         <div className="offer-content__item">
@@ -34,7 +38,11 @@ const Offer = props => {
           />
           <h3 className="offer-content__item__title">Responsywny design</h3>
           <p className="offer-content__item__description">
-            Cały wygląd strony jak i jej układ automatycznie dostosowywuje się do okna przeglądarki, na której jest wyświetlany. Strona tworzona w takiej technice jest bardzo uniwersalna, a jej obsługa staje się znacznie wygodniejsza niezależnie od urządzenia, na którym ją wyświetlamy.
+            Cały wygląd strony jak i&nbsp;jej układ automatycznie dostosowywuje
+            się do&nbsp;okna przeglądarki, na&nbsp;której jest wyświetlany.
+            Strona tworzona w&nbsp;takiej technice jest bardzo uniwersalna, a
+            jej obsługa staje się znacznie wygodniejsza niezależnie od
+            urządzenia, na&nbsp;którym ją wyświetlamy.
           </p>
         </div>
         <div className="offer-content__item">
@@ -45,7 +53,11 @@ const Offer = props => {
           />
           <h3 className="offer-content__item__title">Intuicyjny interfejs</h3>
           <p className="offer-content__item__description">
-            Wszelkie elementy strony rozmieszczam w sposób intuicyjny dla użytkownika, aby poruszanie się po stronie niezależnie od urządzenia było proste i przyjemne. Ponadto oferuję nowoczesny, ciekawy wygląd jak i dbam o wszelkie detale dotyczące m.in. animacji elementów, by sposób użytkowania był jasny i zrozumiały.
+            Wszelkie elementy strony rozmieszczam w&nbsp;sposób intuicyjny dla
+            użytkownika, aby poruszanie się po stronie niezależnie od urządzenia
+            było proste i&nbsp;przyjemne. Ponadto oferuję nowoczesny, ciekawy
+            wygląd jak i&nbsp;dbam o wszelkie detale dotyczące m.in. animacji
+            elementów, by sposób użytkowania był jasny i&nbsp;zrozumiały.
           </p>
         </div>
       </div>

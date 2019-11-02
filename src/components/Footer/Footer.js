@@ -11,7 +11,7 @@ const Footer = props => {
         <div className="footer__top__logo">&nbsp;</div>
         <div className="footer__top__item">
           <h4>
-            Kontakt <i class="far fa-envelope"></i>
+            Kontakt <i className="far fa-envelope"></i>
           </h4>
           <span>
             contact@samuelk.pl<a href="mailto:contact@samuelk.pl"> &rarr;</a>
@@ -22,7 +22,7 @@ const Footer = props => {
         </div>
         <div className="footer__top__item">
           <h4>
-            CV <i class="far fa-address-card"></i>
+            CV <i className="far fa-address-card"></i>
           </h4>
           <a
             href="https://docs.google.com/document/d/1KyYiSiBsq8Lc8nhOA8K3UFCMr0r5hVnkSdl9uidR8Lc/edit?usp=sharing"
@@ -66,10 +66,10 @@ const Footer = props => {
           className="footer__social__link"
           href="https://www.linkedin.com/in/samuel-k%C4%99dziora-b45b86159/"
         >
-          <i class="fab fa-linkedin-in"></i>
+          <i className="fab fa-linkedin-in"></i>
         </a>
         <a className="footer__social__link" href="https://github.com/ssazero">
-          <i class="fab fa-github"></i>
+          <i className="fab fa-github"></i>
         </a>
       </div>
       <div className="footer__copyright">

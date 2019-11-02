@@ -1,8 +1,8 @@
 {
   "short_name": "Portfolio Website",
-  "name": "Frontend Developer Samuel Kedziora - portfolio",
+  "name": "Samuel Kędziora - Front-End Developer",
   "default_locale": "pl",
-  "description": "Page about me - Front-end Developer Samuel Kedziora",
+  "description": "Strona typu portfolio. Została wykonana z myślą o pokazaniu moich umiejętności programowania jak i projektowania stron. Na stronie w zakładce portfolio będą na bieżąco dodawane realizacje moich projektów.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -12,6 +12,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#141414",
   "background_color": "#F1EFF3"
 }

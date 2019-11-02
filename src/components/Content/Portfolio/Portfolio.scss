@@ -50,6 +50,7 @@
         max-width: 60rem;
         margin: .5rem;
         overflow: hidden;
+        border-radius: 3px;
 
         @include respond(tab-port) {
             max-width: 100%;

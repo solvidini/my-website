@@ -46,15 +46,6 @@ const Layout = props => {
     }
   }, [setStickyToolbar, scrollY]);
 
-  // useEffect(() => {
-  //   if (sideDrawerIsVisible) {
-  //     document.body.style.overflow = "hidden";
-  //   }
-  //   return () => {
-  //     document.body.style.overflow = "unset";
-  //   };
-  // }, [sideDrawerIsVisible]);
-
   const sideDrawerToggleHandler = () => {
     setSideDrawerIsVisible(!sideDrawerIsVisible);
   };

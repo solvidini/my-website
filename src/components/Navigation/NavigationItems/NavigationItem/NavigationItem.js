@@ -20,7 +20,6 @@ const NavigationItem = props => {
         duration={500}
         isDynamic={true}
         offset={props.offset ? props.offset : -10}
-        delay={50}
         activeClass="navigation-item--active"
         ignoreCancelEvents={false}
         onClick={props.clicked}

@@ -1,8 +1,6 @@
 import React from "react";
 
 import "./Footer.scss";
-import linkedinIcon from "../../assets/svg/linkedin-in-brands.svg";
-import githubIcon from "../../assets/svg/github-brands.svg";
 
 const Footer = props => {
   const currentDate = new Date().getFullYear();

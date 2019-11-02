@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./About.scss";
-import justMe from "../../../assets/images/just-me.png";
+import justMe from "../../../assets/images/just-me.jpg";
 
 const Contact = props => {
   return (

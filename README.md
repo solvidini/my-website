@@ -7,4 +7,4 @@ Technology I used to create my website:
 * SASS
 	
 ## Live
-https://samuelk.pl/
+http://samuelk.pl/

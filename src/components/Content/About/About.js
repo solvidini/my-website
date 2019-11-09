@@ -8,10 +8,8 @@ const Contact = props => {
     <section className="section-about" name="section-about">
       <div className="section-about__content">
         <h2 className="section-header">
-          <span className="section-header__pre">Kilka słów o mnie</span>
-          <span className="section-header__name">
-            Samuel Kędziora -
-          </span>{" "}
+          <span className="section-header__pre">Kilka słów o&nbsp;mnie</span>
+          <span className="section-header__name">Samuel Kędziora -</span>{" "}
           <span className="no-wrap">Frontend Developer</span>
         </h2>
         <div className="about-me">
@@ -21,19 +19,20 @@ const Contact = props => {
           <div className="about-me__text">
             <p className="about-me__text__paragraph">
               Jestem studentem trzeciego roku informatyki na&nbsp;Uniwersytecie
-              Śląskim, chętnym do&nbsp;rozpoczęcia swojej kariery w IT.
+              Śląskim, chętnym do rozpoczęcia swojej kariery w&nbsp;IT.
             </p>
             <p className="about-me__text__paragraph">
-              Moim celem jest zdobywanie praktycznego doświadczenia w różnych
-              technologiach webowych. Interesują mnie trendy z zakresu tworzenia
-              stron www, aplikacji webowych, blogów oraz&nbsp;sklepów internetowych,
-              jak i&nbsp;zagadnień z UI oraz&nbsp;UX. Głównie rozwijam swoje umiejętności ze
-              strony front-end'u, ale nie odpuszczam i&nbsp;back-end’u.
+              Moim celem jest zdobywanie praktycznego doświadczenia
+              w&nbsp;różnych technologiach webowych. Interesują mnie trendy
+              z&nbsp;zakresu tworzenia stron www, aplikacji webowych, blogów
+              oraz sklepów internetowych, jak i&nbsp;zagadnień z&nbsp;UI oraz
+              UX. Rozwijam swoje umiejętności głównie ze&nbsp;strony front-end'u,
+              ale&nbsp;nie odpuszczam i&nbsp;back-end’u.
             </p>
             <p className="about-me__text__paragraph">
               Osobiście jestem bardzo pracowitą osobą, która pasjonuje się
-              nowymi technologiami i&nbsp;koncentruje na&nbsp;rozwoju osobistym. Umiem
-              pracować samodzielnie jak i&nbsp;w zespole.
+              nowymi technologiami i&nbsp;koncentruje na&nbsp;rozwoju osobistym.
+              Umiem pracować samodzielnie jak i&nbsp;w&nbsp;zespole.
             </p>
           </div>
         </div>

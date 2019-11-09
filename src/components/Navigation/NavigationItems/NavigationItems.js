@@ -32,14 +32,6 @@ const NavigationItems = props => (
     >
       Portfolio
     </NavigationItem>
-    <span className="item-separate"></span>
-    <NavigationItem
-      to="section-contact"
-      opened={props.opened}
-      clicked={props.clicked}
-    >
-      Kontakt
-    </NavigationItem>
   </ul>
 );
 

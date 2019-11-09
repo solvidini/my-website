@@ -11,7 +11,7 @@ const Portfolio = props => {
       <h2 className="section-header">
         <span className="section-header__title">Portfolio</span>
         <span className="section-header__post">
-          Dodawane będą tu różne projekty, które wykonałem.
+          Wykonane projekty
         </span>
       </h2>
       <div className="projects">
@@ -21,7 +21,7 @@ const Portfolio = props => {
               Fotobudka Premium Box
             </h4>
             <p className="projects__item__curtain__description">
-              Wizytówka - Strona firmy
+              Strona - Wizytówka firmy.
             </p>
             <div className="projects__item__curtain__links">
               <a href="https://github.com/ssazero/fotobudka">GitHub</a>{" "}
@@ -40,7 +40,7 @@ const Portfolio = props => {
               Frontend Developer
             </h4>
             <p className="projects__item__curtain__description">
-              Portfolio - Strona własna.
+              Strona - Portfolio własne.
             </p>
             <div className="projects__item__curtain__links">
               <a href="https://github.com/ssazero/my-site">GitHub</a>{" "}

@@ -23,11 +23,10 @@ const Offer = props => {
           />
           <h3 className="offer-content__item__title">Tworzenie stron</h3>
           <p className="offer-content__item__description">
-            Do tworzenia stron używam najnowszych rozwiązań
-            oraz&nbsp;technologii. Kieruję się współczesnymi trendami,
-            spełniając przy tym wszelkie obecne standardy. Zarówno wygląd jak
-            i&nbsp;układ stron opieram o intuicyjny, ładny interfejs jak
-            i&nbsp;responsywny design.
+            Do&nbsp;tworzenia stron używam najnowszych rozwiązań oraz technologii.
+            Kieruję się współczesnymi trendami, spełniając przy tym wszelkie
+            obecne standardy. Zarówno wygląd jak i&nbsp;układ stron opieram
+            o&nbsp;intuicyjny, ładny interfejs jak i&nbsp;responsywny design.
           </p>
         </div>
         <div className="offer-content__item">
@@ -39,10 +38,10 @@ const Offer = props => {
           <h3 className="offer-content__item__title">Responsywny design</h3>
           <p className="offer-content__item__description">
             Cały wygląd strony jak i&nbsp;jej układ automatycznie dostosowywuje
-            się do&nbsp;okna przeglądarki, na&nbsp;której jest wyświetlany.
-            Strona tworzona w&nbsp;takiej technice jest bardzo uniwersalna, a
-            jej obsługa staje się znacznie wygodniejsza niezależnie od
-            urządzenia, na&nbsp;którym ją wyświetlamy.
+            się do&nbsp;okna przeglądarki, na&nbsp;której jest wyświetlany. Strona
+            tworzona w&nbsp;takiej technice jest bardzo uniwersalna, a&nbsp;jej obsługa
+            staje się znacznie wygodniejsza niezależnie od&nbsp;urządzenia,
+            na&nbsp;którym ją wyświetlamy.
           </p>
         </div>
         <div className="offer-content__item">
@@ -54,10 +53,11 @@ const Offer = props => {
           <h3 className="offer-content__item__title">Intuicyjny interfejs</h3>
           <p className="offer-content__item__description">
             Wszelkie elementy strony rozmieszczam w&nbsp;sposób intuicyjny dla
-            użytkownika, aby poruszanie się po stronie niezależnie od urządzenia
-            było proste i&nbsp;przyjemne. Ponadto oferuję nowoczesny, ciekawy
-            wygląd jak i&nbsp;dbam o wszelkie detale dotyczące m.in. animacji
-            elementów, by sposób użytkowania był jasny i&nbsp;zrozumiały.
+            użytkownika, aby poruszanie się po stronie niezależnie
+            od&nbsp;urządzenia było proste i&nbsp;przyjemne. Ponadto oferuję
+            nowoczesny, ciekawy wygląd jak i&nbsp;dbam o&nbsp;wszelkie detale
+            dotyczące m.in. animacji elementów, by sposób użytkowania był jasny
+            i&nbsp;zrozumiały.
           </p>
         </div>
       </div>

@@ -37,7 +37,7 @@ const Footer = props => {
             Curriculum vitae ENG
           </a>
         </div>
-        <div className="footer__top__item">
+        <div className="footer__top__item" style={{lineHeight: "1.6"}}>
           Offer icons made by{" "}
           <span>
             <a href="https://www.flaticon.com/authors/freepik" title="Freepik">

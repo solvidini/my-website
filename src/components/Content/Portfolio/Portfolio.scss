@@ -3,22 +3,22 @@
 
 .section-portfolio {
     position: relative;
-    padding: 10rem 1rem;
+    padding: 10rem .2rem;
     border-bottom: 0.15rem solid $color-dark;
 
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
 
     @include respond(tab-land) {
-        padding: 15rem .2rem 6rem .2rem;
+        padding: 13rem .2rem .2rem;
     }
 
     @include respond(tab-port) {
         clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-        padding: 15rem .2rem .2rem .2rem;
+        padding: 12rem .2rem .2rem .2rem;
     }
 
     @include respond(phone) {
-        padding: 10rem .2rem .2rem .2rem;
+        padding: 8rem .2rem .2rem .2rem;
     }
 
     &:after {
@@ -39,7 +39,7 @@
 }
 
 .projects {
-    max-width: 192rem;
+    // max-width: 120rem;
     margin: 6rem auto 2rem auto;
     display: flex;
     justify-content: space-evenly;
@@ -53,13 +53,15 @@
     }
 
     @include respond(tab-port) {
+        justify-content: space-evenly;
         flex-flow: column;
         margin: 0;
     }
 
     &__item {
         position: relative;
-        max-width: 70rem;
+        // max-width: 70rem;
+        max-height: 50rem;
         margin: .2rem;
         overflow: hidden;
 
@@ -70,6 +72,7 @@
         
         @include respond(tab-land) {
             flex: 1 1 40%;
+            max-width: 50%;
         }
 
         @include respond(tab-port) {

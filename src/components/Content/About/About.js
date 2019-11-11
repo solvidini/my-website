@@ -9,8 +9,8 @@ const Contact = props => {
       <div className="section-about__content">
         <h2 className="section-header">
           <span className="section-header__pre">Kilka słów o&nbsp;mnie</span>
-          <span className="section-header__name">Samuel Kędziora -</span>{" "}
-          <span className="no-wrap">Frontend Developer</span>
+          <span className="section-header__name" style={{fontSize: "3rem"}}>Samuel Kędziora -</span>{" "}
+          <span className="no-wrap" style={{fontSize: "3rem"}}>Frontend Web Developer</span>
         </h2>
         <div className="about-me">
           <div className="about-me__image">

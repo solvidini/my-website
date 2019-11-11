@@ -17,6 +17,7 @@ const Header = React.memo(props => {
       <div className="header__text-box">
         <h1 className="heading-primary">
           <div className="anim-move-in anim-move-in--left">Front-end</div>
+          {" "}
           <div className="anim-move-in anim-move-in--right">Developer</div>
         </h1>
         <div className="heading-paragraph">Samuel Kędziora</div>

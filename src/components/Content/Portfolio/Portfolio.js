@@ -61,12 +61,12 @@ const Portfolio = props => {
             </p>
             <div className="projects__item__curtain__links">
               <a href="https://github.com/ssazero/your-turn">GitHub</a>{" "}
-              <a
+              <span
                 className="link-disabled"
                 title="Strona nie została jeszcze umieszczona w sieci :(."
               >
                 PODGLĄD
-              </a>
+              </span>
             </div>
           </div>
           <img

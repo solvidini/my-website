@@ -63,46 +63,6 @@
   }
 }
 
-@keyframes typewriter {
-  0% {
-    width: 0;
-  }
-
-  40% {
-    width: 100%;
-  }
-
-  90% {
-    width: 100%;
-  }
-
-  98% {
-    width: 0;
-  }
-
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes blinkTextCursor {
-  0% {
-    color: rgba(255, 255, 255, .75);
-  }
-
-  50% {
-    color: rgba(255, 255, 255, .75);
-  }
-
-  51% {
-    color: transparent;
-  }
-
-  100% {
-    color: transparent;
-  }
-}
-
 @keyframes slideIn {
   0% {
     opacity: 0;

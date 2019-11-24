@@ -5,7 +5,6 @@
     display: none;
     position: relative;
     height: 100%;
-    z-index: 900;
     cursor: pointer;
 
     @include respond(phone) {
@@ -15,25 +14,16 @@
 
 .drawer-toggle__icon {
     position: relative;
-    margin-top: 2.4rem;
+    margin-top: 2.9rem;
     z-index: 900;
-
-    @include respond(phone) {
-        margin-top: 3.3rem;
-    }
 
     &,
     &::before,
     &::after {
-        width: 4rem;
-        height: .2rem;
+        width: 5rem;
+        height: 3px;
         background-color: $color-white;
         display: block;
-
-        @include respond(phone) {
-            width: 6rem;
-            height: .3rem;
-        }
     }
 
     &::before,
@@ -41,29 +31,23 @@
         content: "";
         position: absolute;
         left: 0;
-        transition: all .2s;
+        transition: all .4s;
     }
 
     &::before {
-        top: -1rem;
-        @include respond(phone) {
-            top: -1.25rem;
-        }
+        top: -1.25rem;
     }
 
     &::after {
-        top: 1rem;
-        @include respond(phone) {
-            top: 1.25rem;
-        }
+        top: 1.25rem;
     }
 
     &--active {
         position: fixed; 
         display: block;
         z-index: 1000;
-        top: 1.5rem;
-        right: 1.5rem;
+        top: .5rem;
+        right: 1rem;
 
         & {
             background-color: transparent;
@@ -71,7 +55,7 @@
 
         &::before {
             top: 0;
-            transform: rotate(135deg);
+            transform: rotate(-45deg);
         }
 
         &::after {

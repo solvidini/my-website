@@ -2,9 +2,11 @@
 This is my portfolio website. I'll upload here many of my projects in the future.
 	
 ## Technologies
-Technology I used to create my website:
+Main technologies I used to create this website:
 * React
 * SASS
+
+&other
 	
 ## Live
 https://samuelk.pl/

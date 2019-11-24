@@ -24,8 +24,8 @@ const Portfolio = props => {
               Strona - Wizytówka firmy.
             </p>
             <div className="projects__item__curtain__links">
-              <a href="https://github.com/ssazero/fotobudka">GitHub</a>{" "}
-              <a href="http://fotobudka-premiumbox.pl">PODGLĄD</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/ssazero/fotobudka">GitHub</a>{" "}
+              <a target="_blank" rel="noopener noreferrer" href="http://fotobudka-premiumbox.pl">PODGLĄD</a>
             </div>
           </div>
           <img
@@ -43,7 +43,7 @@ const Portfolio = props => {
               Strona - Portfolio własne.
             </p>
             <div className="projects__item__curtain__links">
-              <a href="https://github.com/ssazero/my-site">GitHub</a>{" "}
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/ssazero/my-site">GitHub</a>{" "}
               <a href="/">PODGLĄD</a>
             </div>
           </div>
@@ -60,7 +60,7 @@ const Portfolio = props => {
               Aplikacja - Podział obowiązków domowych.
             </p>
             <div className="projects__item__curtain__links">
-              <a href="https://github.com/ssazero/your-turn">GitHub</a>{" "}
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/ssazero/your-turn">GitHub</a>{" "}
               <span
                 className="link-disabled"
                 title="Strona nie została jeszcze umieszczona w sieci :(."

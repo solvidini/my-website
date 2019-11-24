@@ -9,8 +9,12 @@ const Contact = props => {
       <div className="section-about__content">
         <h2 className="section-header">
           <span className="section-header__pre">Kilka słów o&nbsp;mnie</span>
-          <span className="section-header__name" style={{fontSize: "3rem"}}>Samuel Kędziora -</span>{" "}
-          <span className="no-wrap" style={{fontSize: "3rem"}}>Frontend Web Developer</span>
+          <span className="section-header__name" style={{ fontSize: "3rem" }}>
+            Samuel Kędziora -
+          </span>{" "}
+          <span className="no-wrap" style={{ fontSize: "3rem" }}>
+            Frontend Web Developer
+          </span>
         </h2>
         <div className="about-me">
           <div className="about-me__image">
@@ -26,8 +30,9 @@ const Contact = props => {
               w&nbsp;różnych technologiach webowych. Interesują mnie trendy
               z&nbsp;zakresu tworzenia stron www, aplikacji webowych, blogów
               oraz sklepów internetowych, jak i&nbsp;zagadnień z&nbsp;UI oraz
-              UX. Rozwijam swoje umiejętności głównie ze&nbsp;strony front-end'u,
-              ale&nbsp;nie odpuszczam i&nbsp;back-end’u.
+              UX. Obecnie rozwijam swoje umiejętności głównie ze&nbsp;strony
+              front-end'u i&nbsp;w&nbsp;mniejszym stopniu ze&nbsp;strony
+              back-end’u.
             </p>
             <p className="about-me__text__paragraph">
               Osobiście jestem bardzo pracowitą osobą, która pasjonuje się

@@ -3,7 +3,7 @@
 
 .footer {
   width: 100%;
-  background-color: rgb(37, 37, 41);
+  background-color: rgb(29, 29, 32);
 
   &__top {
     padding: 8rem 0 3rem 0;
@@ -42,14 +42,15 @@
 
     &__item {
       display: flex;
+      color: rgb(192, 192, 192);
       flex-flow: column wrap;
-      color: rgb(218, 218, 218);
       line-height: 2;
       font-size: 1.5rem;
       letter-spacing: .2rem;
       text-align: center;
-
+      
       h4 {
+        color: rgb(218, 218, 218);
         font-size: 1.7rem;
         text-transform: uppercase;
         letter-spacing: .3rem;
@@ -63,13 +64,13 @@
       a,
       a:link,
       a:visited {
-        color: $color-white;
+        color: rgb(192, 192, 192);
         text-decoration: none;
         transition: all .2s ease;
 
         &:hover {
-          text-decoration: underline;
           transform: scale(1.05);
+          color: $color-white;
         }
       }
 
@@ -93,7 +94,7 @@
       width: 6rem;
       height: 6rem;
       border-radius: 50%;
-      background-color: #1e1e21;
+      background-color: $color-dark;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -104,18 +105,19 @@
 
       &:hover {
         color: white;
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
       }
     }
   }
 
   &__copyright {
-    padding: 3rem;
+    padding: 2.6rem;
     background: $color-dark;
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-size: 1.3rem;
-    color: $color-grey-2;
+    color: $color-grey;
+    line-height: 1.6;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

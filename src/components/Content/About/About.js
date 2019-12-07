@@ -22,22 +22,7 @@ const Contact = props => {
           </div>
           <div className="about-me__text">
             <p className="about-me__text__paragraph">
-              Jestem studentem trzeciego roku informatyki na&nbsp;Uniwersytecie
-              Śląskim, chętnym do rozpoczęcia swojej kariery w&nbsp;IT.
-            </p>
-            <p className="about-me__text__paragraph">
-              Moim celem jest zdobywanie praktycznego doświadczenia
-              w&nbsp;różnych technologiach webowych. Interesują mnie trendy
-              z&nbsp;zakresu tworzenia stron www, aplikacji webowych, blogów
-              oraz sklepów internetowych, jak i&nbsp;zagadnień z&nbsp;UI oraz
-              UX. Obecnie rozwijam swoje umiejętności głównie ze&nbsp;strony
-              front-end'u i&nbsp;w&nbsp;mniejszym stopniu ze&nbsp;strony
-              back-end’u.
-            </p>
-            <p className="about-me__text__paragraph">
-              Osobiście jestem bardzo pracowitą osobą, która pasjonuje się
-              nowymi technologiami i&nbsp;koncentruje na&nbsp;rozwoju osobistym.
-              Umiem pracować samodzielnie jak i&nbsp;w&nbsp;zespole.
+            Interesuję się&nbsp;najnowszymi trendami z&nbsp;zakresu tworzenia stron www, aplikacji webowych, blogów, etc. Jako developer skupiam się&nbsp;na&nbsp;zagadnieniach UI, UX oraz dbam o&nbsp;to, aby strony działały płynnie i&nbsp;były dostosowane do&nbsp;wyświetlania na&nbsp;każdym urządzeniu. W&nbsp;rozwijaniu swoich kompetencji koncentruję się&nbsp;głównie na&nbsp;technologiach front-endowych i&nbsp;w&nbsp;mniejszym stopniu na&nbsp;technologiach back-endowych. Do&nbsp;każdego projektu podchodzę indywidualnie. Stawiam na&nbsp;komunikację z&nbsp;klientem, znajdując najlepsze rozwiązania, spełniające jego potrzeby i&nbsp;umożliwiające dostarczenie projektu na&nbsp;czas. 
             </p>
           </div>
         </div>
@@ -72,6 +57,7 @@ const Contact = props => {
             <h3 className="skills__row__title">Oprogramowanie</h3>
             <ul className="skills__row__list">
               <li className="skills__row__list__item">Visual Studio Code</li>
+              <li className="skills__row__list__item">Eclipse</li>
               <li className="skills__row__list__item">Photoshop</li>
               <li className="skills__row__list__item">PhpStorm</li>
             </ul>

@@ -1,135 +1,58 @@
-import React from "react";
+import React from 'react';
 
-import "./Portfolio.scss";
-import fotobudka from "../../../assets/images/project-fotobudka.jpg";
-import mySite from "../../../assets/images/project-my-site.jpg";
-import yourTurn from "../../../assets/images/project-your-turn.jpg";
-import projectW from "../../../assets/images/project-projektw.jpg";
+import './Portfolio.scss';
+import Project from './../../Project/Project';
+import fotobudka from '../../../assets/images/project-fotobudka.jpg';
+import mySite from '../../../assets/images/project-my-site.jpg';
+import yourTurn from '../../../assets/images/project-your-turn.jpg';
+import projectW from '../../../assets/images/project-projektw.jpg';
+import pizzaBuilder from '../../../assets/images/project-pizza-builder.jpg';
 
 const Portfolio = props => {
-  return (
-    <section name="section-portfolio" className="section-portfolio">
-      <h2 className="section-header">
-        <span className="section-header__title">Portfolio</span>
-        <span className="section-header__post">Wykonane&nbsp;projekty</span>
-      </h2>
-      <div className="projects">
-        <div className="projects__item">
-          <div className="projects__item__curtain">
-            <h4 className="projects__item__curtain__title">Projekt&nbsp;W</h4>
-            <p className="projects__item__curtain__description">
-              Strona - Portfolio&nbsp;firmy.
-            </p>
-            <div className="projects__item__curtain__links">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/ssazero/project-w"
-              >
-                GitHub
-              </a>{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="http://projektw.pl"
-              >
-                PODGLĄD
-              </a>
-            </div>
-          </div>
-          <img
-            className="projects__item__image"
-            src={projectW}
-            alt="Project Fotobudka"
+	return (
+		<section name="section-portfolio" className="section-portfolio">
+			<h2 className="section-header">
+				<span className="section-header__title">Portfolio</span>
+				<span className="section-header__post">Wykonane&nbsp;projekty</span>
+			</h2>
+			<div className="projects">
+				<Project
+					title="Projekt&nbsp;W"
+					description="Strona - Portfolio&nbsp;firmy."
+					github="https://github.com/ssazero/project-w"
+					live="http://projektw.pl"
+					source={projectW}
+				/>
+          <Project
+            title="Pizza Builder"
+            description="Aplikacja - Tworzenie i zamawianie pizzy."
+            github="https://github.com/ssazero/pizza-builder"
+            live="https://pizza-builder-6412e.web.app/"
+            source={pizzaBuilder}
           />
-        </div>
-        <div className="projects__item">
-          <div className="projects__item__curtain">
-            <h4 className="projects__item__curtain__title">Your&nbsp;Turn</h4>
-            <p className="projects__item__curtain__description">
-              Aplikacja - Podział obowiązków domowych.
-            </p>
-            <div className="projects__item__curtain__links">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/ssazero/your-turn"
-              >
-                GitHub
-              </a>{" "}
-              <span
-                className="link-disabled"
-                title="Strona nie została jeszcze umieszczona w sieci :(."
-              >
-                PODGLĄD
-              </span>
-            </div>
-          </div>
-          <img
-            className="projects__item__image"
-            src={yourTurn}
-            alt="Project Your Turn"
-          />
-        </div>
-        <div className="projects__item">
-          <div className="projects__item__curtain">
-            <h4 className="projects__item__curtain__title">
-              Front-end Developer
-            </h4>
-            <p className="projects__item__curtain__description">
-              Strona - Portfolio&nbsp;własne.
-            </p>
-            <div className="projects__item__curtain__links">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/ssazero/my-site"
-              >
-                GitHub
-              </a>{" "}
-              <a href="/">PODGLĄD</a>
-            </div>
-          </div>
-          <img
-            className="projects__item__image"
-            src={mySite}
-            alt="Project My Site"
-          />
-        </div>
-        <div className="projects__item">
-          <div className="projects__item__curtain">
-            <h4 className="projects__item__curtain__title">
-              Fotobudka Premium&nbsp;Box
-            </h4>
-            <p className="projects__item__curtain__description">
-              Strona - Wizytówka&nbsp;firmy.
-            </p>
-            <div className="projects__item__curtain__links">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/ssazero/fotobudka"
-              >
-                GitHub
-              </a>{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="http://fotobudka-premiumbox.pl"
-              >
-                PODGLĄD
-              </a>
-            </div>
-          </div>
-          <img
-            className="projects__item__image"
-            src={fotobudka}
-            alt="Project Fotobudka"
-          />
-        </div>
-      </div>
-    </section>
-  );
+				<Project
+					title="Your&nbsp;Turn"
+					description="Aplikacja - Podział obowiązków domowych."
+					github="https://github.com/ssazero/your-turn"
+					source={yourTurn}
+				/>
+				<Project
+					title="Front-end Developer"
+					description="Strona - Portfolio&nbsp;własne."
+					github="https://github.com/ssazero/my-site"
+					live="/"
+					source={mySite}
+				/>
+				<Project
+					title="Fotobudka Premium&nbsp;Box"
+					description="Strona - Wizytówka&nbsp;firmy."
+					github="https://github.com/ssazero/fotobudka"
+					live="http://fotobudka-premiumbox.pl"
+					source={fotobudka}
+				/>
+			</div>
+		</section>
+	);
 };
 
 export default Portfolio;

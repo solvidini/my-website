@@ -3,7 +3,23 @@
 
 .footer {
   width: 100%;
-  background-color: rgb(29, 29, 32);
+  background-color: $color-background;
+  position: absolute;
+
+  &__square {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    background-color: $color-background;
+
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    &--copyright {
+      background-color: $color-dark;
+    }
+  }
 
   &__top {
     padding: 8rem 0 3rem 0;
@@ -101,16 +117,17 @@
       z-index: 1;
       font-size: 4.4rem;
       color: $color-white;
-      transition: all .9s ease;
+      transition: all .4s ease;
 
       &:hover {
         color: white;
-        transform: rotate(-360deg);
+        transform: rotate(-15deg);
       }
     }
   }
 
   &__copyright {
+    position: relative;
     padding: 2.5rem;
     background: $color-dark;
     text-transform: uppercase;
@@ -122,7 +139,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 
     @include respond(phone) {
       letter-spacing: .1rem;

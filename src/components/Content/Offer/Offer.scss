@@ -3,7 +3,7 @@
 
 .section-offer {
     padding: 4rem 0;
-    background-color: $color-white;
+    background-color: $color-background;
 }
 
 .offer-content {
@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: $color-grey-dark;
+    color: $color-white;
 
     @include respond(tab-port) {
         flex-flow: column wrap;

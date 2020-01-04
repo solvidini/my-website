@@ -8,7 +8,7 @@ import ui from "../../../assets/images/ui-color.png";
 const Offer = props => {
   return (
     <section name="section-offer" className="section-offer">
-      <h2 className="section-header">
+      <h2 className="section-header section-header--white">
         <span className="section-header__title">Oferta</span>
         <span className="section-header__post">
           Co oferuję i&nbsp;na&nbsp;co zwracam uwagę?

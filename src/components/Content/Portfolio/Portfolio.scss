@@ -3,22 +3,23 @@
 
 .section-portfolio {
     position: relative;
-    padding: 10rem .2rem .2rem;
+    padding: 10rem .2rem 5rem .2rem;
     border-bottom: 0.15rem solid $color-dark;
+    background-color: $color-white;
 
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
 
     @include respond(tab-land) {
-        padding: 13rem .2rem .2rem;
+        padding: 13rem .2rem 5rem .2rem;
     }
 
     @include respond(tab-port) {
-        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-        padding: 12rem .2rem .2rem .2rem;
+        clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+        padding: 12rem .2rem 5rem .2rem;
     }
 
     @include respond(phone) {
-        padding: 8rem .2rem .2rem .2rem;
+        padding: 8rem .2rem 5rem .2rem;
     }
 
     &:after {

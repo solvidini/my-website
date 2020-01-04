@@ -34,7 +34,7 @@ body {
         sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: $color-white;
+    background-color: $color-background;
 }
 
 code {
@@ -90,5 +90,9 @@ code {
         text-transform: uppercase;
         letter-spacing: .5rem;
         font-size: 4rem;
+    }
+
+    &--white {
+        color: $color-white;
     }
 }

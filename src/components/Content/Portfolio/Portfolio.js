@@ -23,13 +23,13 @@ const Portfolio = props => {
 					live="http://projektw.pl"
 					source={projectW}
 				/>
-          <Project
-            title="Pizza Builder"
-            description="Aplikacja - Tworzenie i zamawianie pizzy."
-            github="https://github.com/ssazero/pizza-builder"
-            live="https://pizza-builder-6412e.web.app/"
-            source={pizzaBuilder}
-          />
+				<Project
+					title="Pizza Builder"
+					description="Aplikacja - Tworzenie i zamawianie pizzy."
+					github="https://github.com/ssazero/pizza-builder"
+					live="https://pizza-builder-6412e.web.app/"
+					source={pizzaBuilder}
+				/>
 				<Project
 					title="Your&nbsp;Turn"
 					description="Aplikacja - Podział obowiązków domowych."

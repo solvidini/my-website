@@ -3,18 +3,11 @@
 
 .projects__item {
     position: relative;
-    flex: 1 0 33%;
+    flex: 0 0 32.99%;
     margin: .2rem;
     overflow: hidden;
-
-    display: flex;
-    flex-flow: column;
-    align-items: center;
     transition: all .3s ease;
-
-    &:nth-child(1), &:nth-child(2) {
-        flex: 1 0 49%;
-    }
+    border-radius: .5rem;
 
     @include respond(tab-land) {
         flex: 1 0 49.5%;
@@ -24,7 +17,7 @@
     @include respond(tab-port) {
         flex: 1 0 49%;
         max-width: 100%;
-        margin: .2rem 0;
+        margin: 1rem 0;
     }
 
     &:hover &__curtain {
@@ -32,9 +25,95 @@
         z-index: 3;
     }
 
-    &:hover &__image {
-        transform: scale(1.15);
+    &__title {
+        font-size: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .35rem;
+        font-weight: 400;
+
+        background-color: $color-background;
+        padding: 1rem;
+        color: $color-white;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+
+        @include respond(tab-land) {
+            font-size: 2.2rem;
+            letter-spacing: .15rem;
+        }
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+            letter-spacing: .15rem;
+        }
     }
+
+    &__description {
+        line-height: 1.4;
+        letter-spacing: .15rem;
+        font-weight: 400;
+        color: $color-white;
+        font-size: 1.6rem;
+
+        text-align: center;
+        background-color: $color-primary;
+        padding: .7rem;
+
+        @include respond(phone) {
+            padding: 0;
+            letter-spacing: .12rem;
+            font-size: 2rem;
+        }
+    }
+
+    &__drawer {
+        transform: translateY(42%);
+        transition: all .5s ease;
+
+        @include respond(tab-land) {
+            transform: translate(0);
+        }
+    }
+
+    &:hover &__drawer {
+        transform: translate(0);
+    }
+
+    &__link {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        cursor: pointer;
+
+        background-color: $color-background;
+        color: $color-white;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+
+        transition: all .2s ease;
+
+        &--left {
+            border-top-right-radius: 1rem;
+            left: 0;
+            border-right: .5rem solid $color-primary;
+            border-top: .25rem solid $color-primary;
+        }
+
+        &--right {
+            border-top-left-radius: 1rem;
+            right: 0;
+            border-left: .5rem solid $color-primary;
+            border-top: .25rem solid $color-primary;
+        }
+
+        &:hover {
+            background-color: $color-primary
+        }
+    }
+
 
     &__image {
         display: flex;
@@ -42,92 +121,6 @@
         height: auto;
         position: relative;
         transition: all .5s ease;
-    }
-
-    &__curtain {
-        opacity: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba($color-primary, .6);
-        color: $color-white;
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 5;
-        text-align: center;
-
-        transition: all .5s ease;
-
-        font-size: 2rem;
-
-        @include respond(tab-port) {
-            font-size: 3rem;
-        }
-
-        @include respond(phone) {
-            font-size: 2rem;
-        }
-
-        &__title {
-            width: 100%;
-            font-size: 2.5rem;
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, 0);
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: .35rem;
-
-            @include respond(tab-land) {
-                font-size: 2.8rem;
-                letter-spacing: .15rem;
-            }
-
-            @include respond(phone) {
-                font-size: 2.5rem;
-                letter-spacing: .15rem;
-            }
-        }
-
-        &__description {
-            margin-top: 2rem;
-            line-height: 1.4;
-            letter-spacing: .15rem;
-            font-weight: 400;
-
-            @include respond(phone) {
-                padding: 0;
-                letter-spacing: .12rem;
-                font-size: 2rem;
-            }
-        }
-
-        &__links {
-            margin-top: 2rem;
-            text-transform: uppercase;
-
-            a:first-child {
-                margin-right: 8rem;
-            }
-
-            a,
-            a:link,
-            a:visited {
-                text-decoration: none;
-                color: $color-white;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
     }
 
 }

@@ -2,9 +2,10 @@
 @import '../../../sass/mixins';
 
 .section-about {
-    border-top: 0.15rem solid $color-dark;
+    border-top: 0.2rem solid $color-dark;
     position: relative;
     padding: 6rem 1rem 5rem;
+    background-color: $color-white;
 
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 

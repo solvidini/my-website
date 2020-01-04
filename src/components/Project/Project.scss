@@ -96,16 +96,16 @@
         transition: all .2s ease;
 
         &--left {
-            border-top-right-radius: 1rem;
             left: 0;
-            border-right: .5rem solid $color-primary;
+            border-top-right-radius: 1rem;
+            border-right: .25rem solid $color-primary;
             border-top: .25rem solid $color-primary;
         }
 
         &--right {
-            border-top-left-radius: 1rem;
             right: 0;
-            border-left: .5rem solid $color-primary;
+            border-top-left-radius: 1rem;
+            border-left: .25rem solid $color-primary;
             border-top: .25rem solid $color-primary;
         }
 

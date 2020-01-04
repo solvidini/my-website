@@ -7,7 +7,7 @@ const Footer = props => {
 
 	return (
 		<footer className="footer" name="section-contact">
-			<div className="footer__square" />
+			<div className="footer__square footer__square--top" />
 			<div className="footer__top">
 				<div className="footer__top__logo">&nbsp;</div>
 				<div className="footer__top__item">

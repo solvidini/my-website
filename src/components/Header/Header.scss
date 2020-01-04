@@ -6,8 +6,8 @@
   min-height: 95vh;
   width: 100%;
   background-image: linear-gradient(to right bottom,
-      rgba($color-secondary, .3),
-      rgba($color-primary, .7)),
+      rgba($color-secondary, .1),
+      rgba($color-primary, .6)),  
     url(../../assets/images/earth.jpg);
   background-position: center;
   background-attachment: fixed;
@@ -95,7 +95,7 @@
   text-transform: uppercase;
   display: block;
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 auto;
   letter-spacing: 1rem;
   animation: moveInTop 3s ease-out;

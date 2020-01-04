@@ -1,11 +1,15 @@
 @import '../../../sass/variables';
 @import '../../../sass/mixins';
 
+.section-about-wraper {
+    filter: drop-shadow(0 2rem 1rem black);
+}
+
 .section-about {
-    border-top: 0.2rem solid $color-dark;
     position: relative;
     padding: 6rem 1rem 5rem;
     background-color: $color-white;
+    overflow: hidden;
 
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 

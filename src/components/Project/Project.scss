@@ -3,21 +3,21 @@
 
 .projects__item {
     position: relative;
-    flex: 0 0 32.99%;
-    margin: .2rem;
+    flex: 0 0 32.33333333%;
+    margin: 1px .5%;
     overflow: hidden;
     transition: all .3s ease;
     border-radius: .5rem;
 
     @include respond(tab-land) {
-        flex: 1 0 49.4%;
-        max-width: 49.5%;
+        flex: 1 0 49%;
+        max-width: 49%;
+        margin: .5%;
     }
 
     @include respond(phone) {
         flex: 1 0 100%;
         max-width: 100%;
-        margin: 1rem 0;
     }
 
     &:hover &__curtain {

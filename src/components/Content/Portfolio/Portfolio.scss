@@ -46,7 +46,7 @@
     align-items: center;
     color: $color-grey-dark;
 
-    @include respond(tab-port) {
+    @include respond(phone) {
         flex-flow: column;
         margin: 0;
     }

@@ -33,7 +33,7 @@ const Portfolio = props => {
 					source={pizzaBuilder}
 				/>
 				<Project
-					title="Your\u00A0Turn"
+					title="Your Turn"
 					description={context.dictionary.portfolio.yourTurn.description}
 					github="https://github.com/ssazero/your-turn"
 					source={yourTurn}
@@ -46,7 +46,7 @@ const Portfolio = props => {
 					source={mySite}
 				/>
 				<Project
-					title="Fotobudka Premium\u00A0Box"
+					title="Fotobudka Premium Box"
 					description={context.dictionary.portfolio.fotobudka.description}
 					github="https://github.com/ssazero/fotobudka"
 					live="http://fotobudka-premiumbox.pl"

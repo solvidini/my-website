@@ -1,14 +1,18 @@
 import React from 'react';
 
+import { LanguageProvider } from './context';
+
 import Layout from './containers/Layout/Layout';
 import Content from './components/Content/Content';
 
 function App() {
-  return (
-    <Layout>
-      <Content />
-    </Layout>
-  );
+	return (
+		<LanguageProvider>
+			<Layout>
+				<Content />
+			</Layout>
+		</LanguageProvider>
+	);
 }
 
 export default App;

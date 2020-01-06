@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './Footer.scss';
+import { LanguageContext } from '../../context';
 
 const Footer = props => {
 	const currentDate = new Date().getFullYear();
-
+	const context = useContext(LanguageContext);
 	return (
 		<footer className="footer" name="section-contact">
 			<div className="footer__square footer__square--top" />
@@ -12,7 +13,7 @@ const Footer = props => {
 				<div className="footer__top__logo">&nbsp;</div>
 				<div className="footer__top__item">
 					<h4>
-						Kontakt <i className="far fa-envelope"></i>
+						{context.dictionary.footer.contact} <i className="far fa-envelope"></i>
 					</h4>
 					<span>
 						contact@samuelk.pl
@@ -51,7 +52,7 @@ const Footer = props => {
 					</a>
 				</div>
 				<div className="footer__top__item" style={{ lineHeight: '1.6' }}>
-					Offer icons made by{' '}
+					{context.dictionary.footer.offerIcons}{' '}
 					<span>
 						<a
 							target="_blank"
@@ -105,7 +106,7 @@ const Footer = props => {
 				<span className="no-wrap">
 					Samuel Kędziora &nbsp;&copy; <b>{currentDate}</b>
 				</span>
-				<span className="no-wrap">Wszelkie prawa zastrzeżone.</span>
+				<span className="no-wrap">{context.dictionary.footer.allRights} </span>
 			</div>
 		</footer>
 	);

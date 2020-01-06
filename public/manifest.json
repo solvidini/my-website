@@ -2,7 +2,7 @@
   "short_name": "Portfolio Website",
   "name": "Samuel Kędziora - Front-End Developer",
   "default_locale": "pl",
-  "description": "Strona typu portfolio. Została wykonana z myślą o pokazaniu moich umiejętności programowania jak i projektowania stron. Na stronie w zakładce portfolio będą na bieżąco dodawane realizacje moich projektów.",
+  "description": "(En) Portfolio page. It was made to show my programming and website design skills. My projects will be added on a regular basis on the portfolio tab. (Pl) Strona typu portfolio. Została wykonana z myślą o pokazaniu moich umiejętności programowania jak i projektowania stron. Na stronie w zakładce portfolio będą na bieżąco dodawane realizacje moich projektów.",
   "icons": [
     {
       "src": "favicon.ico",

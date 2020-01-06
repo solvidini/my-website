@@ -49,6 +49,7 @@
     left: 5rem;
     padding: 1rem 0;
     cursor: pointer;
+    user-select: none;
 
     @include respond(phone) {
         padding: 2rem 0;
@@ -78,6 +79,7 @@
         display: none;
         padding: 1rem 0;
         margin: 0 -1rem;
+
         @include respond(phone) {
             padding: 2rem 0;
             margin: 0 -2rem;
@@ -102,7 +104,8 @@
             width: 9rem;
         }
 
-        &:active, &:focus {
+        &:active,
+        &:focus {
             border: 2px solid $color-primary;
         }
 

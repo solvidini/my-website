@@ -50,13 +50,14 @@
     padding: 1rem 0;
     cursor: pointer;
     user-select: none;
+    outline: transparent;
+    -webkit-tap-highlight-color: transparent;
 
     @include respond(phone) {
         padding: 2rem 0;
     }
 
     &__toggler {
-        user-select: none;
         pointer-events: none;
         color: $color-white;
         font-size: $default-font-size;

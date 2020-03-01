@@ -9,22 +9,22 @@ const Project = props => {
 	return (
 		<Effect>
 			<div className="projects__item">
-				<div className="projects__item__drawer">
-					<h4 className="projects__item__title">{props.title}</h4>
-					<p className="projects__item__description">{props.description}</p>
+				<div className="projects__item-drawer">
+					<h4 className="projects__item-title">{props.title}</h4>
+					<p className="projects__item-description">{props.description}</p>
 				</div>
 				{props.live ? (
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
-						className="projects__item__link projects__item__link--right"
+						className="projects__item-link projects__item-link--right"
 						href={props.live}
 					>
 						{context.dictionary.portfolio.project.preview}
 					</a>
 				) : (
 					<span
-						className="projects__item__link projects__item__link--right"
+						className="projects__item-link projects__item-link--right"
 						title={context.dictionary.portfolio.project.noLink}
 						style={{ textDecoration: 'line-through', color: '#bbb' }}
 					>
@@ -34,12 +34,12 @@ const Project = props => {
 				<a
 					target="_blank"
 					rel="noopener noreferrer"
-					className="projects__item__link projects__item__link--left"
+					className="projects__item-link projects__item-link--left"
 					href={props.github}
 				>
 					GitHub
 				</a>
-				<img className="projects__item__image" src={props.source} alt={'Project ' + props.title} />
+				<img className="projects__item-image" src={props.source} alt={'Project ' + props.title} />
 			</div>
 		</Effect>
 	);

@@ -42,7 +42,7 @@
       padding: 3rem 0;
     }
 
-    &__logo {
+    &-logo {
       z-index: -1;
       background-image: url("../../assets/images/logo.png");
       background-position: center;
@@ -63,7 +63,7 @@
       }
     }
 
-    &__item {
+    &-item {
       display: flex;
       color: rgb(192, 192, 192);
       flex-flow: column wrap;
@@ -110,9 +110,9 @@
     display: flex;
     justify-content: space-evenly;
 
-    &__link,
-    &__link:link,
-    &__link:visited {
+    &-link,
+    &-link:link,
+    &-link:visited {
       text-decoration: none;
       width: 6rem;
       height: 6rem;

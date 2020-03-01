@@ -18,31 +18,31 @@ const Offer = props => {
 			<div className="offer-content">
 				<Effect left>
 					<div className="offer-content__item">
-						<img className="offer-content__item__image" src={website} alt="Kodowanie stron" />
-						<h3 className="offer-content__item__title">{context.dictionary.offer.makingWebsites.title}</h3>
-						<p className="offer-content__item__description">
+						<img className="offer-content__item-image" src={website} alt="Kodowanie stron" />
+						<h3 className="offer-content__item-title">{context.dictionary.offer.makingWebsites.title}</h3>
+						<p className="offer-content__item-description">
 							{context.dictionary.offer.makingWebsites.description}
 						</p>
 					</div>
 				</Effect>
 				<Effect>
 					<div className="offer-content__item">
-						<img className="offer-content__item__image" src={responsive} alt="Responsywny design" />
-						<h3 className="offer-content__item__title">
+						<img className="offer-content__item-image" src={responsive} alt="Responsywny design" />
+						<h3 className="offer-content__item-title">
 							{context.dictionary.offer.responsiveDesign.title}
 						</h3>
-						<p className="offer-content__item__description">
+						<p className="offer-content__item-description">
 							{context.dictionary.offer.responsiveDesign.description}
 						</p>
 					</div>
 				</Effect>
 				<Effect right>
 					<div className="offer-content__item">
-						<img className="offer-content__item__image" src={ui} alt="Intuicyjny interfejs" />
-						<h3 className="offer-content__item__title">
+						<img className="offer-content__item-image" src={ui} alt="Intuicyjny interfejs" />
+						<h3 className="offer-content__item-title">
 							{context.dictionary.offer.intuitiveInterface.title}
 						</h3>
-						<p className="offer-content__item__description">
+						<p className="offer-content__item-description">
 							{context.dictionary.offer.intuitiveInterface.description}
 						</p>
 					</div>

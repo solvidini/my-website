@@ -10,8 +10,8 @@ const Footer = props => {
 		<footer className="footer" name="section-contact">
 			<div className="footer__square footer__square--top" />
 			<div className="footer__top">
-				<div className="footer__top__logo">&nbsp;</div>
-				<div className="footer__top__item">
+				<div className="footer__top-logo">&nbsp;</div>
+				<div className="footer__top-item">
 					<h4>
 						{context.dictionary.footer.contact} <i className="far fa-envelope"></i>
 					</h4>
@@ -30,7 +30,7 @@ const Footer = props => {
 						</a>
 					</span>
 				</div>
-				<div className="footer__top__item">
+				<div className="footer__top-item">
 					<h4>
 						CV <i className="far fa-address-card"></i>
 					</h4>
@@ -51,7 +51,7 @@ const Footer = props => {
 						Curriculum vitae ENG
 					</a>
 				</div>
-				<div className="footer__top__item" style={{ lineHeight: '1.6' }}>
+				<div className="footer__top-item" style={{ lineHeight: '1.6' }}>
 					{context.dictionary.footer.offerIcons}{' '}
 					<span>
 						<a
@@ -86,7 +86,7 @@ const Footer = props => {
 				<a
 					target="_blank"
 					rel="noopener noreferrer"
-					className="footer__social__link"
+					className="footer__social-link"
 					href="https://www.linkedin.com/in/samuel-k%C4%99dziora-b45b86159/"
 				>
 					<i className="fab fa-linkedin-in"></i>
@@ -94,7 +94,7 @@ const Footer = props => {
 				<a
 					target="_blank"
 					rel="noopener noreferrer"
-					className="footer__social__link"
+					className="footer__social-link"
 					href="https://github.com/ssazero"
 				>
 					<i className="fab fa-github"></i>

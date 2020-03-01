@@ -20,12 +20,7 @@
         max-width: 100%;
     }
 
-    &:hover &__curtain {
-        opacity: 1;
-        z-index: 3;
-    }
-
-    &__title {
+    &-title {
         font-size: 2rem;
         text-align: center;
         text-transform: uppercase;
@@ -49,7 +44,7 @@
         }
     }
 
-    &__description {
+    &-description {
         line-height: 1.4;
         letter-spacing: .15rem;
         font-weight: 400;
@@ -67,7 +62,7 @@
         }
     }
 
-    &__drawer {
+    &-drawer {
         transform: translateY(42%);
         transition: all .5s ease;
 
@@ -76,11 +71,11 @@
         }
     }
 
-    &:hover &__drawer {
+    &:hover &-drawer {
         transform: translate(0);
     }
 
-    &__link {
+    &-link {
         position: absolute;
         bottom: 0;
         z-index: 1;
@@ -115,7 +110,7 @@
     }
 
 
-    &__image {
+    &-image {
         display: flex;
         width: 100%;
         height: auto;

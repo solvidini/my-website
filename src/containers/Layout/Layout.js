@@ -12,7 +12,7 @@ import Logo from '../../components/Logo/Logo';
 import { LanguageContext } from '../../context';
 
 const Layout = props => {
-  const context = useContext(LanguageContext);
+	const context = useContext(LanguageContext);
 	const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
 	const [stickyToolbar, setStickyToolbar] = useState(false);
@@ -21,7 +21,7 @@ const Layout = props => {
 
 	const yOffset = () => {
 		setScrollY(window.pageYOffset);
-  };
+	};
 
 	useEffect(() => {
 		const watchScroll = () => {
@@ -57,8 +57,10 @@ const Layout = props => {
 			{!sideDrawerIsVisible && <Logo />}
 			{!sideDrawerIsVisible && (
 				<div className="language-pack">
-					<div className="language-pack__toggler">{context.dictionary.language}&nbsp;
-					<i className="fas fa-caret-down language-pack__toggler-icon"></i></div>
+					<div className="language-pack__toggler">
+						{context.dictionary.language}&nbsp;
+						<i className="fas fa-caret-down language-pack__toggler-icon"></i>
+					</div>
 					<div className="language-pack__dropdown">
 						<button className="language-pack__select" onClick={context.changeLanguage} data-language="pl">
 							Polski

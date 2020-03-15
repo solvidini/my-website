@@ -9,4 +9,4 @@ Main technologies I used to create this website:
 &other
 	
 ## Live
-https://samuelk.pl/
+http://samuelk.pl/

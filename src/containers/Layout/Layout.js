@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import './Layout.scss';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
@@ -9,11 +9,11 @@ import { animateScroll } from 'react-scroll';
 import ArrowUp from '../../components/UI/ArrowUp/ArrowUp';
 import { CSSTransition } from 'react-transition-group';
 import Logo from '../../components/Logo/Logo';
-import { LanguageContext } from '../../context';
+import LanguagePack from '../../components/LanguagePack/LanguagePack';
 
 const Layout = props => {
-	const context = useContext(LanguageContext);
 	const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
+	const [languageDropdownIsVisible, setLanguageDropdownIsVisible] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
 	const [stickyToolbar, setStickyToolbar] = useState(false);
 	const headerRef = useRef(null);
@@ -52,25 +52,18 @@ const Layout = props => {
 		setSideDrawerIsVisible(false);
 	};
 
+	const languagePackToggleHandler = () => {
+		setLanguageDropdownIsVisible(!languageDropdownIsVisible);
+	};
+
+	const languagePackClosedHandler = () => {
+		setLanguageDropdownIsVisible(false);
+	};
+
 	return (
 		<React.Fragment>
 			{!sideDrawerIsVisible && <Logo />}
-			{!sideDrawerIsVisible && (
-				<div className="language-pack">
-					<div className="language-pack__toggler">
-						{context.dictionary.language}&nbsp;
-						<i className="fas fa-caret-down language-pack__toggler-icon"></i>
-					</div>
-					<div className="language-pack__dropdown">
-						<button className="language-pack__select" onClick={context.changeLanguage} data-language="pl">
-							Polski
-						</button>
-						<button className="language-pack__select" onClick={context.changeLanguage} data-language="en">
-							English
-						</button>
-					</div>
-				</div>
-			)}
+			{!sideDrawerIsVisible && <LanguagePack visible={languageDropdownIsVisible} clicked={languagePackToggleHandler} closed={languagePackClosedHandler}/>}
 			<Header headerRef={headerRef}>
 				<Toolbar
 					toolbarRef={toolbarRef}

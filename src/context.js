@@ -23,8 +23,10 @@ export const LanguageProvider = props => {
 
 	const changeLanguage = e => {
 		e.preventDefault();
-		setLanguage(e.target.dataset.language);
-		localStorage.setItem('language', e.target.dataset.language);
+		const languageToChange = e.target.dataset.language;
+		if (languageToChange !== 'pl' && languageToChange !== 'en') return;
+		setLanguage(languageToChange);
+		localStorage.setItem('language', languageToChange);
 	};
 
 	return (

@@ -13,7 +13,13 @@ const Offer = props => {
 				<div className="language-pack__toggler" onClick={props.clicked}>
 					<span style={{ pointerEvents: 'none' }}>
 						{context.dictionary.language}&nbsp;
-						<i className="fas fa-caret-down language-pack__toggler-icon"></i>
+						<i
+							className={
+								props.visible
+									? 'fas fa-caret-down language-pack__toggler-icon language-pack__toggler-icon--active '
+									: 'fas fa-caret-down language-pack__toggler-icon'
+							}
+						></i>
 					</span>
 				</div>
 				<div

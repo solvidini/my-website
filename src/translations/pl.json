@@ -35,13 +35,13 @@
 			"title": "Intuicyjny interfejs",
 			"description": "Wszelkie elementy strony rozmieszczam w\u00A0sposób intuicyjny dla użytkownika, aby\u00A0poruszanie się\u00A0po stronie niezależnie od\u00A0urządzenia było proste i\u00A0przyjemne. Ponadto oferuję nowoczesny, ciekawy wygląd jak i\u00A0dbam o\u00A0wszelkie detale dotyczące m.in. animacji elementów, by\u00A0sposób użytkowania był jasny i\u00A0zrozumiały"
 		}
-    },
-    "portfolio": {
-        "post": "Wykonane\u00A0projekty",
-        "project": {
-            "preview": "Podgląd",
-            "noLink": "Strona nie została jeszcze umieszczona w sieci :("
-        },
+	},
+	"portfolio": {
+		"post": "Wykonane\u00A0projekty",
+		"project": {
+			"preview": "Podgląd",
+			"noLink": "Strona nie została jeszcze umieszczona w sieci :("
+		},
 		"projectW": {
 			"title": "Projekt W",
 			"description": "Strona - Portfolio\u00A0firmy."
@@ -57,11 +57,14 @@
 		},
 		"fotobudka": {
 			"description": "Strona - Wizytówka\u00A0firmy."
+		},
+		"bregula": {
+			"description": "Strona - Wizytówka\u00A0firmy."
 		}
-    },
-    "footer": {
-        "contact": "Kontakt",
-        "offerIcons": "Ikony z oferty od",
-        "allRights": "Wszelkie prawa zastrzeżone."
-    }
+	},
+	"footer": {
+		"contact": "Kontakt",
+		"offerIcons": "Ikony z oferty od",
+		"allRights": "Wszelkie prawa zastrzeżone."
+	}
 }

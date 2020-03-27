@@ -1,17 +1,15 @@
 import React from 'react';
 
-import { LanguageProvider } from './context';
-
 import Layout from './containers/Layout/Layout';
 import Content from './components/Content/Content';
 
+console.log("Thanks for particles effect to: https://github.com/Wufe/react-particles-js")
+
 function App() {
 	return (
-		<LanguageProvider>
-			<Layout>
-				<Content />
-			</Layout>
-		</LanguageProvider>
+		<Layout>
+			<Content />
+		</Layout>
 	);
 }
 

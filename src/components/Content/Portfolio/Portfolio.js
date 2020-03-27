@@ -7,6 +7,7 @@ import mySite from '../../../assets/images/project-my-site.jpg';
 import yourTurn from '../../../assets/images/project-your-turn.jpg';
 import projectW from '../../../assets/images/project-projektw.jpg';
 import pizzaBuilder from '../../../assets/images/project-pizza-builder.jpg';
+import bregulaInsurances from '../../../assets/images/project-bregula-insurances.jpg';
 import { LanguageContext } from '../../../context';
 
 const Portfolio = props => {
@@ -24,7 +25,6 @@ const Portfolio = props => {
 					github="https://github.com/ssazero/project-w"
 					live="http://projektw.pl"
 					source={projectW}
-					
 				/>
 				<Project
 					title="Pizza Builder"
@@ -32,14 +32,19 @@ const Portfolio = props => {
 					github="https://github.com/ssazero/pizza-builder"
 					live="https://pizza-builder-6412e.web.app/"
 					source={pizzaBuilder}
-					
+				/>
+				<Project
+					title="Breguła Ubezpieczenia"
+					description={context.dictionary.portfolio.bregula.description}
+					github="https://github.com/ssazero/bregula-insurance"
+					live="http://bregulaubezpieczenia.pl/"
+					source={bregulaInsurances}
 				/>
 				<Project
 					title="Your Turn"
 					description={context.dictionary.portfolio.yourTurn.description}
 					github="https://github.com/ssazero/your-turn"
 					source={yourTurn}
-					
 				/>
 				<Project
 					title="My-site"
@@ -47,7 +52,6 @@ const Portfolio = props => {
 					github="https://github.com/ssazero/my-site"
 					live="/"
 					source={mySite}
-					
 				/>
 				<Project
 					title="Fotobudka Premium Box"
@@ -55,7 +59,6 @@ const Portfolio = props => {
 					github="https://github.com/ssazero/fotobudka"
 					live="http://fotobudka-premiumbox.pl"
 					source={fotobudka}
-					
 				/>
 			</div>
 		</section>

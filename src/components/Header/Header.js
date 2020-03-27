@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 
-import './Header.scss';
 import ReactTypingEffect from 'react-typing-effect';
-import ArrowDown from '../UI/ArrowDown/ArrowDown';
 import { Link } from 'react-scroll';
+import Particles from 'react-particles-js';
+
+import './Header.scss';
+import ArrowDown from '../UI/ArrowDown/ArrowDown';
 import { LanguageContext } from '../../context';
+import ParticlesConfig from '../../utils/particlesjs-config.json';
 
 // Translations
 import * as translationPL from '../../translations/pl.json';
@@ -17,6 +20,9 @@ const Header = React.memo(props => {
 
 	return (
 		<header className="header" name="top" ref={props.headerRef}>
+			<Particles
+				params={ParticlesConfig}
+			/>
 			<div className="header__text-box">
 				<h1 className="heading-primary">
 					<div className="anim-move-in anim-move-in--left">Front-end</div>{' '}

@@ -4,7 +4,7 @@ import './LanguagePack.scss';
 import { LanguageContext } from '../../context';
 import Backdrop from '../UI/Backdrop/Backdrop';
 
-const Offer = props => {
+const LanguagePack = props => {
 	const context = useContext(LanguageContext);
 	return (
 		<React.Fragment>
@@ -58,4 +58,4 @@ const Offer = props => {
 	);
 };
 
-export default Offer;
+export default LanguagePack;

@@ -21,10 +21,6 @@
         text-transform: uppercase;
     }
 
-    // &:hover &__dropdown {
-    //     display: block;
-    // }
-
     &__toggler-icon {
         transition: all .4s ease;
         &--active {
@@ -65,10 +61,13 @@
             width: 9rem;
         }
 
-        &:active,
-        &:focus,
         &--active {
             border: 2px solid $color-primary;
+        }
+        
+        &:active,
+        &:focus {
+            border: 2px solid rgba($color-primary,0.2);
         }
 
         &:last-child {

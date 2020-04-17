@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 
 import './Footer.scss';
@@ -92,7 +92,7 @@ const Footer = (props) => {
 					className="footer__social-link"
 					href="https://www.linkedin.com/in/samuel-k%C4%99dziora-b45b86159/"
 				>
-					<FontAwesomeIcon icon={faLinkedin} />
+					<FontAwesomeIcon icon={faLinkedinIn} />
 				</a>
 				<a
 					target="_blank"

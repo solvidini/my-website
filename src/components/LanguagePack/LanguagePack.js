@@ -9,7 +9,7 @@ const LanguagePack = props => {
 	return (
 		<React.Fragment>
 			<Backdrop show={props.visible} notVisible clicked={props.closed} />
-			<div className="language-pack">
+			<div className="language-pack" title="ENG / PL">
 				<div className="language-pack__toggler" onClick={props.clicked}>
 					<span style={{ pointerEvents: 'none' }}>
 						{context.dictionary.language}&nbsp;

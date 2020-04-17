@@ -22,11 +22,13 @@ const Header = React.memo(props => {
 		<header className="header" name="top" ref={props.headerRef}>
 			<Particles
 				params={ParticlesConfig}
+				width="100%"
+				height="98vh"
 			/>
 			<div className="header__text-box">
 				<h1 className="heading-primary">
-					<div className="anim-move-in anim-move-in--left">Front-end</div>{' '}
-					<div className="anim-move-in anim-move-in--right">Developer</div>
+					<span className="heading-primary-1 anim-move-in anim-move-in--left">Front-end</span>
+					<span className="heading-primary-2 anim-move-in anim-move-in--right">Developer</span>
 				</h1>
 				<div className="heading-paragraph">Samuel Kędziora</div>
 				<ReactTypingEffect

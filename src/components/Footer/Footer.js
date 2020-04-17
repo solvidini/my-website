@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 
 import './Footer.scss';
 import { LanguageContext } from '../../context';
 
-const Footer = props => {
+const Footer = (props) => {
 	const currentDate = new Date().getFullYear();
 	const context = useContext(LanguageContext);
 	return (
@@ -13,7 +16,7 @@ const Footer = props => {
 				<div className="footer__top-logo">&nbsp;</div>
 				<div className="footer__top-item">
 					<h4>
-						{context.dictionary.footer.contact} <i className="far fa-envelope"></i>
+						{context.dictionary.footer.contact} <FontAwesomeIcon icon={faEnvelope} />
 					</h4>
 					<span>
 						contact@samuelk.pl
@@ -32,7 +35,7 @@ const Footer = props => {
 				</div>
 				<div className="footer__top-item">
 					<h4>
-						CV <i className="far fa-address-card"></i>
+						CV <FontAwesomeIcon icon={faAddressCard} />
 					</h4>
 					<a
 						target="_blank"
@@ -89,7 +92,7 @@ const Footer = props => {
 					className="footer__social-link"
 					href="https://www.linkedin.com/in/samuel-k%C4%99dziora-b45b86159/"
 				>
-					<i className="fab fa-linkedin-in"></i>
+					<FontAwesomeIcon icon={faLinkedin} />
 				</a>
 				<a
 					target="_blank"
@@ -97,7 +100,7 @@ const Footer = props => {
 					className="footer__social-link"
 					href="https://github.com/ssazero"
 				>
-					<i className="fab fa-github"></i>
+					<FontAwesomeIcon icon={faGithub} />
 				</a>
 			</div>
 

@@ -7,7 +7,7 @@
   width: 100%;
   background-image: linear-gradient(to right bottom,
       rgba($color-secondary, .1),
-      rgba($color-primary, .6)),  
+      rgba($color-primary, .6)),
     url(../../assets/images/earth.jpg);
   background-position: center;
   background-attachment: fixed;
@@ -54,6 +54,7 @@
     &:hover {
       cursor: pointer;
     }
+
     @include respond(tab-land) {
       transform: translate(-50%, -100%);
     }
@@ -66,12 +67,21 @@
 
 .heading-primary {
   text-transform: uppercase;
-  width: 100%;
+  // width: 100%;
   display: block;
   font-size: 7rem;
   font-weight: 100;
   letter-spacing: 1.3rem;
   margin-bottom: 1rem;
+
+  &-1 {
+    margin-right: 4rem;
+
+    @include respond(tab-land) {
+      margin-right: 0;
+    }
+  }
+
 
   @include respond(phone) {
     font-size: 4.5rem;
@@ -103,6 +113,7 @@
   @include respond(tab-land) {
     margin-top: 3rem;
   }
+
   @include respond(phone) {
     font-size: 3rem;
   }

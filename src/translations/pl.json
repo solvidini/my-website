@@ -1,78 +1,79 @@
 {
-	"language": "Polski",
-	"nav": {
-		"home": "Home",
-		"about": "O mnie",
-		"skills": "Umiejętności",
-		"offer": "Oferta",
-		"portfolio": "Portfolio"
-	},
-	"header": {
-		"wordsArray": [
-			"Witam na mojej stronie!",
-			"Znajdziesz tu informacje na mój temat oraz projekty, które wykonałem.",
-			"W sekcji \"Portfolio\" będą na bieżąco dodawane moje projekty."
-		]
-	},
-	"about": {
-		"header": "Kilka słów o\u00A0mnie",
-		"aboutMe": "Interesuję się\u00A0najnowszymi trendami z\u00A0zakresu tworzenia stron www, aplikacji webowych, blogów, etc. Jako developer skupiam się\u00A0na\u00A0zagadnieniach UI, UX oraz dbam o\u00A0to, aby strony działały płynnie i\u00A0były dostosowane do\u00A0wyświetlania na\u00A0każdym urządzeniu. W\u00A0rozwijaniu swoich kompetencji koncentruję się\u00A0głównie na\u00A0technologiach front-endowych i\u00A0w\u00A0mniejszym stopniu na\u00A0technologiach back-endowych. Do\u00A0każdego projektu podchodzę indywidualnie. Stawiam na\u00A0komunikację z\u00A0klientem, znajdując najlepsze rozwiązania, spełniające jego potrzeby i\u00A0umożliwiając dostarczenie projektu na\u00A0czas.",
-		"skillsTitle1": "Technologie główne",
-		"skillsTitle2": "Inne technologie",
-		"skillsTitle3": "Oprogramowanie"
-	},
-	"skills": {
-		"header": "Umiejętności",
-		"post": "Jakie są moje umiejętności i\u00A0jakich technologii używam"
-	},
-	"offer": {
-		"title": "Oferta",
-		"post": "Co oferuję i\u00A0na\u00A0co zwracam uwagę?",
-		"makingWebsites": {
-			"title": "Tworzenie stron",
-			"description": "Do\u00A0tworzenia stron używam najnowszych rozwiązań oraz technologii. Kieruję się\u00A0współczesnymi trendami, spełniając przy tym wszelkie obecne standardy. Zarówno wygląd jak i\u00A0układ stron opieram o\u00A0intuicyjny, ładny interfejs jak i\u00A0responsywny design."
-		},
-		"responsiveDesign": {
-			"title": "Responsywny design",
-			"description": "Cały wygląd strony jak i\u00A0jej układ automatycznie dostosowywuje się\u00A0do\u00A0okna przeglądarki, na\u00A0której jest wyświetlany. Strona tworzona w\u00A0takiej technice jest bardzo uniwersalna, a\u00A0jej obsługa staje się\u00A0znacznie wygodniejsza niezależnie od\u00A0urządzenia, na\u00A0którym ją wyświetlamy."
-		},
-		"intuitiveInterface": {
-			"title": "Intuicyjny interfejs",
-			"description": "Wszelkie elementy strony rozmieszczam w\u00A0sposób intuicyjny dla użytkownika, aby\u00A0poruszanie się\u00A0po stronie niezależnie od\u00A0urządzenia było proste i\u00A0przyjemne. Ponadto oferuję nowoczesny, ciekawy wygląd jak i\u00A0dbam o\u00A0wszelkie detale dotyczące m.in. animacji elementów, by\u00A0sposób użytkowania był jasny i\u00A0zrozumiały."
-		}
-	},
-	"portfolio": {
-		"post": "Wykonane\u00A0projekty",
-		"project": {
-			"preview": "Podgląd",
-			"noLink": "Jeszcze nie w produkcji :("
-		},
-		"projectW": {
-			"title": "Projekt W",
-			"description": "Strona - Portfolio\u00A0firmy."
-		},
-		"pizzaBuilder": {
-			"description": "Aplikacja - Tworzenie i zamawianie pizzy."
-		},
-		"yourTurn": {
-			"description": "Aplikacja - Podział obowiązków domowych."
-		},
-		"mySite": {
-			"description": "Strona - Portfolio\u00A0własne."
-		},
-		"fotobudka": {
-			"description": "Strona - Wizytówka\u00A0firmy."
-		},
-		"bregula": {
-			"description": "Strona - Wizytówka\u00A0firmy."
-		},
-		"dailyTasks": {
-			"description": "Android\u00A0/\u00A0iOS\u00A0app - zarządzanie\u00A0zadaniami."
-		}
-	},
-	"footer": {
-		"contact": "Kontakt",
-		"offerIcons": "Ikony z oferty od",
-		"allRights": "Wszelkie prawa zastrzeżone."
-	}
+  "language": "Polski",
+  "nav": {
+    "home": "Home",
+    "about": "O mnie",
+    "skills": "Umiejętności",
+    "offer": "Oferta",
+    "portfolio": "Portfolio"
+  },
+  "header": {
+    "wordsArray": [
+      "Witam na mojej stronie!",
+      "Znajdziesz tu informacje na mój temat oraz projekty, które wykonałem.",
+      "W sekcji \"Portfolio\" będą na bieżąco dodawane moje projekty."
+    ]
+  },
+  "about": {
+    "header": "Kilka słów o\u00A0mnie",
+    "aboutMe": "Interesuję się\u00A0najnowszymi trendami z\u00A0zakresu tworzenia stron www, aplikacji webowych, blogów, etc. Jako developer skupiam się\u00A0na\u00A0zagadnieniach UI, UX oraz dbam o\u00A0to, aby strony działały płynnie i\u00A0były dostosowane do\u00A0wyświetlania na\u00A0każdym urządzeniu. W\u00A0rozwijaniu swoich kompetencji koncentruję się\u00A0głównie na\u00A0technologiach front-endowych i\u00A0w\u00A0mniejszym stopniu na\u00A0technologiach back-endowych. Do\u00A0każdego projektu podchodzę indywidualnie. Stawiam na\u00A0komunikację z\u00A0klientem, znajdując najlepsze rozwiązania, spełniające jego potrzeby i\u00A0umożliwiając dostarczenie projektu na\u00A0czas.",
+    "skillsTitle1": "Technologie główne",
+    "skillsTitle2": "Inne technologie",
+    "skillsTitle3": "Oprogramowanie"
+  },
+  "skills": {
+    "header": "Umiejętności",
+    "post": "Jakie są moje umiejętności i\u00A0jakich technologii używam",
+    "other": "INNE"
+  },
+  "offer": {
+    "title": "Oferta",
+    "post": "Co oferuję i\u00A0na\u00A0co zwracam uwagę?",
+    "makingWebsites": {
+      "title": "Tworzenie stron",
+      "description": "Do\u00A0tworzenia stron używam najnowszych rozwiązań oraz technologii. Kieruję się\u00A0współczesnymi trendami, spełniając przy tym wszelkie obecne standardy. Zarówno wygląd jak i\u00A0układ stron opieram o\u00A0intuicyjny, ładny interfejs jak i\u00A0responsywny design."
+    },
+    "responsiveDesign": {
+      "title": "Responsywny design",
+      "description": "Cały wygląd strony jak i\u00A0jej układ automatycznie dostosowywuje się\u00A0do\u00A0okna przeglądarki, na\u00A0której jest wyświetlany. Strona tworzona w\u00A0takiej technice jest bardzo uniwersalna, a\u00A0jej obsługa staje się\u00A0znacznie wygodniejsza niezależnie od\u00A0urządzenia, na\u00A0którym ją wyświetlamy."
+    },
+    "intuitiveInterface": {
+      "title": "Intuicyjny interfejs",
+      "description": "Wszelkie elementy strony rozmieszczam w\u00A0sposób intuicyjny dla użytkownika, aby\u00A0poruszanie się\u00A0po stronie niezależnie od\u00A0urządzenia było proste i\u00A0przyjemne. Ponadto oferuję nowoczesny, ciekawy wygląd jak i\u00A0dbam o\u00A0wszelkie detale dotyczące m.in. animacji elementów, by\u00A0sposób użytkowania był jasny i\u00A0zrozumiały."
+    }
+  },
+  "portfolio": {
+    "post": "Wykonane\u00A0projekty",
+    "project": {
+      "preview": "Podgląd",
+      "noLink": "Jeszcze nie w produkcji :("
+    },
+    "projectW": {
+      "title": "Projekt W",
+      "description": "Strona - Portfolio\u00A0firmy."
+    },
+    "pizzaBuilder": {
+      "description": "Aplikacja - Tworzenie i zamawianie pizzy."
+    },
+    "yourTurn": {
+      "description": "Aplikacja - Podział obowiązków domowych."
+    },
+    "mySite": {
+      "description": "Strona - Portfolio\u00A0własne."
+    },
+    "fotobudka": {
+      "description": "Strona - Wizytówka\u00A0firmy."
+    },
+    "bregula": {
+      "description": "Strona - Wizytówka\u00A0firmy."
+    },
+    "dailyTasks": {
+      "description": "Android\u00A0/\u00A0iOS\u00A0app - zarządzanie\u00A0zadaniami."
+    }
+  },
+  "footer": {
+    "contact": "Kontakt",
+    "offerIcons": "Ikony z oferty od",
+    "allRights": "Wszelkie prawa zastrzeżone."
+  }
 }

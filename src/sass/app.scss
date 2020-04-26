@@ -53,15 +53,6 @@ code {
     font-weight: 400;
     padding: 0 2rem;
 
-    @include respond(tab-port) {
-        margin-bottom: 6rem;
-        font-size: 4rem;
-    }
-
-    @include respond(phone) {
-        margin-bottom: 2rem;
-    }
-
     &__pre {
         display: block;
         font-size: 1.5rem;
@@ -95,4 +86,8 @@ code {
     &--white {
         color: $color-white;
     }
+}
+
+.section-drop-shadow {
+    filter: drop-shadow(0 1.5rem 1rem black);
 }

@@ -13,6 +13,9 @@ const NavigationItems = props => {
 			<NavigationItem to="section-about" offset={-50} opened={props.opened} clicked={props.clicked}>
 				{context.dictionary.nav.about}
 			</NavigationItem>
+			<NavigationItem to="section-skills" offset={-50} opened={props.opened} clicked={props.clicked}>
+				{context.dictionary.nav.skills}
+			</NavigationItem>
 			<NavigationItem to="section-offer" offset={-50} opened={props.opened} clicked={props.clicked}>
 				{context.dictionary.nav.offer}
 			</NavigationItem>

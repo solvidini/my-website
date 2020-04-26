@@ -28,7 +28,7 @@ const Header = React.memo((props) => {
       <div className="header__text-box">
         <h1 className="heading-primary">
           <span className="heading-primary-1 anim-move-in anim-move-in--left">
-            Front-end
+            Web
           </span>
           <span className="heading-primary-2 anim-move-in anim-move-in--right">
             Developer

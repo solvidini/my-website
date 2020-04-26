@@ -1,20 +1,20 @@
 import React, { useContext } from "react";
 
 import Project from "../Project";
-import fotobudka from "../../assets/images/project-fotobudka.jpg";
-import mySite from "../../assets/images/project-my-site.jpg";
-import yourTurn from "../../assets/images/project-your-turn.jpg";
-import projectW from "../../assets/images/project-projektw.jpg";
-import pizzaBuilder from "../../assets/images/project-pizza-builder.jpg";
-import bregulaInsurances from "../../assets/images/project-bregula-insurances.jpg";
-import dailyTasks from "../../assets/images/project-daily-tasks.jpg";
+import fotobudka from "../../assets/images/projects/project-fotobudka.jpg";
+import mySite from "../../assets/images/projects/project-my-site.jpg";
+import yourTurn from "../../assets/images/projects/project-your-turn.jpg";
+import projectW from "../../assets/images/projects/project-projektw.jpg";
+import pizzaBuilder from "../../assets/images/projects/project-pizza-builder.jpg";
+import bregulaInsurances from "../../assets/images/projects/project-bregula-insurances.jpg";
+import dailyTasks from "../../assets/images/projects/project-daily-tasks.jpg";
 import { LanguageContext } from "../../context";
 
 const Portfolio = (props) => {
   const context = useContext(LanguageContext);
   return (
     <section name="section-portfolio" className="section-portfolio">
-      <h2 className="section-header">
+      <h2 className="section-header section-header--white">
         <span className="section-header__title">Portfolio</span>
         <span className="section-header__post">
           {context.dictionary.portfolio.post}

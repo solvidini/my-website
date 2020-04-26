@@ -3,9 +3,9 @@
 
 .footer {
   width: 100%;
-  background-color: $color-background;
+  background-color: $color-primary;
   position: absolute;
-  border-top: .25rem solid $color-primary;
+  border-top: .25rem solid $color-background;
 
   &__square {
     width: 4rem;
@@ -18,13 +18,15 @@
     transform: translate(-50%, -54%) rotate(-45deg);
 
     &--top {
-      background-color: $color-background;
-      border-right: .25rem solid $color-primary;
-      border-top: .25rem solid $color-primary;
+      background-color: $color-primary;
+      border-right: .25rem solid $color-background;
+      border-top: .25rem solid $color-background;
     }
 
     &--copyright {
       background-color: $color-dark;
+      border-right: .25rem solid $color-primary;
+      border-top: .25rem solid $color-primary;
     }
   }
 
@@ -49,7 +51,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
-      opacity: .1;
+      opacity: .15;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -30%);
@@ -65,15 +67,15 @@
 
     &-item {
       display: flex;
-      color: rgb(192, 192, 192);
+      color: $color-white;
       flex-flow: column wrap;
       line-height: 2;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       letter-spacing: .2rem;
       text-align: center;
       
       h4 {
-        color: rgb(218, 218, 218);
+        color: $color-white;
         font-size: 1.7rem;
         text-transform: uppercase;
         letter-spacing: .3rem;
@@ -87,13 +89,12 @@
       a,
       a:link,
       a:visited {
-        color: rgb(192, 192, 192);
+        color: $color-white;
         text-decoration: none;
         transition: all .2s ease;
 
         &:hover {
           transform: scale(1.05);
-          color: $color-white;
         }
       }
 
@@ -127,7 +128,8 @@
       transition: all .4s ease;
 
       &:hover {
-        color: white;
+        color: $color-black;
+        background-color: $color-white;
         transform: rotate(-15deg);
       }
     }
@@ -140,7 +142,7 @@
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-size: 1.3rem;
-    color: $color-grey;
+    color: rgba($color-white, 0.9);
     line-height: 1.6;
     display: flex;
     flex-wrap: wrap;

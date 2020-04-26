@@ -3,6 +3,7 @@
 	"nav": {
 		"home": "Home",
 		"about": "About me",
+		"skills": "Skills",
 		"offer": "Offer",
 		"portfolio": "Portfolio"
 	},
@@ -19,6 +20,10 @@
 		"skillsTitle1": "Main technologies",
 		"skillsTitle2": "Other technologies",
 		"skillsTitle3": "Software"
+	},
+	"skills": {
+		"header": "Skills",
+		"post": "What are my skills and\u00A0which technologies I\u00A0use"
 	},
 	"offer": {
 		"title": "Offer",

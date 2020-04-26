@@ -3,6 +3,7 @@
 	"nav": {
 		"home": "Home",
 		"about": "O mnie",
+		"skills": "Umiejętności",
 		"offer": "Oferta",
 		"portfolio": "Portfolio"
 	},
@@ -19,6 +20,10 @@
 		"skillsTitle1": "Technologie główne",
 		"skillsTitle2": "Inne technologie",
 		"skillsTitle3": "Oprogramowanie"
+	},
+	"skills": {
+		"header": "Umiejętności",
+		"post": "Jakie są moje umiejętności i\u00A0jakich technologii używam"
 	},
 	"offer": {
 		"title": "Oferta",

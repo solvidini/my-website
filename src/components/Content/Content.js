@@ -1,8 +1,8 @@
 import React from "react";
 
-import About from "./About/About";
-import Portfolio from "./Portfolio/Portfolio";
-import Offer from "./Offer/Offer";
+import About from "./About";
+import Portfolio from "./Portfolio";
+import Offer from "./Offer";
 
 const Content = () => {
   return (

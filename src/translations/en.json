@@ -40,7 +40,7 @@
 		"post": "Projects I\u00A0made",
 		"project": {
 			"preview": "Preview",
-			"noLink": "The site has not yet been posted on the web :("
+			"noLink": "Not yet in production :("
 		},
 		"projectW": {
 			"title": "Project W",
@@ -60,6 +60,9 @@
 		},
 		"bregula": {
 			"description": "Website - Company card."
+		},
+		"dailyTasks": {
+			"description": "Android\u00A0/\u00A0iOS\u00A0app - task\u00A0management."
 		}
 	},
 	"footer": {

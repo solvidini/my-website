@@ -1,0 +1,24 @@
+@import "./variables";
+@import "./mixins";
+@import "./animations";
+@import "./utilities";
+
+@import './containers/layout.scss';
+
+@import './content/portfolio.scss';
+@import './content/offer.scss';
+@import './content/about.scss';
+@import './content/footer.scss';
+@import './content/header.scss';
+
+@import './components/logo.scss';
+@import './components/backdrop.scss';
+@import './components/projects.scss';
+@import './components/navigation.scss';
+@import './components/toolbar.scss';
+@import './components/sideDrawer.scss';
+@import './components/drawerToggle.scss';
+@import './components/languagePack.scss';
+
+@import "./app.scss";
+

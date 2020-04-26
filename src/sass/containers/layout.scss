@@ -1,0 +1,44 @@
+@import '../sass/mixins';
+@import '../sass/variables';
+
+.arrow-top {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    z-index: 100;
+
+    box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, .8);
+
+    overflow: hidden;
+
+
+    @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @include respond(phone) {
+        bottom: 2rem;
+        right: 2rem;
+    }
+}
+
+.fade-enter-active {
+    animation: slideIn .5s ease-in;
+}
+
+.fade-exit-active {
+    animation: slideOut .5s ease-out;
+}

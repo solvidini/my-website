@@ -1,0 +1,21 @@
+@import '../mixins';
+
+.logo {
+    position: fixed;
+    z-index: 200;
+    background: url("../../assets/images/logo.png");
+    background-size: cover;
+
+    height: 3.5rem;
+    width: 3.5rem;
+
+    padding: .25rem;
+    margin: .25rem;
+
+    @include respond(phone) {
+        height: 4rem;
+        width: 4rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+}

@@ -40,7 +40,7 @@
 		"post": "Wykonane\u00A0projekty",
 		"project": {
 			"preview": "Podgląd",
-			"noLink": "Strona nie została jeszcze umieszczona w sieci :("
+			"noLink": "Jeszcze nie w produkcji :("
 		},
 		"projectW": {
 			"title": "Projekt W",
@@ -60,6 +60,9 @@
 		},
 		"bregula": {
 			"description": "Strona - Wizytówka\u00A0firmy."
+		},
+		"dailyTasks": {
+			"description": "Android\u00A0/\u00A0iOS\u00A0app - zarządzanie\u00A0zadaniami."
 		}
 	},
 	"footer": {

@@ -10,6 +10,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
     @include respond(phone) {
+        padding: 6rem 1rem;
         clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%);
     }
 
@@ -61,7 +62,7 @@
         -o-user-select: none;
         user-select: none;
         pointer-events: none;
-        
+
         overflow: hidden;
         position: relative;
         border: 0.15rem solid $color-grey-dark;
@@ -102,12 +103,6 @@
             padding: 0;
             letter-spacing: .12rem;
             margin: 3rem;
-        }
-
-        &-paragraph {
-            &:not(:last-of-type) {
-                margin-bottom: 2rem;
-            }
         }
     }
 }

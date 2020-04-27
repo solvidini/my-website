@@ -96,10 +96,13 @@
             letter-spacing: .15rem;
             font-weight: 400;
 
+            @include respond(tab-port) {
+                font-size: 1.7rem;
+            }
+
             @include respond(phone) {
                 padding: 0;
                 letter-spacing: .12rem;
-                font-size: 1.7rem;
             }
         }
     }

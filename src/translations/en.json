@@ -16,7 +16,7 @@
   },
   "about": {
     "header": "Few words about me",
-    "aboutMe": "I'm interested in the latest trends in the field of creating websites, web applications, blogs, etc. As a developer, I\u00A0focus on UI, UX issues and\u00A0make sure that websites work smoothly and\u00A0are adapted to display on any device. In developing my competences, I\u00A0focus mainly on front-end technologies and\u00A0to a lesser extent on back-end technologies. I\u00A0approach each project individually. I\u00A0focus on communication with the client, finding the best solutions that meet his needs and\u00A0I\u00A0always deliver the project on time.",
+    "aboutMe": "I\u00A0am a\u00A0young developer developing my\u00A0capabilities at\u00A0every possible step. I'm interested in the latest trends in the field of creating websites, web applications, blogs, etc. As a\u00A0developer, I\u00A0focus on\u00A0UI, UX issues and\u00A0make sure that websites work smoothly and\u00A0are adapted to display on\u00A0any device. In developing my competences, I\u00A0focus on\u00A0both front-end and\u00A0back-end technologies. I\u00A0approach each project individually. I\u00A0focus on\u00A0communication with the client, finding the best solutions that meet his needs and\u00A0I\u00A0always deliver the project on\u00A0time.",
     "skillsTitle1": "Main technologies",
     "skillsTitle2": "Other technologies",
     "skillsTitle3": "Software"
@@ -31,15 +31,15 @@
     "post": "What do I\u00A0offer and\u00A0what I\u00A0pay attention to",
     "makingWebsites": {
       "title": "Creating Websites",
-      "description": "I\u00A0use the latest solutions and\u00A0technologies to create websites. I\u00A0follow modern trends and\u00A0meet all current standards. Both the look and\u00A0layout of the pages are based on an intuitive, nice interface and\u00A0responsive design."
+      "description": "I\u00A0use the latest solutions and\u00A0technologies to create websites. I\u00A0follow modern trends and\u00A0meet all current standards. Both the look and\u00A0layout of the pages are based on\u00A0an intuitive, nice interface and\u00A0responsive design."
     },
     "responsiveDesign": {
       "title": "Responsive Design",
-      "description": "The entire appearance of the page and\u00A0its layout automatically adapts to the browser window in which it is displayed. The website created in such a technique is very universal, and\u00A0its operation becomes much more convenient regardless of the device on which it is displayed."
+      "description": "The entire appearance of the page and\u00A0its layout automatically adapts to the browser window in which it is displayed. The website created in such a\u00A0technique is very universal, and\u00A0its operation becomes much more convenient regardless of the device on\u00A0which it is displayed."
     },
     "intuitiveInterface": {
       "title": "Intuitive Interface",
-      "description": "I\u00A0arrange all elements of the page in an intuitive way for the user to make navigating the site independent of the device simple and\u00A0pleasant. In addition, I\u00A0offer a modern, interesting look and\u00A0I take care of all details regarding element animation to make the usage clear and\u00A0understandable."
+      "description": "I\u00A0arrange all elements of the page in an intuitive way for the user to make navigating the site independent of the device simple and\u00A0pleasant. In addition, I\u00A0offer a\u00A0modern, interesting look and\u00A0I take care of all details regarding element animation to make the usage clear and\u00A0understandable."
     }
   },
   "portfolio": {

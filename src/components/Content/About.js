@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import justMe from "../../assets/images/just-me.jpg";
+import justMe from "../../assets/images/profilepx.png";
 import { LanguageContext } from "../../context";
 import Effect from "react-reveal/Fade";
 
@@ -23,8 +23,8 @@ const Contact = (props) => {
           </h2>
           <div className="about-me">
             <Effect>
-              <div className="about-me__image">
-                <img className="image" src={justMe} alt="Just me" />
+              <div className="about-me__image-container">
+                <img className="about-me__image" src={justMe} alt="Just me" />
               </div>
             </Effect>
             <Effect>

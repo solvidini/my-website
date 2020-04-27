@@ -18,6 +18,7 @@ import sass from "../../assets/images/technologies/sass.png";
 import springBoot from "../../assets/images/technologies/spring-boot.png";
 import symfony from "../../assets/images/technologies/symfony.png";
 import vsc from "../../assets/images/technologies/vsc.png";
+import gatsby from "../../assets/images/technologies/gatsby.png";
 
 const Skills = (props) => {
   const context = useContext(LanguageContext);
@@ -36,6 +37,7 @@ const Skills = (props) => {
           <h3 className="technologies-group__title">FRONT-END</h3>
           <div className="technologies-group__items">
             <Technology src={react} name="React" />
+            <Technology src={gatsby} name="Gatsby (React framework)" />
             <Technology src={js} name="JavaScript ES6+" />
             <Technology src={redux} name="Redux" />
             <Technology src={html5} name="HTML5" />

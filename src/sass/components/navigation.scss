@@ -124,6 +124,14 @@
                 animation-delay: 200ms;
             }
 
+            &:nth-child(5) {
+                animation-delay: 250ms;
+            }
+
+            &:nth-child(6) {
+                animation-delay: 300ms;
+            }
+
             transform: translateX(0);
         }
     }

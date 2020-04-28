@@ -2,15 +2,10 @@
 @import "../mixins";
 
 .section-offer {
-    padding: 8rem 0;
     position: relative;
     background-color: $color-white;
 
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-
-    @include respond(tab-land) {
-        padding: 12rem .2rem;
-    }
 
     @include respond(tab-port) {
         clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
@@ -18,7 +13,6 @@
 
     @include respond(phone) {
         clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
-        padding: 8rem .2rem;
     }
 
     &:after {
@@ -35,6 +29,18 @@
         height: 100%;
         z-index: -1;
         opacity: 0.08;
+    }
+
+    &__content {
+        padding: 10rem 0;
+
+        @include respond(tab-land) {
+            padding: 12rem .2rem;
+        }
+
+        @include respond(phone) {
+            padding: 8rem .2rem;
+        }
     }
 }
 

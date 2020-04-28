@@ -3,17 +3,16 @@
 
 .section-about {
     position: relative;
-    padding: 6rem 1rem 10rem;
     background-color: $color-white;
     overflow: hidden;
-
+    
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-
+    
     @include respond(phone) {
         padding: 6rem 1rem;
         clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%);
     }
-
+    
     &:after {
         content: "";
         position: absolute;
@@ -29,10 +28,11 @@
         z-index: -1;
         opacity: 0.05;
     }
-
+    
     &__content {
         max-width: 120rem;
         margin: 0 auto;
+        padding: 6rem 1rem 10rem;
     }
 }
 

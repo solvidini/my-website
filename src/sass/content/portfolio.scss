@@ -3,9 +3,8 @@
 
 .section-portfolio {
     position: relative;
-    padding: 2rem .2rem 5rem .2rem;
 
-    @include respond(phone) {
-        padding: 4rem .2rem;
+    &__content {
+        padding: 5rem .2rem;
     }
 }

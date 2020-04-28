@@ -1,5 +1,5 @@
 # Personal Portfolio Website
-This is my portfolio website. I'll upload here many of my projects in the future.
+This is my website. You can find many of my projects here.
 	
 ## Technologies
 Main technologies I used to create this website:

@@ -17,7 +17,7 @@ const NavigationItem = props => {
         hashSpy={true}
         duration={500}
         isDynamic={true}
-        offset={props.offset ? props.offset : -10}
+        offset={props.offset ? props.offset : 0}
         activeClass="navigation-item--active"
         ignoreCancelEvents={false}
         onClick={props.clicked}

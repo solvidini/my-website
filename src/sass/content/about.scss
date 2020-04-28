@@ -9,7 +9,6 @@
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     
     @include respond(phone) {
-        padding: 6rem 1rem;
         clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%);
     }
     
@@ -33,6 +32,10 @@
         max-width: 120rem;
         margin: 0 auto;
         padding: 6rem 1rem 10rem;
+
+        @include respond(phone) {
+            padding: 6rem 1rem;
+        }
     }
 }
 

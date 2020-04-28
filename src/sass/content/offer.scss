@@ -66,6 +66,12 @@
         flex: 1;
 
         &-image {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+
             max-width: 18rem;
             position: relative;
             margin: 1rem;
@@ -73,7 +79,7 @@
 
             &:hover {
                 filter: brightness(110%);
-                transform: scale(1.01);
+                transform: scale(1.02);
             }
         }
 

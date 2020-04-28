@@ -11,5 +11,5 @@ Main technologies I used to create this website:
 ## Live
 http://samuelk.pl/
 
-#### Author
+### Author
 Samuel Kędziora

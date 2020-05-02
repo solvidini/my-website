@@ -8,6 +8,7 @@ import projectW from "../../assets/images/projects/project-projektw.jpg";
 import pizzaBuilder from "../../assets/images/projects/project-pizza-builder.jpg";
 import bregulaInsurances from "../../assets/images/projects/project-bregula-insurances.jpg";
 import dailyTasks from "../../assets/images/projects/project-daily-tasks.jpg";
+import canvas1 from "../../assets/images/projects/project-canvas-1.png";
 import { LanguageContext } from "../../context";
 
 const Portfolio = (props) => {
@@ -69,6 +70,13 @@ const Portfolio = (props) => {
             github="https://github.com/ssazero/fotobudka"
             live="http://fotobudka-premiumbox.pl"
             source={fotobudka}
+          />
+          <Project
+            title="Canvas Animation 1"
+            description={context.dictionary.portfolio.canvas1.description}
+            github="https://github.com/ssazero/canvas-project-one"
+            live="https://ssazero.github.io/canvas-project-one/"
+            source={canvas1}
           />
         </div>
       </div>

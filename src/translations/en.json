@@ -69,6 +69,9 @@
     },
     "dailyTasks": {
       "description": "Android\u00A0/\u00A0iOS\u00A0app - task\u00A0management."
+    },
+    "canvas1": {
+      "description": "HTML5 Canvas animation."
     }
   },
   "footer": {

@@ -1,9 +1,6 @@
 import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMobileAlt,
-  faLaptop
-} from "@fortawesome/free-solid-svg-icons";
+import { faMobileAlt, faLaptop } from "@fortawesome/free-solid-svg-icons";
 
 import { LanguageContext } from "../context";
 import Effect from "react-reveal/Fade";
@@ -16,7 +13,11 @@ const Project = (props) => {
         <div className="projects__item-drawer">
           <h4 className="projects__item-title">{props.title}</h4>
           <p className="projects__item-description">{props.description}</p>
-		  <FontAwesomeIcon icon={props.mobile ? faMobileAlt : faLaptop} className="projects__item-icon" title={props.mobile ? "Mobile project" : "Web project"} />
+          <FontAwesomeIcon
+            icon={props.mobile ? faMobileAlt : faLaptop}
+            className="projects__item-icon"
+            title={props.mobile ? "Mobile project" : "Web project"}
+          />
         </div>
         {props.live ? (
           <a

@@ -49,14 +49,14 @@
       "noLink": "Not yet in production :("
     },
     "projectW": {
-      "title": "Project W",
+      "title": "Projekt W",
       "description": "Website - Company's portfolio."
     },
     "pizzaBuilder": {
-      "description": "Application - Creating and ordering pizza."
+      "description": "Application - Creating and\u00A0ordering\u00A0pizza."
     },
     "yourTurn": {
-      "description": "Application - The division of household duties."
+      "description": "Application - The\u00A0division of\u00A0household\u00A0duties."
     },
     "mySite": {
       "description": "Website - Own portfolio."
@@ -68,10 +68,10 @@
       "description": "Website - Company card."
     },
     "dailyTasks": {
-      "description": "Android\u00A0/\u00A0iOS\u00A0app - task\u00A0management."
+      "description": "Android\u00A0/\u00A0iOS\u00A0app - Task\u00A0management."
     },
     "canvas1": {
-      "description": "HTML5 Canvas animation."
+      "description": "Interactive\u00A0animation (HTML5\u00A0Canvas)."
     }
   },
   "footer": {

@@ -66,8 +66,10 @@ const Layout = (props) => {
   };
 
   const languagePackClosedHandler = (e) => {
-    if (!languagePackRef.current.contains(e.target)) {
-      setLanguageDropdownIsVisible(false);
+    if (languagePackRef.current) {
+      if (!languagePackRef.current.contains(e.target)) {
+        setLanguageDropdownIsVisible(false);
+      }
     }
   };
 

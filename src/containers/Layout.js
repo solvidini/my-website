@@ -1,37 +1,50 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
-import Toolbar from "../components/Navigation/Toolbar";
-import SideDrawer from "../components/Navigation/SideDrawer";
-import Header from "../components/Content/Header";
-import Footer from "../components/Content/Footer";
-import { animateScroll } from "react-scroll";
-import ArrowUp from "../components/UI/ArrowUp/ArrowUp";
-import { CSSTransition } from "react-transition-group";
-import Logo from "../components/Logo";
-import LanguagePack from "../components/LanguagePack";
+import Toolbar from '../components/Navigation/Toolbar';
+import SideDrawer from '../components/Navigation/SideDrawer';
+import Header from '../components/Content/Header';
+import Footer from '../components/Content/Footer';
+import { animateScroll } from 'react-scroll';
+import ArrowUp from '../components/UI/ArrowUp/ArrowUp';
+import { CSSTransition } from 'react-transition-group';
+import Logo from '../components/Logo';
+import LanguagePack from '../components/LanguagePack';
 
 const Layout = (props) => {
-  const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
-  const [languageDropdownIsVisible, setLanguageDropdownIsVisible] = useState(
-    false
-  );
+  const [
+    sideDrawerIsVisible,
+    setSideDrawerIsVisible,
+  ] = useState(false);
+  const [
+    languageDropdownIsVisible,
+    setLanguageDropdownIsVisible,
+  ] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [stickyToolbar, setStickyToolbar] = useState(false);
-  const [hideHeaderCanvas, setHideHeaderCanvas] = useState(false);
+  const [hideHeaderCanvas, setHideHeaderCanvas] = useState(
+    false
+  );
   const headerRef = useRef(null);
   const toolbarRef = useRef(null);
+  const languagePackRef = useRef(null);
 
   const yOffset = () => {
     setScrollY(window.pageYOffset);
   };
 
   useEffect(() => {
-    const watchScroll = () => {
-      window.addEventListener("scroll", yOffset);
-    };
-    watchScroll();
+    window.addEventListener('scroll', yOffset);
+    window.addEventListener(
+      'click',
+      languagePackClosedHandler
+    );
+
     return () => {
-      window.removeEventListener("scroll", yOffset);
+      window.removeEventListener('scroll', yOffset);
+      window.removeEventListener(
+        'click',
+        languagePackClosedHandler
+      );
     };
   });
 
@@ -47,8 +60,8 @@ const Layout = (props) => {
       setStickyToolbar(true);
       setHideHeaderCanvas(true);
     } else {
-	  setStickyToolbar(false);
-	  setHideHeaderCanvas(false);
+      setStickyToolbar(false);
+      setHideHeaderCanvas(false);
     }
   }, [setStickyToolbar, scrollY]);
 
@@ -61,11 +74,15 @@ const Layout = (props) => {
   };
 
   const languagePackToggleHandler = () => {
-    setLanguageDropdownIsVisible(!languageDropdownIsVisible);
+    setLanguageDropdownIsVisible(
+      !languageDropdownIsVisible
+    );
   };
 
-  const languagePackClosedHandler = () => {
-    setLanguageDropdownIsVisible(false);
+  const languagePackClosedHandler = (e) => {
+    if (!languagePackRef.current.contains(e.target)) {
+      setLanguageDropdownIsVisible(false);
+    }
   };
 
   return (
@@ -76,9 +93,13 @@ const Layout = (props) => {
           visible={languageDropdownIsVisible}
           clicked={languagePackToggleHandler}
           closed={languagePackClosedHandler}
+          languagePackRef={languagePackRef}
         />
       )}
-      <Header headerRef={headerRef} hideCanvas={hideHeaderCanvas}>
+      <Header
+        headerRef={headerRef}
+        hideCanvas={hideHeaderCanvas}
+      >
         <Toolbar
           toolbarRef={toolbarRef}
           sideDrawerToggleClicked={sideDrawerToggleHandler}
@@ -99,7 +120,10 @@ const Layout = (props) => {
         timeout={500}
         classNames="fade"
       >
-        <div onClick={animateScroll.scrollToTop} className="arrow-top">
+        <div
+          onClick={animateScroll.scrollToTop}
+          className="arrow-top"
+        >
           <ArrowUp />
         </div>
       </CSSTransition>

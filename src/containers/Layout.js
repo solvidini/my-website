@@ -11,19 +11,13 @@ import Logo from '../components/Logo';
 import LanguagePack from '../components/LanguagePack';
 
 const Layout = (props) => {
-  const [
-    sideDrawerIsVisible,
-    setSideDrawerIsVisible,
-  ] = useState(false);
-  const [
-    languageDropdownIsVisible,
-    setLanguageDropdownIsVisible,
-  ] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-  const [stickyToolbar, setStickyToolbar] = useState(false);
-  const [hideHeaderCanvas, setHideHeaderCanvas] = useState(
+  const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
+  const [languageDropdownIsVisible, setLanguageDropdownIsVisible] = useState(
     false
   );
+  const [scrollY, setScrollY] = useState(0);
+  const [stickyToolbar, setStickyToolbar] = useState(false);
+  const [hideHeaderCanvas, setHideHeaderCanvas] = useState(false);
   const headerRef = useRef(null);
   const toolbarRef = useRef(null);
   const languagePackRef = useRef(null);
@@ -34,17 +28,11 @@ const Layout = (props) => {
 
   useEffect(() => {
     window.addEventListener('scroll', yOffset);
-    window.addEventListener(
-      'click',
-      languagePackClosedHandler
-    );
+    window.addEventListener('click', languagePackClosedHandler);
 
     return () => {
       window.removeEventListener('scroll', yOffset);
-      window.removeEventListener(
-        'click',
-        languagePackClosedHandler
-      );
+      window.removeEventListener('click', languagePackClosedHandler);
     };
   });
 
@@ -74,9 +62,7 @@ const Layout = (props) => {
   };
 
   const languagePackToggleHandler = () => {
-    setLanguageDropdownIsVisible(
-      !languageDropdownIsVisible
-    );
+    setLanguageDropdownIsVisible(!languageDropdownIsVisible);
   };
 
   const languagePackClosedHandler = (e) => {
@@ -91,15 +77,11 @@ const Layout = (props) => {
       {!sideDrawerIsVisible && (
         <LanguagePack
           visible={languageDropdownIsVisible}
-          clicked={languagePackToggleHandler}
-          closed={languagePackClosedHandler}
+          showToggler={languagePackToggleHandler}
           languagePackRef={languagePackRef}
         />
       )}
-      <Header
-        headerRef={headerRef}
-        hideCanvas={hideHeaderCanvas}
-      >
+      <Header headerRef={headerRef} hideCanvas={hideHeaderCanvas}>
         <Toolbar
           toolbarRef={toolbarRef}
           sideDrawerToggleClicked={sideDrawerToggleHandler}
@@ -120,10 +102,7 @@ const Layout = (props) => {
         timeout={500}
         classNames="fade"
       >
-        <div
-          onClick={animateScroll.scrollToTop}
-          className="arrow-top"
-        >
+        <div onClick={animateScroll.scrollToTop} className="arrow-top">
           <ArrowUp />
         </div>
       </CSSTransition>

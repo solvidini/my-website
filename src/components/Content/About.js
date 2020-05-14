@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 
-import justMe from "../../assets/images/profilepx.png";
-import { LanguageContext } from "../../context";
-import Effect from "react-reveal/Fade";
+import justMe from '../../assets/images/profilepx.png';
+import { LanguageContext } from '../../context';
+import Effect from 'react-reveal/Fade';
 
 const Contact = (props) => {
   const context = useContext(LanguageContext);
@@ -14,17 +14,25 @@ const Contact = (props) => {
             <span className="section-header__pre">
               {context.dictionary.about.header}
             </span>
-            <span className="section-header__name" style={{ fontSize: "3rem" }}>
+            <span
+              className="section-header__name"
+              style={{ fontSize: '3rem' }}
+            >
               Samuel Kędziora -
-            </span>{" "}
-            <span className="no-wrap" style={{ fontSize: "3rem" }}>
-              Web Developer
+            </span>
+            <span style={{ fontSize: '3rem' }}>
+              {' '}
+              Web&nbsp;Developer
             </span>
           </h2>
           <div className="about-me">
             <Effect>
               <div className="about-me__image-container">
-                <img className="about-me__image" src={justMe} alt="Just me" />
+                <img
+                  className="about-me__image"
+                  src={justMe}
+                  alt="Just me"
+                />
               </div>
             </Effect>
             <Effect>

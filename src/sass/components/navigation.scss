@@ -89,6 +89,7 @@
 
         &--active {
             border-bottom: .5rem solid $color-primary;
+            filter: drop-shadow(0 0 3px $color-primary);
 
             @include respond(big-desktop) {
                 border-bottom: .3rem solid $color-primary;

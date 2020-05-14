@@ -1,4 +1,5 @@
 @import '../mixins';
+@import '../variables';
 
 .logo {
     -webkit-user-select: none;
@@ -6,7 +7,7 @@
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
-    
+
     position: fixed;
     z-index: 200;
     background: url("../../assets/images/logo.png");

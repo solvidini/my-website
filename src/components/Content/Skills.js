@@ -35,11 +35,11 @@ const Skills = (props) => {
         </h2>
         <div className="technologies">
           <div className="technologies-group">
-            <h3 className="technologies-group__title">FRONT-END</h3>
+            <h3 className="technologies-group__title">FRONT-END:</h3>
             <div className="technologies-group__items">
               <Technology src={react} name="React" />
               <Technology src={gatsby} name="Gatsby (React framework)" />
-              <Technology src={js} name="JavaScript ES6+" />
+              <Technology src={js} name="JavaScript ES5, ES6+" />
               <Technology src={redux} name="Redux" />
               <Technology src={html5} name="HTML5" />
               <Technology src={css3} name="CSS3" />
@@ -47,7 +47,7 @@ const Skills = (props) => {
             </div>
           </div>
           <div className="technologies-group">
-            <h3 className="technologies-group__title">BACK-END</h3>
+            <h3 className="technologies-group__title">BACK-END:</h3>
             <div className="technologies-group__items">
               <Technology src={nodejs} name="Node.js / Express.js" />
               <Technology src={mongodb} name="MongoDB" />
@@ -58,7 +58,7 @@ const Skills = (props) => {
           </div>
           <div className="technologies-group">
             <h3 className="technologies-group__title">
-              {context.dictionary.skills.other}
+              {context.dictionary.skills.other + ':'}
             </h3>
             <div className="technologies-group__items">
               <Technology src={reactNative} name="React Native" />

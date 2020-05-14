@@ -38,7 +38,7 @@ const Portfolio = (props) => {
             source={pizzaBuilder}
           />
           <Project
-            title="Breguła Ubezpieczenia"
+            title="Bregula Ubezpieczenia"
             description={context.dictionary.portfolio.bregula.description}
             github="https://github.com/ssazero/bregula-insurance"
             live="http://bregulaubezpieczenia.pl/"
@@ -72,7 +72,7 @@ const Portfolio = (props) => {
             source={fotobudka}
           />
           <Project
-            title="Canvas Animation 1"
+            title="Canvas Animation"
             description={context.dictionary.portfolio.canvas1.description}
             github="https://github.com/ssazero/canvas-project-one"
             live="https://ssazero.github.io/canvas-project-one/"

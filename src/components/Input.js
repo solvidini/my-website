@@ -41,7 +41,7 @@ const Input = (props) => {
 
   return (
     <div className="form-control">
-      <label className="form-control__label" for={props.id}>
+      <label className="form-control__label" htmlFor={props.id}>
         {props.label}
       </label>
       {inputType}

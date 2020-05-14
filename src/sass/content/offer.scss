@@ -84,7 +84,7 @@
             transition: all .3s ease;
 
             &:hover {
-                filter: brightness(110%) drop-shadow(0 0 1px $color-primary);;
+                filter: brightness(110%);
                 transform: scale(1.02);
             }
         }

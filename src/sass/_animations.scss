@@ -124,3 +124,17 @@
     box-shadow: 2px 2px .3rem rgba($color-primary, .7);
   }
 }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

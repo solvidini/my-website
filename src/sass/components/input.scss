@@ -12,8 +12,8 @@
     }
 
     &__label {
-        font-size: 1.6rem;
-        margin-bottom: 3px;
+        font-size: 1.7rem;
+        margin-bottom: 4px;
         color: $color-white;
     }
 
@@ -29,7 +29,7 @@
     font-family: 'lato', sans-serif;
     width: 100%;
     padding: .5rem;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     background-color: $color-white;
     outline: none;
 
@@ -38,6 +38,7 @@
 
     &:focus {
         border-color: $color-white;
+        box-shadow: 0 0 .5rem $color-white;
     }
 
     &--textarea {
@@ -48,7 +49,7 @@
     }
 
     &--valid {
-        border-color: $color-success;
+        border-color: $color-white;
     }
 
     &--invalid {

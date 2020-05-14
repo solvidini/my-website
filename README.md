@@ -5,6 +5,8 @@ This is my website. You can find many of my projects here.
 Main technologies I used to create this website:
 * React
 * Sass
+* Node.js
+* Express.js
 
 &other
 	

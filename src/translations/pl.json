@@ -77,7 +77,19 @@
   },
   "contact": {
     "title": "Kontakt",
-    "post": "Skontaktuj się ze mną przez e-mail"
+    "post": "Skontaktuj się ze mną przez e-mail",
+    "sent": "Twoja wiadomość została wysłana do\u00A0Samuel'a\u00A0Kędziory!",
+    "incorrect": "Dane w E-Mail'u są\u00A0niewłaściwe!",
+    "emailPH": "przyklad@gmail.com",
+    "emailError": "Proszę podać właściwy e-mail.",
+    "name": "Imię",
+    "namePH": "Twoje Imię",
+    "subject": "Temat",
+    "subjectPH": "Temat e-mail'a",
+    "subjectError": "Temat powinien mieć co najmniej 2 znaki. (max 30)",
+    "message": "Wiadomość",
+    "messageError": "Twoja wiadomość powinna mieć co najmniej 5 znaków. (max 5000)",
+    "send": "Wyślij"
   },
   "footer": {
     "contact": "Kontakt",

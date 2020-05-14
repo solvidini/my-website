@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 
 import Project from "../Project";
-import fotobudka from "../../assets/images/projects/project-fotobudka.jpg";
+import fotobudka from "../../assets/images/projects/project-fotobudka.gif";
 import mySite from "../../assets/images/projects/project-my-site.gif";
 import yourTurn from "../../assets/images/projects/project-your-turn.jpg";
-import projectW from "../../assets/images/projects/project-projektw.jpg";
+import projectW from "../../assets/images/projects/project-projektw.gif";
 import pizzaBuilder from "../../assets/images/projects/project-pizza-builder.gif";
-import bregulaInsurances from "../../assets/images/projects/project-bregula-insurances.jpg";
+import bregulaInsurances from "../../assets/images/projects/project-bregula-insurances.gif";
 import dailyTasks from "../../assets/images/projects/project-daily-tasks.jpg";
 import canvas1 from "../../assets/images/projects/project-canvas-1.gif";
 import { LanguageContext } from "../../context";
@@ -51,18 +51,18 @@ const Portfolio = (props) => {
             source={dailyTasks}
             mobile
           />
+            <Project
+              title="My-site"
+              description={context.dictionary.portfolio.mySite.description}
+              github="https://github.com/ssazero/my-site"
+              live="/"
+              source={mySite}
+            />
           <Project
             title="Your Turn"
             description={context.dictionary.portfolio.yourTurn.description}
             github="https://github.com/ssazero/your-turn"
             source={yourTurn}
-          />
-          <Project
-            title="My-site"
-            description={context.dictionary.portfolio.mySite.description}
-            github="https://github.com/ssazero/my-site"
-            live="/"
-            source={mySite}
           />
           <Project
             title="Fotobudka Premium Box"

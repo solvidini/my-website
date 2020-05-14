@@ -4,6 +4,7 @@ import Effect from 'react-reveal/Fade';
 import { LanguageContext } from '../../context';
 import Input from '../Input';
 import * as vali from '../../utils/validators';
+import Modal from '../UI/Modal';
 
 const MAIL_FORM = {
   name: {
@@ -37,8 +38,7 @@ const Contact = (props) => {
   const [mailForm, setMailForm] = useState(MAIL_FORM);
   const [formIsValid, setFormIsValid] = useState(false);
   const [error, setError] = useState();
-
-  console.log(error);
+  const [message, setMessage] = useState();
 
   const inputChangedHandler = (id, value) => {
     const updatedMailForm = { ...mailForm };
@@ -76,11 +76,11 @@ const Contact = (props) => {
     event.preventDefault();
 
     if (!formIsValid) {
-      setError('Data in E-Mail form is not correct!');
+      setError(context.dictionary.contact.incorrect);
       return;
     }
 
-    fetch('http://localhost:8081/send', {
+    fetch('http://email-service.samuelk.pl:8081/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -94,18 +94,34 @@ const Contact = (props) => {
     })
       .then((result) => {
         if (result.status !== 200) {
-          throw new Error('Data in E-Mail form is not correct!');
+          throw new Error(context.dictionary.contact.incorrect);
         }
-        //clear the form
+        setMessage(context.dictionary.contact.sent);
+        setFormIsValid(false);
+        setMailForm(MAIL_FORM);
       })
       .catch((err) => {
-        console.log(err);
         setError(err);
       });
   };
 
+  const modalClosedHandler = () => {
+    setMessage(null);
+    setError(null);
+  };
+
   return (
     <section className="section-contact" name="section-contact">
+      {message && (
+        <Modal show close={modalClosedHandler} title="Success!">
+          {message}
+        </Modal>
+      )}
+      {error && (
+        <Modal show close={modalClosedHandler} title="Error!" error>
+          {error.toString()}
+        </Modal>
+      )}
       <div className="section-contact__content">
         <h2 className="section-header">
           <span className="section-header__title">
@@ -115,75 +131,78 @@ const Contact = (props) => {
             {context.dictionary.contact.post}
           </span>
         </h2>
-        <form className="contact-form" onSubmit={onSubmitHandler}>
-          <div className="contact-form__group">
-            <Input
-              type="email"
-              id={'email'}
-              label="E-Mail"
-              required
-              placeholder="example@email.com"
-              errorMessage="Please enter a valid e-mail."
-              isValid={mailForm.email.isValid}
-              value={mailForm.email.value}
-              touched={mailForm.email.touched}
-              onChange={inputChangedHandler}
-              onFocus={onFocusHandler}
-            />
-            <Input
-              type="text"
-              id={'name'}
-              label="Name"
-              placeholder="Your Name"
-              isValid={mailForm.name.isValid}
-              value={mailForm.name.value}
-              touched={mailForm.name.touched}
-              onChange={inputChangedHandler}
-              onFocus={onFocusHandler}
-            />
-          </div>
-          <div className="contact-form__group">
-            <Input
-              type="text"
-              id={'subject'}
-              label="Subject"
-              required
-              placeholder="E-Mail Subject"
-              errorMessage="Subject should have at least 2 characters. (max 30)"
-              isValid={mailForm.subject.isValid}
-              value={mailForm.subject.value}
-              touched={mailForm.subject.touched}
-              onChange={inputChangedHandler}
-              onFocus={onFocusHandler}
-            />
-          </div>
-          <div className="contact-form__group">
-            <Input
-              type="textarea"
-              id={'message'}
-              label="Message"
-              rows="8"
-              required
-              placeholder="What do you want from me?"
-              errorMessage="Your message should have at least 5 characters. (max 5000)"
-              isValid={mailForm.message.isValid}
-              value={mailForm.message.value}
-              touched={mailForm.message.touched}
-              onChange={inputChangedHandler}
-              onFocus={onFocusHandler}
-            />
-          </div>
-          <button
-            className={[
-              'contact-form__submit',
-              !formIsValid ? 'contact-form__submit--disabled' : null,
-            ].join(' ')}
-            disabled={!formIsValid}
-            type="submit"
-          >
-            Send
-          </button>
-        </form>
+        <Effect left>
+          <form className="contact-form" onSubmit={onSubmitHandler}>
+            <div className="contact-form__group">
+              <Input
+                type="email"
+                id={'email'}
+                label="E-Mail"
+                required
+                placeholder={context.dictionary.contact.emailPH}
+                errorMessage={context.dictionary.contact.emailError}
+                isValid={mailForm.email.isValid}
+                value={mailForm.email.value}
+                touched={mailForm.email.touched}
+                onChange={inputChangedHandler}
+                onFocus={onFocusHandler}
+              />
+              <Input
+                type="text"
+                id={'name'}
+                label={context.dictionary.contact.name}
+                placeholder={context.dictionary.contact.namePH}
+                isValid={mailForm.name.isValid}
+                value={mailForm.name.value}
+                touched={mailForm.name.touched}
+                onChange={inputChangedHandler}
+                onFocus={onFocusHandler}
+              />
+            </div>
+            <div className="contact-form__group">
+              <Input
+                type="text"
+                id={'subject'}
+                label={context.dictionary.contact.subject}
+                required
+                placeholder={context.dictionary.contact.subjectPH}
+                errorMessage={context.dictionary.contact.subjectError}
+                isValid={mailForm.subject.isValid}
+                value={mailForm.subject.value}
+                touched={mailForm.subject.touched}
+                onChange={inputChangedHandler}
+                onFocus={onFocusHandler}
+              />
+            </div>
+            <div className="contact-form__group">
+              <Input
+                type="textarea"
+                id={'message'}
+                label={context.dictionary.contact.message}
+                rows="8"
+                required
+                errorMessage={context.dictionary.contact.messageError}
+                isValid={mailForm.message.isValid}
+                value={mailForm.message.value}
+                touched={mailForm.message.touched}
+                onChange={inputChangedHandler}
+                onFocus={onFocusHandler}
+              />
+            </div>
+            <button
+              className={[
+                'contact-form__submit',
+                !formIsValid
+                  ? 'contact-form__submit--disabled'
+                  : 'contact-form__submit--enabled',
+              ].join(' ')}
+              disabled={!formIsValid}
+              type="submit"
+            >
+              {context.dictionary.contact.send}
+            </button>
+          </form>
+        </Effect>
       </div>
     </section>
   );

@@ -73,9 +73,6 @@
 
             @include respond(tab-land) {
                 background-color: $color-white;
-            }
-
-            @include respond(tab-port) {
                 filter: drop-shadow(0 0 .7rem $color-white);
             }
 

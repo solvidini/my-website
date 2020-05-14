@@ -5,7 +5,8 @@
     "about": "O mnie",
     "skills": "Umiejętności",
     "offer": "Oferta",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
   },
   "header": {
     "wordsArray": [
@@ -73,6 +74,10 @@
     "canvas1": {
       "description": "Interaktywna\u00A0animacja (HTML5\u00A0Canvas)."
     }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "post": "Skontaktuj się ze mną przez e-mail"
   },
   "footer": {
     "contact": "Kontakt",

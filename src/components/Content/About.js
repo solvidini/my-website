@@ -4,7 +4,7 @@ import justMe from '../../assets/images/profilepx.png';
 import { LanguageContext } from '../../context';
 import Effect from 'react-reveal/Fade';
 
-const Contact = (props) => {
+const About = (props) => {
   const context = useContext(LanguageContext);
   return (
     <div className="section-drop-shadow">
@@ -49,4 +49,4 @@ const Contact = (props) => {
   );
 };
 
-export default Contact;
+export default About;

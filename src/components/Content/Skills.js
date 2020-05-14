@@ -19,6 +19,7 @@ import springBoot from "../../assets/images/technologies/spring-boot.png";
 import symfony from "../../assets/images/technologies/symfony.png";
 import vsc from "../../assets/images/technologies/vsc.png";
 import gatsby from "../../assets/images/technologies/gatsby.png";
+import firebase from "../../assets/images/technologies/firebase.png";
 
 const Skills = (props) => {
   const context = useContext(LanguageContext);
@@ -62,6 +63,7 @@ const Skills = (props) => {
             </h3>
             <div className="technologies-group__items">
               <Technology src={reactNative} name="React Native" />
+              <Technology src={firebase} name="Firebase" />
               <Technology src={git} name="Git" />
               <Technology src={vsc} name="Visual Studio Code" />
               <Technology src={ps} name="Photoshop" />

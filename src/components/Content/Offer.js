@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
+import Effect from "react-reveal/Fade";
 
 import website from "../../assets/images/website-color.png";
 import responsive from "../../assets/images/responsive-color.png";
 import ui from "../../assets/images/ui-color.png";
 import { LanguageContext } from "../../context";
-import Effect from "react-reveal/Fade";
 
 const Offer = (props) => {
   const context = useContext(LanguageContext);

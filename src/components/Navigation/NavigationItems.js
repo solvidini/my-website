@@ -38,6 +38,13 @@ const NavigationItems = (props) => {
       >
         {context.dictionary.nav.portfolio}
       </NavigationItem>
+      <NavigationItem
+        to="section-contact"
+        opened={props.opened}
+        clicked={props.clicked}
+      >
+        {context.dictionary.nav.contact}
+      </NavigationItem>
     </ul>
   );
 };

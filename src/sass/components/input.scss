@@ -1,0 +1,58 @@
+@import '../mixins';
+@import '../variables';
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 2%;
+
+    @include respond(phone) {
+        padding: 0;
+    }
+
+    &__label {
+        font-size: 1.6rem;
+        margin-bottom: 3px;
+        color: $color-white;
+    }
+
+    &__error {
+        margin-top: .5rem;
+        text-align: center;
+        font-size: 1.6rem;
+        color: $color-failure;
+    }
+}
+
+.input {
+    font-family: 'lato', sans-serif;
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.6rem;
+    background-color: $color-white;
+    outline: none;
+
+    border: 1px solid transparent;
+    border-radius: 2px;
+
+    &:focus {
+        border-color: $color-white;
+    }
+
+    &--textarea {
+        font-family: 'lato', sans-serif;
+        resize: vertical;
+        min-height: 3.2rem;
+        max-height: 30rem;
+    }
+
+    &--valid {
+        border-color: $color-success;
+    }
+
+    &--invalid {
+        border-color: $color-failure;
+        background-color: rgb(255, 228, 228);
+    }
+}

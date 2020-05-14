@@ -69,6 +69,7 @@
 
         &--active {
             border: 2px solid $color-primary;
+            box-shadow: 0 0 1rem $color-primary;
         }
 
         &:active,

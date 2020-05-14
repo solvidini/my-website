@@ -5,7 +5,7 @@
   width: 100%;
   background-color: $color-primary;
   position: absolute;
-  border-top: .25rem solid $color-background;
+  border-top: .25rem solid transparent;
 
   &__square {
     width: 4rem;
@@ -19,8 +19,8 @@
 
     &--top {
       background-color: $color-primary;
-      border-right: .25rem solid $color-background;
-      border-top: .25rem solid $color-background;
+      border-right: .25rem solid transparent;
+      border-top: .25rem solid transparent;
     }
 
     &--copyright {

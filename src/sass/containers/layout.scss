@@ -17,6 +17,7 @@
     box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
     background-color: rgba(0, 0, 0, .8);
 
+    transition: all .3s ease;
     overflow: hidden;
 
 
@@ -27,6 +28,7 @@
 
     &:hover {
         cursor: pointer;
+        box-shadow: 0 0 5px rgba($color-primary, 1);
     }
 
     @include respond(phone) {

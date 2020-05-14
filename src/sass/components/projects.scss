@@ -35,6 +35,7 @@
             margin: 1rem .5%;
             flex: 1 0 100%;
             max-width: 100%;
+            width: 100%;
         }
 
         &-title {
@@ -65,12 +66,17 @@
 
             text-align: center;
             background-color: $color-primary;
+            filter: drop-shadow(0 0 .7rem $color-primary);
             padding: .7rem;
 
             transition: all .5s ease;
 
             @include respond(tab-land) {
                 background-color: $color-white;
+            }
+
+            @include respond(tab-port) {
+                filter: drop-shadow(0 0 .7rem $color-white);
             }
 
             @include respond(phone) {
@@ -81,6 +87,7 @@
         }
 
         &:hover &-description {
+            filter: drop-shadow(0 0 .7rem $color-white);
             background-color: $color-white;
         }
 
@@ -114,6 +121,7 @@
 
             &--left {
                 left: 0;
+                filter: drop-shadow(0 0 .7rem $color-primary);
                 border-top-right-radius: 1rem;
                 border-right: .25rem solid $color-primary;
                 border-top: .25rem solid $color-primary;
@@ -121,6 +129,7 @@
 
             &--right {
                 right: 0;
+                filter: drop-shadow(0 0 .7rem $color-primary);
                 border-top-left-radius: 1rem;
                 border-left: .25rem solid $color-primary;
                 border-top: .25rem solid $color-primary;
@@ -141,7 +150,7 @@
 
             background-color: $color-dark;
 
-            min-height: 25rem;
+            min-height: 9rem;
             width: 100%;
 
             display: flex;

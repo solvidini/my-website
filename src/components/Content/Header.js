@@ -51,7 +51,7 @@ const Header = React.memo((props) => {
           hashSpy={true}
           duration={1500}
           isDynamic={true}
-          offset={-10}
+          offset={0}
           ignoreCancelEvents={false}
         >
           <ArrowDown />

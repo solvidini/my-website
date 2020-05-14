@@ -2,13 +2,13 @@ import React, { useContext } from "react";
 
 import Project from "../Project";
 import fotobudka from "../../assets/images/projects/project-fotobudka.jpg";
-import mySite from "../../assets/images/projects/project-my-site.jpg";
+import mySite from "../../assets/images/projects/project-my-site.gif";
 import yourTurn from "../../assets/images/projects/project-your-turn.jpg";
 import projectW from "../../assets/images/projects/project-projektw.jpg";
-import pizzaBuilder from "../../assets/images/projects/project-pizza-builder.jpg";
+import pizzaBuilder from "../../assets/images/projects/project-pizza-builder.gif";
 import bregulaInsurances from "../../assets/images/projects/project-bregula-insurances.jpg";
 import dailyTasks from "../../assets/images/projects/project-daily-tasks.jpg";
-import canvas1 from "../../assets/images/projects/project-canvas-1.png";
+import canvas1 from "../../assets/images/projects/project-canvas-1.gif";
 import { LanguageContext } from "../../context";
 
 const Portfolio = (props) => {

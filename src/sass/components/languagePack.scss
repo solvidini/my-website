@@ -5,7 +5,7 @@
     position: fixed;
     z-index: 200;
     left: 5rem;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
     cursor: pointer;
     user-select: none;
     outline: transparent;
@@ -17,7 +17,8 @@
 
     &__toggler {
         color: $color-white;
-        font-size: $default-font-size;
+        margin-left: .3rem;
+        font-size: 1.4rem;
         text-transform: uppercase;
     }
 

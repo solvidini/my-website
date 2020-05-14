@@ -1,17 +1,18 @@
 @import '../variables';
 @import '../mixins';
+@import '../animations';
 
 .section-about {
     position: relative;
     background-color: $color-white;
     overflow: hidden;
-    
+
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    
+
     @include respond(phone) {
         clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%);
     }
-    
+
     &:after {
         content: "";
         position: absolute;
@@ -27,7 +28,7 @@
         z-index: -1;
         opacity: 0.05;
     }
-    
+
     &__content {
         max-width: 120rem;
         margin: 0 auto;
@@ -45,7 +46,6 @@
     justify-content: center;
     align-items: center;
     margin: 10rem 8rem;
-    overflow: hidden;
     text-align: justify;
 
     @include respond(tab-port) {
@@ -69,8 +69,10 @@
         overflow: hidden;
         position: relative;
         border: 0.15rem solid $color-grey-dark;
-        border-radius: 3px;
+        border-top-left-radius: 6rem;
         flex: 0 1 30%;
+
+        box-shadow: 1px 1px .3rem rgba($color-dark, .7);
 
         @include respond(tab-port) {
             max-width: 50%;
@@ -78,12 +80,14 @@
         }
 
         @include respond(phone) {
+            border-radius: 0;
             max-width: 80%;
             margin: 3rem;
         }
     }
 
     &__image {
+        filter: drop-shadow(0 0 1px white);
         display: flex;
         width: 100%;
     }

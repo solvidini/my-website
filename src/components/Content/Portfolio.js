@@ -50,6 +50,7 @@ const Portfolio = (props) => {
             github="https://github.com/ssazero/daily-tasks"
             source={dailyTasks}
             mobile
+            live="https://expo.io/@ssazero/daily-tasks"
           />
             <Project
               title="My-site"

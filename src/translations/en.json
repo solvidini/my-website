@@ -47,7 +47,8 @@
     "post": "Projects I\u00A0made",
     "project": {
       "preview": "Preview",
-      "noLink": "Not yet in production :("
+      "noLink": "Not yet in production :(",
+      "install": "Download"
     },
     "projectW": {
       "title": "Projekt W",
@@ -78,7 +79,7 @@
   "contact": {
     "title": "Contact",
     "post": "Contact with me via e-mail",
-    "sent": "Your message was sent to\u00A0Samuel\u00A0Kedziora!",
+    "sent": "Your message was sent to\u00A0Samuel!",
     "incorrect": "Data in E-Mail form is\u00A0not\u00A0correct!",
     "emailPH": "example@gmail.com",
     "emailError": "Please enter a valid e-mail.",

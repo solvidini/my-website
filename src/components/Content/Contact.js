@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Effect from 'react-reveal/Fade';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { LanguageContext } from '../../context';
 import Input from '../Input';
@@ -131,7 +133,7 @@ const Contact = (props) => {
             {context.dictionary.contact.post}
           </span>
         </h2>
-        <Effect left>
+        <Effect up>
           <form className="contact-form" onSubmit={onSubmitHandler}>
             <div className="contact-form__group">
               <Input

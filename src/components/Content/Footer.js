@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 import { LanguageContext } from "../../context";
 

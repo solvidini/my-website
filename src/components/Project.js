@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMobileAlt, faLaptop } from "@fortawesome/free-solid-svg-icons";
+import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faMobileAlt,
+  faLaptop,
+} from '@fortawesome/free-solid-svg-icons';
 
-import { LanguageContext } from "../context";
-import Effect from "react-reveal/Fade";
+import { LanguageContext } from '../context';
+import Effect from 'react-reveal/Fade';
 
 const Project = (props) => {
   const context = useContext(LanguageContext);
@@ -12,11 +15,13 @@ const Project = (props) => {
       <div className="projects__item">
         <div className="projects__item-drawer">
           <h4 className="projects__item-title">{props.title}</h4>
-          <p className="projects__item-description">{props.description}</p>
+          <p className="projects__item-description">
+            {props.description}
+          </p>
           <FontAwesomeIcon
             icon={props.mobile ? faMobileAlt : faLaptop}
             className="projects__item-icon"
-            title={props.mobile ? "Mobile project" : "Web project"}
+            title={props.mobile ? 'Mobile project' : 'Web project'}
           />
         </div>
         {props.live ? (
@@ -26,15 +31,19 @@ const Project = (props) => {
             className="projects__item-link projects__item-link--right"
             href={props.live}
           >
-            {context.dictionary.portfolio.project.preview}
+            {props.mobile
+              ? context.dictionary.portfolio.project.install
+              : context.dictionary.portfolio.project.preview}
           </a>
         ) : (
           <span
             className="projects__item-link projects__item-link--right"
             title={context.dictionary.portfolio.project.noLink}
-            style={{ textDecoration: "line-through", color: "#bbb" }}
+            style={{ textDecoration: 'line-through', color: '#bbb' }}
           >
-            {context.dictionary.portfolio.project.preview}
+            {props.mobile
+              ? context.dictionary.portfolio.project.install
+              : context.dictionary.portfolio.project.preview}
           </span>
         )}
         <a
@@ -49,7 +58,7 @@ const Project = (props) => {
           <img
             className="projects__item-image"
             src={props.source}
-            alt={"Project " + props.title}
+            alt={'Project ' + props.title}
           />
         </div>
       </div>

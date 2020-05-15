@@ -29,7 +29,7 @@
   },
   "offer": {
     "title": "Oferta",
-    "post": "Co oferuję i\u00A0na\u00A0co zwracam uwagę?",
+    "post": "Co oferuję i\u00A0na\u00A0co zwracam uwagę",
     "makingWebsites": {
       "title": "Tworzenie stron",
       "description": "Do\u00A0tworzenia stron używam najnowszych rozwiązań oraz technologii. Kieruję się\u00A0współczesnymi trendami, spełniając przy tym wszelkie obecne standardy. Zarówno wygląd jak i\u00A0układ stron opieram o\u00A0intuicyjny, ładny interfejs jak i\u00A0responsywny design."
@@ -47,7 +47,8 @@
     "post": "Wykonane\u00A0projekty",
     "project": {
       "preview": "Podgląd",
-      "noLink": "Jeszcze nie w produkcji :("
+      "noLink": "Jeszcze nie w produkcji :(",
+      "install": "Pobierz"
     },
     "projectW": {
       "title": "Projekt W",
@@ -78,8 +79,8 @@
   "contact": {
     "title": "Kontakt",
     "post": "Skontaktuj się ze mną przez e-mail",
-    "sent": "Twoja wiadomość została wysłana do\u00A0Samuel'a\u00A0Kędziory!",
-    "incorrect": "Dane w E-Mail'u są\u00A0niewłaściwe!",
+    "sent": "Twoja wiadomość została wysłana do\u00A0Samuela!",
+    "incorrect": "Dane w formularzu E-Mail są\u00A0niepoprawne!",
     "emailPH": "przyklad@gmail.com",
     "emailError": "Proszę podać właściwy e-mail.",
     "name": "Imię",

@@ -5,7 +5,7 @@ import Effect from "react-reveal/Fade";
 const Technology = (props) => {
   return (
     <Effect>
-      <div className="technologies__item" title={props.name}>
+      <div className="technologies__item" title={props.name} style={{...props.style}}>
         <img
           className="technologies__item-image"
           src={props.src}

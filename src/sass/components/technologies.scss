@@ -52,7 +52,7 @@
         -o-user-select: none;
         user-select: none;
 
-        height: 8rem;
+        height: 6.5rem;
         margin: 2rem;
 
         transition: all .2s ease;
@@ -62,7 +62,7 @@
         }
 
         @include respond(phone) {
-            height: 5.5rem;
+            height: 5rem;
             margin: 1.5rem;
         }
 

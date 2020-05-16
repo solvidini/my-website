@@ -20,6 +20,7 @@ import symfony from "../../assets/images/technologies/symfony.png";
 import vsc from "../../assets/images/technologies/vsc.png";
 import gatsby from "../../assets/images/technologies/gatsby.png";
 import firebase from "../../assets/images/technologies/firebase.png";
+import npm from "../../assets/images/technologies/npm.png";
 
 const Skills = (props) => {
   const context = useContext(LanguageContext);
@@ -63,6 +64,7 @@ const Skills = (props) => {
             </h3>
             <div className="technologies-group__items">
               <Technology src={reactNative} name="React Native" />
+              <Technology src={npm} name="Node package manager" style={{padding: '1.2rem'}} />
               <Technology src={firebase} name="Firebase" />
               <Technology src={git} name="Git" />
               <Technology src={vsc} name="Visual Studio Code" />

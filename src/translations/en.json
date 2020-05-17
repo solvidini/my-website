@@ -87,9 +87,9 @@
     "namePH": "Your Name",
     "subject": "Subject",
     "subjectPH": "Subject of an e-mail",
-    "subjectError": "Subject should have at least 2 characters. (max 30)",
+    "subjectError": "Subject must be at least 2 characters. (max 30)",
     "message": "Message",
-    "messageError": "Your message should have at least 5 characters. (max 5000)",
+    "messageError": "Your message must be at least 5 characters. (max 5000)",
     "send": "Send"
   },
   "footer": {

@@ -53,7 +53,7 @@ const Portfolio = (props) => {
             live="https://expo.io/@ssazero/daily-tasks"
           />
             <Project
-              title="My-site"
+              title="My Site"
               description={context.dictionary.portfolio.mySite.description}
               github="https://github.com/ssazero/my-site"
               live="/"

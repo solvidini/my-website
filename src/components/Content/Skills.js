@@ -21,6 +21,7 @@ import vsc from "../../assets/images/technologies/vsc.png";
 import gatsby from "../../assets/images/technologies/gatsby.png";
 import firebase from "../../assets/images/technologies/firebase.png";
 import npm from "../../assets/images/technologies/npm.png";
+import gql from "../../assets/images/technologies/graphql.png";
 
 const Skills = (props) => {
   const context = useContext(LanguageContext);
@@ -68,6 +69,7 @@ const Skills = (props) => {
               <Technology src={firebase} name="Firebase" />
               <Technology src={git} name="Git" />
               <Technology src={vsc} name="Visual Studio Code" />
+              <Technology src={gql} name="GraphQL" />
               <Technology src={ps} name="Photoshop" />
             </div>
           </div>

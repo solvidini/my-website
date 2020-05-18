@@ -1,4 +1,5 @@
 .loadingScreen {
+    position: relative;
     background-image: linear-gradient(to right bottom,
             transparent,
             rgba($color-primary, .8)),
@@ -12,7 +13,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 
     &__logo {
         position: absolute;
@@ -20,5 +20,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 100%;
+        height: auto;
     }
 }

@@ -1,0 +1,24 @@
+.loadingScreen {
+    background-image: linear-gradient(to right bottom,
+            transparent,
+            rgba($color-primary, .8)),
+        url(../../assets/images/city.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__logo {
+        position: absolute;
+        opacity: .1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

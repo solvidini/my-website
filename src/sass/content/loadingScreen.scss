@@ -13,14 +13,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     &__logo {
+        height: 60%;
+        width: auto;
         position: absolute;
         opacity: .1;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 100%;
-        height: auto;
     }
 }

@@ -50,8 +50,6 @@
     max-width: 70rem;
 
     background-color: $color-background;
-    // border: 2px solid $color-primary;
-    // box-shadow: 0 0 .8rem rgba($color-primary, 0.7);
     border-radius: .5rem;
 
     padding: 2rem;
@@ -60,6 +58,27 @@
 
     @include respond(phone) {
         padding: 2rem 1rem;
+    }
+
+    &__block {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+
+        position: absolute;
+        top: -2.6rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: $color-background;
+        padding: 1rem 4rem 1rem 4rem;
+        border-top-left-radius: 8rem;
+        border-top-right-radius: 8rem;
+        font-size: 1.7rem;
+        letter-spacing: 1px;
+        color: $color-white;
     }
 
 

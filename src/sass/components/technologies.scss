@@ -51,6 +51,7 @@
         -moz-user-select: none;
         -o-user-select: none;
         user-select: none;
+        position: relative;
 
         height: 6.5rem;
         margin: 2rem;
@@ -66,8 +67,36 @@
             margin: 1.5rem;
         }
 
-        &:hover &-image {
+        &:hover,
+        &:active {
+            z-index: 5;
+        }
+
+        &:hover &-image,
+        &:active &-image {
             transform: scale(1.1);
+        }
+
+        &:hover &-label,
+        &:active &-label {
+            display: block;
+        }
+
+        &-label {
+            display: none;
+            position: absolute;
+            bottom: -4rem;
+            left: 50%;
+            width: auto;
+            transform: translateX(-50%);
+
+            white-space: nowrap;
+            color: $color-white;
+            background-color: rgba($color-dark, 0.9);
+            border-radius: .5rem;
+            text-align: center;
+            font-size: 1.7rem;
+            padding: 1rem;
         }
 
         &-image {

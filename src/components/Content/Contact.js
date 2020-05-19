@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react';
 import Effect from 'react-reveal/Fade';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import { LanguageContext } from '../../context';
 import Input from '../Input';
@@ -135,6 +133,9 @@ const Contact = (props) => {
         </h2>
         <Effect up>
           <form className="contact-form" onSubmit={onSubmitHandler}>
+            <div className="contact-form__block">
+              E-MAIL
+            </div>
             <div className="contact-form__group">
               <Input
                 type="email"

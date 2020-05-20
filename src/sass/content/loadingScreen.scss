@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    filter: grayscale(100%);
 
     &__logo {
         height: 60%;

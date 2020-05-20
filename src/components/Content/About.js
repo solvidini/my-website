@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import justMe from '../../assets/images/profilepx.png';
+import justMe from '../../assets/images/me.png';
 import { LanguageContext } from '../../context';
 import Effect from 'react-reveal/Fade';
 

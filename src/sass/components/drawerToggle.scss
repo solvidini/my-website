@@ -17,6 +17,7 @@
         position: relative;
         margin-top: 2.9rem;
         z-index: 900;
+        transition: all .2s ease;
 
         &,
         &::before,
@@ -32,36 +33,27 @@
             content: "";
             position: absolute;
             left: 0;
-            transition: all .4s;
         }
-
+        
         &::before {
             top: -1.25rem;
+            transition: all .4s ease;
         }
 
         &::after {
             top: 1.25rem;
+            transition: all .4s ease 100ms;
         }
 
         &--active {
-            position: fixed;
-            display: block;
-            z-index: 1000;
-            top: .5rem;
-            right: 1rem;
-
-            & {
-                background-color: transparent;
-            }
+            background-color: transparent;
 
             &::before {
-                top: 0;
-                transform: rotate(-45deg);
+                transform: translateX(20rem);
             }
 
             &::after {
-                top: 0;
-                transform: rotate(-135deg);
+                transform: translateX(20rem);
             }
 
         }

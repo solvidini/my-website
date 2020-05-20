@@ -36,12 +36,15 @@
     left: 0;
     box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
     background-color: rgba(0, 0, 0, .8);
+
   }
 
   &--transparent {
-    background-color: transparent;
-    box-shadow: none;
-    backdrop-filter: none;
+    @include respond(phone) {
+      background-color: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
   }
 
   &__nav {

@@ -74,7 +74,7 @@ const Layout = (props) => {
   };
 
   return (
-    <React.Fragment>
+    <>
       {!sideDrawerIsVisible && <Logo />}
       {!sideDrawerIsVisible && (
         <LanguagePack
@@ -108,7 +108,7 @@ const Layout = (props) => {
           <ArrowUp />
         </div>
       </CSSTransition>
-    </React.Fragment>
+    </>
   );
 };
 

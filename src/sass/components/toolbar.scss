@@ -9,7 +9,6 @@
   left: 0;
   overflow: hidden;
 
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,8 +16,6 @@
 
   z-index: 100;
   transition: background-color .3s cubic-bezier(.45, .68, .45, .68);
-
-  // background-color: rgba(0, 0, 0, .1);
 
   @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
     -webkit-backdrop-filter: blur(2px);

@@ -9,7 +9,7 @@ const Footer = (props) => {
   const currentDate = new Date().getFullYear();
   const context = useContext(LanguageContext);
   return (
-    <footer className="footer" name="section-contact">
+    <footer className="footer">
       <div className="footer__square footer__square--top" />
       <div className="footer__top">
         <div className="footer__top-logo">&nbsp;</div>

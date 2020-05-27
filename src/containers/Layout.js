@@ -8,13 +8,16 @@ import { animateScroll } from 'react-scroll';
 import ArrowUp from '../components/UI/ArrowUp/ArrowUp';
 import { CSSTransition } from 'react-transition-group';
 import Logo from '../components/Logo';
+import CookiesBar from '../components/CookiesBar';
 import LanguagePack from '../components/LanguagePack';
 
 const Layout = (props) => {
   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
-  const [languageDropdownIsVisible, setLanguageDropdownIsVisible] = useState(
-    false
-  );
+  const [
+    languageDropdownIsVisible,
+    setLanguageDropdownIsVisible,
+  ] = useState(false);
+  const [cookiesBarIsVisible, setCookiesBarIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [stickyToolbar, setStickyToolbar] = useState(false);
   const [hideHeaderCanvas, setHideHeaderCanvas] = useState(false);
@@ -35,6 +38,16 @@ const Layout = (props) => {
       window.removeEventListener('click', languagePackClosedHandler);
     };
   });
+
+  useEffect(() => {
+    if (localStorage.getItem('cookiesAccepted')) {
+      setCookiesBarIsVisible(false);
+    } else {
+      setTimeout(() => {
+        setCookiesBarIsVisible(true);
+      }, 5000);
+    }
+  }, [setCookiesBarIsVisible]);
 
   useEffect(() => {
     const toolbarHeight = toolbarRef.current
@@ -73,6 +86,11 @@ const Layout = (props) => {
     }
   };
 
+  const acceptedCookiesHandler = () => {
+    setCookiesBarIsVisible(false);
+    localStorage.setItem('cookiesAccepted', true);
+  };
+
   return (
     <>
       {!sideDrawerIsVisible && <Logo />}
@@ -82,6 +100,9 @@ const Layout = (props) => {
           showToggler={languagePackToggleHandler}
           languagePackRef={languagePackRef}
         />
+      )}
+      {cookiesBarIsVisible && (
+        <CookiesBar clicked={acceptedCookiesHandler} />
       )}
       <Header headerRef={headerRef} hideCanvas={hideHeaderCanvas}>
         <Toolbar

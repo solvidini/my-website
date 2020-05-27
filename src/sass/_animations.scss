@@ -138,3 +138,13 @@
     transform: scale(1);
   }
 }
+
+@keyframes showCookies {
+  0% {
+    transform: translateY(101%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

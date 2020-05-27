@@ -1,0 +1,76 @@
+.cookies-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 300;
+    width: 100%;
+    padding: 2rem;
+
+    background-color: rgba($color-background, .9);
+
+    @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+    }
+
+    color: $color-white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    animation: showCookies 1s ease;
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        text-align: justify;
+
+        @include respond(phone) {
+            flex-basis: 100%;
+
+            & p:not(:first-child) {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__button {
+        margin-left: 2rem;
+        cursor: pointer;
+        background-color: $color-primary;
+        outline: none;
+
+        border: 1px solid transparent;
+        border-radius: 3px;
+        padding: 1rem 2rem;
+
+        color: $color-white;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        transition: all .2s ease;
+
+        @include respond(phone) {
+            margin: 0;
+            margin-top: 1rem;
+        }
+
+        &:focus {
+            border-color: $color-primary;
+        }
+
+        &:hover {
+            box-shadow: 0 0 1rem $color-primary;
+        }
+
+        &:active {
+            box-shadow: inset 0 0 .5rem $color-dark;
+        }
+    }
+}

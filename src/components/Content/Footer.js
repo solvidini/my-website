@@ -1,9 +1,15 @@
-import React, { useContext } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faAddressCard } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faEnvelope,
+  faAddressCard,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faGithub,
+  faLinkedinIn,
+} from '@fortawesome/free-brands-svg-icons';
 
-import { LanguageContext } from "../../context";
+import { LanguageContext } from '../../context';
 
 const Footer = (props) => {
   const currentDate = new Date().getFullYear();
@@ -15,7 +21,7 @@ const Footer = (props) => {
         <div className="footer__top-logo">&nbsp;</div>
         <div className="footer__top-item">
           <h4>
-            {context.dictionary.footer.contact}{" "}
+            {context.dictionary.footer.contact}{' '}
             <FontAwesomeIcon icon={faEnvelope} />
           </h4>
           <a
@@ -54,8 +60,8 @@ const Footer = (props) => {
             Curriculum vitae ENG
           </a>
         </div>
-        <div className="footer__top-item" style={{ lineHeight: "1.6" }}>
-          {context.dictionary.footer.offerIcons}{" "}
+        <div className="footer__top-item" style={{ lineHeight: '1.6' }}>
+          {context.dictionary.footer.offerIcons}{' '}
           <span>
             <a
               target="_blank"
@@ -78,7 +84,7 @@ const Footer = (props) => {
             </a>
           </span>
           <span>
-            from{" "}
+            from{' '}
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -111,10 +117,10 @@ const Footer = (props) => {
 
       <div className="footer__copyright">
         <div className="footer__square footer__square--copyright" />
-        <span className="no-wrap">
-          Samuel Kędziora &nbsp;&copy; <b>{currentDate}</b>
+        <span>
+          Samuel Kędziora &copy; <b>{currentDate}</b>
         </span>
-        <span className="no-wrap">{context.dictionary.footer.allRights} </span>
+        <span>{context.dictionary.footer.allRights} </span>
       </div>
     </footer>
   );

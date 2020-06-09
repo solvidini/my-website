@@ -28,11 +28,16 @@
 .input {
     font-family: 'lato', sans-serif;
     width: 100%;
-    padding: .5rem;
+    padding: .75rem .5rem;
     font-size: 1.7rem;
     background-color: $color-white;
     outline: none;
 
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
     border: 1px solid transparent;
     border-radius: 2px;
 
@@ -54,6 +59,7 @@
 
     &--invalid {
         border-color: $color-failure;
-        background-color: #ffdfe6;;
+        background-color: #ffdfe6;
+        ;
     }
 }

@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Effect from "react-reveal/Fade";
+import Effect from 'react-reveal/Fade';
 
 const Technology = (props) => {
   return (
     <Effect>
-      <div className="technologies__item" style={{...props.style}}>
+      <div className="technologies__item" style={{ ...props.style }}>
         <img
           className="technologies__item-image"
           src={props.src}

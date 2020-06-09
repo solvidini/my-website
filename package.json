@@ -1,6 +1,6 @@
 {
 	"name": "my-site",
-	"version": "2.6.5",
+	"version": "2.7.0",
 	"author": "Samuel Kędziora <contact@samuelk.pl>",
 	"private": false,
 	"dependencies": {

@@ -9,6 +9,7 @@ import pizzaBuilder from "../../assets/images/projects/project-pizza-builder.gif
 import bregulaInsurances from "../../assets/images/projects/project-bregula-insurances.gif";
 import dailyTasks from "../../assets/images/projects/project-daily-tasks.jpg";
 import canvas1 from "../../assets/images/projects/project-canvas-1.gif";
+import swpiu from "../../assets/images/projects/project-swpiu.gif";
 import { LanguageContext } from "../../context";
 
 const Portfolio = (props) => {
@@ -29,6 +30,13 @@ const Portfolio = (props) => {
             github="https://github.com/ssazero/project-w"
             live="http://projektw.pl"
             source={projectW}
+          />
+          <Project
+            title="SWPIU"
+            description={context.dictionary.portfolio.swpiu.description}
+            github="https://github.com/ssazero/eng-proj-client"
+            live="http://swpiu.samuelk.pl/"
+            source={swpiu}
           />
           <Project
             title="Pizza Builder"

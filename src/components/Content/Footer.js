@@ -46,7 +46,7 @@ const Footer = (props) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://docs.google.com/document/d/1KyYiSiBsq8Lc8nhOA8K3UFCMr0r5hVnkSdl9uidR8Lc/edit?usp=sharing"
+            href="https://drive.google.com/file/d/1xP9JN5og8rnONDwM8AJlnhGHyrsU2Q1p/view"
             title="Curriculum vitae PL"
           >
             Curriculum vitae PL
@@ -54,7 +54,7 @@ const Footer = (props) => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://docs.google.com/document/d/1lmQmuafOFvkSBoKYF8b_ny6XoHf_qqf0jZlUhjwYnss/edit?usp=sharing"
+            href="https://drive.google.com/file/d/1JPlq5PQlUYPhNXDbvKRrTA3TA-WTPeVA/view"
             title="Curriculum vitae ENG"
           >
             Curriculum vitae ENG

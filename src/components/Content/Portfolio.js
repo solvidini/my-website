@@ -10,6 +10,7 @@ import bregulaInsurances from "../../assets/images/projects/project-bregula-insu
 import dailyTasks from "../../assets/images/projects/project-daily-tasks.jpg";
 import canvas1 from "../../assets/images/projects/project-canvas-1.gif";
 import swpiu from "../../assets/images/projects/project-swpiu.gif";
+import button from "../../assets/images/projects/project-button.gif";
 import { LanguageContext } from "../../context";
 
 const Portfolio = (props) => {
@@ -44,6 +45,13 @@ const Portfolio = (props) => {
             github="https://github.com/ssazero/pizza-builder"
             live="https://pizza-builder-6412e.web.app/"
             source={pizzaBuilder}
+          />
+          <Project
+            title="Tapicernia Button"
+            description={context.dictionary.portfolio.button.description}
+            github="https://github.com/ssazero/tapicernia-button"
+            live="http://www.pracownia-button.pl/"
+            source={button}
           />
           <Project
             title="Bregula Ubezpieczenia"

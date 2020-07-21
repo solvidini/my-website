@@ -80,6 +80,9 @@
     },
     "swpiu": {
       "description": "System - Engineering Project."
+    },
+    "calculator": {
+      "description": "Simple web calculator."
     }
   },
   "contact": {

@@ -56,6 +56,7 @@ const Project = (props) => {
         </a>
         <div className="projects__item-image-container">
           <img
+            draggable="false"
             className="projects__item-image"
             src={props.source}
             alt={'Project ' + props.title}

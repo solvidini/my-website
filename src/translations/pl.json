@@ -80,6 +80,9 @@
     },
     "swpiu": {
       "description": "System - Projekt Inżynierski."
+    },
+    "calculator": {
+      "description": "Prosty kalkulator internetowy."
     }
   },
   "contact": {

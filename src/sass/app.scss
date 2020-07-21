@@ -45,6 +45,23 @@ code {
     color: $color-white;
 }
 
+::-webkit-scrollbar {
+    background-color: $color-background;
+}
+
+::-webkit-scrollbar-track {
+    background: $color-dark;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $color-primary;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $color-secondary;
+}
+
 .section-header {
     text-align: center;
     font-size: 3rem;

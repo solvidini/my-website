@@ -11,6 +11,7 @@ import dailyTasks from "../../assets/images/projects/project-daily-tasks.jpg";
 import canvas1 from "../../assets/images/projects/project-canvas-1.gif";
 import swpiu from "../../assets/images/projects/project-swpiu.gif";
 import button from "../../assets/images/projects/project-button.gif";
+import calculator from "../../assets/images/projects/project-calculator.png";
 import { LanguageContext } from "../../context";
 
 const Portfolio = (props) => {
@@ -52,6 +53,13 @@ const Portfolio = (props) => {
             github="https://github.com/ssazero/tapicernia-button"
             live="http://www.pracownia-button.pl/"
             source={button}
+          />
+          <Project
+            title="Calculator"
+            description={context.dictionary.portfolio.calculator.description}
+            github="https://github.com/ssazero/calculator"
+            live="https://ssazero.github.io/calculator/"
+            source={calculator}
           />
           <Project
             title="Bregula Ubezpieczenia"

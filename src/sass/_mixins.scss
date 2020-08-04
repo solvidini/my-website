@@ -13,6 +13,21 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin glowingText($color, $outline: false, $width: 2px) {
+    @if $outline==true {
+        color: transparent;
+        -webkit-text-stroke-color: $color;
+        -webkit-text-stroke-width: $width;
+        text-shadow: none;
+        filter: drop-shadow(0px 0px 3px $color);
+    }
+
+    @else {
+        text-shadow: 0px 0px 7px $color;
+        color: $color;
+    }
+}
+
 // MEDIA QUERY MANAGER
 /* 
 0px - 600px: Phone

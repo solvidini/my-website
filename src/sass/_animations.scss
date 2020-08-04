@@ -12,14 +12,14 @@
 
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translate(initial);
   }
 }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(20rem);
+    transform: translateX(40rem);
   }
 
   80% {
@@ -28,14 +28,14 @@
 
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translate(initial);
   }
 }
 
 @keyframes moveInTop {
   0% {
     opacity: 0;
-    color: black;
+    color: rgba(black, .5);
     transform: translateY(-10rem);
   }
 
@@ -45,7 +45,7 @@
 
   100% {
     opacity: 1;
-    transform: translate(0);
+    transform: translate(initial);
   }
 }
 

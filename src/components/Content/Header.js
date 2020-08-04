@@ -25,19 +25,12 @@ const Header = React.memo((props) => {
       {!props.hideCanvas && (
         <Particles
           params={ParticlesConfig}
-          width="100%"
+          width="100vw"
           height="98vh"
         />
       )}
       <div className="header__text-box">
-        <h1 className="heading-primary">
-          <span className="anim-move-in anim-move-in--left">
-            Web
-          </span>{' '}
-          <span className="anim-move-in anim-move-in--right">
-            Developer
-          </span>
-        </h1>
+        <h1 className="heading-primary">Web Developer</h1>
         <div className="heading-paragraph">Samuel Kędziora</div>
         <ReactTypingEffect
           className="typewriter-container"

@@ -70,7 +70,7 @@
   letter-spacing: 1.2rem;
   margin-bottom: 1rem;
   transform: translateX(6px);
-  @include glowingText(rgba($color-secondary, .6));
+  @include glowingText(rgba($color-secondary, .5));
 
   animation: moveInLeft 3s ease-out;
 

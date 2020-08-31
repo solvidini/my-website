@@ -27,13 +27,11 @@ const About = (props) => {
           </h2>
           <div className="about-me">
             <Effect>
-              <div className="about-me__image-container">
                 <img
                   className="about-me__image"
                   src={justMe}
                   alt="Just me"
                 />
-              </div>
             </Effect>
             <Effect>
               <div className="about-me__text">

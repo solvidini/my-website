@@ -58,7 +58,7 @@
         margin: 2.5rem 0;
     }
 
-    &__image-container {
+    &__image {
         -webkit-user-select: none;
         -khtml-user-select: none;
         -moz-user-select: none;
@@ -67,13 +67,9 @@
         pointer-events: none;
 
         overflow: hidden;
-        position: relative;
-        border: 0.15rem solid $color-grey-dark;
-        border-radius: 3px;
-        border-top-left-radius: 6rem;
+        border-radius: 50%;
         flex: 0 1 30%;
-
-        box-shadow: 1px 1px .3rem rgba($color-dark, .7);
+        width: 100%;
 
         @include respond(tab-port) {
             max-width: 50%;
@@ -81,16 +77,10 @@
         }
 
         @include respond(phone) {
-            border-radius: 0;
             max-width: 80%;
             margin: 3rem;
         }
-    }
 
-    &__image {
-        filter: drop-shadow(0 0 1px white);
-        display: flex;
-        width: 100%;
     }
 
     &__text {

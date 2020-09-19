@@ -47,7 +47,8 @@
     "post": "Projects I\u00A0made",
     "project": {
       "preview": "Preview",
-      "noLink": "Not yet in production :(",
+      "noLiveLink": "Not yet in production :(",
+      "noGithubLink": "Repository private",
       "install": "Download"
     },
     "projectW": {

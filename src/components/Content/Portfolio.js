@@ -29,7 +29,7 @@ const Portfolio = (props) => {
           <Project
             title={context.dictionary.portfolio.projectW.title}
             description={context.dictionary.portfolio.projectW.description}
-            github="https://github.com/ssazero/project-w"
+            github="private"
             live="http://projektw.pl"
             source={projectW}
           />
@@ -50,7 +50,7 @@ const Portfolio = (props) => {
           <Project
             title="Tapicernia Button"
             description={context.dictionary.portfolio.button.description}
-            github="https://github.com/ssazero/tapicernia-button"
+            github="private"
             live="http://www.pracownia-button.pl/"
             source={button}
           />
@@ -64,7 +64,7 @@ const Portfolio = (props) => {
           <Project
             title="Bregula Ubezpieczenia"
             description={context.dictionary.portfolio.bregula.description}
-            github="https://github.com/ssazero/bregula-insurance"
+            github="private"
             live="http://bregulaubezpieczenia.pl/"
             source={bregulaInsurances}
           />
@@ -92,7 +92,7 @@ const Portfolio = (props) => {
           <Project
             title="Fotobudka Premium Box"
             description={context.dictionary.portfolio.fotobudka.description}
-            github="https://github.com/ssazero/fotobudka"
+            github="private"
             live="http://fotobudka-premiumbox.pl"
             source={fotobudka}
           />

@@ -41,7 +41,7 @@ const Skills = (props) => {
             <h3 className="technologies-group__title">FRONT-END:</h3>
             <div className="technologies-group__items">
               <Technology src={react} name="React" />
-              <Technology src={gatsby} name="Gatsby (React framework)" />
+              <Technology src={gatsby} name="Gatsby (React based framework)" />
               <Technology src={js} name="JavaScript ES5, ES6+" />
               <Technology src={redux} name="Redux" />
               <Technology src={html5} name="HTML5" />

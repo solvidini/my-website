@@ -148,3 +148,33 @@
     transform: translateY(0);
   }
 }
+
+@keyframes release {
+  0% {
+    transform: scale(0) translate(-50%, 50%);
+  }
+
+  100% {
+    transform: scale(1) translate(-50%, 0);
+  }
+}
+
+@keyframes release-project1 {
+  0% {
+    transform: scale(0) translateX(-100%);
+  }
+
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes release-project2 {
+  0% {
+    transform: scale(0) translateX(-100%);
+  }
+
+  100% {
+    transform: scale(1) translateX(-100%);
+  }
+}

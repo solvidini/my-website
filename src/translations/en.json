@@ -84,6 +84,12 @@
     },
     "calculator": {
       "description": "Simple web calculator."
+    },
+    "mot": {
+      "description": "Game to improve your MOT skills."
+    },
+    "annsr": {
+      "description": "Artificial neural network symbol recognition."
     }
   },
   "contact": {

@@ -84,6 +84,12 @@
     },
     "calculator": {
       "description": "Prosty kalkulator internetowy."
+    },
+    "mot": {
+      "description": "Gra do poprawienia twoich umiejętności MOT."
+    },
+    "annsr": {
+      "description": "Sztuczna sieć neuronowa do rozpoznawania symboli."
     }
   },
   "contact": {

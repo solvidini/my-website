@@ -34,9 +34,11 @@ const Header = React.memo((props) => {
         <div className="heading-paragraph">Samuel Kędziora</div>
         <ReactTypingEffect
           className="typewriter-container"
-          speed={40}
+          speed={38}
           text={words}
+          eraseSpeed={19}
           eraseDelay={3000}
+          typingDelay={1000}
           cursor="_"
         />
       </div>

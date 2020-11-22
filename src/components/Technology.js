@@ -6,7 +6,7 @@ const Technology = (props) => {
   return (
     <Effect>
       <div
-        className="technologies__item custom-label-container"
+        className="technologies__item"
         style={{ ...props.style }}
       >
         <img
@@ -14,7 +14,7 @@ const Technology = (props) => {
           src={props.src}
           alt={props.name}
         />
-        <div className="custom-label">{props.name}</div>
+        <div className="technologies__item-label">{props.name}</div>
       </div>
     </Effect>
   );

@@ -18,6 +18,7 @@ import sass from "../../assets/images/technologies/sass.png";
 import springBoot from "../../assets/images/technologies/spring-boot.png";
 import symfony from "../../assets/images/technologies/symfony.png";
 import vsc from "../../assets/images/technologies/vsc.png";
+import webstorm from "../../assets/images/technologies/webstorm.png";
 import gatsby from "../../assets/images/technologies/gatsby.png";
 import firebase from "../../assets/images/technologies/firebase.png";
 import npm from "../../assets/images/technologies/npm.png";
@@ -37,9 +38,9 @@ const Skills = (props) => {
           </span>
         </h2>
         <div className="technologies">
-          <div className="technologies-group">
-            <h3 className="technologies-group__title">FRONT-END:</h3>
-            <div className="technologies-group__items">
+          <div className="technologies__group">
+            <h3 className="technologies__group-title">FRONT-END:</h3>
+            <div className="technologies__items">
               <Technology src={react} name="React" />
               <Technology src={gatsby} name="Gatsby (React based framework)" />
               <Technology src={js} name="JavaScript ES5, ES6+" />
@@ -49,9 +50,9 @@ const Skills = (props) => {
               <Technology src={sass} name="Sass" />
             </div>
           </div>
-          <div className="technologies-group">
-            <h3 className="technologies-group__title">BACK-END:</h3>
-            <div className="technologies-group__items">
+          <div className="technologies__group">
+            <h3 className="technologies__group-title">BACK-END:</h3>
+            <div className="technologies__items">
               <Technology src={nodejs} name="Node.js / Express.js" />
               <Technology src={mongodb} name="MongoDB" />
               <Technology src={mysql} name="MySQL" />
@@ -59,17 +60,18 @@ const Skills = (props) => {
               <Technology src={symfony} name="Symfony 4 / php" />
             </div>
           </div>
-          <div className="technologies-group">
-            <h3 className="technologies-group__title">
+          <div className="technologies__group">
+            <h3 className="technologies__group-title">
               {context.dictionary.skills.other + ':'}
             </h3>
-            <div className="technologies-group__items">
+            <div className="technologies__items">
               <Technology src={reactNative} name="React Native" />
-              <Technology src={npm} name="Node package manager" style={{padding: '1.2rem'}} />
-              <Technology src={firebase} name="Firebase" />
-              <Technology src={git} name="Git" />
-              <Technology src={vsc} name="Visual Studio Code" />
               <Technology src={gql} name="GraphQL" />
+              <Technology src={npm} name="Node package manager" style={{padding: '1.2rem'}} />
+              <Technology src={git} name="Git" />
+              <Technology src={firebase} name="Firebase" />
+              <Technology src={vsc} name="Visual Studio Code" />
+              <Technology src={webstorm} name="Webstorm" />
               <Technology src={ps} name="Photoshop" />
             </div>
           </div>

@@ -71,6 +71,8 @@
         flex: 0 1 30%;
         width: 100%;
 
+        filter: drop-shadow(1px 1px 1px $color-primary);
+
         @include respond(tab-port) {
             max-width: 50%;
             margin: 0 auto 6rem auto;
@@ -80,7 +82,6 @@
             max-width: 80%;
             margin: 3rem;
         }
-
     }
 
     &__text {

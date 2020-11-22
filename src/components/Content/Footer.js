@@ -49,7 +49,7 @@ const Footer = (props) => {
             href="https://drive.google.com/file/d/1xP9JN5og8rnONDwM8AJlnhGHyrsU2Q1p/view"
             title="Curriculum vitae PL"
           >
-            Curriculum vitae PL
+            Resume (PL)
           </a>
           <a
             target="_blank"
@@ -57,7 +57,7 @@ const Footer = (props) => {
             href="https://drive.google.com/file/d/1JPlq5PQlUYPhNXDbvKRrTA3TA-WTPeVA/view"
             title="Curriculum vitae ENG"
           >
-            Curriculum vitae ENG
+            Resume (ENG)
           </a>
         </div>
         <div className="footer__top-item" style={{ lineHeight: '1.6' }}>

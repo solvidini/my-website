@@ -36,7 +36,7 @@ const Header = React.memo((props) => {
           className="typewriter-container"
           speed={38}
           text={words}
-          eraseSpeed={19}
+          eraseSpeed={11}
           eraseDelay={3000}
           typingDelay={1000}
           cursor="_"

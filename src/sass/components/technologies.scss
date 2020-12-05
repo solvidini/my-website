@@ -111,9 +111,10 @@
             left: 50%;
             top: 0;
             transform: translate(-50%, -50%) rotate(45deg);
-            width: 2rem;
-            height: 2rem;
-            background-color: $color-dark;
+            border-top: .75rem solid $color-dark;
+            border-right: .75rem solid transparent;
+            border-left: .75rem solid $color-dark;
+            border-bottom: .75rem solid transparent;
         }
     }
 

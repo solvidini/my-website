@@ -9,7 +9,7 @@
 
     padding: 2rem;
     background-color: $color-background;
-    box-shadow: .5rem .5rem .4rem rgba($color-dark, 0.9);
+    box-shadow: .5rem .5rem .4rem rgba($color-dark, 0.55);
     color: $color-white;
 
     border-radius: 3px;
@@ -18,7 +18,8 @@
     min-width: 45rem;
 
     @include respond(phone) {
-        width: 90%
+        min-width: 0;
+        width: 85%;
     }
 
     &__title {

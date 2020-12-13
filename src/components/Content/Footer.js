@@ -16,7 +16,7 @@ const Footer = (props) => {
   const context = useContext(LanguageContext);
   return (
     <footer className="footer">
-      <div className="footer__square footer__square--top" />
+      <div className="footer__triangle footer__triangle--top" />
       <div className="footer__top">
         <div className="footer__top-logo">&nbsp;</div>
         <div className="footer__top-item">
@@ -71,17 +71,6 @@ const Footer = (props) => {
             >
               Freepik
             </a>
-            ,
-          </span>
-          <span>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.flaticon.com/authors/elias-bikbulatov"
-              title="Elias Bikbulatov"
-            >
-              Elias Bikbulatov
-            </a>
           </span>
           <span>
             from{' '}
@@ -116,7 +105,7 @@ const Footer = (props) => {
       </div>
 
       <div className="footer__copyright">
-        <div className="footer__square footer__square--copyright" />
+        <div className="footer__triangle footer__triangle--copyright" />
         <span>
           Samuel Kędziora &copy; <b>{currentDate}</b>
         </span>

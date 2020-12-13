@@ -88,16 +88,15 @@
         }
 
         &--active {
-            border-bottom: .5rem solid $color-primary;
-            filter: drop-shadow(0 0 3px $color-primary);
+            border-bottom: 4px solid $color-secondary;
 
-            @include respond(big-desktop) {
-                border-bottom: .3rem solid $color-primary;
+            @include respond(tab-land) {
+                border-bottom: 3px solid $color-secondary;
             }
 
             @include respond(phone) {
                 border-bottom: none;
-                border-left: 1.8rem solid $color-primary;
+                border-left: 1.8rem solid $color-secondary;
                 transform: translateX(-1.1rem);
             }
         }
@@ -107,7 +106,8 @@
         }
 
         &--show-on {
-            animation: navItemSlide 1s ease;
+            animation: navItemSlide .7s ease;
+            transform: translateX(0);
 
             &:nth-child(1) {
                 animation-delay: 50ms;
@@ -132,8 +132,6 @@
             &:nth-child(6) {
                 animation-delay: 300ms;
             }
-
-            transform: translateX(0);
         }
     }
 }

@@ -24,7 +24,7 @@
    },
    "skills": {
       "header": "Skills",
-      "post": "What are my skills and\u00A0which technologies I\u00A0use",
+      "post": "My skills and\u00A0technologies I\u00A0use",
       "other": "OTHER"
    },
    "offer": {
@@ -44,52 +44,52 @@
       }
    },
    "portfolio": {
-      "post": "Projects I\u00A0made",
+      "post": "My creations",
       "project": {
          "preview": "Preview",
-         "noLiveLink": "Not yet in production :(",
+         "noLiveLink": "Not yet in network :(",
          "noGithubLink": "Repository private",
          "install": "Download"
       },
       "projectW": {
          "title": "Projekt W",
-         "description": "Website - Company's portfolio."
+         "description": "Website - Company's portfolio"
       },
       "pizzaBuilder": {
-         "description": "Application - Creating and\u00A0ordering\u00A0pizza."
+         "description": "Application - Creating and\u00A0ordering\u00A0pizza"
       },
       "yourTurn": {
-         "description": "Application - The\u00A0division of\u00A0household\u00A0duties."
+         "description": "Application - The\u00A0division of\u00A0household\u00A0duties"
       },
       "mySite": {
-         "description": "Website - Own portfolio."
+         "description": "Website - Own portfolio"
       },
       "fotobudka": {
-         "description": "Website - Company card."
+         "description": "Website - Company card"
       },
       "bregula": {
-         "description": "Website - Company card."
+         "description": "Website - Company card"
       },
       "button": {
-         "description": "Website - Company card."
+         "description": "Website - Company card"
       },
       "dailyTasks": {
-         "description": "Android\u00A0/\u00A0iOS\u00A0app - Task\u00A0management."
+         "description": "Android\u00A0/\u00A0iOS\u00A0app - Task\u00A0management"
       },
       "canvas1": {
-         "description": "Interactive\u00A0animation (HTML5\u00A0Canvas)."
+         "description": "Interactive\u00A0animation (HTML5\u00A0Canvas)"
       },
       "swpiu": {
-         "description": "System for finding products and services."
+         "description": "System for finding products and services"
       },
       "calculator": {
-         "description": "Simple web calculator."
+         "description": "Simple web calculator"
       },
       "mot": {
-         "description": "Game to improve your MOT skills."
+         "description": "Game to improve your MOT skills"
       },
       "annsr": {
-         "description": "Artificial neural network symbol recognition."
+         "description": "Artificial neural network symbol recognition"
       }
    },
    "contact": {

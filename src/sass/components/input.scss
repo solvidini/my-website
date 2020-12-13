@@ -21,7 +21,7 @@
         margin-top: .5rem;
         text-align: center;
         font-size: 1.6rem;
-        color: $color-failure;
+        color: $color-primary;
     }
 }
 
@@ -58,7 +58,7 @@
     }
 
     &--invalid {
-        border-color: $color-failure;
+        border-color: $color-primary;
         background-color: #ffdfe6;
         ;
     }

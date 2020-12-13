@@ -24,7 +24,7 @@
   },
   "skills": {
     "header": "Umiejętności",
-    "post": "Jakie są moje umiejętności i\u00A0jakich technologii używam",
+    "post": "Moje umiejętności i\u00A0technologie, które używam",
     "other": "INNE"
   },
   "offer": {
@@ -44,52 +44,52 @@
     }
   },
   "portfolio": {
-    "post": "Wykonane\u00A0projekty",
+    "post": "Moje twory",
     "project": {
       "preview": "Podgląd",
-      "noLiveLink": "Jeszcze nie w produkcji :(",
+      "noLiveLink": "Jeszcze nie w sieci :(",
       "noGithubLink": "Repozytorium prywatne",
       "install": "Pobierz"
     },
     "projectW": {
       "title": "Projekt W",
-      "description": "Strona - Portfolio\u00A0firmy."
+      "description": "Strona - Portfolio\u00A0firmy"
     },
     "pizzaBuilder": {
-      "description": "Aplikacja - Tworzenie i\u00A0zamawianie\u00A0pizzy."
+      "description": "Aplikacja - Tworzenie i\u00A0zamawianie\u00A0pizzy"
     },
     "yourTurn": {
-      "description": "Aplikacja - Podział obowiązków\u00A0domowych."
+      "description": "Aplikacja - Podział obowiązków\u00A0domowych"
     },
     "mySite": {
-      "description": "Strona - Portfolio\u00A0własne."
+      "description": "Strona - Portfolio\u00A0własne"
     },
     "fotobudka": {
-      "description": "Strona - Wizytówka\u00A0firmy."
+      "description": "Strona - Wizytówka\u00A0firmy"
     },
     "bregula": {
-      "description": "Strona - Wizytówka\u00A0firmy."
+      "description": "Strona - Wizytówka\u00A0firmy"
     },
     "button": {
-      "description": "Strona - Wizytówka\u00A0firmy."
+      "description": "Strona - Wizytówka\u00A0firmy"
     },
     "dailyTasks": {
-      "description": "Android\u00A0/\u00A0iOS\u00A0app - Zarządzanie\u00A0zadaniami."
+      "description": "Android\u00A0/\u00A0iOS\u00A0app - Zarządzanie\u00A0zadaniami"
     },
     "canvas1": {
-      "description": "Interaktywna\u00A0animacja (HTML5\u00A0Canvas)."
+      "description": "Interaktywna\u00A0animacja (HTML5\u00A0Canvas)"
     },
     "swpiu": {
-      "description": "System do znajdowania produktów i usług."
+      "description": "System do znajdowania produktów i usług"
     },
     "calculator": {
-      "description": "Prosty kalkulator internetowy."
+      "description": "Prosty kalkulator internetowy"
     },
     "mot": {
-      "description": "Gra do poprawienia twoich umiejętności MOT."
+      "description": "Gra do poprawienia twoich umiejętności MOT"
     },
     "annsr": {
-      "description": "Sztuczna sieć neuronowa do rozpoznawania symboli."
+      "description": "Sztuczna sieć neuronowa do rozpoznawania symboli"
     }
   },
   "contact": {

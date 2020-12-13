@@ -106,15 +106,7 @@
         transition: all .1s ease;
 
         &::before {
-            content: "";
-            position: absolute;
-            left: 50%;
-            top: 0;
-            transform: translate(-50%, -50%) rotate(45deg);
-            border-top: .75rem solid $color-dark;
-            border-right: .75rem solid transparent;
-            border-left: .75rem solid $color-dark;
-            border-bottom: .75rem solid transparent;
+            @include triangle(0.9rem, $color-dark, 0, -45%);
         }
     }
 

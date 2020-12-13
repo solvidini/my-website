@@ -103,28 +103,6 @@
   }
 }
 
-@keyframes neonAround {
-  0% {
-    box-shadow: 2px 2px .3rem rgba($color-primary, .7);
-  }
-
-  25% {
-    box-shadow: -2px 2px .3rem rgba($color-primary, .7);
-  }
-
-  50% {
-    box-shadow: -2px -2px .3rem rgba($color-primary, .7);
-  }
-
-  75% {
-    box-shadow: 2px -2px .3rem rgba($color-primary, .7);
-  }
-
-  100% {
-    box-shadow: 2px 2px .3rem rgba($color-primary, .7);
-  }
-}
-
 @keyframes pulse {
   0% {
     transform: scale(1);

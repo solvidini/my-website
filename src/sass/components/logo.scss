@@ -19,6 +19,8 @@
     padding: .25rem;
     margin: .25rem;
 
+    animation: moveInLeft-delay .8s;
+
     @include respond(phone) {
         height: 4rem;
         width: 4rem;

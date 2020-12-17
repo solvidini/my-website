@@ -176,7 +176,7 @@ const Contact = (props) => {
                         type="textarea"
                         id={'message'}
                         label={context.dictionary.contact.message}
-                        rows="8"
+                        rows={8}
                         required
                         errorMessage={context.dictionary.contact.messageError}
                         isValid={mailForm.message.isValid}

@@ -11,6 +11,8 @@
     outline: transparent;
     -webkit-tap-highlight-color: transparent;
 
+    animation: fade-in .6s;
+
     @include respond(phone) {
         padding: 2rem 0;
     }

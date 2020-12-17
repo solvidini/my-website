@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
-import Effect from 'react-reveal/Fade';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTelegramPlane } from '@fortawesome/free-brands-svg-icons';
 
 import { LanguageContext } from '../../context';
 import Technology from '../Technology';
@@ -26,7 +27,7 @@ import firebase from '../../assets/images/technologies/firebase.png';
 import npm from '../../assets/images/technologies/npm.png';
 import gql from '../../assets/images/technologies/graphql.png';
 
-const data = {
+const TECHNOLOGIES = {
    frontend: [
       {
          id: 'react',
@@ -138,37 +139,63 @@ const data = {
 
 const Skills = (props) => {
    const context = useContext(LanguageContext);
-   const [technologies, setTechnologies] = useState(data);
+   const groups = [
+      {
+         id: 'frontend',
+         title: 'FRONT-END',
+         technologies: TECHNOLOGIES.frontend,
+      },
+      {
+         id: 'backend',
+         title: 'BACK-END',
+         technologies: TECHNOLOGIES.backend,
+      },
+      {
+         id: 'other',
+         title: context.dictionary.skills.other,
+         technologies: TECHNOLOGIES.other,
+      },
+   ];
+   const [order, setOrder] = useState(groups);
 
    const renderTechnologies = (techData) =>
-      techData.map((technology, index) => {
-         const id = 'tech-id_' + technology.id;
+      techData.map((data) => <Technology key={data.id} {...data} />);
+
+   const renderGroups = () => {
+      return order.map((group, index) => {
+         const { id, title, technologies } = group;
          return (
             <Draggable key={id} draggableId={id} index={index}>
                {(provided) => (
-                  <Technology
-                     forwardedRef={provided.innerRef}
-                     {...technology}
+                  <div
+                     className="technologies__group"
+                     ref={provided.innerRef}
                      {...provided.draggableProps}
-                     {...provided.dragHandleProps}
-                  />
+                  >
+                     <h3 className="technologies__group-title" 
+                     {...provided.dragHandleProps}>
+                        <FontAwesomeIcon icon={faTelegramPlane} />
+                        {' ' + title + ':'}
+                     </h3>
+                     <div className="technologies__items">{renderTechnologies(technologies)}</div>
+                  </div>
                )}
             </Draggable>
          );
       });
+   };
 
    const handleOnDragEnd = (result) => {
+      console.log(result);
       const sourceId = result.source.droppableId;
       const destinationId = result.destination?.droppableId;
       if (!destinationId && sourceId !== destinationId) return false;
 
-      const updatedTechnologies = technologies;
-      const source = updatedTechnologies[sourceId];
+      const updatedOrder = order;
+      const [reorderedItem] = updatedOrder.splice(result.source.index, 1);
+      updatedOrder.splice(result.destination.index, 0, reorderedItem);
 
-      const [reorderedItem] = source.splice(result.source.index, 1);
-      source.splice(result.destination.index, 0, reorderedItem);
-
-      setTechnologies(updatedTechnologies);
+      setOrder(updatedOrder);
    };
 
    return (
@@ -179,61 +206,18 @@ const Skills = (props) => {
                <span className="section-header__post">{context.dictionary.skills.post}</span>
             </h2>
             <DragDropContext onDragEnd={handleOnDragEnd}>
-               <div className="technologies">
-                  <div className="technologies__group">
-                     <h3 className="technologies__group-title">FRONT-END:</h3>
-                     <Effect>
-                        <Droppable droppableId="frontend" direction="horizontal">
-                           {(provided) => (
-                              <div
-                                 className="technologies__items"
-                                 {...provided.droppableProps}
-                                 ref={provided.innerRef}
-                              >
-                                 {renderTechnologies(technologies.frontend)}
-                                 {provided.placeholder}
-                              </div>
-                           )}
-                        </Droppable>
-                     </Effect>
-                  </div>
-                  <div className="technologies__group">
-                     <h3 className="technologies__group-title">BACK-END:</h3>
-                     <Effect>
-                        <Droppable droppableId="backend" direction="horizontal">
-                           {(provided) => (
-                              <div
-                                 className="technologies__items"
-                                 {...provided.droppableProps}
-                                 ref={provided.innerRef}
-                              >
-                                 {renderTechnologies(technologies.backend)}
-                                 {provided.placeholder}
-                              </div>
-                           )}
-                        </Droppable>
-                     </Effect>
-                  </div>
-                  <div className="technologies__group">
-                     <h3 className="technologies__group-title">
-                        {context.dictionary.skills.other + ':'}
-                     </h3>
-                     <Effect>
-                        <Droppable droppableId="other" direction="horizontal">
-                           {(provided) => (
-                              <div
-                                 className="technologies__items"
-                                 {...provided.droppableProps}
-                                 ref={provided.innerRef}
-                              >
-                                 {renderTechnologies(technologies.other)}
-                                 {provided.placeholder}
-                              </div>
-                           )}
-                        </Droppable>
-                     </Effect>
-                  </div>
-               </div>
+               <Droppable droppableId="technologies">
+                  {(provided) => (
+                     <div
+                        className="technologies"
+                        ref={provided.innerRef}
+                        {...provided.droppableProps}
+                     >
+                        {renderGroups()}
+                        {provided.placeholder}
+                     </div>
+                  )}
+               </Droppable>
             </DragDropContext>
          </div>
       </section>

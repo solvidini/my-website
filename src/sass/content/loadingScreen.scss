@@ -15,9 +15,9 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    filter: grayscale(1);
+    filter: grayscale(0);
 
-    animation: grayOff 1.6s .6s;
+    animation: grayOff 1.2s;
 
     &__logo {
         height: 60%;
@@ -28,10 +28,10 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        animation: hide .4s .8s ease;
+        animation: hide 1.2s ease;
     }
 
     &__animate {
-        animation: shrink .4s .8s ease;
+        animation: shrink 1.2s ease;
     }
 }

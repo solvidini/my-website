@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTelegramPlane } from '@fortawesome/free-brands-svg-icons';
+import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 
 import { LanguageContext } from '../../context';
 import Technology from '../Technology';
@@ -174,8 +174,8 @@ const Skills = (props) => {
                   >
                      <h3 className="technologies__group-title" 
                      {...provided.dragHandleProps}>
-                        <FontAwesomeIcon icon={faTelegramPlane} />
-                        {' ' + title + ':'}
+                     <FontAwesomeIcon className="technologies__group-icon" icon={faEllipsisV} />
+                        {title}
                      </h3>
                      <div className="technologies__items">{renderTechnologies(technologies)}</div>
                   </div>

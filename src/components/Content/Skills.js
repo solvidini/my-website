@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 
 import { LanguageContext } from '../../context';
 import Technology from '../Technology';
@@ -172,10 +170,8 @@ const Skills = (props) => {
                      ref={provided.innerRef}
                      {...provided.draggableProps}
                   >
-                     <h3 className="technologies__group-title" 
-                     {...provided.dragHandleProps}>
-                     <FontAwesomeIcon className="technologies__group-icon" icon={faEllipsisV} />
-                        {title}
+                     <h3 className="technologies__group-title" {...provided.dragHandleProps}>
+                        {title + ':'}
                      </h3>
                      <div className="technologies__items">{renderTechnologies(technologies)}</div>
                   </div>
@@ -186,7 +182,6 @@ const Skills = (props) => {
    };
 
    const handleOnDragEnd = (result) => {
-      console.log(result);
       const sourceId = result.source.droppableId;
       const destinationId = result.destination?.droppableId;
       if (!destinationId && sourceId !== destinationId) return false;

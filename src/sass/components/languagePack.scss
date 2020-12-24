@@ -86,3 +86,11 @@
     }
 
 }
+
+.lpa-enter-active {
+    animation: lpaIn .25s;
+}
+
+.lpa-exit-active {
+    animation: lpaOut .25s;
+}

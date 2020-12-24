@@ -1,22 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
+
+import withTranslation from '../../hoc/withTranslation';
 
 import ReactTypingEffect from 'react-typing-effect';
 import { Link } from 'react-scroll';
 import Particles from 'react-particles-js';
 
 import ArrowDown from '../UI/ArrowDown/ArrowDown';
-import { LanguageContext } from '../../context';
 import ParticlesConfig from '../../utils/particlesjs-config.json';
 
-// Translations
-import * as translationPL from '../../translations/pl.json';
-import * as translationEN from '../../translations/en.json';
-
 const Header = React.memo((props) => {
-   const context = useContext(LanguageContext);
+   const { dictionary } = props;
 
-   const words =
-      context.language === 'pl' ? translationPL.header.wordsArray : translationEN.header.wordsArray;
+   const words = dictionary.header.wordsArray;
 
    return (
       <header className="header" name="top" ref={props.headerRef}>
@@ -53,4 +49,4 @@ const Header = React.memo((props) => {
    );
 });
 
-export default Header;
+export default withTranslation(Header);

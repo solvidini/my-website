@@ -1,7 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import Effect from 'react-reveal/Fade';
 
-import { LanguageContext } from '../../context';
+import withTranslation from '../../hoc/withTranslation';
+
 import Input from '../Input';
 import * as vali from '../../utils/validators';
 import Modal from '../UI/Modal';
@@ -34,7 +35,7 @@ const MAIL_FORM = {
 };
 
 const Contact = (props) => {
-   const context = useContext(LanguageContext);
+   const { dictionary } = props;
    const [mailForm, setMailForm] = useState(MAIL_FORM);
    const [formIsValid, setFormIsValid] = useState(false);
    const [error, setError] = useState();
@@ -76,7 +77,7 @@ const Contact = (props) => {
       event.preventDefault();
 
       if (!formIsValid) {
-         setError(context.dictionary.contact.incorrect);
+         setError(dictionary.contact.incorrect);
          return;
       }
 
@@ -94,9 +95,9 @@ const Contact = (props) => {
       })
          .then((result) => {
             if (result.status !== 200) {
-               throw new Error(context.dictionary.contact.incorrect);
+               throw new Error(dictionary.contact.incorrect);
             }
-            setMessage(context.dictionary.contact.sent);
+            setMessage(dictionary.contact.sent);
             setFormIsValid(false);
             setMailForm(MAIL_FORM);
          })
@@ -124,8 +125,8 @@ const Contact = (props) => {
          )}
          <div className="section-contact__content">
             <h2 className="section-header">
-               <span className="section-header__title">{context.dictionary.contact.title}</span>
-               <span className="section-header__post">{context.dictionary.contact.post}</span>
+               <span className="section-header__title">{dictionary.contact.title}</span>
+               <span className="section-header__post">{dictionary.contact.post}</span>
             </h2>
             <Effect up>
                <form className="contact-form" onSubmit={onSubmitHandler}>
@@ -136,8 +137,8 @@ const Contact = (props) => {
                         id={'email'}
                         label="E-Mail"
                         required
-                        placeholder={context.dictionary.contact.emailPH}
-                        errorMessage={context.dictionary.contact.emailError}
+                        placeholder={dictionary.contact.emailPH}
+                        errorMessage={dictionary.contact.emailError}
                         isValid={mailForm.email.isValid}
                         value={mailForm.email.value}
                         touched={mailForm.email.touched}
@@ -147,8 +148,8 @@ const Contact = (props) => {
                      <Input
                         type="text"
                         id={'name'}
-                        label={context.dictionary.contact.name}
-                        placeholder={context.dictionary.contact.namePH}
+                        label={dictionary.contact.name}
+                        placeholder={dictionary.contact.namePH}
                         isValid={mailForm.name.isValid}
                         value={mailForm.name.value}
                         touched={mailForm.name.touched}
@@ -160,10 +161,10 @@ const Contact = (props) => {
                      <Input
                         type="text"
                         id={'subject'}
-                        label={context.dictionary.contact.subject}
+                        label={dictionary.contact.subject}
                         required
-                        placeholder={context.dictionary.contact.subjectPH}
-                        errorMessage={context.dictionary.contact.subjectError}
+                        placeholder={dictionary.contact.subjectPH}
+                        errorMessage={dictionary.contact.subjectError}
                         isValid={mailForm.subject.isValid}
                         value={mailForm.subject.value}
                         touched={mailForm.subject.touched}
@@ -175,10 +176,10 @@ const Contact = (props) => {
                      <Input
                         type="textarea"
                         id={'message'}
-                        label={context.dictionary.contact.message}
+                        label={dictionary.contact.message}
                         rows={8}
                         required
-                        errorMessage={context.dictionary.contact.messageError}
+                        errorMessage={dictionary.contact.messageError}
                         isValid={mailForm.message.isValid}
                         value={mailForm.message.value}
                         touched={mailForm.message.touched}
@@ -196,7 +197,7 @@ const Contact = (props) => {
                      disabled={!formIsValid}
                      type="submit"
                   >
-                     {context.dictionary.contact.send}
+                     {dictionary.contact.send}
                   </button>
                </form>
             </Effect>
@@ -205,4 +206,4 @@ const Contact = (props) => {
    );
 };
 
-export default Contact;
+export default withTranslation(Contact);

@@ -111,7 +111,7 @@ const Layout = (props) => {
             mountOnEnter
             unmountOnExit
             timeout={500}
-            classNames="fade"
+            classNames="arrow"
          >
             <div onClick={animateScroll.scrollToTop} className="arrow-top">
                <ArrowUp />

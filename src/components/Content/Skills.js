@@ -1,7 +1,6 @@
-import React, { useContext, useState } from 'react';
-import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
+import React from 'react';
 
-import { LanguageContext } from '../../context';
+import withTranslation from '../../hoc/withTranslation';
 import Technology from '../Technology';
 
 import css3 from '../../assets/images/technologies/css3.png';
@@ -136,87 +135,41 @@ const TECHNOLOGIES = {
 };
 
 const Skills = (props) => {
-   const context = useContext(LanguageContext);
-   const groups = [
-      {
-         id: 'frontend',
-         title: 'FRONT-END',
-         technologies: TECHNOLOGIES.frontend,
-      },
-      {
-         id: 'backend',
-         title: 'BACK-END',
-         technologies: TECHNOLOGIES.backend,
-      },
-      {
-         id: 'other',
-         title: context.dictionary.skills.other,
-         technologies: TECHNOLOGIES.other,
-      },
-   ];
-   const [order, setOrder] = useState(groups);
+   const { dictionary } = props;
 
    const renderTechnologies = (techData) =>
       techData.map((data) => <Technology key={data.id} {...data} />);
-
-   const renderGroups = () => {
-      return order.map((group, index) => {
-         const { id, title, technologies } = group;
-         return (
-            <Draggable key={id} draggableId={id} index={index}>
-               {(provided) => (
-                  <div
-                     className="technologies__group"
-                     ref={provided.innerRef}
-                     {...provided.draggableProps}
-                  >
-                     <h3 className="technologies__group-title" {...provided.dragHandleProps}>
-                        {title + ':'}
-                     </h3>
-                     <div className="technologies__items">{renderTechnologies(technologies)}</div>
-                  </div>
-               )}
-            </Draggable>
-         );
-      });
-   };
-
-   const handleOnDragEnd = (result) => {
-      const sourceId = result.source.droppableId;
-      const destinationId = result.destination?.droppableId;
-      if (!destinationId && sourceId !== destinationId) return false;
-
-      const updatedOrder = order;
-      const [reorderedItem] = updatedOrder.splice(result.source.index, 1);
-      updatedOrder.splice(result.destination.index, 0, reorderedItem);
-
-      setOrder(updatedOrder);
-   };
 
    return (
       <section className="section-skills" name="section-skills">
          <div className="section-skills__content">
             <h2 className="section-header section-header--white">
-               <span className="section-header__title">{context.dictionary.skills.header}</span>
-               <span className="section-header__post">{context.dictionary.skills.post}</span>
+               <span className="section-header__title">{dictionary.skills.header}</span>
+               <span className="section-header__post">{dictionary.skills.post}</span>
             </h2>
-            <DragDropContext onDragEnd={handleOnDragEnd}>
-               <Droppable droppableId="technologies">
-                  {(provided) => (
-                     <div
-                        className="technologies"
-                        ref={provided.innerRef}
-                        {...provided.droppableProps}
-                     >
-                        {renderGroups()}
-                        {provided.placeholder}
-                     </div>
-                  )}
-               </Droppable>
-            </DragDropContext>
+            <div className="technologies">
+               <div className="technologies__group">
+                  <h3 className="technologies__group-title">FRONT-END:</h3>
+                  <div className="technologies__items">
+                     {renderTechnologies(TECHNOLOGIES.frontend)}
+                  </div>
+               </div>
+               <div className="technologies__group">
+                  <h3 className="technologies__group-title">BACK-END:</h3>
+                  <div className="technologies__items">
+                     {renderTechnologies(TECHNOLOGIES.backend)}
+                  </div>
+               </div>
+               <div className="technologies__group">
+                  <h3 className="technologies__group-title">{dictionary.skills.other}:</h3>
+                  <div className="technologies__items">
+                     {renderTechnologies(TECHNOLOGIES.other)}
+                  </div>
+               </div>
+            </div>
          </div>
       </section>
    );
 };
 
-export default Skills;
+export default withTranslation(Skills);

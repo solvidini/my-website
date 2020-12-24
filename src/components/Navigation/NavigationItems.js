@@ -1,33 +1,33 @@
-import React, { useContext } from 'react';
+import React from 'react';
+
+import withTranslation from '../../hoc/withTranslation';
 
 import NavigationItem from './NavigationItem';
-import { LanguageContext } from '../../context';
 
 const NavigationItems = (props) => {
-   const { opened = () => {}, clicked = () => {} } = props;
-   const context = useContext(LanguageContext);
+   const { opened = () => {}, clicked = () => {}, dictionary } = props;
    return (
       <ul className="navigation">
          <NavigationItem to="top" opened={opened} clicked={clicked}>
-            {context.dictionary.nav.home}
+            {dictionary.nav.home}
          </NavigationItem>
          <NavigationItem to="section-about" opened={opened} clicked={clicked}>
-            {context.dictionary.nav.about}
+            {dictionary.nav.about}
          </NavigationItem>
          <NavigationItem to="section-skills" opened={opened} clicked={clicked}>
-            {context.dictionary.nav.skills}
+            {dictionary.nav.skills}
          </NavigationItem>
          <NavigationItem to="section-offer" opened={opened} clicked={clicked}>
-            {context.dictionary.nav.offer}
+            {dictionary.nav.offer}
          </NavigationItem>
          <NavigationItem to="section-portfolio" opened={opened} clicked={clicked}>
-            {context.dictionary.nav.portfolio}
+            {dictionary.nav.portfolio}
          </NavigationItem>
          <NavigationItem to="section-contact" opened={opened} clicked={clicked}>
-            {context.dictionary.nav.contact}
+            {dictionary.nav.contact}
          </NavigationItem>
       </ul>
    );
 };
 
-export default NavigationItems;
+export default withTranslation(NavigationItems);

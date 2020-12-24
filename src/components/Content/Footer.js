@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-import { LanguageContext } from '../../context';
+import withTranslation from '../../hoc/withTranslation';
 
 const Footer = (props) => {
+   const { dictionary } = props;
    const currentDate = new Date().getFullYear();
-   const context = useContext(LanguageContext);
+   
    return (
       <footer className="footer">
          <div className="footer__triangle footer__triangle--top" />
@@ -15,7 +16,7 @@ const Footer = (props) => {
             <div className="footer__top-logo">&nbsp;</div>
             <div className="footer__top-item">
                <h4>
-                  {context.dictionary.footer.contact} <FontAwesomeIcon icon={faEnvelope} />
+                  {dictionary.footer.contact} <FontAwesomeIcon icon={faEnvelope} />
                </h4>
                <a target="_blank" rel="noopener noreferrer" href="mailto:contact@samuelk.pl">
                   contact@samuelk.pl
@@ -46,7 +47,7 @@ const Footer = (props) => {
                </a>
             </div>
             <div className="footer__top-item" style={{ lineHeight: '1.6' }}>
-               {context.dictionary.footer.offerIcons}{' '}
+               {dictionary.footer.offerIcons}{' '}
                <span>
                   <a
                      target="_blank"
@@ -94,10 +95,10 @@ const Footer = (props) => {
             <span>
                Samuel Kędziora &copy; <b>{currentDate}</b>
             </span>
-            <span>{context.dictionary.footer.allRights} </span>
+            <span>{dictionary.footer.allRights} </span>
          </div>
       </footer>
    );
 };
 
-export default Footer;
+export default withTranslation(Footer);

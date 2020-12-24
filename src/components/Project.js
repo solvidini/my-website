@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faLaptop } from '@fortawesome/free-solid-svg-icons';
 
-import { LanguageContext } from '../context';
+import withTranslation from '../hoc/withTranslation';
 import Effect from 'react-reveal/Fade';
 
 const Project = (props) => {
-   const context = useContext(LanguageContext);
-   const { title, description, mobile, live, github, source } = props;
+   const { title, description, mobile, live, github, source, dictionary } = props;
    let githubButton, previewButton;
 
    if (github === 'private') {
@@ -18,7 +17,7 @@ const Project = (props) => {
          >
             GitHub
             <div className="custom-label custom-label--project custom-label--project--1">
-               {context.dictionary.portfolio.project.noGithubLink}
+               {dictionary.portfolio.project.noGithubLink}
             </div>
          </span>
       );
@@ -43,9 +42,7 @@ const Project = (props) => {
             className="projects__item-link projects__item-link--right"
             href={live}
          >
-            {mobile
-               ? context.dictionary.portfolio.project.install
-               : context.dictionary.portfolio.project.preview}
+            {mobile ? dictionary.portfolio.project.install : dictionary.portfolio.project.preview}
          </a>
       );
    } else {
@@ -54,11 +51,9 @@ const Project = (props) => {
             className="projects__item-link projects__item-link--right custom-label-container"
             style={{ textDecoration: 'line-through', color: '#bbb' }}
          >
-            {mobile
-               ? context.dictionary.portfolio.project.install
-               : context.dictionary.portfolio.project.preview}
+            {mobile ? dictionary.portfolio.project.install : dictionary.portfolio.project.preview}
             <div className="custom-label custom-label--project custom-label--project--2">
-               {context.dictionary.portfolio.project.noLiveLink}
+               {dictionary.portfolio.project.noLiveLink}
             </div>
          </span>
       );
@@ -91,4 +86,4 @@ const Project = (props) => {
    );
 };
 
-export default Project;
+export default withTranslation(Project);

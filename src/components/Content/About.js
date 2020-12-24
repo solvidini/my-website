@@ -1,17 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
+
+import withTranslation from '../../hoc/withTranslation';
 
 import justMe from '../../assets/images/me.png';
-import { LanguageContext } from '../../context';
 import Effect from 'react-reveal/Fade';
 
 const About = (props) => {
-   const context = useContext(LanguageContext);
+   const { dictionary } = props;
    return (
       <div className="section-drop-shadow">
          <section className="section-about" name="section-about">
             <div className="section-about__content">
                <h2 className="section-header">
-                  <span className="section-header__pre">{context.dictionary.about.header}</span>
+                  <span className="section-header__pre">{dictionary.about.header}</span>
                   <span className="section-header__name" style={{ fontSize: '3rem' }}>
                      Samuel Kędziora -
                   </span>
@@ -23,9 +24,7 @@ const About = (props) => {
                   </Effect>
                   <Effect>
                      <div className="about-me__text">
-                        <p className="about-me__text-paragraph">
-                           {context.dictionary.about.aboutMe}
-                        </p>
+                        <p className="about-me__text-paragraph">{dictionary.about.aboutMe}</p>
                      </div>
                   </Effect>
                </div>
@@ -35,4 +34,4 @@ const About = (props) => {
    );
 };
 
-export default About;
+export default withTranslation(About);

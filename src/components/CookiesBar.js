@@ -1,20 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
-import { LanguageContext } from '../context';
+import withTranslation from '../hoc/withTranslation';
 
 const CookiesBar = (props) => {
-   const context = useContext(LanguageContext);
+   const { dictionary } = props;
    return (
       <div className="cookies-bar">
          <div className="cookies-bar__text">
-            <p>{context.dictionary.cookies1}</p>
-            <p>{context.dictionary.cookies2}</p>
+            <p>{dictionary.cookies1}</p>
+            <p>{dictionary.cookies2}</p>
          </div>
          <button className="cookies-bar__button" onClick={props.clicked}>
-            {context.dictionary.understand}
+            {dictionary.understand}
          </button>
       </div>
    );
 };
 
-export default CookiesBar;
+export default withTranslation(CookiesBar);

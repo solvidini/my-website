@@ -5,21 +5,25 @@
     position: fixed;
     z-index: 200;
     left: 5rem;
-    padding: 1.2rem 0;
+    height: 4rem;
+    // min-width: 8rem;
+    display: flex;
+    align-items: center;
+
     cursor: pointer;
     user-select: none;
     outline: transparent;
     -webkit-tap-highlight-color: transparent;
 
-    animation: fade-in .6s;
+    animation: fadeIn .6s;
 
     @include respond(phone) {
-        padding: 2rem 0;
+        left: 6rem;
+        height: 6rem;
     }
 
     &__toggler {
         color: $color-white;
-        margin-left: .3rem;
         font-size: 1.4rem;
         text-transform: uppercase;
 
@@ -37,18 +41,11 @@
     }
 
     &__dropdown {
-        display: none;
-        padding: 1rem 0;
-        margin: 0 -1rem;
-
-        @include respond(phone) {
-            padding: 2rem 0;
-            margin: 0 -2rem;
-        }
-
-        &--visible {
-            display: block;
-        }
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     &__select {

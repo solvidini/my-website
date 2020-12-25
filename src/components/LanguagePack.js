@@ -20,7 +20,7 @@ const LanguagePack = (props) => {
             </span>
          </div>
          <CSSTransition in={visible} mountOnEnter unmountOnExit timeout={200} classNames="lpa">
-            <div className={'language-pack__dropdown language-pack__dropdown--visible'}>
+            <div className={'language-pack__dropdown'}>
                <button
                   className={
                      language === 'pl'

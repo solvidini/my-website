@@ -3,7 +3,7 @@ import Effect from 'react-reveal/Fade';
 
 import withTranslation from '../../hoc/withTranslation';
 
-import Input from '../Input';
+import Input from '../Input.tsx';
 import * as vali from '../../utils/validators';
 import Modal from '../UI/Modal';
 

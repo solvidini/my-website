@@ -1,6 +1,6 @@
 import React, { useContext, MouseEventHandler } from 'react';
 
-import { LanguageContext } from '../context';
+import { LanguageContext } from '../languageContext';
 
 interface Props {
   clicked: MouseEventHandler

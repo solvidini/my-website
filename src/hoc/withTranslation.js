@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { LanguageContext } from '../languageContext';
+import { LanguageContext } from '../languageContext.tsx';
 
 const withTranslation = (Component) => {
    return (props) => {

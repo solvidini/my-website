@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
 import App from './App';
-import { LanguageProvider } from './languageContext';
+import { LanguageProvider } from './languageContext.tsx';
 
 ReactDOM.render(
 	<LanguageProvider>

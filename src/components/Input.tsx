@@ -88,4 +88,16 @@ const Input = (props: Props) => {
    );
 };
 
+Input.defaultProps = {
+   type: 'text',
+   label: '',
+   value: '',
+   placeholder: '',
+   errorMessage: null,
+   isValid: false,
+   touched: false,
+   required: false,
+   rows: 1,
+};
+
 export default Input;

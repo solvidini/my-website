@@ -9,7 +9,7 @@ import {
   faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
 
-import { LanguageContext } from '../../context';
+import { LanguageContext } from '../../context.tsx';
 
 const Footer = (props) => {
   const currentDate = new Date().getFullYear();

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import justMe from '../../assets/images/me.png';
-import { LanguageContext } from '../../context';
+import { LanguageContext } from '../../context.tsx';
 import Effect from 'react-reveal/Fade';
 
 const About = (props) => {

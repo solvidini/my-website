@@ -5,7 +5,7 @@ import {
   faLaptop,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { LanguageContext } from '../context';
+import { LanguageContext } from '../context.tsx';
 import Effect from 'react-reveal/Fade';
 
 const Project = (props) => {

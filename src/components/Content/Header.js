@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 import Particles from 'react-particles-js';
 
 import ArrowDown from '../UI/ArrowDown/ArrowDown';
-import { LanguageContext } from '../../context';
+import { LanguageContext } from '../../context.tsx';
 import ParticlesConfig from '../../utils/particlesjs-config.json';
 
 // Translations

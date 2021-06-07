@@ -8,7 +8,7 @@ import { animateScroll } from 'react-scroll';
 import ArrowUp from '../components/UI/ArrowUp/ArrowUp';
 import { CSSTransition } from 'react-transition-group';
 import Logo from '../components/Logo';
-import CookiesBar from '../components/CookiesBar';
+import CookiesBar from '../components/CookiesBar.tsx';
 import LanguagePack from '../components/LanguagePack';
 
 const Layout = (props) => {

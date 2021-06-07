@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { LanguageContext } from '../context';
+import { LanguageContext } from '../context.tsx';
 
 const LanguagePack = (props) => {
   const context = useContext(LanguageContext);

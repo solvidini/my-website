@@ -1,28 +1,37 @@
 .loadingScreen {
+    height: 100vh;
+    width: 100%;
     position: relative;
     background-image: linear-gradient(to right bottom,
-            transparent,
-            rgba($color-primary, .8)),
-        url(../../assets/images/city.jpg);
-    background-position: center;
+            rgba($color-secondary, .1),
+            rgba($color-primary, .9)),
+        url(../../assets/images/ssazero-background.jpg);
+    background-position: bottom;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    filter: grayscale(100%);
+    filter: grayscale(0);
+
+    animation: grayOff 1.2s;
 
     &__logo {
         height: 60%;
         width: auto;
         position: absolute;
-        opacity: .1;
+        opacity: 0.1;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        animation: hide 1.2s ease;
+    }
+
+    &__animate {
+        animation: shrink 1.2s ease;
     }
 }

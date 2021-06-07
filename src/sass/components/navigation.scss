@@ -23,10 +23,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all .5s ease-out;
-
         white-space: nowrap;
-
 
         @include respond(phone) {
             font-size: 3rem;
@@ -88,16 +85,15 @@
         }
 
         &--active {
-            border-bottom: .5rem solid $color-primary;
-            filter: drop-shadow(0 0 3px $color-primary);
+            border-bottom: 4px solid $color-secondary;
 
-            @include respond(big-desktop) {
-                border-bottom: .3rem solid $color-primary;
+            @include respond(tab-land) {
+                border-bottom: 3px solid $color-secondary;
             }
 
             @include respond(phone) {
                 border-bottom: none;
-                border-left: 1.8rem solid $color-primary;
+                border-left: 1.8rem solid $color-secondary;
                 transform: translateX(-1.1rem);
             }
         }
@@ -107,49 +103,28 @@
         }
 
         &--show-on {
-            animation: navItemSlide 1s ease;
+            transform: translateX(-100%);
+            animation: navItemSlide .7s forwards;
 
-            &:nth-child(1) {
+            &:nth-child(2) {
                 animation-delay: 50ms;
             }
 
-            &:nth-child(2) {
+            &:nth-child(3) {
                 animation-delay: 100ms;
             }
 
-            &:nth-child(3) {
+            &:nth-child(4) {
                 animation-delay: 150ms;
             }
 
-            &:nth-child(4) {
+            &:nth-child(5) {
                 animation-delay: 200ms;
             }
 
-            &:nth-child(5) {
+            &:nth-child(6) {
                 animation-delay: 250ms;
             }
-
-            &:nth-child(6) {
-                animation-delay: 300ms;
-            }
-
-            transform: translateX(0);
         }
-    }
-}
-
-.item-separate {
-    width: 0;
-    border-left: 0.15rem solid rgba($color-dark, .6);
-    height: 60%;
-    margin: auto 0;
-
-    @include respond(phone) {
-        border-left: none;
-        border-bottom: 0.15rem solid rgba($color-dark, .8);
-        background-color: transparent;
-        height: 0;
-        width: 80%;
-        margin: 1rem auto 0 auto;
     }
 }

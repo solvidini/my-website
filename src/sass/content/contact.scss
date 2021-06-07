@@ -5,6 +5,7 @@
 .section-contact {
     position: relative;
     background-color: $color-white;
+    overflow: hidden;
 
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
 
@@ -22,7 +23,7 @@
         display: block;
         top: 0;
         left: 0;
-        background-image: url(../../assets/images/code3.jpg);
+        background-image: url(../../assets/images/tech-2.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;

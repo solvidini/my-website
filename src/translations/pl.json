@@ -10,21 +10,21 @@
   },
   "header": {
     "wordsArray": [
-      "Witam na mojej stronie!",
+      "Witaj na mojej stronie! :)",
       "Znajdziesz tu informacje na mój temat oraz projekty, które wykonałem.",
       "W sekcji \"Portfolio\" będą na bieżąco dodawane moje projekty."
     ]
   },
   "about": {
     "header": "Kilka słów o\u00A0mnie",
-    "aboutMe": "Jestem młodym deweloperem rozwijającym swoje możliwości na\u00A0każdym możliwym kroku. Interesuję się\u00A0najnowszymi trendami z\u00A0zakresu tworzenia stron www, aplikacji webowych, blogów, etc. Jako deweloper skupiam się\u00A0na\u00A0zagadnieniach UI, UX oraz dbam o\u00A0to, aby strony działały płynnie i\u00A0były dostosowane do\u00A0wyświetlania na\u00A0każdym urządzeniu. W\u00A0rozwijaniu swoich kompetencji koncentruję się\u00A0zarówno na\u00A0technologiach front-endowych jak i\u00A0back-endowych. Do\u00A0każdego projektu podchodzę indywidualnie. Stawiam na\u00A0komunikację z\u00A0klientem, znajdując najlepsze rozwiązania, spełniające jego potrzeby i\u00A0umożliwiając dostarczenie projektu na\u00A0czas.",
+    "aboutMe": "Jestem młodym deweloperem rozwijającym swoje możliwości na\u00A0każdym możliwym kroku. Interesuję się\u00A0najnowszymi trendami z\u00A0zakresu tworzenia stron www, aplikacji webowych, blogów, gier etc. Jako deweloper skupiam się\u00A0na\u00A0zagadnieniach UI, UX oraz dbam o\u00A0to, aby strony działały płynnie i\u00A0były dostosowane do\u00A0wyświetlania na\u00A0każdym urządzeniu. W\u00A0rozwijaniu swoich kompetencji koncentruję się\u00A0zarówno na\u00A0technologiach front-endowych jak i\u00A0back-endowych. Do\u00A0każdego projektu podchodzę indywidualnie. Stawiam na\u00A0komunikację z\u00A0klientem, znajdując najlepsze rozwiązania, spełniające jego potrzeby i\u00A0umożliwiając dostarczenie projektu na\u00A0czas.",
     "skillsTitle1": "Technologie główne",
     "skillsTitle2": "Inne technologie",
     "skillsTitle3": "Oprogramowanie"
   },
   "skills": {
     "header": "Umiejętności",
-    "post": "Jakie są moje umiejętności i\u00A0jakich technologii używam",
+    "post": "Moje umiejętności i\u00A0technologie, które używam",
     "other": "INNE"
   },
   "offer": {
@@ -44,44 +44,57 @@
     }
   },
   "portfolio": {
-    "post": "Wykonane\u00A0projekty",
+    "post": "Moje twory",
     "project": {
       "preview": "Podgląd",
-      "noLink": "Jeszcze nie w produkcji :(",
+      "noLiveLink": "Jeszcze nie w sieci :(",
+      "noGithubLink": "Repozytorium prywatne",
       "install": "Pobierz"
     },
     "projectW": {
       "title": "Projekt W",
-      "description": "Strona - Portfolio\u00A0firmy."
+      "description": "Strona - Portfolio\u00A0firmy"
     },
     "pizzaBuilder": {
-      "description": "Aplikacja - Tworzenie i\u00A0zamawianie\u00A0pizzy."
+      "description": "Aplikacja - Tworzenie i\u00A0zamawianie\u00A0pizzy"
     },
     "yourTurn": {
-      "description": "Aplikacja - Podział obowiązków\u00A0domowych."
+      "description": "Aplikacja - Podział obowiązków\u00A0domowych"
     },
     "mySite": {
-      "description": "Strona - Portfolio\u00A0własne."
+      "description": "Strona - Portfolio\u00A0własne"
     },
     "fotobudka": {
-      "description": "Strona - Wizytówka\u00A0firmy."
+      "description": "Strona - Wizytówka\u00A0firmy"
     },
     "bregula": {
-      "description": "Strona - Wizytówka\u00A0firmy."
+      "description": "Strona - Wizytówka\u00A0firmy"
+    },
+    "button": {
+      "description": "Strona - Wizytówka\u00A0firmy"
     },
     "dailyTasks": {
-      "description": "Android\u00A0/\u00A0iOS\u00A0app - Zarządzanie\u00A0zadaniami."
+      "description": "Android\u00A0/\u00A0iOS\u00A0app - Zarządzanie\u00A0zadaniami"
     },
     "canvas1": {
-      "description": "Interaktywna\u00A0animacja (HTML5\u00A0Canvas)."
+      "description": "Interaktywna\u00A0animacja (HTML5\u00A0Canvas)"
     },
     "swpiu": {
-      "description": "System - Projekt Inżynierski."
+      "description": "System do znajdowania produktów i usług"
+    },
+    "calculator": {
+      "description": "Prosty kalkulator internetowy"
+    },
+    "mot": {
+      "description": "Gra do poprawienia twoich umiejętności MOT"
+    },
+    "annsr": {
+      "description": "Sztuczna sieć neuronowa do rozpoznawania symboli"
     }
   },
   "contact": {
     "title": "Kontakt",
-    "post": "Skontaktuj się ze mną przez e-mail",
+    "post": "Skontaktuj się ze mną poprzez e-mail",
     "sent": "Twoja wiadomość została wysłana do\u00A0Samuela!",
     "incorrect": "Dane w formularzu E-Mail są\u00A0niepoprawne!",
     "emailPH": "przyklad@gmail.com",

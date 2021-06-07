@@ -1,106 +1,119 @@
 {
-  "language": "English",
-  "nav": {
-    "home": "Home",
-    "about": "About me",
-    "skills": "Skills",
-    "offer": "Offer",
-    "portfolio": "Portfolio",
-    "contact": "Contact"
-  },
-  "header": {
-    "wordsArray": [
-      "Welcome to my page!",
-      "You will find here information about me and\u00A0also projects I\u00A0made.",
-      "In section \"Portfolio\" I\u00A0will be adding more and\u00A0more of my projects over time."
-    ]
-  },
-  "about": {
-    "header": "Few words about me",
-    "aboutMe": "I\u00A0am a\u00A0young developer developing my\u00A0capabilities at\u00A0every possible step. I'm interested in the latest trends in the field of creating websites, web applications, blogs, etc. As a\u00A0developer, I\u00A0focus on\u00A0UI, UX issues and\u00A0make sure that websites work smoothly and\u00A0are adapted to display on\u00A0any device. In developing my competences, I\u00A0focus on\u00A0both front-end and\u00A0back-end technologies. I\u00A0approach each project individually. I\u00A0focus on\u00A0communication with the client, finding the best solutions that meet his needs and\u00A0I\u00A0always deliver the project on\u00A0time.",
-    "skillsTitle1": "Main technologies",
-    "skillsTitle2": "Other technologies",
-    "skillsTitle3": "Software"
-  },
-  "skills": {
-    "header": "Skills",
-    "post": "What are my skills and\u00A0which technologies I\u00A0use",
-    "other": "OTHER"
-  },
-  "offer": {
-    "title": "Offer",
-    "post": "What do I\u00A0offer and\u00A0what I\u00A0pay attention to",
-    "makingWebsites": {
-      "title": "Creating Websites",
-      "description": "I\u00A0use the latest solutions and\u00A0technologies to create websites. I\u00A0follow modern trends and\u00A0meet all current standards. Both the look and\u00A0layout of the pages are based on\u00A0an intuitive, nice interface and\u00A0responsive design."
-    },
-    "responsiveDesign": {
-      "title": "Responsive Design",
-      "description": "The entire appearance of the page and\u00A0its layout automatically adapts to the browser window in which it is displayed. The website created in such a\u00A0technique is very universal, and\u00A0its operation becomes much more convenient regardless of the device on\u00A0which it is displayed."
-    },
-    "intuitiveInterface": {
-      "title": "Intuitive Interface",
-      "description": "I\u00A0arrange all elements of the page in an intuitive way for the user to make navigating the site independent of the device simple and\u00A0pleasant. In addition, I\u00A0offer a\u00A0modern, interesting look and\u00A0I take care of all details regarding element animation to make the usage clear and\u00A0understandable."
-    }
-  },
-  "portfolio": {
-    "post": "Projects I\u00A0made",
-    "project": {
-      "preview": "Preview",
-      "noLink": "Not yet in production :(",
-      "install": "Download"
-    },
-    "projectW": {
-      "title": "Projekt W",
-      "description": "Website - Company's portfolio."
-    },
-    "pizzaBuilder": {
-      "description": "Application - Creating and\u00A0ordering\u00A0pizza."
-    },
-    "yourTurn": {
-      "description": "Application - The\u00A0division of\u00A0household\u00A0duties."
-    },
-    "mySite": {
-      "description": "Website - Own portfolio."
-    },
-    "fotobudka": {
-      "description": "Website - Company card."
-    },
-    "bregula": {
-      "description": "Website - Company card."
-    },
-    "dailyTasks": {
-      "description": "Android\u00A0/\u00A0iOS\u00A0app - Task\u00A0management."
-    },
-    "canvas1": {
-      "description": "Interactive\u00A0animation (HTML5\u00A0Canvas)."
-    },
-    "swpiu": {
-      "description": "System - Engineering Project."
-    }
-  },
-  "contact": {
-    "title": "Contact",
-    "post": "Contact with me via e-mail",
-    "sent": "Your message was sent to\u00A0Samuel!",
-    "incorrect": "Data in E-Mail form is\u00A0not\u00A0correct!",
-    "emailPH": "example@gmail.com",
-    "emailError": "Please enter a valid e-mail.",
-    "name": "Name",
-    "namePH": "Your Name",
-    "subject": "Subject",
-    "subjectPH": "Subject of an e-mail",
-    "subjectError": "Subject must be at least 2 characters. (max 30)",
-    "message": "Message",
-    "messageError": "Your message must be at least 5 characters. (max 5000)",
-    "send": "Send"
-  },
-  "footer": {
-    "contact": "Contact",
-    "offerIcons": "Offer icons made by",
-    "allRights": "All rights reserved."
-  },
-  "cookies1": "Please be advised that the site uses cookies to optimize and improve its functionality for end users.",
-  "cookies2": "The site does not collect any personal user information.",
-  "understand": "I\u00A0understand"
+   "language": "English",
+   "nav": {
+      "home": "Home",
+      "about": "About me",
+      "skills": "Skills",
+      "offer": "Offer",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+   },
+   "header": {
+      "wordsArray": [
+         "Welcome to my page! :)",
+         "You will find here information about me and\u00A0also projects I\u00A0made.",
+         "In section \"Portfolio\" I\u00A0will be adding more and\u00A0more of my projects over time."
+      ]
+   },
+   "about": {
+      "header": "Few words about me",
+      "aboutMe": "I\u00A0am a\u00A0young developer developing my\u00A0capabilities at\u00A0every possible step. I'm interested in the latest trends in the field of creating websites, web applications, blogs, games etc. As a\u00A0developer, I\u00A0focus on\u00A0UI, UX issues and\u00A0make sure that websites work smoothly and\u00A0are adapted to display on\u00A0any device. In developing my competences, I\u00A0focus on\u00A0both front-end and\u00A0back-end technologies. I\u00A0approach each project individually. I\u00A0focus on\u00A0communication with the client, finding the best solutions that meet his needs and\u00A0I\u00A0always deliver the project on\u00A0time.",
+      "skillsTitle1": "Main technologies",
+      "skillsTitle2": "Other technologies",
+      "skillsTitle3": "Software"
+   },
+   "skills": {
+      "header": "Skills",
+      "post": "My skills and\u00A0technologies I\u00A0use",
+      "other": "OTHER"
+   },
+   "offer": {
+      "title": "Offer",
+      "post": "What do I\u00A0offer and\u00A0what I\u00A0pay attention to",
+      "makingWebsites": {
+         "title": "Creating Websites",
+         "description": "I\u00A0use the latest solutions and\u00A0technologies to create websites. I\u00A0follow modern trends and\u00A0meet all current standards. Both the look and\u00A0layout of the pages are based on\u00A0an intuitive, nice interface and\u00A0responsive design."
+      },
+      "responsiveDesign": {
+         "title": "Responsive Design",
+         "description": "The entire appearance of the page and\u00A0its layout automatically adapts to the browser window in which it is displayed. The website created in such a\u00A0technique is very universal, and\u00A0its operation becomes much more convenient regardless of the device on\u00A0which it is displayed."
+      },
+      "intuitiveInterface": {
+         "title": "Intuitive Interface",
+         "description": "I\u00A0arrange all elements of the page in an intuitive way for the user to make navigating the site independent of the device simple and\u00A0pleasant. In addition, I\u00A0offer a\u00A0modern, interesting look and\u00A0I take care of all details regarding element animation to make the usage clear and\u00A0understandable."
+      }
+   },
+   "portfolio": {
+      "post": "My creations",
+      "project": {
+         "preview": "Preview",
+         "noLiveLink": "Not yet in network :(",
+         "noGithubLink": "Repository private",
+         "install": "Download"
+      },
+      "projectW": {
+         "title": "Projekt W",
+         "description": "Website - Company's portfolio"
+      },
+      "pizzaBuilder": {
+         "description": "Application - Creating and\u00A0ordering\u00A0pizza"
+      },
+      "yourTurn": {
+         "description": "Application - The\u00A0division of\u00A0household\u00A0duties"
+      },
+      "mySite": {
+         "description": "Website - Own portfolio"
+      },
+      "fotobudka": {
+         "description": "Website - Company card"
+      },
+      "bregula": {
+         "description": "Website - Company card"
+      },
+      "button": {
+         "description": "Website - Company card"
+      },
+      "dailyTasks": {
+         "description": "Android\u00A0/\u00A0iOS\u00A0app - Task\u00A0management"
+      },
+      "canvas1": {
+         "description": "Interactive\u00A0animation (HTML5\u00A0Canvas)"
+      },
+      "swpiu": {
+         "description": "System for finding products and services"
+      },
+      "calculator": {
+         "description": "Simple web calculator"
+      },
+      "mot": {
+         "description": "Game to improve your MOT skills"
+      },
+      "annsr": {
+         "description": "Artificial neural network symbol recognition"
+      }
+   },
+   "contact": {
+      "title": "Contact",
+      "post": "Contact with me via e-mail",
+      "sent": "Your message was sent to\u00A0Samuel!",
+      "incorrect": "Data in E-Mail form is\u00A0not\u00A0correct!",
+      "emailPH": "example@gmail.com",
+      "emailError": "Please enter a valid e-mail.",
+      "name": "Name",
+      "namePH": "Your Name",
+      "subject": "Subject",
+      "subjectPH": "Subject of an e-mail",
+      "subjectError": "Subject must be at least 2 characters. (max 30)",
+      "message": "Message",
+      "messageError": "Your message must be at least 5 characters. (max 5000)",
+      "send": "Send"
+   },
+   "footer": {
+      "contact": "Contact",
+      "offerIcons": "Offer icons made by",
+      "allRights": "All rights reserved."
+   },
+   "cookies1": "Please be advised that the site uses cookies to optimize and improve its functionality for end users.",
+   "cookies2": "The site does not collect any personal user information.",
+   "understand": "I\u00A0understand"
 }

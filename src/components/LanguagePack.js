@@ -1,60 +1,52 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 
-import { LanguageContext } from '../context.tsx';
+import withTranslation from '../hoc/withTranslation';
 
 const LanguagePack = (props) => {
-  const context = useContext(LanguageContext);
-  return (
-    <div
-      className="language-pack"
-      title="ENG / PL"
-      onClick={props.showToggler}
-      ref={props.languagePackRef}
-    >
-      <div className="language-pack__toggler">
-        <span style={{ pointerEvents: 'none' }}>
-          {context.dictionary.language}&nbsp;
-          <i
-            className={
-              props.visible
-                ? 'fas fa-caret-down language-pack__toggler-icon language-pack__toggler-icon--active '
-                : 'fas fa-caret-down language-pack__toggler-icon'
-            }
-          ></i>
-        </span>
+   const { showToggler, languagePackRef, visible, language, changeLanguage, dictionary } = props;
+   return (
+      <div className="language-pack" title="ENG / PL" onClick={showToggler} ref={languagePackRef}>
+         <div className="language-pack__toggler">
+            <span style={{ pointerEvents: 'none' }}>
+               {dictionary.language}&nbsp;
+               <i
+                  className={
+                     visible
+                        ? 'fas fa-caret-down language-pack__toggler-icon language-pack__toggler-icon--active '
+                        : 'fas fa-caret-down language-pack__toggler-icon'
+                  }
+               ></i>
+            </span>
+         </div>
+         <CSSTransition in={visible} mountOnEnter unmountOnExit timeout={200} classNames="lpa">
+            <div className={'language-pack__dropdown'}>
+               <button
+                  className={
+                     language === 'pl'
+                        ? 'language-pack__select language-pack__select--active'
+                        : 'language-pack__select'
+                  }
+                  onClick={changeLanguage}
+                  data-language="pl"
+               >
+                  Polski
+               </button>
+               <button
+                  className={
+                     language === 'en'
+                        ? 'language-pack__select language-pack__select--active'
+                        : 'language-pack__select'
+                  }
+                  onClick={changeLanguage}
+                  data-language="en"
+               >
+                  English
+               </button>
+            </div>
+         </CSSTransition>
       </div>
-      <div
-        className={
-          props.visible
-            ? 'language-pack__dropdown language-pack__dropdown--visible'
-            : 'language-pack__dropdown'
-        }
-      >
-        <button
-          className={
-            context.language === 'pl'
-              ? 'language-pack__select language-pack__select--active'
-              : 'language-pack__select'
-          }
-          onClick={context.changeLanguage}
-          data-language="pl"
-        >
-          Polski
-        </button>
-        <button
-          className={
-            context.language === 'en'
-              ? 'language-pack__select language-pack__select--active'
-              : 'language-pack__select'
-          }
-          onClick={context.changeLanguage}
-          data-language="en"
-        >
-          English
-        </button>
-      </div>
-    </div>
-  );
+   );
 };
 
-export default LanguagePack;
+export default withTranslation(LanguagePack);

@@ -1,32 +1,28 @@
 @import '../variables';
 @import '../mixins';
 
+$square-size: 2.5rem;
+
 .footer {
   width: 100%;
+  position: relative;
+
   background-color: $color-primary;
-  position: absolute;
-  border-top: .25rem solid transparent;
+  background-image: linear-gradient(10deg,
+      rgba($color-secondary, .6) 10%,
+      rgba($color-primary, 1) 70%),
+    url(../../assets/images/tech-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  &__square {
-    width: 4rem;
-    height: 4rem;
-    position: absolute;
-    border-top-right-radius: 1rem;
-
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -54%) rotate(-45deg);
-
+  &__triangle {
     &--top {
-      background-color: $color-primary;
-      border-right: .25rem solid transparent;
-      border-top: .25rem solid transparent;
+      @include triangle($square-size, $color-primary, 1rem, -47%);
     }
 
     &--copyright {
-      background-color: $color-dark;
-      border-right: .25rem solid $color-primary;
-      border-top: .25rem solid $color-primary;
+      @include triangle($square-size, $color-dark, 1rem, -47%);
     }
   }
 
@@ -73,7 +69,7 @@
       font-size: 1.6rem;
       letter-spacing: .2rem;
       text-align: center;
-      
+
       h4 {
         color: $color-white;
         font-size: 1.7rem;

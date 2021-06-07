@@ -4,6 +4,7 @@
 .section-offer {
     position: relative;
     background-color: $color-white;
+    overflow: hidden;
 
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
 
@@ -21,7 +22,7 @@
         display: block;
         top: 0;
         left: 0;
-        background-image: url(../../assets/images/code3.jpg);
+        background-image: url(../../assets/images/tech-3.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -82,9 +83,10 @@
             position: relative;
             margin: 1rem;
             transition: all .3s ease;
+            
+            filter: brightness(110%);
 
             &:hover {
-                filter: brightness(110%);
                 transform: scale(1.02);
             }
         }

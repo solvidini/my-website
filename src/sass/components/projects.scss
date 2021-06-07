@@ -25,6 +25,11 @@
         transition: all .3s ease;
         border-radius: .5rem;
 
+        &:hover &-link {
+            box-shadow: 0 0 7px 1px $color-secondary;
+            border-color: $color-secondary;
+        }
+
         @include respond(tab-land) {
             flex: 1 0 49%;
             max-width: 49%;
@@ -114,11 +119,11 @@
             text-transform: uppercase;
             font-size: 1.7rem;
 
-            transition: all .2s ease;
-
+            transition: all .3s ease;
+            
+            box-shadow: 0 0 7px 1px $color-primary;
             &--left {
                 left: 0;
-                filter: drop-shadow(0 0 .7rem $color-primary);
                 border-top-right-radius: 1rem;
                 border-right: .25rem solid $color-primary;
                 border-top: .25rem solid $color-primary;
@@ -126,14 +131,13 @@
 
             &--right {
                 right: 0;
-                filter: drop-shadow(0 0 .7rem $color-primary);
                 border-top-left-radius: 1rem;
                 border-left: .25rem solid $color-primary;
                 border-top: .25rem solid $color-primary;
             }
 
             &:hover {
-                background-color: $color-primary
+                background-color: $color-secondary
             }
         }
 
@@ -157,6 +161,7 @@
 
 
         &-image {
+            
             display: flex;
             width: 100%;
             height: auto;

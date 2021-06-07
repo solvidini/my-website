@@ -1,0 +1,38 @@
+.custom-label-container:hover .custom-label,
+.custom-label-container:active .custom-label {
+    display: block;
+}
+
+.custom-label {
+    display: none;
+    position: absolute;
+    bottom: -4rem;
+    left: 50%;
+    width: auto;
+    
+    white-space: nowrap;
+    color: $color-white;
+    background-color: rgba($color-dark, 0.9);
+    border-radius: .5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 1rem;
+    
+    animation: release .2s;
+    transform: translate(-50%, 0);
+
+    &--project {
+        bottom: 2rem;
+        border: 0;
+
+        &--1 {
+            animation: release-project1 .2s;
+            transform: translateX(0);
+        }
+
+        &--2 {
+            animation: release-project2 .2s;
+            transform: translateX(-100%);
+        }
+    }
+}

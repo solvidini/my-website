@@ -3,8 +3,11 @@
 
 .section-portfolio {
     position: relative;
+    overflow: hidden;
 
     &__content {
         padding: 5rem .2rem;
+        max-width: 150rem;
+        margin: 0 auto;
     }
 }

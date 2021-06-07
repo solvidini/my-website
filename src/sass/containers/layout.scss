@@ -36,10 +36,10 @@
     }
 }
 
-.fade-enter-active {
+.arrow-enter-active {
     animation: slideIn .5s ease-in;
 }
 
-.fade-exit-active {
+.arrow-exit-active {
     animation: slideOut .5s ease-out;
 }

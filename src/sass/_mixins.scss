@@ -13,6 +13,36 @@
     transform: translate(-50%, -50%);
 }
 
+@mixin triangle($size: 1rem, $color: $color-dark, $radius: 0, $y: -50%) {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, $y) rotate(45deg);
+
+    border-top-left-radius: $radius;
+    border-top: $size solid $color;
+    border-left: $size solid $color;
+    border-right: $size solid transparent;
+    border-bottom: $size solid transparent;
+}
+
+@mixin glowingText($color, $outline: false, $width: 2px) {
+    @if $outline==true {
+        color: transparent;
+        -webkit-text-stroke-color: $color;
+        -webkit-text-stroke-width: $width;
+        text-shadow: none;
+        filter: drop-shadow(0px 0px 3px $color);
+    }
+
+    @else {
+        text-shadow: 0px 0px 7px rgba($color, .9);
+        color: rgba($color, .3);
+    }
+}
+
 // MEDIA QUERY MANAGER
 /* 
 0px - 600px: Phone

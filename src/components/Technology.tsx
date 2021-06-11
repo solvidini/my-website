@@ -1,7 +1,13 @@
 import React from 'react';
 import Effect from 'react-reveal/Fade';
 
-const Technology = (props) => {
+interface Props {
+   src: string,
+   name: string,
+   styles?: Object
+}
+
+const Technology = (props: Props) => {
    const { src, name, styles = {} } = props;
 
    return (

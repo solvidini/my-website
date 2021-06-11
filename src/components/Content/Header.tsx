@@ -1,4 +1,4 @@
-import React, { forwardRef, RefObject, memo, FC } from 'react';
+import React, { RefObject, memo, FC } from 'react';
 
 import withTranslation from '../../hoc/withTranslation';
 
@@ -12,7 +12,7 @@ import { Dictionary } from './../../languageContext';
 
 interface Props {
    dictionary: Dictionary,
-   forwardedRef: (instance: HTMLElement | null) => void,
+   forwardedRef: RefObject<HTMLHeadElement>,
    hideCanvas: boolean
 }
 

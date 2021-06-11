@@ -1,6 +1,7 @@
 import React from 'react';
 
 import withTranslation from '../../hoc/withTranslation';
+import { Dictionary } from './../../languageContext';
 
 import Project from '../Project';
 import fotobudka from '../../assets/images/projects/project-fotobudka.gif';
@@ -17,7 +18,11 @@ import calculator from '../../assets/images/projects/project-calculator.png';
 import mot from '../../assets/images/projects/project-mot.gif';
 import annsr from '../../assets/images/projects/project-annsr.gif';
 
-const Portfolio = (props) => {
+interface Props {
+   dictionary: Dictionary
+}
+
+const Portfolio = (props: Props) => {
    const { dictionary } = props;
    return (
       <section className="section-portfolio" id="section-portfolio">

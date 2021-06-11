@@ -4,11 +4,15 @@ import { faEnvelope, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 import withTranslation from '../../hoc/withTranslation';
+import { Dictionary } from './../../languageContext';
 
-const Footer = (props) => {
+interface Props {
+   dictionary: Dictionary
+}
+const Footer = (props: Props) => {
    const { dictionary } = props;
    const currentDate = new Date().getFullYear();
-   
+
    return (
       <footer className="footer">
          <div className="footer__triangle footer__triangle--top" />

@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 
 import Navigation from './NavigationItems';
 import DrawerToggle from './DrawerToggle';
 
-const Toolbar = (props) => {
-   const { forwardedRef, sideDrawerIsVisible } = props;
+interface Props {
+   forwardedRef: RefObject<HTMLDivElement>,
+   sticky: boolean,
+   sideDrawerIsVisible: boolean,
+   sideDrawerToggleClicked: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
+}
+
+const Toolbar = (props: Props) => {
+   const { forwardedRef, sticky, sideDrawerIsVisible, sideDrawerToggleClicked } = props;
    const toolbarClasses = ['toolbar'];
-   if (props.sticky) {
+   if (sticky) {
       toolbarClasses.push('toolbar--fixed');
    }
-   if (props.sideDrawerIsVisible) {
+   if (sideDrawerIsVisible) {
       toolbarClasses.push('toolbar--transparent');
    }
    return (
@@ -17,7 +24,7 @@ const Toolbar = (props) => {
          <div></div>
          <DrawerToggle
             sideDrawerIsVisible={sideDrawerIsVisible}
-            clicked={props.sideDrawerToggleClicked}
+            onClick={sideDrawerToggleClicked}
          />
          <nav className="toolbar__nav desktop-only">
             <Navigation />

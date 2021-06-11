@@ -1,14 +1,15 @@
 import React, { useContext, MouseEventHandler } from 'react';
 
-import { LanguageContext } from '../languageContext';
+import withTranslation from '../hoc/withTranslation';
+import { Dictionary } from './../languageContext';
 
 interface Props {
-  clicked: MouseEventHandler
+  clicked: MouseEventHandler,
+  dictionary: Dictionary
 };
 
-const CookiesBar = ({ clicked }: Props) => {
-  const context = useContext(LanguageContext);
-  const { dictionary: { cookies1, cookies2, understand } }: any = context;
+const CookiesBar = (props: Props) => {
+  const { dictionary: { cookies1, cookies2, understand }, clicked } = props;
   return (
     <div className="cookies-bar">
       <div className="cookies-bar__text">
@@ -22,4 +23,4 @@ const CookiesBar = ({ clicked }: Props) => {
   );
 };
 
-export default CookiesBar;
+export default withTranslation(CookiesBar);

@@ -2,12 +2,16 @@ import React from 'react';
 import Effect from 'react-reveal/Fade';
 
 import withTranslation from '../../hoc/withTranslation';
-
 import website from '../../assets/images/website-color.png';
 import responsive from '../../assets/images/responsive-color.png';
 import ui from '../../assets/images/ui-color.png';
+import { Dictionary } from './../../languageContext';
 
-const Offer = (props) => {
+interface Props {
+   dictionary: Dictionary
+}
+
+const Offer = (props: Props) => {
    const { dictionary } = props;
 
    return (

@@ -145,7 +145,7 @@ const Skills: React.FC<{ dictionary: Dictionary }> = (props) => {
    const { dictionary } = props;
 
    const renderTechnologies = (techData: Array<{ [index: string]: any }>) =>
-      techData.map((data) => <Technology key={data.id} {...data} />);
+      techData.map(({ id, src, name }) => <Technology key={id} src={src} name={name} />);
 
    return (
       <section className="section-skills" id="section-skills">

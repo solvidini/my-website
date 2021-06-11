@@ -11,7 +11,6 @@ import ArrowUp from '../components/UI/ArrowUp/ArrowUp';
 import Logo from '../components/Logo';
 import CookiesBar from '../components/CookiesBar';
 import LanguagePack from '../components/LanguagePack';
-import withTranslation from './../components/Navigation/NavigationItems';
 
 const Layout: FC = ({ children }) => {
    const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
@@ -73,7 +72,7 @@ const Layout: FC = ({ children }) => {
       setLanguageDropdownIsVisible(!languageDropdownIsVisible);
    };
 
-   const languagePackClosedHandler = (e: MouseEvent | {target: any}) => {
+   const languagePackClosedHandler = (e: MouseEvent | { target: any }) => {
       if (languagePackRef.current) {
          if (!languagePackRef.current.contains(e.target)) {
             setLanguageDropdownIsVisible(false);
@@ -105,7 +104,7 @@ const Layout: FC = ({ children }) => {
                sticky={stickyToolbar}
             />
          </Header>
-         <SideDrawer opened={sideDrawerIsVisible} closed={sideDrawerClosedHandler} />
+         <SideDrawer opened={sideDrawerIsVisible} onClose={sideDrawerClosedHandler} />
          {children}
          <Footer />
          <CSSTransition

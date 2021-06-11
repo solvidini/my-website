@@ -4,8 +4,13 @@ import withTranslation from '../../hoc/withTranslation';
 
 import justMe from '../../assets/images/me.png';
 import Effect from 'react-reveal/Fade';
+import { Dictionary } from '../../languageContext';
 
-const About = (props) => {
+interface Props {
+   dictionary: Dictionary
+};
+
+const About = (props: Props) => {
    const { dictionary } = props;
    return (
       <div className="section-drop-shadow">

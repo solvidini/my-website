@@ -3,17 +3,23 @@ import React from 'react';
 import NavigationItems from './NavigationItems';
 import Backdrop from '../UI/Backdrop';
 
-const SideDrawer = (props) => {
+interface Props {
+   onClose: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void,
+   opened: boolean
+};
+
+const SideDrawer = (props: Props) => {
+   const { onClose, opened } = props;
    let sideDrawerClasses = ['side-drawer', 'side-drawer--closed'];
-   if (props.opened) {
+   if (opened) {
       sideDrawerClasses = ['side-drawer', 'side-drawer--opened'];
    }
    return (
       <div className="side-drawer-container">
-         <Backdrop show={props.opened} clicked={props.closed} />
-         <div className={sideDrawerClasses.join(' ')} onClick={props.closed}>
+         <Backdrop show={opened} clicked={onClose} />
+         <div className={sideDrawerClasses.join(' ')} onClick={onClose}>
             <nav className="side-drawer__nav">
-               <NavigationItems clicked={props.closed} opened={props.opened} />
+               <NavigationItems clicked={onClose} opened={opened} />
             </nav>
          </div>
       </div>

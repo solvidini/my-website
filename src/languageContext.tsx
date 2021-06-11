@@ -1,16 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createContext, ChangeEvent, FC } from 'react';
 
 // Translations
 import polish from './translations/pl.json';
 import english from './translations/en.json';
 
-export const LanguageContext = React.createContext({});
-
-type Props = {
-   children: React.ReactChildren
+export interface Dictionary {
+   [index: string]: any
 }
 
-export const LanguageProvider = (props: Props) => {
+export interface LC {
+   language: string,
+   changeLanguage: Function
+   dictionary: Dictionary
+}
+
+
+export const LanguageContext = createContext<LC>({ language: 'pl', changeLanguage: () => { }, dictionary: {} });
+
+export const LanguageProvider: FC<{}> = ({ children }) => {
    const [language, setLanguage] = useState('pl');
    const [dictionary, setDictionary] = useState(polish);
 
@@ -26,7 +33,7 @@ export const LanguageProvider = (props: Props) => {
       else setDictionary(english);
    }, [language]);
 
-   const changeLanguage = (e: any) => {
+   const changeLanguage = (e: ChangeEvent<{ dataset: any }>) => {
       e.preventDefault();
       const languageToChange = e.target.dataset.language;
       if (languageToChange !== 'pl' && languageToChange !== 'en') return;
@@ -42,7 +49,7 @@ export const LanguageProvider = (props: Props) => {
             dictionary: dictionary,
          }}
       >
-         {props.children}
+         {children}
       </LanguageContext.Provider>
    );
 };

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 
-import { LanguageContext } from '../languageContext.tsx';
+import { LanguageContext } from '../languageContext';
 
-const withTranslation = (Component) => {
-   return (props) => {
-      const { language = '', changeLanguage = () => {}, dictionary = {} } = useContext(
+const withTranslation = (Component: any) => {
+   return (props: any) => {
+      const { language = '', changeLanguage = () => { }, dictionary = {} } = useContext(
          LanguageContext
       );
 

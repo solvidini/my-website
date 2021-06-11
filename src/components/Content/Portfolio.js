@@ -20,7 +20,7 @@ import annsr from '../../assets/images/projects/project-annsr.gif';
 const Portfolio = (props) => {
    const { dictionary } = props;
    return (
-      <section name="section-portfolio" className="section-portfolio">
+      <section className="section-portfolio" id="section-portfolio">
          <div className="section-portfolio__content">
             <h2 className="section-header section-header--white">
                <span className="section-header__title">Portfolio</span>
@@ -30,7 +30,6 @@ const Portfolio = (props) => {
                <Project
                   title={dictionary.portfolio.projectW.title}
                   description={dictionary.portfolio.projectW.description}
-                  github="private"
                   live="http://projektw.pl"
                   source={projectW}
                />
@@ -51,7 +50,6 @@ const Portfolio = (props) => {
                <Project
                   title="Tapicernia Button"
                   description={dictionary.portfolio.button.description}
-                  github="private"
                   live="http://www.pracownia-button.pl/"
                   source={button}
                />
@@ -72,7 +70,6 @@ const Portfolio = (props) => {
                <Project
                   title="Bregula Ubezpieczenia"
                   description={dictionary.portfolio.bregula.description}
-                  github="private"
                   live="http://bregulaubezpieczenia.pl/"
                   source={bregulaInsurances}
                />
@@ -107,7 +104,6 @@ const Portfolio = (props) => {
                <Project
                   title="Fotobudka Premium Box"
                   description={dictionary.portfolio.fotobudka.description}
-                  github="private"
                   live="http://fotobudka-premiumbox.pl"
                   source={fotobudka}
                />

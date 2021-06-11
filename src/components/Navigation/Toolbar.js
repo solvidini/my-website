@@ -4,7 +4,7 @@ import Navigation from './NavigationItems';
 import DrawerToggle from './DrawerToggle';
 
 const Toolbar = (props) => {
-   const { toolbarRef, sideDrawerIsVisible } = props;
+   const { forwardedRef, sideDrawerIsVisible } = props;
    const toolbarClasses = ['toolbar'];
    if (props.sticky) {
       toolbarClasses.push('toolbar--fixed');
@@ -13,7 +13,7 @@ const Toolbar = (props) => {
       toolbarClasses.push('toolbar--transparent');
    }
    return (
-      <div className={toolbarClasses.join(' ')} ref={toolbarRef}>
+      <div className={toolbarClasses.join(' ')} ref={forwardedRef}>
          <div></div>
          <DrawerToggle
             sideDrawerIsVisible={sideDrawerIsVisible}

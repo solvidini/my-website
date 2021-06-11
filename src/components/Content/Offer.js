@@ -12,7 +12,7 @@ const Offer = (props) => {
 
    return (
       <div className="section-drop-shadow">
-         <section className="section-offer" name="section-offer">
+         <section className="section-offer" id="section-offer">
             <div className="section-offer__content">
                <h2 className="section-header">
                   <span className="section-header__title">{dictionary.offer.title}</span>

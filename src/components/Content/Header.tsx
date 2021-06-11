@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef, RefObject, memo, FC } from 'react';
 
 import withTranslation from '../../hoc/withTranslation';
 
@@ -7,16 +7,23 @@ import { Link } from 'react-scroll';
 import Particles from 'react-particles-js';
 
 import ArrowDown from '../UI/ArrowDown/ArrowDown';
-import ParticlesConfig from '../../utils/particlesjs-config.json';
+import ParticlesConfig from '../../utils/particlesjs-config';
+import { Dictionary } from './../../languageContext';
 
-const Header = React.memo((props) => {
-   const { dictionary } = props;
+interface Props {
+   dictionary: Dictionary,
+   forwardedRef: (instance: HTMLElement | null) => void,
+   hideCanvas: boolean
+}
+
+const Header: FC<Props> = (props) => {
+   const { dictionary, hideCanvas, children, forwardedRef } = props;
 
    const words = dictionary.header.wordsArray;
 
    return (
-      <header className="header" name="top" ref={props.headerRef}>
-         {!props.hideCanvas && <Particles params={ParticlesConfig} width="100vw" height="98vh" />}
+      <header className="header" id="top" ref={forwardedRef}>
+         {!hideCanvas && <Particles params={ParticlesConfig} width="100vw" height="98vh" />}
          <div className="header__text-box">
             <h1 className="heading-primary">Web Developer</h1>
             <div className="heading-paragraph">Samuel Kędziora</div>
@@ -44,9 +51,9 @@ const Header = React.memo((props) => {
                <ArrowDown />
             </Link>
          </div>
-         {props.children}
+         {children}
       </header>
    );
-});
+};
 
-export default withTranslation(Header);
+export default withTranslation(memo(Header));

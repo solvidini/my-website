@@ -3,10 +3,10 @@ import { CSSTransition } from 'react-transition-group';
 
 import withTranslation from '../hoc/withTranslation';
 
-const LanguagePack = (props) => {
-   const { showToggler, languagePackRef, visible, language, changeLanguage, dictionary } = props;
+const LanguagePack = (props: any) => {
+   const { showToggler, forwardedRef, visible, language, changeLanguage, dictionary } = props;
    return (
-      <div className="language-pack" title="ENG / PL" onClick={showToggler} ref={languagePackRef}>
+      <div className="language-pack" title="ENG / PL" onClick={showToggler} ref={forwardedRef}>
          <div className="language-pack__toggler">
             <span style={{ pointerEvents: 'none' }}>
                {dictionary.language}&nbsp;

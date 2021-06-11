@@ -4,13 +4,35 @@ import { faMobileAlt, faLaptop } from '@fortawesome/free-solid-svg-icons';
 
 import withTranslation from '../hoc/withTranslation';
 import Effect from 'react-reveal/Fade';
+import { Dictionary } from './../languageContext';
 
-const Project = (props) => {
+interface Props {
+   title: string,
+   description: string,
+   mobile?: boolean,
+   live?: string,
+   github?: string,
+   source: string,
+   dictionary: Dictionary
+}
+
+const Project = (props: Props) => {
    const { title, description, mobile, live, github, source, dictionary } = props;
-   let githubButton, previewButton;
 
-   if (github === 'private') {
-      githubButton = (
+   const renderGithubButton = () => {
+      if (github) {
+         return (
+            <a
+               target="_blank"
+               rel="noopener noreferrer"
+               className="projects__item-link projects__item-link--left"
+               href={github}
+            >
+               GitHub
+            </a>
+         );
+      }
+      return (
          <span
             className="projects__item-link projects__item-link--left custom-label-container"
             style={{ textDecoration: 'line-through', color: '#bbb' }}
@@ -21,32 +43,22 @@ const Project = (props) => {
             </div>
          </span>
       );
-   } else {
-      githubButton = (
-         <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="projects__item-link projects__item-link--left"
-            href={github}
-         >
-            GitHub
-         </a>
-      );
    }
 
-   if (live) {
-      previewButton = (
-         <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="projects__item-link projects__item-link--right"
-            href={live}
-         >
-            {mobile ? dictionary.portfolio.project.install : dictionary.portfolio.project.preview}
-         </a>
-      );
-   } else {
-      previewButton = (
+   const renderPreviewButton = () => {
+      if (live) {
+         return (
+            <a
+               target="_blank"
+               rel="noopener noreferrer"
+               className="projects__item-link projects__item-link--right"
+               href={live}
+            >
+               {mobile ? dictionary.portfolio.project.install : dictionary.portfolio.project.preview}
+            </a>
+         );
+      }
+      return (
          <span
             className="projects__item-link projects__item-link--right custom-label-container"
             style={{ textDecoration: 'line-through', color: '#bbb' }}
@@ -57,6 +69,7 @@ const Project = (props) => {
             </div>
          </span>
       );
+
    }
 
    return (
@@ -71,8 +84,8 @@ const Project = (props) => {
                   title={mobile ? 'Mobile project' : 'Web project'}
                />
             </div>
-            {githubButton}
-            {previewButton}
+            {renderGithubButton()}
+            {renderPreviewButton()}
             <div className="projects__item-image-container">
                <img
                   draggable="false"

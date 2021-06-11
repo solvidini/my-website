@@ -1,26 +1,28 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, FC, SyntheticEvent } from 'react';
+
+import { CSSTransition } from 'react-transition-group';
+import { animateScroll } from 'react-scroll';
 
 import Toolbar from '../components/Navigation/Toolbar';
 import SideDrawer from '../components/Navigation/SideDrawer';
 import Header from '../components/Content/Header';
 import Footer from '../components/Content/Footer';
-import { animateScroll } from 'react-scroll';
 import ArrowUp from '../components/UI/ArrowUp/ArrowUp';
-import { CSSTransition } from 'react-transition-group';
 import Logo from '../components/Logo';
-import CookiesBar from '../components/CookiesBar.tsx';
+import CookiesBar from '../components/CookiesBar';
 import LanguagePack from '../components/LanguagePack';
+import withTranslation from './../components/Navigation/NavigationItems';
 
-const Layout = (props) => {
+const Layout: FC = ({ children }) => {
    const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
    const [languageDropdownIsVisible, setLanguageDropdownIsVisible] = useState(false);
    const [cookiesBarIsVisible, setCookiesBarIsVisible] = useState(false);
    const [scrollY, setScrollY] = useState(0);
    const [stickyToolbar, setStickyToolbar] = useState(false);
    const [hideHeaderCanvas, setHideHeaderCanvas] = useState(false);
-   const headerRef = useRef(null);
-   const toolbarRef = useRef(null);
-   const languagePackRef = useRef(null);
+   const headerRef = useRef<HTMLHeadElement>(null);
+   const toolbarRef = useRef<HTMLDivElement>(null);
+   const languagePackRef = useRef<HTMLDivElement>(null);
 
    const yOffset = () => {
       setScrollY(window.pageYOffset);
@@ -47,8 +49,8 @@ const Layout = (props) => {
    }, [setCookiesBarIsVisible]);
 
    useEffect(() => {
-      const toolbarHeight = toolbarRef.current ? toolbarRef.current.offsetHeight : 50;
-      const height = headerRef.current ? headerRef.current.offsetHeight - toolbarHeight : 0;
+      const toolbarHeight = toolbarRef?.current?.offsetHeight ? toolbarRef.current.offsetHeight : 50
+      const height = headerRef?.current?.offsetHeight ? headerRef.current.offsetHeight - toolbarHeight : 0;
 
       if (scrollY > height) {
          setStickyToolbar(true);
@@ -71,7 +73,7 @@ const Layout = (props) => {
       setLanguageDropdownIsVisible(!languageDropdownIsVisible);
    };
 
-   const languagePackClosedHandler = (e) => {
+   const languagePackClosedHandler = (e: MouseEvent | {target: any}) => {
       if (languagePackRef.current) {
          if (!languagePackRef.current.contains(e.target)) {
             setLanguageDropdownIsVisible(false);
@@ -81,7 +83,7 @@ const Layout = (props) => {
 
    const acceptedCookiesHandler = () => {
       setCookiesBarIsVisible(false);
-      localStorage.setItem('cookiesAccepted', true);
+      localStorage.setItem('cookiesAccepted', 'true');
    };
 
    return (
@@ -91,20 +93,20 @@ const Layout = (props) => {
             <LanguagePack
                visible={languageDropdownIsVisible}
                showToggler={languagePackToggleHandler}
-               languagePackRef={languagePackRef}
+               forwardedRef={languagePackRef}
             />
          )}
          {cookiesBarIsVisible && <CookiesBar clicked={acceptedCookiesHandler} />}
-         <Header headerRef={headerRef} hideCanvas={hideHeaderCanvas}>
+         <Header forwardedRef={headerRef} hideCanvas={hideHeaderCanvas}>
             <Toolbar
-               toolbarRef={toolbarRef}
+               forwardedRef={toolbarRef}
                sideDrawerToggleClicked={sideDrawerToggleHandler}
                sideDrawerIsVisible={sideDrawerIsVisible}
                sticky={stickyToolbar}
             />
          </Header>
          <SideDrawer opened={sideDrawerIsVisible} closed={sideDrawerClosedHandler} />
-         {props.children}
+         {children}
          <Footer />
          <CSSTransition
             in={stickyToolbar}

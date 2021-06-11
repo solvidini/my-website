@@ -2,6 +2,7 @@ import React from 'react';
 
 import withTranslation from '../../hoc/withTranslation';
 import Technology from '../Technology';
+import { Dictionary } from '../../languageContext';
 
 import css3 from '../../assets/images/technologies/css3.png';
 import git from '../../assets/images/technologies/git.png';
@@ -140,14 +141,14 @@ const TECHNOLOGIES = {
    ],
 };
 
-const Skills = (props) => {
+const Skills: React.FC<{ dictionary: Dictionary }> = (props) => {
    const { dictionary } = props;
 
-   const renderTechnologies = (techData) =>
+   const renderTechnologies = (techData: Array<{ [index: string]: any }>) =>
       techData.map((data) => <Technology key={data.id} {...data} />);
 
    return (
-      <section className="section-skills" name="section-skills">
+      <section className="section-skills" id="section-skills">
          <div className="section-skills__content">
             <h2 className="section-header section-header--white">
                <span className="section-header__title">{dictionary.skills.header}</span>

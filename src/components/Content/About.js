@@ -9,7 +9,7 @@ const About = (props) => {
    const { dictionary } = props;
    return (
       <div className="section-drop-shadow">
-         <section className="section-about" name="section-about">
+         <section className="section-about" id="section-about">
             <div className="section-about__content">
                <h2 className="section-header">
                   <span className="section-header__pre">{dictionary.about.header}</span>

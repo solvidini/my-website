@@ -112,7 +112,7 @@ const Contact = (props) => {
    };
 
    return (
-      <section className="section-contact" name="section-contact">
+      <section className="section-contact" id="section-contact">
          {message && (
             <Modal show close={modalClosedHandler} title="Success!">
                {message}

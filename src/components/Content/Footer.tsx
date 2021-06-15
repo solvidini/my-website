@@ -9,6 +9,7 @@ import { Dictionary } from './../../languageContext';
 interface Props {
    dictionary: Dictionary
 }
+
 const Footer = (props: Props) => {
    const { dictionary } = props;
    const currentDate = new Date().getFullYear();

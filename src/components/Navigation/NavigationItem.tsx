@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Link } from 'react-scroll';
 
-const NavigationItem = (props) => {
-   const { children, to, offset = 0, clicked, opened } = props;
+interface Props {
+   to: string,
+   offset?: number,
+   onClick: (() => void) & React.MouseEventHandler<HTMLButtonElement>,
+   isOpened: boolean,
+}
+
+const NavigationItem: FC<Props> = (props) => {
+   const { children, to, offset = 0, onClick, isOpened } = props;
    const navigationItemClasses = ['navigation-item'];
-   if (opened) {
+   if (isOpened) {
       navigationItemClasses.push('navigation-item--show-on');
    }
    return (
@@ -21,7 +28,7 @@ const NavigationItem = (props) => {
             offset={offset}
             activeClass="navigation-item--active"
             ignoreCancelEvents={false}
-            onClick={clicked}
+            onClick={onClick}
          >
             {children}
          </Link>

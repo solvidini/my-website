@@ -1,4 +1,4 @@
-import React, { useContext, MouseEventHandler } from 'react';
+import React, { MouseEventHandler } from 'react';
 
 import withTranslation from '../hoc/withTranslation';
 import { Dictionary } from './../languageContext';

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Effect from 'react-reveal/Fade';
 
 import withTranslation from '../../hoc/withTranslation';
-
-import Input from '../Input.tsx';
+import Input from '../Input';
 import * as vali from '../../utils/validators';
 import Modal from '../UI/Modal';
+import { Dictionary } from '../../languageContext';
 
 const MAIL_FORM = {
    name: {
@@ -34,15 +34,19 @@ const MAIL_FORM = {
    },
 };
 
-const Contact = (props) => {
+interface Props {
+   dictionary: Dictionary
+}
+
+const Contact = (props: Props) => {
    const { dictionary } = props;
    const [mailForm, setMailForm] = useState(MAIL_FORM);
-   const [formIsValid, setFormIsValid] = useState(false);
+   const [isFormValid, setisFormValid] = useState(false);
    const [error, setError] = useState();
    const [message, setMessage] = useState();
 
-   const inputChangedHandler = (id, value) => {
-      const updatedMailForm = { ...mailForm };
+   const inputChangedHandler = (id: string, value: string) => {
+      const updatedMailForm: any = { ...mailForm };
       const updatedInput = { ...updatedMailForm[id] };
 
       let isValid = true;
@@ -60,11 +64,11 @@ const Contact = (props) => {
       }
 
       setMailForm(updatedMailForm);
-      setFormIsValid(formValidity);
+      setisFormValid(formValidity);
    };
 
-   const onBlurHandler = (id) => {
-      const updatedMailForm = { ...mailForm };
+   const onBlurHandler = (id: string) => {
+      const updatedMailForm: any = { ...mailForm };
       const updatedInput = { ...updatedMailForm[id] };
 
       updatedInput.touched = true;
@@ -73,10 +77,10 @@ const Contact = (props) => {
       setMailForm(updatedMailForm);
    };
 
-   const onSubmitHandler = (event) => {
-      event.preventDefault();
+   const onSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
+      event?.preventDefault();
 
-      if (!formIsValid) {
+      if (!isFormValid) {
          setError(dictionary.contact.incorrect);
          return;
       }
@@ -98,7 +102,7 @@ const Contact = (props) => {
                throw new Error(dictionary.contact.incorrect);
             }
             setMessage(dictionary.contact.sent);
-            setFormIsValid(false);
+            setisFormValid(false);
             setMailForm(MAIL_FORM);
          })
          .catch((err) => {
@@ -107,22 +111,35 @@ const Contact = (props) => {
    };
 
    const modalClosedHandler = () => {
-      setMessage(null);
-      setError(null);
+      setMessage(undefined);
+      setError(undefined);
    };
+
+   const renderModal = () => {
+      if (message) {
+         return (
+            <Modal show onClose={modalClosedHandler} title="Success!">
+               {message}
+            </Modal>
+         )
+      }
+      return null;
+   }
+
+   const renderError = () => {
+      if (error) {
+         return (
+            <Modal show onClose={modalClosedHandler} title="Error!" isError>
+               {(error || '').toString()}
+            </Modal>
+         )
+      }
+   }
 
    return (
       <section className="section-contact" id="section-contact">
-         {message && (
-            <Modal show close={modalClosedHandler} title="Success!">
-               {message}
-            </Modal>
-         )}
-         {error && (
-            <Modal show close={modalClosedHandler} title="Error!" error>
-               {error.toString()}
-            </Modal>
-         )}
+         {renderModal()}
+         {renderError()}
          <div className="section-contact__content">
             <h2 className="section-header">
                <span className="section-header__title">{dictionary.contact.title}</span>
@@ -190,11 +207,11 @@ const Contact = (props) => {
                   <button
                      className={[
                         'contact-form__submit',
-                        !formIsValid
+                        !isFormValid
                            ? 'contact-form__submit--disabled'
                            : 'contact-form__submit--enabled',
                      ].join(' ')}
-                     disabled={!formIsValid}
+                     disabled={!isFormValid}
                      type="submit"
                   >
                      {dictionary.contact.send}

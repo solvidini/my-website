@@ -16,7 +16,7 @@ const SideDrawer = (props: Props) => {
    }
    return (
       <div className="side-drawer-container">
-         <Backdrop show={opened} clicked={onClose} />
+         <Backdrop show={opened} onClick={onClose} />
          <div className={sideDrawerClasses.join(' ')} onClick={onClose}>
             <nav className="side-drawer__nav">
                <NavigationItems clicked={onClose} opened={opened} />

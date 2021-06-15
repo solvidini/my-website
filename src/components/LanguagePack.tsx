@@ -2,8 +2,18 @@ import React from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import withTranslation from '../hoc/withTranslation';
+import { Dictionary } from '../languageContext';
 
-const LanguagePack = (props: any) => {
+interface Props {
+   showToggler: React.MouseEventHandler<HTMLDivElement>,
+   forwardedRef: React.LegacyRef<HTMLDivElement> | undefined,
+   visible: boolean,
+   language: string,
+   changeLanguage: React.MouseEventHandler<HTMLButtonElement>,
+   dictionary: Dictionary
+}
+
+const LanguagePack = (props: Props) => {
    const { showToggler, forwardedRef, visible, language, changeLanguage, dictionary } = props;
    return (
       <div className="language-pack" title="ENG / PL" onClick={showToggler} ref={forwardedRef}>

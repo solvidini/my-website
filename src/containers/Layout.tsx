@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, FC, SyntheticEvent } from 'react';
+import React, { useState, useEffect, useRef, FC } from 'react';
 
 import { CSSTransition } from 'react-transition-group';
 import { animateScroll } from 'react-scroll';

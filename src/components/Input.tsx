@@ -12,7 +12,7 @@ type Props = {
    rows?: number;
    required?: boolean;
    onChange: Function;
-   onFocus: Function;
+   onBlur: Function;
 };
 
 const Input = (props: Props) => {
@@ -26,7 +26,7 @@ const Input = (props: Props) => {
       placeholder,
       required,
       onChange,
-      onFocus,
+      onBlur,
       label,
       errorMessage,
    } = props;
@@ -53,7 +53,7 @@ const Input = (props: Props) => {
                   placeholder={placeholder}
                   required={required}
                   onChange={(e) => onChange(id, e.target.value)}
-                  onFocus={() => onFocus(id)}
+                  onBlur={() => onBlur(id)}
                />
             );
          default:
@@ -66,7 +66,7 @@ const Input = (props: Props) => {
                   placeholder={placeholder}
                   required={required}
                   onChange={(e) => onChange(id, e.target.value)}
-                  onFocus={() => onFocus(id)}
+                  onBlur={() => onBlur(id)}
                />
             );
       }

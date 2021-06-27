@@ -104,7 +104,7 @@ const Layout: FC = ({ children }) => {
                sticky={stickyToolbar}
             />
          </Header>
-         <SideDrawer opened={sideDrawerIsVisible} onClose={sideDrawerClosedHandler} />
+         <SideDrawer isOpened={sideDrawerIsVisible} onClose={sideDrawerClosedHandler} />
          {children}
          <Footer />
          <CSSTransition

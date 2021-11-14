@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, FC } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useEffect, useRef, FC } from 'react'
+import ReactDOM from 'react-dom'
 
-import Backdrop from './Backdrop';
+import Backdrop from './Backdrop'
 
 interface Props {
    show: boolean,
@@ -11,11 +11,11 @@ interface Props {
 }
 
 const Modal: FC<Props> = ({ show, onClose, isError, title, children }) => {
-   const OKButtonRef = useRef<HTMLButtonElement>(null);
+   const OKButtonRef = useRef<HTMLButtonElement>(null)
 
    useEffect(() => {
-      OKButtonRef?.current?.focus();
-   });
+      OKButtonRef?.current?.focus()
+   })
 
    return ReactDOM.createPortal(
       <>
@@ -31,7 +31,7 @@ const Modal: FC<Props> = ({ show, onClose, isError, title, children }) => {
          </div>
       </>,
       document.getElementById('modal-root') as HTMLElement
-   );
-};
+   )
+}
 
-export default Modal;
+export default Modal

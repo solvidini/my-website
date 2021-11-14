@@ -1,42 +1,36 @@
-import React from 'react';
+import React from 'react'
 
-import withTranslation from '../../hoc/withTranslation';
+import justMe from '../../assets/images/me.png'
+import { useTranslation } from 'react-i18next'
 
-import justMe from '../../assets/images/me.png';
-import Effect from 'react-reveal/Fade';
-import { Dictionary } from '../../languageContext';
+const About = () => {
+   const { t } = useTranslation()
 
-interface Props {
-   dictionary: Dictionary
-};
-
-const About = (props: Props) => {
-   const { dictionary } = props;
    return (
       <div className="section-drop-shadow">
          <section className="section-about" id="section-about">
             <div className="section-about__content">
                <h2 className="section-header">
-                  <span className="section-header__pre">{dictionary.about.header}</span>
+                  <span className="section-header__pre">{t('About.Header')}</span>
                   <span className="section-header__name" style={{ fontSize: '3rem' }}>
                      Samuel Kędziora -
                   </span>
                   <span style={{ fontSize: '3rem' }}> Web&nbsp;Developer</span>
                </h2>
                <div className="about-me">
-                  <Effect>
+                  {/* <Effect> */}
                      <img className="about-me__image" src={justMe} alt="Just me" />
-                  </Effect>
-                  <Effect>
+                  {/* </Effect> */}
+                  {/* <Effect> */}
                      <div className="about-me__text">
-                        <p className="about-me__text-paragraph">{dictionary.about.aboutMe}</p>
+                        <p className="about-me__text-paragraph">{t('About.Content')}</p>
                      </div>
-                  </Effect>
+                  {/* </Effect> */}
                </div>
             </div>
          </section>
       </div>
-   );
-};
+   )
+}
 
-export default withTranslation(About);
+export default About

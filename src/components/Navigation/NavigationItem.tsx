@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Link } from 'react-scroll';
+import React from 'react'
+import { Link } from 'react-scroll'
 
 interface Props {
    to: string,
@@ -8,11 +8,10 @@ interface Props {
    isOpened: boolean,
 }
 
-const NavigationItem: FC<Props> = (props) => {
-   const { children, to, offset = 0, onClick, isOpened } = props;
-   const navigationItemClasses = ['navigation-item'];
+const NavigationItem: React.FC<Props> = ({ children, to, offset = 0, onClick, isOpened }) => {
+   const navigationItemClasses = ['navigation-item']
    if (isOpened) {
-      navigationItemClasses.push('navigation-item--show-on');
+      navigationItemClasses.push('navigation-item--show-on')
    }
    return (
       <li className={navigationItemClasses.join(' ')}>
@@ -33,7 +32,7 @@ const NavigationItem: FC<Props> = (props) => {
             {children}
          </Link>
       </li>
-   );
-};
+   )
+}
 
-export default NavigationItem;
+export default NavigationItem

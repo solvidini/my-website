@@ -1,0 +1,121 @@
+{
+  "Language": "English",
+  "Global": {
+    "Understand": "I understand",
+    "SomethingWentWrong": "Something went wrong"
+  },
+  "Nav": {
+    "Home": "Home",
+    "About": "About me",
+    "Skills": "Skills",
+    "Offer": "Offer",
+    "Portfolio": "Portfolio",
+    "Contact": "Contact"
+  },
+  "Header": {
+    "SentenceArray": [
+      "Welcome to my page! :)",
+      "You will find here information about me and also projects I made.",
+      "In section \"Portfolio\" I will be adding more and more of my projects over time."
+    ]
+  },
+  "About": {
+    "Header": "A few words about myself",
+    "Content": "I am a software developer developing my capabilities at every possible step. I'm interested in the latest trends in the field of creating websites, web applications, blogs, games etc. As a developer, I focus on UI, UX issues and make sure that websites work smoothly and are adapted to display on any device. In developing my competences, I focus on both front-end and back-end technologies. I approach each project individually. I focus on communication with the client, finding the best solutions that meet his needs and I always deliver the project on time."
+  },
+  "Skills": {
+    "Title": "Skills",
+    "SubTitle": "My skills and technologies I use",
+    "Other": "OTHER"
+  },
+  "Offer": {
+    "Title": "Offer",
+    "SubTitle": "What do I offer and what I pay attention to",
+    "MakingWebsites": {
+      "Title": "Creating Websites",
+      "Description": "I use the latest solutions and technologies to create websites. I follow modern trends and meet all current standards. Both the look and layout of the pages are based on an intuitive, nice interface and responsive design."
+    },
+    "ResponsiveDesign": {
+      "Title": "Responsive Design",
+      "Description": "The entire appearance of the page and its layout automatically adapts to the browser window in which it is displayed. The website created in such a technique is very universal, and its operation becomes much more convenient regardless of the device on which it is displayed."
+    },
+    "IntuitiveInterface": {
+      "Title": "Intuitive Interface",
+      "Description": "I arrange all elements of the page in an intuitive way for the user to make navigating the site independent of the device simple and pleasant. In addition, I offer a modern, interesting look and I take care of all details regarding element animation to make the usage clear and understandable."
+    }
+  },
+  "Portfolio": {
+    "SubTitle": "My creations",
+    "Project": {
+      "Preview": "Preview",
+      "NoLiveLink": "Not uploaded to the network :(",
+      "NoGithubLink": "Repository private",
+      "Install": "Download"
+    },
+    "ProjectW": {
+      "Title": "Projekt W",
+      "Description": "Website - Company's portfolio"
+    },
+    "PizzaBuilder": {
+      "Description": "Application - Creating and ordering pizza"
+    },
+    "YourTurn": {
+      "Description": "Application - The division of household duties"
+    },
+    "MySite": {
+      "Description": "Website - Own portfolio"
+    },
+    "Fotobudka": {
+      "Description": "Website - Company card"
+    },
+    "Bregula": {
+      "Description": "Website - Company card"
+    },
+    "Button": {
+      "Description": "Website - Company card"
+    },
+    "DailyTasks": {
+      "Description": "Android / iOS app - Task management"
+    },
+    "CanvasBubbles": {
+      "Description": "Interactive animation (HTML5 Canvas)"
+    },
+    "SWPIU": {
+      "Description": "System for finding products and services"
+    },
+    "Calculator": {
+      "Description": "Simple web calculator"
+    },
+    "MOT": {
+      "Description": "Game to improve your MOT skills"
+    },
+    "ANNSR": {
+      "Description": "Artificial neural network symbol recognition"
+    }
+  },
+  "Contact": {
+    "Title": "Contact",
+    "SubTitle": "Contact with me via e-mail",
+    "Sent": "Your message was sent to Samuel!",
+    "Incorrect": "Data in E-Mail form is not correct!",
+    "EmailPH": "example@gmail.com",
+    "EmailError": "Please enter a valid e-mail.",
+    "Name": "Name",
+    "NamePH": "Your Name",
+    "Subject": "Subject",
+    "SubjectPH": "Subject of an e-mail",
+    "SubjectError": "Subject must be at least 2 characters. (max 30)",
+    "Message": "Message",
+    "MessageError": "Your message must be at least 5 characters. (max 5000)",
+    "Send": "Send"
+  },
+  "Footer": {
+    "Contact": "Contact",
+    "OfferIcons": "Offer icons made by",
+    "AllRights": "All rights reserved."
+  },
+  "Cookies": [
+    "Please be advised that the site uses cookies to optimize and improve its functionality for end users.",
+    "The site does not collect any personal user information."
+  ]
+}

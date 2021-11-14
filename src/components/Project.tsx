@@ -1,10 +1,7 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMobileAlt, faLaptop } from '@fortawesome/free-solid-svg-icons';
-
-import withTranslation from '../hoc/withTranslation';
-import Effect from 'react-reveal/Fade';
-import { Dictionary } from './../languageContext';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMobileAlt, faLaptop } from '@fortawesome/free-solid-svg-icons'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
    title: string,
@@ -13,11 +10,10 @@ interface Props {
    live?: string,
    github?: string,
    source: string,
-   dictionary: Dictionary
 }
 
-const Project = (props: Props) => {
-   const { title, description, mobile, live, github, source, dictionary } = props;
+const Project = ({ title, description, mobile, live, github, source }: Props) => {
+   const { t } = useTranslation()
 
    const renderGithubButton = () => {
       if (github) {
@@ -30,7 +26,7 @@ const Project = (props: Props) => {
             >
                GitHub
             </a>
-         );
+         )
       }
       return (
          <span
@@ -39,10 +35,10 @@ const Project = (props: Props) => {
          >
             GitHub
             <div className="custom-label custom-label--project custom-label--project--1">
-               {dictionary.portfolio.project.noGithubLink}
+               {t('Portfolio.Project.NoGithubLink')}
             </div>
          </span>
-      );
+      )
    }
 
    const renderPreviewButton = () => {
@@ -54,49 +50,49 @@ const Project = (props: Props) => {
                className="projects__item-link projects__item-link--right"
                href={live}
             >
-               {mobile ? dictionary.portfolio.project.install : dictionary.portfolio.project.preview}
+               {mobile ? t('Portfolio.Project.Install') : t('Portfolio.Project.Preview')}
             </a>
-         );
+         )
       }
       return (
          <span
             className="projects__item-link projects__item-link--right custom-label-container"
             style={{ textDecoration: 'line-through', color: '#bbb' }}
          >
-            {mobile ? dictionary.portfolio.project.install : dictionary.portfolio.project.preview}
+            {mobile ? t('Portfolio.Project.Install') : t('Portfolio.Project.Preview')}
             <div className="custom-label custom-label--project custom-label--project--2">
-               {dictionary.portfolio.project.noLiveLink}
+               {t('Portfolio.Project.NoLiveLink')}
             </div>
          </span>
-      );
+      )
 
    }
 
    return (
-      <Effect>
-         <div className="projects__item">
-            <div className="projects__item-drawer">
-               <h4 className="projects__item-title">{title}</h4>
-               <p className="projects__item-description">{description}</p>
-               <FontAwesomeIcon
-                  icon={mobile ? faMobileAlt : faLaptop}
-                  className="projects__item-icon"
-                  title={mobile ? 'Mobile project' : 'Web project'}
-               />
-            </div>
-            {renderGithubButton()}
-            {renderPreviewButton()}
-            <div className="projects__item-image-container">
-               <img
-                  draggable="false"
-                  className="projects__item-image"
-                  src={source}
-                  alt={'Project ' + title}
-               />
-            </div>
+      // <Effect>
+      <div className="projects__item">
+         <div className="projects__item-drawer">
+            <h4 className="projects__item-title">{title}</h4>
+            <p className="projects__item-description">{description}</p>
+            <FontAwesomeIcon
+               icon={mobile ? faMobileAlt : faLaptop}
+               className="projects__item-icon"
+               title={mobile ? 'Mobile project' : 'Web project'}
+            />
          </div>
-      </Effect>
-   );
-};
+         {renderGithubButton()}
+         {renderPreviewButton()}
+         <div className="projects__item-image-container">
+            <img
+               draggable="false"
+               className="projects__item-image"
+               src={source}
+               alt={'Project ' + title}
+            />
+         </div>
+      </div>
+      // </Effect>
+   )
+}
 
-export default withTranslation(Project);
+export default Project

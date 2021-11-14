@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
 
 type Props = {
-   id: string;
-   type: string;
-   isValid: boolean;
-   label: string;
-   placeholder: string;
-   errorMessage: string;
-   touched: boolean;
-   value: string;
-   rows?: number;
-   required?: boolean;
-   onChange: Function;
-   onBlur: Function;
-};
+   id: string
+   type: string
+   isValid: boolean
+   label: string
+   placeholder: string
+   errorMessage: string
+   touched: boolean
+   value: string
+   rows?: number
+   required?: boolean
+   onChange: Function
+   onBlur: Function
+}
 
 const Input = (props: Props) => {
    const {
@@ -29,17 +29,17 @@ const Input = (props: Props) => {
       onBlur,
       label,
       errorMessage,
-   } = props;
+   } = props
 
-   const validityClass = !isValid && touched ? 'input--invalid' : 'input--valid';
+   const validityClass = !isValid && touched ? 'input--invalid' : 'input--valid'
 
    const renderLabel = () => {
       return (
          <label className="form-control__label" htmlFor={id}>
             {label}
          </label>
-      );
-   };
+      )
+   }
 
    const renderInput = () => {
       switch (type) {
@@ -55,7 +55,7 @@ const Input = (props: Props) => {
                   onChange={(e) => onChange(id, e.target.value)}
                   onBlur={() => onBlur(id)}
                />
-            );
+            )
          default:
             return (
                <input
@@ -68,15 +68,15 @@ const Input = (props: Props) => {
                   onChange={(e) => onChange(id, e.target.value)}
                   onBlur={() => onBlur(id)}
                />
-            );
+            )
       }
    }
 
    const renderError = () => {
       if (!isValid && touched) {
-         return <span className="form-control__error">{errorMessage}</span>;
+         return <span className="form-control__error">{errorMessage}</span>
       }
-      return null;
+      return null
    }
 
    return (
@@ -85,8 +85,8 @@ const Input = (props: Props) => {
          {renderInput()}
          {renderError()}
       </div>
-   );
-};
+   )
+}
 
 Input.defaultProps = {
    type: 'text',
@@ -98,6 +98,6 @@ Input.defaultProps = {
    touched: false,
    required: false,
    rows: 1,
-};
+}
 
-export default Input;
+export default Input

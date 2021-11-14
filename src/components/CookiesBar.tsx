@@ -1,26 +1,24 @@
-import React, { MouseEventHandler } from 'react';
-
-import withTranslation from '../hoc/withTranslation';
-import { Dictionary } from './../languageContext';
+import React, { MouseEventHandler } from 'react'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
   clicked: MouseEventHandler,
-  dictionary: Dictionary
-};
+}
 
-const CookiesBar = (props: Props) => {
-  const { dictionary: { cookies1, cookies2, understand }, clicked } = props;
+const CookiesBar = ({ clicked }: Props) => {
+  const { t } = useTranslation()
+
   return (
     <div className="cookies-bar">
       <div className="cookies-bar__text">
-        <p>{cookies1}</p>
-        <p>{cookies2}</p>
+        <p>{t('Cookies.0')}</p>
+        <p>{t('Cookies.1')}</p>
       </div>
       <button className="cookies-bar__button" onClick={clicked}>
-        {understand}
+        {t('Global.Understand')}
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default withTranslation(CookiesBar);
+export default CookiesBar

@@ -1,7 +1,7 @@
-import React, { RefObject } from 'react';
+import React, { RefObject } from 'react'
 
-import Navigation from './NavigationItems';
-import DrawerToggle from './DrawerToggle';
+import NavigationItems from './NavigationItems'
+import DrawerToggle from './DrawerToggle'
 
 interface Props {
    forwardedRef: RefObject<HTMLDivElement>,
@@ -11,13 +11,13 @@ interface Props {
 }
 
 const Toolbar = (props: Props) => {
-   const { forwardedRef, sticky, sideDrawerIsVisible, sideDrawerToggleClicked } = props;
-   const toolbarClasses = ['toolbar'];
+   const { forwardedRef, sticky, sideDrawerIsVisible, sideDrawerToggleClicked } = props
+   const toolbarClasses = ['toolbar']
    if (sticky) {
-      toolbarClasses.push('toolbar--fixed');
+      toolbarClasses.push('toolbar--fixed')
    }
    if (sideDrawerIsVisible) {
-      toolbarClasses.push('toolbar--transparent');
+      toolbarClasses.push('toolbar--transparent')
    }
    return (
       <div className={toolbarClasses.join(' ')} ref={forwardedRef}>
@@ -27,10 +27,10 @@ const Toolbar = (props: Props) => {
             onClick={sideDrawerToggleClicked}
          />
          <nav className="toolbar__nav desktop-only">
-            <Navigation />
+            <NavigationItems />
          </nav>
       </div>
-   );
-};
+   )
+}
 
-export default Toolbar;
+export default Toolbar

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 interface Props {
    sideDrawerIsVisible: boolean,
@@ -6,16 +6,16 @@ interface Props {
 }
 
 const DrawerToggle = (props: Props) => {
-   const { sideDrawerIsVisible, onClick } = props;
-   const iconClasses = ['drawer-toggle__icon'];
+   const { sideDrawerIsVisible, onClick } = props
+   const iconClasses = ['drawer-toggle__icon']
    if (sideDrawerIsVisible) {
-      iconClasses.push('drawer-toggle__icon--active');
+      iconClasses.push('drawer-toggle__icon--active')
    }
    return (
       <div onClick={onClick} className="drawer-toggle__button">
          <div className={iconClasses.join(' ')}>&nbsp;</div>
       </div>
-   );
-};
+   )
+}
 
-export default DrawerToggle;
+export default DrawerToggle

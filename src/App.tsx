@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
-import './sass/main.scss';
-import Spinner from './components/UI/Spinner/Spinner';
-import Layout from './containers/Layout';
-import Content from './components/Content/Content';
-import logo from './assets/images/logo.png';
+import './sass/main.scss'
+import Spinner from './components/UI/Spinner/Spinner'
+import Layout from './containers/Layout'
+import Content from './components/Content/Content'
+import logo from './assets/images/logo.png'
 
-console.log('Thanks for particles effect to: https://github.com/Wufe/react-particles-js');
+console.log('Thanks for particles effect to: https://github.com/Wufe/react-particles-js')
 
 function App() {
-   const [loading, setLoading] = useState(true);
+   const [loading, setLoading] = useState(true)
 
    useEffect(() => {
       setTimeout(() => {
-         setLoading(false);
-      }, 1000);
-   }, []);
+         setLoading(false)
+      }, 1000)
+   }, [])
 
    const renderApp = () => {
       return (
          <Layout>
             <Content />
          </Layout>
-      );
-   };
+      )
+   }
 
    const renderLoadingScreen = () => {
       return (
@@ -33,10 +33,10 @@ function App() {
                <Spinner />
             </div>
          </div>
-      );
-   };
+      )
+   }
 
-   return loading ? renderLoadingScreen() : renderApp();
+   return loading ? renderLoadingScreen() : renderApp()
 }
 
-export default App;
+export default App

@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 interface Props {
    show: boolean,
@@ -16,6 +16,6 @@ const Backdrop = ({ show, notVisible, onClick }: Props) =>
          ></div>
       ) : null,
       document.getElementById('backdrop-root') as HTMLElement
-   );
+   )
 
-export default Backdrop;
+export default Backdrop

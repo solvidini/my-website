@@ -1,5 +1,4 @@
-import React from 'react';
-import Effect from 'react-reveal/Fade';
+import React from 'react'
 
 interface Props {
    src: string,
@@ -8,16 +7,16 @@ interface Props {
 }
 
 const Technology = (props: Props) => {
-   const { src, name, styles = {} } = props;
+   const { src, name, styles = {} } = props
 
    return (
-      <Effect>
+      // <Effect>
          <div className="technologies__item" style={styles}>
             <img className="technologies__item-image" src={src} alt={name} />
             <div className="technologies__item-label">{name}</div>
          </div>
-      </Effect>
-   );
-};
+      // </Effect>
+   )
+}
 
-export default Technology;
+export default Technology

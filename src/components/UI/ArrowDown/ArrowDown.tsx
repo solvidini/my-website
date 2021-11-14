@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import classes from './ArrowDown.module.scss';
+import classes from './ArrowDown.module.scss'
 
 const ArrowDown = () => (
    <div className={classes['arrow-container']}>
@@ -8,6 +8,6 @@ const ArrowDown = () => (
          <div className={classes['arrow']}></div>
       </div>
    </div>
-);
+)
 
-export default ArrowDown;
+export default ArrowDown

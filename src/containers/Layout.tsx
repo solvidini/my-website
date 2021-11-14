@@ -1,89 +1,89 @@
-import React, { useState, useEffect, useRef, FC } from 'react';
+import React, { useState, useEffect, useRef, FC } from 'react'
 
-import { CSSTransition } from 'react-transition-group';
-import { animateScroll } from 'react-scroll';
+import { CSSTransition } from 'react-transition-group'
+import { animateScroll } from 'react-scroll'
 
-import Toolbar from '../components/Navigation/Toolbar';
-import SideDrawer from '../components/Navigation/SideDrawer';
-import Header from '../components/Content/Header';
-import Footer from '../components/Content/Footer';
-import ArrowUp from '../components/UI/ArrowUp/ArrowUp';
-import Logo from '../components/Logo';
-import CookiesBar from '../components/CookiesBar';
-import LanguagePack from '../components/LanguagePack';
+import Toolbar from '../components/Navigation/Toolbar'
+import SideDrawer from '../components/Navigation/SideDrawer'
+import Header from '../components/Content/Header'
+import Footer from '../components/Content/Footer'
+import ArrowUp from '../components/UI/ArrowUp/ArrowUp'
+import Logo from '../components/Logo'
+import CookiesBar from '../components/CookiesBar'
+import LanguagePack from '../components/LanguagePack'
 
 const Layout: FC = ({ children }) => {
-   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
-   const [languageDropdownIsVisible, setLanguageDropdownIsVisible] = useState(false);
-   const [cookiesBarIsVisible, setCookiesBarIsVisible] = useState(false);
-   const [scrollY, setScrollY] = useState(0);
-   const [stickyToolbar, setStickyToolbar] = useState(false);
-   const [hideHeaderCanvas, setHideHeaderCanvas] = useState(false);
-   const headerRef = useRef<HTMLHeadElement>(null);
-   const toolbarRef = useRef<HTMLDivElement>(null);
-   const languagePackRef = useRef<HTMLDivElement>(null);
+   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false)
+   const [languageDropdownIsVisible, setLanguageDropdownIsVisible] = useState(false)
+   const [cookiesBarIsVisible, setCookiesBarIsVisible] = useState(false)
+   const [scrollY, setScrollY] = useState(0)
+   const [stickyToolbar, setStickyToolbar] = useState(false)
+   const [hideHeaderCanvas, setHideHeaderCanvas] = useState(false)
+   const headerRef = useRef<HTMLHeadElement>(null)
+   const toolbarRef = useRef<HTMLDivElement>(null)
+   const languagePackRef = useRef<HTMLDivElement>(null)
 
    const yOffset = () => {
-      setScrollY(window.pageYOffset);
-   };
+      setScrollY(window.pageYOffset)
+   }
 
    useEffect(() => {
-      window.addEventListener('scroll', yOffset);
-      window.addEventListener('click', languagePackClosedHandler);
+      window.addEventListener('scroll', yOffset)
+      window.addEventListener('click', languagePackClosedHandler)
 
       return () => {
-         window.removeEventListener('scroll', yOffset);
-         window.removeEventListener('click', languagePackClosedHandler);
-      };
-   });
+         window.removeEventListener('scroll', yOffset)
+         window.removeEventListener('click', languagePackClosedHandler)
+      }
+   })
 
    useEffect(() => {
       if (localStorage.getItem('cookiesAccepted')) {
-         setCookiesBarIsVisible(false);
+         setCookiesBarIsVisible(false)
       } else {
          setTimeout(() => {
-            setCookiesBarIsVisible(true);
-         }, 5000);
+            setCookiesBarIsVisible(true)
+         }, 5000)
       }
-   }, [setCookiesBarIsVisible]);
+   }, [setCookiesBarIsVisible])
 
    useEffect(() => {
       const toolbarHeight = toolbarRef?.current?.offsetHeight ? toolbarRef.current.offsetHeight : 50
-      const height = headerRef?.current?.offsetHeight ? headerRef.current.offsetHeight - toolbarHeight : 0;
+      const height = headerRef?.current?.offsetHeight ? headerRef.current.offsetHeight - toolbarHeight : 0
 
       if (scrollY > height) {
-         setStickyToolbar(true);
-         setHideHeaderCanvas(true);
+         setStickyToolbar(true)
+         setHideHeaderCanvas(true)
       } else {
-         setStickyToolbar(false);
-         setHideHeaderCanvas(false);
+         setStickyToolbar(false)
+         setHideHeaderCanvas(false)
       }
-   }, [setStickyToolbar, scrollY]);
+   }, [setStickyToolbar, scrollY])
 
    const sideDrawerToggleHandler = () => {
-      setSideDrawerIsVisible(!sideDrawerIsVisible);
-   };
+      setSideDrawerIsVisible(!sideDrawerIsVisible)
+   }
 
    const sideDrawerClosedHandler = () => {
-      setSideDrawerIsVisible(false);
-   };
+      setSideDrawerIsVisible(false)
+   }
 
    const languagePackToggleHandler = () => {
-      setLanguageDropdownIsVisible(!languageDropdownIsVisible);
-   };
+      setLanguageDropdownIsVisible(!languageDropdownIsVisible)
+   }
 
    const languagePackClosedHandler = (e: MouseEvent | { target: any }) => {
       if (languagePackRef.current) {
          if (!languagePackRef.current.contains(e.target)) {
-            setLanguageDropdownIsVisible(false);
+            setLanguageDropdownIsVisible(false)
          }
       }
-   };
+   }
 
    const acceptedCookiesHandler = () => {
-      setCookiesBarIsVisible(false);
-      localStorage.setItem('cookiesAccepted', 'true');
-   };
+      setCookiesBarIsVisible(false)
+      localStorage.setItem('cookiesAccepted', 'true')
+   }
 
    return (
       <>
@@ -119,7 +119,7 @@ const Layout: FC = ({ children }) => {
             </div>
          </CSSTransition>
       </>
-   );
-};
+   )
+}
 
-export default Layout;
+export default Layout

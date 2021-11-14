@@ -1,25 +1,24 @@
-import React from 'react';
-import { CSSTransition } from 'react-transition-group';
+import React from 'react'
+import { CSSTransition } from 'react-transition-group'
 
-import withTranslation from '../hoc/withTranslation';
-import { Dictionary } from '../languageContext';
+import { useTranslation } from 'react-i18next'
+import { isNoSubstitutionTemplateLiteral } from 'typescript'
 
 interface Props {
    showToggler: React.MouseEventHandler<HTMLDivElement>,
    forwardedRef: React.LegacyRef<HTMLDivElement> | undefined,
-   visible: boolean,
-   language: string,
-   changeLanguage: React.MouseEventHandler<HTMLButtonElement>,
-   dictionary: Dictionary
+   visible: boolean
 }
 
 const LanguagePack = (props: Props) => {
-   const { showToggler, forwardedRef, visible, language, changeLanguage, dictionary } = props;
+   const { showToggler, forwardedRef, visible } = props
+   const { i18n, t } = useTranslation()
+
    return (
       <div className="language-pack" title="ENG / PL" onClick={showToggler} ref={forwardedRef}>
          <div className="language-pack__toggler">
             <span style={{ pointerEvents: 'none' }}>
-               {dictionary.language}&nbsp;
+               {t('Language')}&nbsp;
                <i
                   className={
                      visible
@@ -33,30 +32,28 @@ const LanguagePack = (props: Props) => {
             <div className={'language-pack__dropdown'}>
                <button
                   className={
-                     language === 'pl'
+                     i18n.language === 'pl'
                         ? 'language-pack__select language-pack__select--active'
                         : 'language-pack__select'
                   }
-                  onClick={changeLanguage}
-                  data-language="pl"
+                  onClick={() => i18n.changeLanguage('pl')}
                >
                   Polski
                </button>
                <button
                   className={
-                     language === 'en'
+                     i18n.language === 'en'
                         ? 'language-pack__select language-pack__select--active'
                         : 'language-pack__select'
                   }
-                  onClick={changeLanguage}
-                  data-language="en"
+                  onClick={() => i18n.changeLanguage('en')}
                >
                   English
                </button>
             </div>
          </CSSTransition>
       </div>
-   );
-};
+   )
+}
 
-export default withTranslation(LanguagePack);
+export default LanguagePack

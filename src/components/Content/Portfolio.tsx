@@ -1,93 +1,88 @@
-import React from 'react';
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
-import withTranslation from '../../hoc/withTranslation';
-import { Dictionary } from './../../languageContext';
+import Project from '../Project'
+import fotobudka from '../../assets/images/projects/project-fotobudka.gif'
+import mySite from '../../assets/images/projects/project-my-site.gif'
+import yourTurn from '../../assets/images/projects/project-your-turn.jpg'
+import projectW from '../../assets/images/projects/project-projektw.gif'
+import pizzaBuilder from '../../assets/images/projects/project-pizza-builder.gif'
+import bregulaInsurances from '../../assets/images/projects/project-bregula-insurances.gif'
+import dailyTasks from '../../assets/images/projects/project-daily-tasks.jpg'
+import canvasBubbles from '../../assets/images/projects/project-canvas-1.gif'
+import swpiu from '../../assets/images/projects/project-swpiu.gif'
+import button from '../../assets/images/projects/project-button.gif'
+import calculator from '../../assets/images/projects/project-calculator.png'
+import mot from '../../assets/images/projects/project-mot.gif'
+import annsr from '../../assets/images/projects/project-annsr.gif'
 
-import Project from '../Project';
-import fotobudka from '../../assets/images/projects/project-fotobudka.gif';
-import mySite from '../../assets/images/projects/project-my-site.gif';
-import yourTurn from '../../assets/images/projects/project-your-turn.jpg';
-import projectW from '../../assets/images/projects/project-projektw.gif';
-import pizzaBuilder from '../../assets/images/projects/project-pizza-builder.gif';
-import bregulaInsurances from '../../assets/images/projects/project-bregula-insurances.gif';
-import dailyTasks from '../../assets/images/projects/project-daily-tasks.jpg';
-import canvas1 from '../../assets/images/projects/project-canvas-1.gif';
-import swpiu from '../../assets/images/projects/project-swpiu.gif';
-import button from '../../assets/images/projects/project-button.gif';
-import calculator from '../../assets/images/projects/project-calculator.png';
-import mot from '../../assets/images/projects/project-mot.gif';
-import annsr from '../../assets/images/projects/project-annsr.gif';
+const Portfolio: React.FC = () => {
+   const { t } = useTranslation()
 
-interface Props {
-   dictionary: Dictionary
-}
-
-const Portfolio = (props: Props) => {
-   const { dictionary } = props;
    return (
       <section className="section-portfolio" id="section-portfolio">
          <div className="section-portfolio__content">
             <h2 className="section-header section-header--white">
                <span className="section-header__title">Portfolio</span>
-               <span className="section-header__post">{dictionary.portfolio.post}</span>
+               <span className="section-header__sub-title">{t('Portfolio.SubTitle')}</span>
             </h2>
             <div className="projects">
                <Project
-                  title={dictionary.portfolio.projectW.title}
-                  description={dictionary.portfolio.projectW.description}
+                  title={t('Portfolio.ProjectW.Title')}
+                  description={t('Portfolio.ProjectW.Description')}
                   live="http://projektw.pl"
                   source={projectW}
                />
                <Project
                   title="SWPIU"
-                  description={dictionary.portfolio.swpiu.description}
+                  description={t('Portfolio.SWPIU.Description')}
                   github="https://github.com/ssazero/eng-proj-client"
                   live="http://swpiu.samuelk.pl/"
                   source={swpiu}
                />
                <Project
                   title="Pizza Builder"
-                  description={dictionary.portfolio.pizzaBuilder.description}
+                  description={t('Portfolio.PizzaBuilder.Description')}
                   github="https://github.com/ssazero/pizza-builder"
                   live="https://pizza-builder-6412e.web.app/"
                   source={pizzaBuilder}
                />
                <Project
                   title="Tapicernia Button"
-                  description={dictionary.portfolio.button.description}
+                  description={t('Portfolio.Button.Description')}
                   live="http://www.pracownia-button.pl/"
                   source={button}
                />
                <Project
                   title="Multiple Object Tracking"
-                  description={dictionary.portfolio.mot.description}
+                  description={t('Portfolio.MOT.Description')}
                   github="https://github.com/ssazero/multiple-object-tracking"
                   live="https://ssazero.github.io/multiple-object-tracking/"
                   source={mot}
                />
                <Project
                   title="Calculator"
-                  description={dictionary.portfolio.calculator.description}
+                  description={t('Portfolio.Calculator.Description')}
                   github="https://github.com/ssazero/calculator"
                   live="https://ssazero.github.io/calculator/"
                   source={calculator}
                />
                <Project
                   title="Bregula Ubezpieczenia"
-                  description={dictionary.portfolio.bregula.description}
+                  description={t('Portfolio.Bregula.Description')}
                   live="http://bregulaubezpieczenia.pl/"
                   source={bregulaInsurances}
                />
                <Project
                   title="ANN Symbol Recognition"
-                  description={dictionary.portfolio.annsr.description}
+                  description={t('Portfolio.ANNSR.Description')}
                   github="https://github.com/ssazero/ann-symbol-recognition"
                   live="https://ssazero.github.io/ann-symbol-recognition/"
                   source={annsr}
                />
                <Project
                   title="Daily Tasks"
-                  description={dictionary.portfolio.dailyTasks.description}
+                  description={t('Portfolio.DailyTasks.Description')}
                   github="https://github.com/ssazero/daily-tasks"
                   source={dailyTasks}
                   mobile
@@ -95,34 +90,34 @@ const Portfolio = (props: Props) => {
                />
                <Project
                   title="My Site"
-                  description={dictionary.portfolio.mySite.description}
+                  description={t('Portfolio.MySite.Description')}
                   github="https://github.com/ssazero/my-site"
                   live="/"
                   source={mySite}
                />
                <Project
                   title="Your Turn"
-                  description={dictionary.portfolio.yourTurn.description}
+                  description={t('Portfolio.YourTurn.Description')}
                   github="https://github.com/ssazero/your-turn"
                   source={yourTurn}
                />
                <Project
                   title="Fotobudka Premium Box"
-                  description={dictionary.portfolio.fotobudka.description}
+                  description={t('Portfolio.Fotobudka.Description')}
                   live="http://fotobudka-premiumbox.pl"
                   source={fotobudka}
                />
                <Project
                   title="Canvas Animation"
-                  description={dictionary.portfolio.canvas1.description}
+                  description={t('Portfolio.CanvasBubbles.Description')}
                   github="https://github.com/ssazero/canvas-project-one"
                   live="https://ssazero.github.io/canvas-project-one/"
-                  source={canvas1}
+                  source={canvasBubbles}
                />
             </div>
          </div>
       </section>
-   );
-};
+   )
+}
 
-export default withTranslation(Portfolio);
+export default Portfolio

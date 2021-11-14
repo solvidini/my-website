@@ -1,29 +1,30 @@
-import React, { RefObject, memo, FC } from 'react';
+import React, { RefObject, memo, FC } from 'react'
 
-import withTranslation from '../../hoc/withTranslation';
+import ReactTypingEffect from 'react-typing-effect'
+import { Link } from 'react-scroll'
+import Particles from 'react-tsparticles'
 
-import ReactTypingEffect from 'react-typing-effect';
-import { Link } from 'react-scroll';
-import Particles from 'react-particles-js';
-
-import ArrowDown from '../UI/ArrowDown/ArrowDown';
-import ParticlesConfig from '../../utils/particlesjs-config';
-import { Dictionary } from './../../languageContext';
+import ArrowDown from '../UI/ArrowDown/ArrowDown'
+import ParticlesConfig from '../../utils/particlesjs-config'
+import { useTranslation } from 'react-i18next'
 
 interface Props {
-   dictionary: Dictionary,
    forwardedRef: RefObject<HTMLHeadElement>,
    hideCanvas: boolean
 }
 
-const Header: FC<Props> = (props) => {
-   const { dictionary, hideCanvas, children, forwardedRef } = props;
+const Header: FC<Props> = ({ children, hideCanvas, forwardedRef }) => {
+   const { t } = useTranslation()
 
-   const words = dictionary.header.wordsArray;
+   const words = [
+      t('Header.SentenceArray.0'),
+      t('Header.SentenceArray.1'),
+      t('Header.SentenceArray.2'),
+   ]
 
    return (
       <header className="header" id="top" ref={forwardedRef}>
-         {!hideCanvas && <Particles params={ParticlesConfig} width="100vw" height="98vh" />}
+         {!hideCanvas && <Particles id='header-particles' params={ParticlesConfig} width="100vw" height="98vh" />}
          <div className="header__text-box">
             <h1 className="heading-primary">Web Developer</h1>
             <div className="heading-paragraph">Samuel Kędziora</div>
@@ -53,7 +54,7 @@ const Header: FC<Props> = (props) => {
          </div>
          {children}
       </header>
-   );
-};
+   )
+}
 
-export default withTranslation(memo(Header));
+export default Header

@@ -1,18 +1,12 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faAddressCard } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faAddressCard } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { useTranslation } from 'react-i18next'
 
-import withTranslation from '../../hoc/withTranslation';
-import { Dictionary } from './../../languageContext';
-
-interface Props {
-   dictionary: Dictionary
-}
-
-const Footer = (props: Props) => {
-   const { dictionary } = props;
-   const currentDate = new Date().getFullYear();
+const Footer = () => {
+   const { t } = useTranslation()
+   const currentDate = new Date().getFullYear()
 
    return (
       <footer className="footer">
@@ -21,7 +15,7 @@ const Footer = (props: Props) => {
             <div className="footer__top-logo">&nbsp;</div>
             <div className="footer__top-item">
                <h4>
-                  {dictionary.footer.contact} <FontAwesomeIcon icon={faEnvelope} />
+                  {t('Footer.Contact')} <FontAwesomeIcon icon={faEnvelope} />
                </h4>
                <a target="_blank" rel="noopener noreferrer" href="mailto:contact@samuelk.pl">
                   contact@samuelk.pl
@@ -52,7 +46,7 @@ const Footer = (props: Props) => {
                </a>
             </div>
             <div className="footer__top-item" style={{ lineHeight: '1.6' }}>
-               {dictionary.footer.offerIcons}{' '}
+               {t('Footer.OfferIcons')}
                <span>
                   <a
                      target="_blank"
@@ -98,12 +92,12 @@ const Footer = (props: Props) => {
          <div className="footer__copyright">
             <div className="footer__triangle footer__triangle--copyright" />
             <span>
-               Samuel Kędziora &copy; <b>{currentDate}</b>
+               Samuel Kędziora &copy <b>{currentDate}</b>
             </span>
-            <span>{dictionary.footer.allRights} </span>
+            <span>{t('Footer.AllRights')}</span>
          </div>
       </footer>
-   );
-};
+   )
+}
 
-export default withTranslation(Footer);
+export default Footer

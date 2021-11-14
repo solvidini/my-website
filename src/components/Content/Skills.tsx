@@ -1,30 +1,29 @@
-import React from 'react';
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
-import withTranslation from '../../hoc/withTranslation';
-import Technology from '../Technology';
-import { Dictionary } from '../../languageContext';
+import Technology from '../Technology'
 
-import css3 from '../../assets/images/technologies/css3.png';
-import git from '../../assets/images/technologies/git.png';
-import html5 from '../../assets/images/technologies/html5.png';
-import js from '../../assets/images/technologies/js.png';
-import mongodb from '../../assets/images/technologies/mongodb.png';
-import mysql from '../../assets/images/technologies/mysql.png';
-import nodejs from '../../assets/images/technologies/nodejs.png';
-import ps from '../../assets/images/technologies/ps.png';
-import reactNative from '../../assets/images/technologies/react-native.png';
-import ts from '../../assets/images/technologies/typescript.png';
-import react from '../../assets/images/technologies/react.png';
-import redux from '../../assets/images/technologies/redux.png';
-import sass from '../../assets/images/technologies/sass.png';
-import springBoot from '../../assets/images/technologies/spring-boot.png';
-import symfony from '../../assets/images/technologies/symfony.png';
-import vsc from '../../assets/images/technologies/vsc.png';
-import webstorm from '../../assets/images/technologies/webstorm.png';
-import gatsby from '../../assets/images/technologies/gatsby.png';
-import firebase from '../../assets/images/technologies/firebase.png';
-import npm from '../../assets/images/technologies/npm.png';
-import gql from '../../assets/images/technologies/graphql.png';
+import css3 from '../../assets/images/technologies/css3.png'
+import git from '../../assets/images/technologies/git.png'
+import html5 from '../../assets/images/technologies/html5.png'
+import js from '../../assets/images/technologies/js.png'
+import mongodb from '../../assets/images/technologies/mongodb.png'
+import mysql from '../../assets/images/technologies/mysql.png'
+import nodejs from '../../assets/images/technologies/nodejs.png'
+import ps from '../../assets/images/technologies/ps.png'
+import reactNative from '../../assets/images/technologies/react-native.png'
+import ts from '../../assets/images/technologies/typescript.png'
+import react from '../../assets/images/technologies/react.png'
+import redux from '../../assets/images/technologies/redux.png'
+import sass from '../../assets/images/technologies/sass.png'
+import springBoot from '../../assets/images/technologies/spring-boot.png'
+import symfony from '../../assets/images/technologies/symfony.png'
+import vsc from '../../assets/images/technologies/vsc.png'
+import webstorm from '../../assets/images/technologies/webstorm.png'
+import gatsby from '../../assets/images/technologies/gatsby.png'
+import firebase from '../../assets/images/technologies/firebase.png'
+import npm from '../../assets/images/technologies/npm.png'
+import gql from '../../assets/images/technologies/graphql.png'
 
 const TECHNOLOGIES = {
    frontend: [
@@ -139,20 +138,20 @@ const TECHNOLOGIES = {
          name: 'Photoshop',
       },
    ],
-};
+}
 
-const Skills: React.FC<{ dictionary: Dictionary }> = (props) => {
-   const { dictionary } = props;
+const Skills: React.FC = () => {
+   const { t } = useTranslation()
 
    const renderTechnologies = (techData: Array<{ [index: string]: any }>) =>
-      techData.map(({ id, src, name }) => <Technology key={id} src={src} name={name} />);
+      techData.map(({ id, src, name }) => <Technology key={id} src={src} name={name} />)
 
    return (
       <section className="section-skills" id="section-skills">
          <div className="section-skills__content">
             <h2 className="section-header section-header--white">
-               <span className="section-header__title">{dictionary.skills.header}</span>
-               <span className="section-header__post">{dictionary.skills.post}</span>
+               <span className="section-header__title">{t('Skills.Title')}</span>
+               <span className="section-header__sub-title">{t('Skills.SubTitle')}</span>
             </h2>
             <div className="technologies">
                <div className="technologies__group">
@@ -168,7 +167,7 @@ const Skills: React.FC<{ dictionary: Dictionary }> = (props) => {
                   </div>
                </div>
                <div className="technologies__group">
-                  <h3 className="technologies__group-title">{dictionary.skills.other}:</h3>
+                  <h3 className="technologies__group-title">{t('Skills.Other')}:</h3>
                   <div className="technologies__items">
                      {renderTechnologies(TECHNOLOGIES.other)}
                   </div>
@@ -176,7 +175,7 @@ const Skills: React.FC<{ dictionary: Dictionary }> = (props) => {
             </div>
          </div>
       </section>
-   );
-};
+   )
+}
 
-export default withTranslation(Skills);
+export default Skills

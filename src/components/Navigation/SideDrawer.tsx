@@ -1,18 +1,17 @@
-import React from 'react';
+import React from 'react'
 
-import NavigationItems from './NavigationItems';
-import Backdrop from '../UI/Backdrop';
+import NavigationItems from './NavigationItems'
+import Backdrop from '../UI/Backdrop'
 
 interface Props {
-   onClose: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void,
+   onClose: (() => void) & React.MouseEventHandler<HTMLButtonElement>,
    isOpened: boolean
-};
+}
 
-const SideDrawer = (props: Props) => {
-   const { onClose, isOpened } = props;
-   let sideDrawerClasses = ['side-drawer', 'side-drawer--closed'];
+const SideDrawer = ({ onClose, isOpened }: Props) => {
+   let sideDrawerClasses = ['side-drawer', 'side-drawer--closed']
    if (isOpened) {
-      sideDrawerClasses = ['side-drawer', 'side-drawer--opened'];
+      sideDrawerClasses = ['side-drawer', 'side-drawer--opened']
    }
    return (
       <div className="side-drawer-container">
@@ -23,7 +22,7 @@ const SideDrawer = (props: Props) => {
             </nav>
          </div>
       </div>
-   );
-};
+   )
+}
 
-export default SideDrawer;
+export default SideDrawer

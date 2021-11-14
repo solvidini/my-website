@@ -1,0 +1,121 @@
+{
+  "Language": "Polski",
+  "Global": {
+    "Understand": "Rozumiem",
+    "SomethingWentWrong": "Coś poszło nie tak"
+  },
+  "Nav": {
+    "Home": "Home",
+    "About": "O mnie",
+    "Skills": "Umiejętności",
+    "Offer": "Oferta",
+    "Portfolio": "Portfolio",
+    "Contact": "Kontakt"
+  },
+  "Header": {
+    "SentenceArray": [
+      "Witaj na mojej stronie! :)",
+      "Znajdziesz tu informacje na mój temat oraz projekty, które wykonałem.",
+      "W sekcji \"Portfolio\" będą na bieżąco dodawane moje projekty."
+    ]
+  },
+  "About": {
+    "Header": "Kilka słów o mnie",
+    "Content": "Jestem programistą rozwijającym swoje możliwości na każdym możliwym kroku. Interesuję się najnowszymi trendami z zakresu tworzenia stron www, aplikacji webowych, blogów, gier etc. Jako deweloper skupiam się na zagadnieniach UI, UX oraz dbam o to, aby strony działały płynnie i były dostosowane do wyświetlania na każdym urządzeniu. W rozwijaniu swoich kompetencji koncentruję się zarówno na technologiach front-endowych jak i back-endowych. Do każdego projektu podchodzę indywidualnie. Stawiam na komunikację z klientem, znajdując najlepsze rozwiązania, spełniające jego potrzeby i umożliwiając dostarczenie projektu na czas."
+  },
+  "Skills": {
+    "Title": "Umiejętności",
+    "SubTitle": "Moje umiejętności i technologie, które używam",
+    "Other": "INNE"
+  },
+  "Offer": {
+    "Title": "Oferta",
+    "SubTitle": "Co oferuję i na co zwracam uwagę",
+    "MakingWebsites": {
+      "Title": "Tworzenie stron",
+      "Description": "Do tworzenia stron używam najnowszych rozwiązań oraz technologii. Kieruję się współczesnymi trendami, spełniając przy tym wszelkie obecne standardy. Zarówno wygląd jak i układ stron opieram o intuicyjny, ładny interfejs jak i responsywny design."
+    },
+    "ResponsiveDesign": {
+      "Title": "Responsywny design",
+      "Description": "Cały wygląd strony jak i jej układ automatycznie dostosowywuje się do okna przeglądarki, na której jest wyświetlany. Strona tworzona w takiej technice jest bardzo uniwersalna, a jej obsługa staje się znacznie wygodniejsza niezależnie od urządzenia, na którym ją wyświetlamy."
+    },
+    "IntuitiveInterface": {
+      "Title": "Intuicyjny interfejs",
+      "Description": "Wszelkie elementy strony rozmieszczam w sposób intuicyjny dla użytkownika, aby poruszanie się po stronie niezależnie od urządzenia było proste i przyjemne. Ponadto oferuję nowoczesny, ciekawy wygląd jak i dbam o wszelkie detale dotyczące m.in. animacji elementów, by sposób użytkowania był jasny i zrozumiały."
+    }
+  },
+  "Portfolio": {
+    "SubTitle": "Moje twory",
+    "Project": {
+      "Preview": "Podgląd",
+      "NoLiveLink": "Nie przesłano do sieci :(",
+      "NoGithubLink": "Repozytorium prywatne",
+      "Install": "Pobierz"
+    },
+    "ProjectW": {
+      "Title": "Projekt W",
+      "Description": "Strona - Portfolio firmy"
+    },
+    "PizzaBuilder": {
+      "Description": "Aplikacja - Tworzenie i zamawianie pizzy"
+    },
+    "YourTurn": {
+      "Description": "Aplikacja - Podział obowiązków domowych"
+    },
+    "MySite": {
+      "Description": "Strona - Portfolio własne"
+    },
+    "Fotobudka": {
+      "Description": "Strona - Wizytówka firmy"
+    },
+    "Bregula": {
+      "Description": "Strona - Wizytówka firmy"
+    },
+    "Button": {
+      "Description": "Strona - Wizytówka firmy"
+    },
+    "DailyTasks": {
+      "Description": "Android / iOS app - Zarządzanie zadaniami"
+    },
+    "CanvasBubbles": {
+      "Description": "Interaktywna animacja (HTML5 Canvas)"
+    },
+    "SWPIU": {
+      "Description": "System do znajdowania produktów i usług"
+    },
+    "Calculator": {
+      "Description": "Prosty kalkulator internetowy"
+    },
+    "MOT": {
+      "Description": "Gra do poprawienia twoich umiejętności MOT"
+    },
+    "ANNSR": {
+      "Description": "Sztuczna sieć neuronowa do rozpoznawania symboli"
+    }
+  },
+  "Contact": {
+    "Title": "Kontakt",
+    "SubTitle": "Skontaktuj się ze mną poprzez e-mail",
+    "Sent": "Twoja wiadomość została wysłana do Samuela!",
+    "Incorrect": "Dane w formularzu E-Mail są niepoprawne!",
+    "EmailPH": "przyklad@gmail.com",
+    "EmailError": "Proszę podać właściwy e-mail.",
+    "Name": "Imię",
+    "NamePH": "Twoje Imię",
+    "Subject": "Temat",
+    "SubjectPH": "Temat e-mail'a",
+    "SubjectError": "Temat powinien mieć co najmniej 2 znaki. (max 30)",
+    "Message": "Wiadomość",
+    "MessageError": "Twoja wiadomość powinna mieć co najmniej 5 znaków. (max 5000)",
+    "Send": "Wyślij"
+  },
+  "Footer": {
+    "Contact": "Kontakt",
+    "OfferIcons": "Ikony z oferty od",
+    "AllRights": "Wszelkie prawa zastrzeżone."
+  },
+  "Cookies": [
+    "Informuję, iż strona korzysta z plików cookies w celu optymalizacji i polepszenia funkcjonalności dla użytkowników końcowych.",
+    "Strona nie zbiera żadnych personalnych informacji użytkowników."
+  ]
+}

@@ -2,8 +2,12 @@
     &__button {
         display: none;
         position: relative;
+        padding: 0 2rem 0 2.5rem;
         height: 100%;
         cursor: pointer;
+
+        @include darkMatter;
+        transition: .25s ease;
 
         @include respond(phone) {
             display: flex;
@@ -20,7 +24,7 @@
         &,
         &::before,
         &::after {
-            width: 5rem;
+            width: 4rem;
             height: 2px;
             background-color: $color-white;
             display: block;

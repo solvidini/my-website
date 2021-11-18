@@ -30,9 +30,7 @@ const Project = ({ title, description, mobile, live, github, source }: Props) =>
       }
       return (
          <span
-            className="projects__item-link projects__item-link--left custom-label-container"
-            style={{ textDecoration: 'line-through', color: '#bbb' }}
-         >
+            className="projects__item-link projects__item-link--left link-disabled custom-label-container">
             GitHub
             <div className="custom-label custom-label--project custom-label--project--1">
                {t('Portfolio.Project.NoGithubLink')}
@@ -55,10 +53,7 @@ const Project = ({ title, description, mobile, live, github, source }: Props) =>
          )
       }
       return (
-         <span
-            className="projects__item-link projects__item-link--right custom-label-container"
-            style={{ textDecoration: 'line-through', color: '#bbb' }}
-         >
+         <span className="projects__item-link projects__item-link--right link-disabled custom-label-container">
             {mobile ? t('Portfolio.Project.Install') : t('Portfolio.Project.Preview')}
             <div className="custom-label custom-label--project custom-label--project--2">
                {t('Portfolio.Project.NoLiveLink')}

@@ -146,7 +146,7 @@ const Contact: React.FC = () => {
                   <Input
                      type="email"
                      id={'email'}
-                     label="E-Mail"
+                     label="Email"
                      required
                      placeholder={t('Contact.EmailPH')}
                      errorMessage={t('Contact.EmailError')}

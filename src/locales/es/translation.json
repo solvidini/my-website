@@ -1,0 +1,122 @@
+{
+  "Language": "Español",
+  "Code": "ES",
+  "Global": {
+    "Understand": "Entiendo",
+    "SomethingWentWrong": "Algo salió mal"
+  },
+  "Nav": {
+    "Home": "Hogar",
+    "About": "Sobre mí",
+    "Skills": "Habilidades",
+    "Offer": "Oferta",
+    "Portfolio": "portafolio",
+    "Contact": "Contacto"
+  },
+  "Header": {
+    "SentenceArray": [
+      "¡Bienvenido a mi página! \n:)",
+      "Aquí encontrarás información sobre mí y también los proyectos que realicé.",
+      "En la sección \"Portafolio\" iré agregando más y más proyectos a lo largo del tiempo."
+    ]
+  },
+  "About": {
+    "Header": "Unas palabras sobre mi",
+    "Content": "Soy un desarrollador de software que desarrolla mis capacidades en cada paso posible. \nEstoy interesado en las últimas tendencias en el campo de la creación de sitios web, aplicaciones web, blogs, juegos, etc. Como desarrollador, me concentro en la interfaz de usuario, los problemas de UX y me aseguro de que los sitios web funcionen sin problemas y estén adaptados para mostrarse en cualquier dispositivo. \nAl desarrollar mis competencias, me concentro tanto en las tecnologías front-end como en las back-end. \nMe acerco a cada proyecto de forma individual. \nMe enfoco en la comunicación con el cliente, buscando las mejores soluciones que se adapten a sus necesidades y siempre entrego el proyecto a tiempo."
+  },
+  "Skills": {
+    "Title": "Habilidades",
+    "SubTitle": "Mis habilidades y tecnologías que utilizo",
+    "Other": "OTRO"
+  },
+  "Offer": {
+    "Title": "Oferta",
+    "SubTitle": "¿Qué ofrezco y a qué presto atención?",
+    "MakingWebsites": {
+      "Title": "Creación de sitios web",
+      "Description": "Utilizo las últimas soluciones y tecnologías para crear sitios web. \nSigo las tendencias modernas y cumplo con todos los estándares actuales. \nTanto el aspecto como el diseño de las páginas se basan en una interfaz agradable e intuitiva y un diseño receptivo."
+    },
+    "ResponsiveDesign": {
+      "Title": "Diseño de respuesta",
+      "Description": "La apariencia completa de la página y su diseño se adapta automáticamente a la ventana del navegador en la que se muestra. \nEl sitio web creado con tal técnica es muy universal y su funcionamiento se vuelve mucho más conveniente independientemente del dispositivo en el que se muestre."
+    },
+    "IntuitiveInterface": {
+      "Title": "Interfaz intuitiva",
+      "Description": "Ordeno todos los elementos de la página de una manera intuitiva para que el usuario haga que navegar por el sitio independientemente del dispositivo sea simple y agradable. \nAdemás, ofrezco un aspecto moderno e interesante y me ocupo de todos los detalles relacionados con la animación de elementos para que el uso sea claro y comprensible."
+    }
+  },
+  "Portfolio": {
+    "SubTitle": "Mis creaciones",
+    "Project": {
+      "Preview": "Avance",
+      "NoLiveLink": "No subido a la red :(",
+      "NoGithubLink": "Repositorio privado",
+      "Install": "Descargar"
+    },
+    "ProjectW": {
+      "Title": "Proyecto W",
+      "Description": "Sitio web: cartera de la empresa"
+    },
+    "PizzaBuilder": {
+      "Description": "Aplicación: creación y pedido de pizza"
+    },
+    "YourTurn": {
+      "Description": "Aplicación: la división de las tareas del hogar"
+    },
+    "MySite": {
+      "Description": "Sitio web - Portafolio propio"
+    },
+    "Fotobudka": {
+      "Description": "Sitio web - Tarjeta de empresa"
+    },
+    "Bregula": {
+      "Description": "Sitio web - Tarjeta de empresa"
+    },
+    "Button": {
+      "Description": "Sitio web - Tarjeta de empresa"
+    },
+    "DailyTasks": {
+      "Description": "Aplicación para Android / iOS: gestión de tareas"
+    },
+    "CanvasBubbles": {
+      "Description": "Animación interactiva (HTML5 Canvas)"
+    },
+    "SWPIU": {
+      "Description": "Sistema de búsqueda de productos y servicios"
+    },
+    "Calculator": {
+      "Description": "Calculadora web simple"
+    },
+    "MOT": {
+      "Description": "Juego para mejorar tus habilidades MOT"
+    },
+    "ANNSR": {
+      "Description": "Reconocimiento de símbolos de redes neuronales artificiales"
+    }
+  },
+  "Contact": {
+    "Title": "Contacto",
+    "SubTitle": "Contacta conmigo por correo electrónico",
+    "Sent": "¡Tu mensaje fue enviado a Samuel!",
+    "Incorrect": "¡Los datos del formulario de correo electrónico no son correctos!",
+    "EmailPH": "ejemplo@gmail.com",
+    "EmailError": "Por favor introduzca una dirección de correo electrónico válida.",
+    "Name": "Nombre",
+    "NamePH": "Tu nombre",
+    "Subject": "Tema",
+    "SubjectPH": "Asunto de un correo electrónico",
+    "SubjectError": "El asunto debe tener al menos 2 caracteres. \n(máximo 30)",
+    "Message": "Mensaje",
+    "MessageError": "Su mensaje debe tener al menos 5 caracteres. \n(máximo 5000)",
+    "Send": "Enviar"
+  },
+  "Footer": {
+    "Contact": "Contacto",
+    "OfferIcons": "Ofrecer iconos creados por",
+    "AllRights": "Reservados todos los derechos."
+  },
+  "Cookies": [
+    "Tenga en cuenta que el sitio utiliza cookies para optimizar y mejorar su funcionalidad para los usuarios finales.",
+    "El sitio no recopila ninguna información personal del usuario."
+  ]
+}

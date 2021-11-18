@@ -87,7 +87,7 @@ const Layout: FC = ({ children }) => {
 
    return (
       <>
-         {!sideDrawerIsVisible && <Logo />}
+         {!sideDrawerIsVisible && <Logo transparent />}
          {!sideDrawerIsVisible && (
             <LanguagePack
                visible={languageDropdownIsVisible}

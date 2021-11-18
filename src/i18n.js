@@ -4,6 +4,7 @@ import LanguageDetector from "i18next-browser-languagedetector"
 
 import english from './locales/en/translation.json'
 import polish from './locales/pl/translation.json'
+import spanish from './locales/es/translation.json'
 
 const resources = {
   en: {
@@ -11,6 +12,9 @@ const resources = {
   },
   pl: {
     translation: polish
+  },
+  es: {
+    translation: spanish
   }
 }
 
@@ -19,8 +23,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: ['en', 'pl'],
-    supportedLngs: ['en', 'pl'],
+    fallbackLng: ['en', 'pl', 'es'],
+    supportedLngs: ['en', 'pl', 'es'],
     interpolation: {
       escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
     }

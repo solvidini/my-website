@@ -1,4 +1,4 @@
-import React, { RefObject, memo, FC } from 'react'
+import React, { RefObject, FC } from 'react'
 
 import ReactTypingEffect from 'react-typing-effect'
 import { Link } from 'react-scroll'
@@ -8,12 +8,12 @@ import ArrowDown from '../UI/ArrowDown/ArrowDown'
 import ParticlesConfig from '../../utils/particlesjs-config'
 import { useTranslation } from 'react-i18next'
 
-interface Props {
+interface IHeader {
    forwardedRef: RefObject<HTMLHeadElement>,
    hideCanvas: boolean
 }
 
-const Header: FC<Props> = ({ children, hideCanvas, forwardedRef }) => {
+const Header: FC<IHeader> = ({ children, hideCanvas, forwardedRef }) => {
    const { t } = useTranslation()
 
    const words = [
@@ -24,7 +24,7 @@ const Header: FC<Props> = ({ children, hideCanvas, forwardedRef }) => {
 
    return (
       <header className="header" id="top" ref={forwardedRef}>
-         {!hideCanvas && <Particles id='header-particles' params={ParticlesConfig} width="100vw" height="98vh" />}
+         <Particles id='header-particles' canvasClassName='header-particles' params={ParticlesConfig} width="100%" height="100%" />
          <div className="header__text-box">
             <h1 className="heading-primary">Web Developer</h1>
             <div className="heading-paragraph">Samuel Kędziora</div>
@@ -36,6 +36,7 @@ const Header: FC<Props> = ({ children, hideCanvas, forwardedRef }) => {
                eraseDelay={3000}
                typingDelay={1000}
                cursor="_"
+               cursorClassName="typewriter-cursor"
             />
          </div>
          <div className="header__arrow-down">

@@ -1,5 +1,5 @@
 import React from 'react'
 
-const logo = () => <div className="logo">&nbsp;</div>
+const Logo: React.FC<{ styles?: React.CSSProperties, transparent?: boolean }> = ({ styles = {}, transparent }) => <div className={`logo${transparent && ' logo-transparent'}`} style={styles}>&nbsp;</div>
 
-export default logo
+export default Logo

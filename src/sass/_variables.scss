@@ -1,10 +1,12 @@
 // COLORS
-$color-primary: #ee3462;
+$color-main: #f3c33e;
+$color-main-light: #f5d681;
 
-$color-secondary: #1abdda;
+$gradient-gold: linear-gradient(295deg, $color-main 0%, $color-main-light 74%);
 
-$color-grey-light-1: #f7f7f7;
-$color-grey-light-2: #eee;
+$color-accent: #ee3462;
+
+$color-disabled: #aaa;
 
 $color-grey: #777;
 $color-grey-2: #999;

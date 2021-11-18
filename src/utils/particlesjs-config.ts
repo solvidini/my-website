@@ -1,79 +1,96 @@
-import { IParticlesParams } from 'react-tsparticles'
+import { RecursivePartial, IOptions } from "react-tsparticles"
 
-const particles: any = {
-  "particles": {
-    "number": {
-      "value": 97,
-      "density": {
-        "enable": true
-      }
-    },
-    "color": {
-      "value": "#ddd"
-    },
-    "shape": {
-      "type": "circle"
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 2.5,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": true
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ddd",
-      "opacity": 0.2,
-      "width": 2
-    },
-    "move": {
-      "enable": true,
-      "speed": 2,
-      "direction": "none",
-      "random": true,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
+const particles: RecursivePartial<IOptions> = {
+  "pauseOnOutsideViewport": true,
   "interactivity": {
-    "detect_on": "canvas",
     "events": {
-      "onhover": {
+      "onHover": {
         "enable": true,
-        "mode": "grab"
+        "mode": "connect"
       }
     },
     "modes": {
+      "connect": {
+        "distance": 200,
+        "links": {
+          "opacity": 0.7
+        },
+        "radius": 90
+      },
       "grab": {
-        "distance": 180,
-        "line_linked": {
-          "opacity": 0.5
+        "distance": 200,
+        "links": {
+          "blink": true,
+          "consent": true,
+          "opacity": 0.4
         }
       }
     }
   },
-  "retina_detect": true
+  "particles": {
+    "color": {
+      "value": "#ee3462"
+    },
+    "links": {
+      "blink": true,
+      "color": {
+        "value": "#ffffff"
+      },
+      "distance": 150,
+      "enable": true,
+      "opacity": 0.3
+    },
+    "move": {
+      "spin": {
+        "enable": false
+      },
+      "enable": true,
+      "speed": 0.6
+    },
+    "number": {
+      "density": {
+        "enable": true
+      },
+      "value": 120
+    },
+    "opacity": {
+      "value": {
+        "min": 0.1,
+        "max": 0.5
+      },
+      "animation": {
+        "enable": true,
+        "speed": 3,
+        "minimumValue": 0.1
+      }
+    },
+    "size": {
+      "value": {
+        "min": 0.1,
+        "max": 1
+      },
+      "animation": {
+        "enable": true,
+        "speed": 12,
+        "minimumValue": 0.1
+      }
+    },
+    "twinkle": {
+      "lines": {
+        "enable": false,
+        "frequency": 0.005,
+        "opacity": 0.6,
+        "color": {
+          "value": "#f1c532"
+        }
+      },
+      "particles": {
+        "color": {
+          "value": "#ffff00"
+        }
+      }
+    }
+  }
 }
 
 export default particles

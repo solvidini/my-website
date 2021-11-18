@@ -7,17 +7,11 @@
   overflow: hidden;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 0 2rem;
 
   z-index: 100;
-  transition: background-color .3s cubic-bezier(.45, .68, .45, .68);
-
-  @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
-  }
+  transition: .5s ease;
 
   @include respond(phone) {
     height: 6rem;
@@ -27,22 +21,14 @@
   &--fixed {
     position: fixed;
     top: 0;
-    left: 0;
-    box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
-    background-color: rgba(0, 0, 0, .8);
-
-  }
-
-  &--transparent {
-    @include respond(phone) {
-      background-color: transparent;
-      box-shadow: none;
-      backdrop-filter: none;
-    }
+    right: 0;
   }
 
   &__nav {
     height: 100%;
+    transition: .25s ease;
+    overflow: hidden;
+    @include darkMatter;
   }
 }
 

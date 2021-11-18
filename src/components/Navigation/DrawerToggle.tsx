@@ -1,18 +1,19 @@
 import React from 'react'
 
-interface Props {
+interface IDrawerToggle {
    sideDrawerIsVisible: boolean,
    onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
+   styles: React.CSSProperties
 }
 
-const DrawerToggle = (props: Props) => {
-   const { sideDrawerIsVisible, onClick } = props
+const DrawerToggle = ({ sideDrawerIsVisible, onClick, styles }: IDrawerToggle) => {
    const iconClasses = ['drawer-toggle__icon']
    if (sideDrawerIsVisible) {
       iconClasses.push('drawer-toggle__icon--active')
    }
+
    return (
-      <div onClick={onClick} className="drawer-toggle__button">
+      <div onClick={onClick} className={`drawer-toggle__button${sideDrawerIsVisible ? ' transparent' : ''}`} style={{ ...styles, }}>
          <div className={iconClasses.join(' ')}>&nbsp;</div>
       </div>
    )

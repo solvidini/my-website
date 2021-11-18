@@ -82,15 +82,15 @@
         }
 
         &--active {
-            border-bottom: 4px solid $color-secondary;
+            border-bottom: 4px solid $color-main;
 
             @include respond(tab-land) {
-                border-bottom: 3px solid $color-secondary;
+                border-bottom: 3px solid $color-main;
             }
 
             @include respond(phone) {
                 border-bottom: none;
-                border-left: 1.8rem solid $color-secondary;
+                border-left: 1.8rem solid $color-main;
                 transform: translateX(-1.1rem);
             }
         }

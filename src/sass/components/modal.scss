@@ -1,5 +1,3 @@
-@import '../variables';
-
 .modal {
     position: fixed;
     z-index: 1000;
@@ -7,12 +5,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    padding: 2rem;
+    padding: 1rem;
     background-color: $color-background;
     box-shadow: .5rem .5rem .4rem rgba($color-dark, 0.55);
     color: $color-white;
 
-    border-radius: 3px;
+    border-radius: 1rem;
     text-align: right;
 
     min-width: 45rem;
@@ -30,8 +28,8 @@
         text-transform: uppercase;
 
         &--error {
-            color: $color-primary;
-            text-shadow: 0 0 .3rem $color-primary;
+            color: $color-accent;
+            text-shadow: 0 0 2px $color-dark;
         }
     }
 
@@ -44,7 +42,7 @@
     &__submit {
         cursor: pointer;
         width: 40%;
-        background-color: $color-primary;
+        background-color: $color-main;
         outline: none;
 
         border: 1px solid transparent;
@@ -65,11 +63,11 @@
         }
 
         &:focus {
-            border-color: $color-primary;
+            border-color: $color-main;
         }
 
         &:hover {
-            box-shadow: 0 0 1rem $color-primary;
+            box-shadow: 0 0 1rem $color-main;
         }
 
         &:active {

@@ -92,7 +92,7 @@ const Footer = () => {
          <div className="footer__copyright">
             <div className="footer__triangle footer__triangle--copyright" />
             <span>
-               Samuel Kędziora &copy <b>{currentDate}</b>
+               Samuel Kędziora &copy; <b>{currentDate}</b>
             </span>
             <span>{t('Footer.AllRights')}</span>
          </div>

@@ -3,9 +3,9 @@
     width: 100%;
     position: relative;
     background-image: linear-gradient(to right bottom,
-            rgba($color-secondary, .1),
-            rgba($color-primary, .9)),
-        url(../../assets/images/ssazero-background.jpg);
+            rgba($color-dark, .2) 0%,
+            rgba($color-black, .95) 100%),
+        url(../../assets/images/ssazero-background-dark.jpg);
     background-position: bottom;
     background-attachment: fixed;
     background-size: cover;
@@ -15,9 +15,6 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    filter: grayscale(0);
-
-    animation: grayOff 1.2s;
 
     &__logo {
         height: 60%;

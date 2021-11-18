@@ -1,24 +1,23 @@
-@import '../mixins';
-@import '../variables';
-
 .language-pack {
     position: fixed;
     z-index: 200;
-    left: 5rem;
+    left: 0;
+    padding: 0 1rem 0 5rem;
     height: 4rem;
-    // min-width: 8rem;
     display: flex;
     align-items: center;
+
+    transition: .25s ease;
+    @include darkMatter;
 
     cursor: pointer;
     user-select: none;
     outline: transparent;
-    -webkit-tap-highlight-color: transparent;
 
     animation: fadeIn .6s;
 
     @include respond(phone) {
-        left: 6rem;
+        padding-left: 6rem;
         height: 6rem;
     }
 
@@ -44,20 +43,21 @@
         display: block;
         position: absolute;
         top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 0;
     }
 
     &__select {
-        background-color: $color-dark;
+        @include darkMatter;
         font-size: $default-font-size;
         color: $color-white;
         border: none;
         padding: 1rem;
         cursor: pointer;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        width: 8rem;
+        width: 9rem;
         outline: none;
         border: 2px solid transparent;
 
@@ -67,21 +67,29 @@
         }
 
         &--active {
-            border: 2px solid $color-secondary;
-            box-shadow: 0 0 1rem $color-secondary;
+            border: 2px solid $color-accent;
+            box-shadow: 0 0 .5rem $color-accent;
         }
 
         &:active,
         &:focus {
-            border: 2px solid rgba($color-secondary, 0.2);
+            border: 2px solid rgba($color-accent, 0.2);
         }
 
         &:last-child {
-            border-bottom-left-radius: .5rem;
-            border-bottom-right-radius: .5rem;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
         }
     }
 
+    &__lang {
+        font-size: 1.4rem;
+        margin-left: .5rem;
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+        }
+    }
 }
 
 .lpa-enter-active {

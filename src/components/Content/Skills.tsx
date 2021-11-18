@@ -109,8 +109,8 @@ const TECHNOLOGIES = {
       {
          id: 'npm',
          src: npm,
-         name: 'Node package manager',
-         styles: { padding: '1.2rem' },
+         name: 'npm / yarn',
+         styles: { padding: '.8rem' },
       },
       {
          id: 'git',
@@ -144,7 +144,7 @@ const Skills: React.FC = () => {
    const { t } = useTranslation()
 
    const renderTechnologies = (techData: Array<{ [index: string]: any }>) =>
-      techData.map(({ id, src, name }) => <Technology key={id} src={src} name={name} />)
+      techData.map(({ id, src, name, styles }) => <Technology key={id} src={src} name={name} styles={styles} />)
 
    return (
       <section className="section-skills" id="section-skills">

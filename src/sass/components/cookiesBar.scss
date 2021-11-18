@@ -41,7 +41,7 @@
     &__button {
         margin-left: 2rem;
         cursor: pointer;
-        background-color: $color-primary;
+        background-color: $color-main;
         outline: none;
 
         border: 1px solid transparent;
@@ -62,11 +62,11 @@
         }
 
         &:focus {
-            border-color: $color-primary;
+            border-color: $color-main;
         }
 
         &:hover {
-            box-shadow: 0 0 1rem $color-primary;
+            box-shadow: 0 0 1rem $color-main;
         }
 
         &:active {

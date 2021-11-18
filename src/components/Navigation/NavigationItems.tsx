@@ -3,12 +3,12 @@ import { useTranslation } from 'react-i18next'
 
 import NavigationItem from './NavigationItem'
 
-interface Props {
+interface INavigationItems {
    isOpened?: boolean,
    onClick?: (() => void) & React.MouseEventHandler<HTMLButtonElement>
 }
 
-const NavigationItems = ({ isOpened = false, onClick = () => {} }: Props) => {
+const NavigationItems = ({ isOpened = false, onClick = () => {} }: INavigationItems) => {
    const { t } = useTranslation()
 
    return (

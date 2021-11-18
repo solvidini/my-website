@@ -1,7 +1,6 @@
-@import "./variables";
-@import "./mixins";
-@import "./animations";
-@import "./utilities";
+@import './variables';
+@import './mixins';
+@import './animations';
 
 @import './containers/layout.scss';
 
@@ -28,4 +27,4 @@
 @import './components/cookiesBar.scss';
 @import './components/itemLabel.scss';
 
-@import "./app.scss";
+@import './app.scss';

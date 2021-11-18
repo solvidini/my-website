@@ -3,12 +3,12 @@ import React from 'react'
 import NavigationItems from './NavigationItems'
 import Backdrop from '../UI/Backdrop'
 
-interface Props {
+interface ISideDrawer {
    onClose: (() => void) & React.MouseEventHandler<HTMLButtonElement>,
    isOpened: boolean
 }
 
-const SideDrawer = ({ onClose, isOpened }: Props) => {
+const SideDrawer = ({ onClose, isOpened }: ISideDrawer) => {
    let sideDrawerClasses = ['side-drawer', 'side-drawer--closed']
    if (isOpened) {
       sideDrawerClasses = ['side-drawer', 'side-drawer--opened']

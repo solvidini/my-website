@@ -1,6 +1,6 @@
 {
-	"name": "my-site",
-	"version": "3.4.0",
+	"name": "ssazero-site",
+	"version": "3.10.0",
 	"author": "Samuel Kędziora <contact@samuelk.pl>",
 	"private": false,
 	"dependencies": {
@@ -22,13 +22,14 @@
 		"node-sass": "^6.0.1",
 		"prop-types": "^15.7.2",
 		"react": "^17.0.2",
+		"react-country-flag": "^2.3.1",
 		"react-dom": "^17.0.2",
 		"react-i18next": "^11.14.1",
 		"react-scripts": "^4.0.3",
 		"react-scroll": "^1.8.4",
 		"react-testing-library": "^8.0.1",
 		"react-transition-group": "^4.4.2",
-		"react-tsparticles": "^1.37.3",
+		"react-tsparticles": "^1.37.4",
 		"react-typing-effect": "^2.0.5",
 		"typescript": "^4.4.4"
 	},

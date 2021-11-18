@@ -1,16 +1,11 @@
-@import "../variables";
-@import "../animations";
-@import "../mixins";
-
 .header {
   height: 98vh;
   width: 100%;
   position: relative;
   background-image: linear-gradient(to right bottom,
-      rgba($color-secondary, .2) 0%,
-      rgba($color-primary, .95) 95%,
-      rgba($color-primary, 1) 95%),
-    url(../../assets/images/ssazero-background.jpg);
+      rgba($color-dark, .2) 0%,
+      rgba($color-black, .95) 100%),
+    url(../../assets/images/ssazero-background-dark.jpg);
   background-position: bottom;
   background-attachment: fixed;
   background-size: cover;
@@ -29,10 +24,14 @@
 
   &__text-box {
     position: absolute;
-    transform: translateY(-10%);
+    transform: translateY(-40%);
     text-align: center;
     color: $color-white;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      transform: translateY(-20%);
+    }
   }
 
   &__arrow-down {
@@ -65,18 +64,21 @@
   position: relative;
   text-transform: uppercase;
   display: inline-block;
-  font-size: 7.5rem;
-  font-weight: 700;
-  letter-spacing: 1.2rem;
   margin-bottom: 1rem;
-  transform: translateX(6px);
-  @include glowingText(rgba($color-secondary, .5));
+
+  font-family: 'Genos';
+  font-size: 10rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
+  transform: translateX(4px);
+  color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 0px 3px rgba($color-accent, .6);
 
   animation: moveInLeft 3s ease-out;
 
   @include respond(phone) {
-    font-size: 5.5rem;
-    letter-spacing: .8rem;
+    font-size: 7.5rem;
+    letter-spacing: .5rem;
   }
 
   &::after {
@@ -85,15 +87,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateX(-6px);
+    transform: translateX(-4px);
 
-    @include glowingText($color-white, true);
+    color: $color-white;
 
     animation: moveInRight 3s ease-out;
-
-    @include respond(phone) {
-      @include glowingText($color-white, true, 1px);
-    }
   }
 }
 
@@ -105,7 +103,12 @@
   font-weight: 600;
   margin: 0 auto;
   letter-spacing: 1rem;
-  text-shadow: 0px 0px 10px rgba($color-white, 0.8);
+  color: $color-main;
+  background: $gradient-gold;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0px 0px 10px rgba($color-main-light, 0.5);
   transform: translateX(4px);
 
   animation: moveInTop 3s ease-out;
@@ -120,7 +123,11 @@
 }
 
 .typewriter-container {
+  position: absolute;
+  left: 0;
+  width: 98%;
   display: inline-block;
+
   text-align: center;
   font-size: 3rem;
   font-weight: 300;
@@ -129,4 +136,8 @@
   @include respond(phone) {
     font-size: 2.5rem;
   }
+}
+
+.typewriter-cursor {
+  color: $color-accent;
 }

@@ -1,5 +1,5 @@
 .projects {
-    margin: 2rem auto;
+    margin: 1rem auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -19,12 +19,7 @@
         margin: 1px .5%;
         overflow: hidden;
         transition: all .3s ease;
-        border-radius: .5rem;
-
-        &:hover &-link {
-            box-shadow: 0 0 7px 1px $color-secondary;
-            border-color: $color-secondary;
-        }
+        border-radius: 1rem;
 
         @include respond(tab-land) {
             flex: 1 0 49%;
@@ -33,7 +28,7 @@
         }
 
         @include respond(phone) {
-            margin: 1rem .5%;
+            margin: 0.5rem .5%;
             flex: 1 0 100%;
             max-width: 100%;
             width: 100%;
@@ -41,6 +36,7 @@
 
         &-title {
             font-size: 2rem;
+            font-family: 'Genos';
             text-align: center;
             text-transform: uppercase;
             letter-spacing: .35rem;
@@ -66,40 +62,46 @@
             font-size: 1.6rem;
 
             text-align: center;
-            background-color: $color-primary;
-            filter: drop-shadow(0 0 .7rem $color-primary);
-            padding: .7rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            background-color: $color-white;
+            filter: drop-shadow(0 0 .5rem $color-accent);
+            padding: .5rem;
 
             transition: all .5s ease;
 
             @include respond(tab-land) {
-                background-color: $color-white;
-                filter: drop-shadow(0 0 .7rem $color-white);
+                filter: drop-shadow(0 0 .5rem $color-white);
             }
 
             @include respond(phone) {
-                padding: 0;
+                padding: 0 1rem;
                 letter-spacing: .12rem;
                 font-size: 2rem;
             }
         }
 
         &:hover &-description {
-            filter: drop-shadow(0 0 .7rem $color-white);
-            background-color: $color-white;
+            filter: drop-shadow(0 0 .5rem $color-white);
         }
 
         &-drawer {
-            transform: translateY(42%);
+            transform: translateY(43%);
             transition: all .5s ease;
+            border-top: 1px solid transparent;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
 
             @include respond(tab-land) {
+                border-top: 1px solid $color-white;
                 transform: translate(0);
             }
         }
 
         &:hover &-drawer {
             transform: translate(0);
+            border-top: 1px solid $color-white;
         }
 
         &-link {
@@ -113,27 +115,31 @@
             padding: 1rem 2rem;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 1.7rem;
+            font-size: 1.6rem;
 
             transition: all .3s ease;
-            
-            box-shadow: 0 0 7px 1px $color-primary;
+
+            box-shadow: 0 0 4px 1px $color-accent;
+
             &--left {
                 left: 0;
                 border-top-right-radius: 1rem;
-                border-right: .25rem solid $color-primary;
-                border-top: .25rem solid $color-primary;
+                border-bottom-left-radius: 1rem;
+                border-right: 1px solid $color-white;
+                border-top: 1px solid $color-white;
             }
 
             &--right {
                 right: 0;
                 border-top-left-radius: 1rem;
-                border-left: .25rem solid $color-primary;
-                border-top: .25rem solid $color-primary;
+                border-bottom-right-radius: 1rem;
+                border-left: 1px solid $color-white;
+                border-top: 1px solid $color-white;
             }
 
             &:hover {
-                background-color: $color-secondary
+                background-color: $color-white;
+                color: $color-dark;
             }
         }
 
@@ -147,7 +153,7 @@
 
             background-color: $color-dark;
 
-            min-height: 9rem;
+            height: 27rem;
             width: 100%;
 
             display: flex;
@@ -157,31 +163,36 @@
 
 
         &-image {
-            
             display: flex;
             width: 100%;
-            height: auto;
+            height: 100%;
             position: relative;
             transition: all .5s ease;
+            object-fit: cover;
+            object-position: top;
         }
 
         &-icon {
             position: absolute;
             top: 1rem;
             right: 1rem;
-            font-size: 2.4rem;
+            font-size: 2.2rem;
             color: $color-white;
 
             @include respond(tab-port) {
                 top: 1.2rem;
             }
         }
-
     }
 }
 
 .link-disabled {
-    cursor: not-allowed;
-    text-decoration: none !important;
-    color: rgb(200, 200, 200) !important;
+    text-decoration: line-through;
+    color: $color-disabled;
+    background-color: $color-dark;
+
+    &:hover {
+        color: $color-disabled;
+        background-color: $color-dark;
+    }
 }

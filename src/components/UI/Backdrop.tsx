@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-interface Props {
+interface IBackdrop {
    show: boolean,
    notVisible?: boolean,
    onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 }
 
-const Backdrop = ({ show, notVisible, onClick }: Props) =>
+const Backdrop = ({ show, notVisible, onClick }: IBackdrop) =>
    ReactDOM.createPortal(
       show ? (
          <div

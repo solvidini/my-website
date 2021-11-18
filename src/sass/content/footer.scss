@@ -1,16 +1,13 @@
-@import '../variables';
-@import '../mixins';
-
 $square-size: 2.5rem;
 
 .footer {
   width: 100%;
   position: relative;
 
-  background-color: $color-primary;
-  background-image: linear-gradient(10deg,
-      rgba($color-secondary, .6) 10%,
-      rgba($color-primary, 1) 70%),
+  background-color: $color-main;
+  background-image: linear-gradient(7deg,
+      rgba($color-main, .7) 10%,
+      rgba($color-main, 1) 70%),
     url(../../assets/images/tech-3.jpg);
   background-position: center;
   background-size: cover;
@@ -18,11 +15,11 @@ $square-size: 2.5rem;
 
   &__triangle {
     &--top {
-      @include triangle($square-size, $color-primary, 1rem, -47%);
+      @include triangle($square-size, $color-main, .6rem, -47%);
     }
 
     &--copyright {
-      @include triangle($square-size, $color-dark, 1rem, -47%);
+      @include triangle($square-size, $color-dark, .6rem, -47%);
     }
   }
 
@@ -47,12 +44,12 @@ $square-size: 2.5rem;
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
-      opacity: .15;
+      opacity: .1;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -30%);
-      width: 120%;
-      height: 120%;
+      width: 110%;
+      height: 110%;
       max-width: 30rem;
 
       @include respond(phone) {
@@ -63,7 +60,7 @@ $square-size: 2.5rem;
 
     &-item {
       display: flex;
-      color: $color-white;
+      color: $color-dark;
       flex-flow: column wrap;
       line-height: 2;
       font-size: 1.6rem;
@@ -71,7 +68,7 @@ $square-size: 2.5rem;
       text-align: center;
 
       h4 {
-        color: $color-white;
+        color: $color-dark;
         font-size: 1.7rem;
         text-transform: uppercase;
         letter-spacing: .3rem;
@@ -85,7 +82,7 @@ $square-size: 2.5rem;
       a,
       a:link,
       a:visited {
-        color: $color-white;
+        color: $color-black;
         text-decoration: none;
         transition: all .2s ease;
 

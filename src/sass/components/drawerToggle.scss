@@ -1,54 +1,54 @@
 .drawer-toggle {
     &__button {
-        display: none;
+        display : none;
         position: relative;
-        padding: 0 2rem 0 2.5rem;
-        height: 100%;
-        cursor: pointer;
+        padding : 0 2rem 0 2.5rem;
+        height  : 100%;
+        cursor  : pointer;
 
         @include darkMatter;
         transition: .25s ease;
 
         @include respond(phone) {
-            display: flex;
+            display    : flex;
             align-items: center;
         }
     }
 
     &__icon {
         position: relative;
-        z-index: 200;
+        z-index : 200;
 
         transition: all .2s ease 100ms;
 
         &,
         &::before,
         &::after {
-            width: 4rem;
-            height: 2px;
+            width           : 4rem;
+            height          : 2px;
             background-color: $color-white;
-            display: block;
+            display         : block;
         }
 
         &::before,
         &::after {
-            content: "";
+            content : "";
             position: absolute;
         }
 
         &::before {
-            top: -1rem;
+            top       : -1rem;
             transition: all .4s ease;
         }
 
         &::after {
-            top: 1rem;
+            top       : 1rem;
             transition: all .4s ease 100ms;
         }
 
         &--active {
             background-color: transparent;
-            
+
             &::before {
                 transform: translateX(20rem);
             }

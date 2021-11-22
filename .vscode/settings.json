@@ -3,5 +3,6 @@
         "D:/Programming/Commercial/my-site/src/locales"
     ],
     "i18next.i18nPaths": "d:/Programming/Commercial/my-site/public/locales",
-    "i18n-ally.keystyle": "nested"
+    "i18n-ally.keystyle": "nested",
+    "typescript.tsdk": "node_modules\\typescript\\lib"
 }

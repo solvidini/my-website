@@ -1,50 +1,50 @@
 @keyframes moveInLeft {
   0% {
-    opacity: 0;
+    opacity  : 0;
     transform: translateX(-20rem);
   }
 
   100% {
-    opacity: 1;
+    opacity  : 1;
     transform: translate(initial);
   }
 }
 
 @keyframes moveInRight {
   0% {
-    opacity: 0;
+    opacity  : 0;
     transform: translateX(40rem);
   }
 
   100% {
-    opacity: 1;
+    opacity  : 1;
     transform: translate(initial);
   }
 }
 
 @keyframes moveInLeft-delay {
   0% {
-    opacity: 0;
-    color: rgba(black, .5);
+    opacity  : 0;
+    color    : rgba(black, .5);
     transform: translateX(-100%);
   }
 
   60% {
-    opacity: 0;
-    color: rgba(black, .5);
+    opacity  : 0;
+    color    : rgba(black, .5);
     transform: translateX(-30%);
   }
 
   100% {
-    opacity: 1;
+    opacity  : 1;
     transform: translate(initial);
   }
 }
 
 @keyframes moveInTop {
   0% {
-    opacity: 0;
-    color: rgba(black, .5);
+    opacity  : 0;
+    color    : rgba(black, .5);
     transform: translateY(-10rem);
   }
 
@@ -53,7 +53,7 @@
   }
 
   100% {
-    opacity: 1;
+    opacity  : 1;
     transform: translate(initial);
   }
 }
@@ -61,41 +61,41 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    color: rgba(black, .5);
+    color  : rgba(black, .5);
   }
 
   60% {
-    opacity: 0;
-    color: rgba(black, .5);
+    opacity  : 0;
+    color    : rgba(black, .5);
     transform: translateY(-30%);
   }
 
   100% {
-    opacity: 1;
+    opacity  : 1;
     transform: translate(initial);
   }
 }
 
 @keyframes slideIn {
   0% {
-    opacity: 0;
+    opacity  : 0;
     transform: translateY(20rem);
   }
 
   100% {
-    opacity: 1;
+    opacity  : 1;
     transform: translateY(0);
   }
 }
 
 @keyframes slideOut {
   0% {
-    opacity: 1;
+    opacity  : 1;
     transform: translateY(0);
   }
 
   100% {
-    opacity: 0;
+    opacity  : 0;
     transform: translateY(20rem);
   }
 }
@@ -111,20 +111,6 @@
 
   100% {
     transform: translateX(0);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.05);
-  }
-
-  100% {
-    transform: scale(1);
   }
 }
 
@@ -161,7 +147,7 @@
 @keyframes shrink {
   0% {
     transform: scale(1);
-    filter: grayscale(1);
+    filter   : grayscale(1);
   }
 
   50% {
@@ -174,7 +160,7 @@
 
   100% {
     transform: scale(0);
-    filter: grayscale(0);
+    filter   : grayscale(0);
   }
 }
 
@@ -194,24 +180,24 @@
 
 @keyframes lpaIn {
   0% {
-    opacity: 0;
+    opacity  : 0;
     transform: translateY(-50%) scale(0);
   }
 
   100% {
-    opacity: 1;
+    opacity  : 1;
     transform: translateY(0) scale(1);
   }
 }
 
 @keyframes lpaOut {
   0% {
-    opacity: 1;
+    opacity  : 1;
     transform: translateY(0) scale(1);
   }
 
   100% {
-    opacity: 0;
+    opacity  : 0;
     transform: translateY(-50%) scale(0);
   }
 }

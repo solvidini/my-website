@@ -11,29 +11,29 @@ interface IToolbar {
 }
 
 const Toolbar = ({ forwardedRef, sticky, sideDrawerIsVisible, sideDrawerToggleClicked }: IToolbar) => {
-   const toolbarClasses = ['toolbar']
-   if (sticky) {
-      toolbarClasses.push('toolbar--fixed')
-   }
+	const toolbarClasses = ['toolbar']
+	if (sticky) {
+		toolbarClasses.push('toolbar--fixed')
+	}
 
-   const navStyles = sticky ? {
-      borderBottomLeftRadius: '2.7rem'
-   } : {
-         borderTopLeftRadius: '2.7rem'
-      }
+	const navStyles = sticky ? {
+		borderBottomLeftRadius: '2.7rem'
+	} : {
+		borderTopLeftRadius: '2.7rem'
+	}
 
-   return (
-      <div className={toolbarClasses.join(' ')} ref={forwardedRef}>
-         <DrawerToggle
-            sideDrawerIsVisible={sideDrawerIsVisible}
-            onClick={sideDrawerToggleClicked}
-            styles={navStyles}
-         />
-         <nav className="toolbar__nav desktop-only" style={navStyles}>
-            <NavigationItems />
-         </nav>
-      </div>
-   )
+	return (
+		<div className={toolbarClasses.join(' ')} ref={forwardedRef}>
+			<DrawerToggle
+				sideDrawerIsVisible={sideDrawerIsVisible}
+				onClick={sideDrawerToggleClicked}
+				styles={navStyles}
+			/>
+			<nav className='toolbar__nav desktop-only' style={navStyles}>
+				<NavigationItems />
+			</nav>
+		</div>
+	)
 }
 
 export default Toolbar

@@ -3,7 +3,8 @@
   "Code": "GB",
   "Global": {
     "Understand": "I understand",
-    "SomethingWentWrong": "Something went wrong"
+    "SomethingWentWrong": "Something went wrong.",
+    "Error": "Error!"
   },
   "Nav": {
     "Home": "Home",
@@ -96,7 +97,7 @@
   "Contact": {
     "Title": "Contact",
     "SubTitle": "Contact with me via e-mail",
-    "Sent": "Your message was sent to Samuel!",
+    "Sent": "Your message has been sent to Samuel!",
     "Incorrect": "Data in E-Mail form is not correct!",
     "EmailPH": "example@gmail.com",
     "EmailError": "Please enter a valid e-mail.",

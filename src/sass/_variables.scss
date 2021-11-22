@@ -1,10 +1,12 @@
 // COLORS
-$color-main: #f3c33e;
+$color-main      : #f3c33e;
 $color-main-light: #f5d681;
 
 $gradient-gold: linear-gradient(295deg, $color-main 0%, $color-main-light 74%);
 
 $color-accent: #ee3462;
+
+$color-success: #72ec67;
 
 $color-disabled: #aaa;
 
@@ -12,9 +14,9 @@ $color-grey: #777;
 
 $color-dark-text: #333;
 
-$color-white: rgb(241, 239, 243);
-$color-black: #090909;
-$color-dark: rgb(17, 17, 17);
+$color-white     : rgb(241, 239, 243);
+$color-black     : #090909;
+$color-dark      : rgb(17, 17, 17);
 $color-background: rgb(28, 28, 31);
 
 // FONT

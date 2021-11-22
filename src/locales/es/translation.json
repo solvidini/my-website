@@ -3,7 +3,8 @@
   "Code": "ES",
   "Global": {
     "Understand": "Entiendo",
-    "SomethingWentWrong": "Algo salió mal"
+    "SomethingWentWrong": "Algo salió mal.",
+    "Error": "¡Error!"
   },
   "Nav": {
     "Home": "Hogar",
@@ -96,7 +97,7 @@
   "Contact": {
     "Title": "Contacto",
     "SubTitle": "Contacta conmigo por correo electrónico",
-    "Sent": "¡Tu mensaje fue enviado a Samuel!",
+    "Sent": "¡Tu mensaje ha sido enviado a Samuel!",
     "Incorrect": "¡Los datos del formulario de correo electrónico no son correctos!",
     "EmailPH": "ejemplo@gmail.com",
     "EmailError": "Por favor introduzca una dirección de correo electrónico válida.",

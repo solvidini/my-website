@@ -3,7 +3,8 @@
   "Code": "PL",
   "Global": {
     "Understand": "Rozumiem",
-    "SomethingWentWrong": "Coś poszło nie tak"
+    "SomethingWentWrong": "Coś poszło nie tak.",
+    "Error": "Błąd!"
   },
   "Nav": {
     "Home": "Home",

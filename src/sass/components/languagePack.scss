@@ -1,29 +1,29 @@
 .language-pack {
-    position: fixed;
-    z-index: 200;
-    left: 0;
-    padding: 0 1rem 0 5rem;
-    height: 4rem;
-    display: flex;
+    position   : fixed;
+    z-index    : 200;
+    left       : 0;
+    padding    : 0 1rem 0 5rem;
+    height     : 4rem;
+    display    : flex;
     align-items: center;
 
     transition: .25s ease;
     @include darkMatter;
 
-    cursor: pointer;
+    cursor     : pointer;
     user-select: none;
-    outline: transparent;
+    outline    : transparent;
 
     animation: fadeIn .6s;
 
     @include respond(phone) {
         padding-left: 6rem;
-        height: 6rem;
+        height      : 6rem;
     }
 
     &__toggler {
-        color: $color-white;
-        font-size: 1.4rem;
+        color         : $color-white;
+        font-size     : 1.4rem;
         text-transform: uppercase;
 
         @include respond(phone) {
@@ -40,34 +40,34 @@
     }
 
     &__dropdown {
-        display: block;
+        display : block;
         position: absolute;
-        top: 100%;
-        right: 0;
+        top     : 100%;
+        right   : 0;
     }
 
     &__select {
         @include darkMatter;
-        font-size: $default-font-size;
-        color: $color-white;
-        border: none;
-        padding: 1rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
+        font-size      : $default-font-size;
+        color          : $color-white;
+        border         : none;
+        padding        : 1rem;
+        cursor         : pointer;
+        display        : flex;
+        align-items    : center;
         justify-content: center;
-        text-align: center;
-        width: 9rem;
-        outline: none;
-        border: 1px solid transparent;
+        text-align     : center;
+        width          : 9rem;
+        outline        : none;
+        border         : 1px solid transparent;
 
         @include respond(phone) {
             font-size: 2rem;
-            width: 9rem;
+            width    : 9rem;
         }
 
         &--active {
-            border: 1px solid $color-accent;
+            border    : 1px solid $color-accent;
             box-shadow: 0 0 4px $color-accent;
         }
 
@@ -77,13 +77,13 @@
         }
 
         &:last-child {
-            border-bottom-left-radius: 1rem;
+            border-bottom-left-radius : 1rem;
             border-bottom-right-radius: 1rem;
         }
     }
 
     &__lang {
-        font-size: 1.4rem;
+        font-size  : 1.4rem;
         margin-left: .5rem;
 
         @include respond(phone) {

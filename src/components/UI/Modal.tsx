@@ -11,27 +11,27 @@ interface Props {
 }
 
 const Modal: FC<Props> = ({ show, onClose, isError, title, children }) => {
-   const OKButtonRef = useRef<HTMLButtonElement>(null)
+	const OKButtonRef = useRef<HTMLButtonElement>(null)
 
-   useEffect(() => {
-      OKButtonRef?.current?.focus()
-   })
+	useEffect(() => {
+		OKButtonRef?.current?.focus()
+	})
 
-   return ReactDOM.createPortal(
-      <>
-         <Backdrop show={show} onClick={onClose} />
-         <div className="modal">
-            <h1 className={!isError ? 'modal__title' : 'modal__title modal__title--error'}>
-               {title}
-            </h1>
-            <div className="modal__content">{children}</div>
-            <button onClick={onClose} className="modal__submit" ref={OKButtonRef}>
+	return ReactDOM.createPortal(
+		<>
+			<Backdrop show={show} onClick={onClose} />
+			<div className='modal'>
+				<h1 className={!isError ? 'modal__title' : 'modal__title modal__title--error'}>
+					{title}
+				</h1>
+				<div className='modal__content'>{children}</div>
+				<button onClick={onClose} className='button' ref={OKButtonRef}>
                OK
-            </button>
-         </div>
-      </>,
+				</button>
+			</div>
+		</>,
       document.getElementById('modal-root') as HTMLElement
-   )
+	)
 }
 
 export default Modal

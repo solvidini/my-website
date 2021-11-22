@@ -8,14 +8,14 @@ interface IBackdrop {
 }
 
 const Backdrop = ({ show, notVisible, onClick }: IBackdrop) =>
-   ReactDOM.createPortal(
-      show ? (
-         <div
-            className={notVisible ? 'backdrop' : 'backdrop backdrop--visible'}
-            onClick={onClick}
-         ></div>
-      ) : null,
+	ReactDOM.createPortal(
+		show ? (
+			<div
+				className={notVisible ? 'backdrop' : 'backdrop backdrop--visible'}
+				onClick={onClick}
+			></div>
+		) : null,
       document.getElementById('backdrop-root') as HTMLElement
-   )
+	)
 
 export default Backdrop

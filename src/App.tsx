@@ -9,34 +9,34 @@ import logo from './assets/images/logo.png'
 console.log('Thanks for particles effect to: https://www.npmjs.com/package/react-tsparticles')
 
 function App() {
-   const [loading, setLoading] = useState(true)
+	const [loading, setLoading] = useState(true)
 
-   useEffect(() => {
-      setTimeout(() => {
-         setLoading(false)
-      }, 1000)
-   }, [])
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false)
+		}, 1000)
+	}, [])
 
-   const renderApp = () => {
-      return (
-         <Layout>
-            <Content />
-         </Layout>
-      )
-   }
+	const renderApp = () => {
+		return (
+			<Layout>
+				<Content />
+			</Layout>
+		)
+	}
 
-   const renderLoadingScreen = () => {
-      return (
-         <div className="loadingScreen">
-            <img className="loadingScreen__logo" src={logo} alt="SS" />
-            <div className="loadingScreen__animate">
-               <Spinner />
-            </div>
-         </div>
-      )
-   }
+	const renderLoadingScreen = () => {
+		return (
+			<div className='loadingScreen'>
+				<img className='loadingScreen__logo' src={logo} alt='SS' />
+				<div className='loadingScreen__animate'>
+					<Spinner />
+				</div>
+			</div>
+		)
+	}
 
-   return loading ? renderLoadingScreen() : renderApp()
+	return loading ? renderLoadingScreen() : renderApp()
 }
 
 export default App

@@ -1,7 +1,7 @@
 .section-about {
-    position: relative;
+    position        : relative;
     background-color: $color-white;
-    overflow: hidden;
+    overflow        : hidden;
 
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
@@ -10,24 +10,24 @@
     }
 
     &:after {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        background-image: url(../../assets/images/tech-2.jpg);
+        content            : "";
+        position           : absolute;
+        display            : block;
+        top                : 0;
+        left               : 0;
+        background-image   : url(../../assets/images/tech-2.jpg);
         background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        opacity: 0.05;
+        background-size    : cover;
+        background-repeat  : no-repeat;
+        width              : 100%;
+        height             : 100%;
+        z-index            : -1;
+        opacity            : 0.05;
     }
 
     &__content {
         max-width: 120rem;
-        margin: 6rem auto 10rem;
+        margin   : 6rem auto 10rem;
 
         @include respond(phone) {
             margin: 6rem 0;
@@ -36,35 +36,35 @@
 }
 
 .about-me {
-    display: flex;
-    flex-flow: row wrap;
+    display        : flex;
+    flex-flow      : row wrap;
     justify-content: center;
-    align-items: center;
-    margin: 4rem 8rem 8rem;
-    text-align: justify;
+    align-items    : center;
+    margin         : 4rem 8rem 8rem;
+    text-align     : justify;
 
     @include respond(tab-port) {
         flex-flow: column;
-        margin: 2rem 4rem 7rem;
+        margin   : 2rem 4rem 7rem;
     }
 
     @include respond(phone) {
         flex-flow: column;
-        margin: 2.5rem 0;
+        margin   : 2.5rem 0;
     }
 
     &__image {
         @include unselectable;
         pointer-events: none;
 
-        overflow: hidden;
+        overflow     : hidden;
         border-radius: 50%;
-        flex: 0 1 30%;
-        width: 100%;
+        flex         : 0 1 30%;
+        width        : 100%;
 
         @include respond(tab-port) {
             max-width: 40%;
-            margin: 0 auto 4rem auto;
+            margin   : 0 auto 4rem auto;
         }
 
         @include respond(phone) {
@@ -73,27 +73,27 @@
     }
 
     &__text {
-        margin: 0 0 0 8rem;
-        font-size: 1.6rem;
-        font-weight: 400;
-        color: $color-dark-text;
-        line-height: 1.4;
+        margin        : 0 0 0 8rem;
+        font-size     : 1.6rem;
+        font-weight   : 400;
+        color         : $color-dark-text;
+        line-height   : 1.4;
         letter-spacing: .15rem;
-        flex: 1;
+        flex          : 1;
 
         @include respond(tab-port) {
-            margin: 0 13rem 3rem;
+            margin   : 0 13rem 3rem;
             font-size: 1.7rem;
         }
 
         @include respond(phone) {
             letter-spacing: .12rem;
-            margin: 3rem;
+            margin        : 3rem;
         }
     }
 }
 
 .flex-break {
     flex-basis: 100%;
-    height: 0;
+    height    : 0;
 }

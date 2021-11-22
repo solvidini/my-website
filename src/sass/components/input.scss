@@ -1,26 +1,26 @@
 .form-control {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    width: 100%;
-    padding: 0 2%;
+    width         : 100%;
+    padding       : 0 2%;
 
     @include respond(phone) {
         padding: 0;
     }
 
     &__label {
-        font-size: 1.7rem;
-        font-family: 'Genos';
+        font-size     : 1.7rem;
+        font-family   : 'Genos';
         letter-spacing: 1px;
-        margin-bottom: 4px;
-        color: $color-white;
+        margin-bottom : 4px;
+        color         : $color-white;
     }
 
     &__error {
         margin-top: 3px;
         text-align: center;
-        font-size: 13px;
-        color: $color-accent;
+        font-size : 13px;
+        color     : $color-accent;
 
         @include respond(phone) {
             font-size: 15px;
@@ -30,21 +30,21 @@
 
 .input {
     font-family: 'lato',
-    sans-serif;
-    width: 100%;
-    padding: 1rem;
-    font-size: 14px;
+        sans-serif;
+    width           : 100%;
+    padding         : 1rem;
+    font-size       : 14px;
     background-color: transparent;
-    color: $color-white;
-    outline: none;
+    color           : $color-white;
+    outline         : none;
 
-    -webkit-appearance: none;
+    -webkit-appearance   : none;
     -webkit-border-radius: 0;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius        : 0;
+    -webkit-box-shadow   : none;
+    box-shadow           : none;
+    border               : 1px solid transparent;
+    border-radius        : 5px;
 
     @include respond(phone) {
         font-size: 16px;
@@ -56,9 +56,9 @@
 
     &--textarea {
         font-family: 'lato', sans-serif;
-        resize: vertical;
-        min-height: 3.2rem;
-        max-height: 30rem;
+        resize     : vertical;
+        min-height : 3.2rem;
+        max-height : 30rem;
     }
 
     &--valid {
@@ -66,7 +66,7 @@
     }
 
     &--invalid {
-        border-color: $color-accent;
+        border-color    : $color-accent;
         background-color: #ff144812;
     }
 }

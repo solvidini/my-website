@@ -4,25 +4,30 @@
 }
 
 .custom-label {
-    display: none;
+    display : none;
     position: absolute;
-    bottom: -4rem;
-    left: 50%;
-    width: auto;
-    
-    white-space: nowrap;
-    color: $color-white;
+    bottom  : -4rem;
+    left    : 50%;
+    width   : auto;
+
+    white-space     : nowrap;
+    color           : $color-white;
     background-color: rgba($color-dark, 0.9);
-    border-radius: .5rem;
-    text-align: center;
-    padding: 1rem;
-    
+    border-radius   : .5rem;
+    text-align      : center;
+    padding         : 1rem;
+
     animation: release .2s;
     transform: translate(-50%, 0);
 
     &--project {
-        bottom: 2rem;
-        border: 0;
+        font-size: 1.4rem;
+        bottom   : 2rem;
+        border   : 0;
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+        }
 
         &--1 {
             animation: release-project1 .2s;

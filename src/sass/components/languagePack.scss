@@ -59,7 +59,7 @@
         text-align: center;
         width: 9rem;
         outline: none;
-        border: 2px solid transparent;
+        border: 1px solid transparent;
 
         @include respond(phone) {
             font-size: 2rem;
@@ -67,13 +67,13 @@
         }
 
         &--active {
-            border: 2px solid $color-accent;
-            box-shadow: 0 0 .5rem $color-accent;
+            border: 1px solid $color-accent;
+            box-shadow: 0 0 4px $color-accent;
         }
 
         &:active,
         &:focus {
-            border: 2px solid rgba($color-accent, 0.2);
+            border: 1px solid rgba($color-accent, 0.2);
         }
 
         &:last-child {

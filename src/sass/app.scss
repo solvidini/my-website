@@ -76,7 +76,7 @@ input:-webkit-autofill {
     text-align: center;
     font-size: 3rem;
     font-weight: 400;
-    padding: 0 2rem;
+    margin: 0 3rem;
 
     &__pre {
         display: block;
@@ -103,7 +103,6 @@ input:-webkit-autofill {
     }
 
     &__title {
-        filter: drop-shadow(0 0 1px $color-white);
         text-transform: uppercase;
         letter-spacing: .5rem;
         font-size: 4rem;

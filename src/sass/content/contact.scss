@@ -53,12 +53,12 @@
     margin: 6rem auto 0;
     text-align: right;
 
+    @include respond(phone) {
+        width: 98%;
+    }
+
     &__block {
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
+        @include unselectable;
 
         position: absolute;
         top: -2.6rem;
@@ -120,7 +120,7 @@
             animation: pulse .5s alternate;
 
             &:hover {
-                box-shadow: 0 0 1rem $color-main;
+                box-shadow: 0 0 .7rem $color-main;
             }
         }
 

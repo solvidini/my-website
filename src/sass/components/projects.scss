@@ -31,7 +31,7 @@
             margin: 0.5rem .5%;
             flex: 1 0 100%;
             max-width: 100%;
-            width: 100%;
+            width: 98%;
         }
 
         &-title {
@@ -94,14 +94,14 @@
             border-top-right-radius: 1rem;
 
             @include respond(tab-land) {
-                border-top: 1px solid $color-white;
+                border-top: 1px solid $color-main-light;
                 transform: translate(0);
             }
         }
 
         &:hover &-drawer {
             transform: translate(0);
-            border-top: 1px solid $color-white;
+            border-top: 1px solid $color-main-light;
         }
 
         &-link {
@@ -145,11 +145,7 @@
 
         &-image-container {
             position: relative;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -o-user-select: none;
-            user-select: none;
+            @include unselectable;
 
             background-color: $color-dark;
 

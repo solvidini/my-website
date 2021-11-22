@@ -1,78 +1,84 @@
 .technologies {
-    padding: 2rem 2rem 0;
-    max-width: 140rem;
+    max-width: 90rem;
     margin: 0 auto;
 
-    @include respond(tab-land) {
-        max-width: 90rem;
+    perspective: 1000px;
+
+
+    @include respond(tab-port) {
+        max-width: 70rem;
     }
 
     @include respond(phone) {
-        padding: 4rem 1rem 0;
+        max-width: 38rem;
     }
 
-    &__group {
-        margin: 2rem;
+    &__skills {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        background-color: rgba($color-background, 0.95);
-        border-radius: 1rem;
-
-        &:not(:last-child) {
-            margin-bottom: 4rem;
-        }
-
-        &-title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            color: $color-white;
-            font-size: 2.5rem;
-            letter-spacing: .5rem;
-            margin-bottom: .5rem;
-        }
-    }
-
-    &__items {
-        position: relative;
-        display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
+        transform-style: preserve-3d;
+        transform: rotateX(45deg) translateY(-2rem);
 
-    &__item {
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
-        position: relative;
-
-        height: 6.5rem;
-        margin: 2rem;
-
-        @include respond(tab-land) {
-            margin: 2.5rem;
+        @include respond(tab-port) {
+            transform: rotateX(34deg) translateY(-5rem);
         }
 
         @include respond(phone) {
-            height: 5rem;
-            margin: 1.5rem;
+            transform: rotateX(17deg) translateY(-7rem);
+        }
+
+        // &:after {
+        //     content: "";
+        //     flex: auto;
+        // }
+    }
+
+    &__item {
+        @include unselectable;
+        position: relative;
+
+        height: 11rem;
+        min-width: 11rem;
+        padding: 1rem;
+        text-align: center;
+        flex: 1 1 auto;
+
+        box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
+        background-color: rgba($color-dark, .85);
+
+        border: 2px solid $color-background;
+
+        transform-origin: bottom center;
+        backface-visibility: hidden;
+        transition: 0.6s ease transform;
+
+        @include respond(tab-port) {
+            min-width: 14rem;
+        }
+
+        @include respond(phone) {
+            min-width: 13rem;
         }
 
         &:hover,
         &:active {
             z-index: 5;
-        }
+            transform: rotateX(-45deg) scale(1.1) translateZ(30px);
 
-        &:hover &-image,
-        &:active &-image {
-            transform: scale(1.1);
+            border: 2px solid $color-accent;
+
+            @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+                -webkit-backdrop-filter: blur(2px);
+                backdrop-filter: blur(2px);
+            }
+
+            @include respond(tab-port) {
+                transform: rotateX(-34deg) scale(1.1) translateZ(30px);
+            }
+
+            @include respond(phone) {
+                transform: rotateX(-17deg) scale(1.1) translateZ(30px);
+            }
         }
 
         &-image {
@@ -88,14 +94,14 @@
 
     &__item-label {
         position: absolute;
-        bottom: -4rem;
+        top: -5rem;
         left: 50%;
         transform: translate(-50%, 0) scale(0);
         width: auto;
 
         white-space: nowrap;
-        color: $color-white;
-        background-color: $color-dark;
+        color: $color-dark-text;
+        background-color: $color-white;
         border-radius: .5rem;
         text-align: center;
         font-size: 1.6rem;
@@ -104,7 +110,7 @@
         transition: all .1s ease;
 
         &::before {
-            @include triangle(0.9rem, $color-dark, 0, -45%);
+            @include triangleBottom(0.9rem, $color-white, 0, 45%);
         }
     }
 }

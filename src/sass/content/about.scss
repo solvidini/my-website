@@ -27,11 +27,10 @@
 
     &__content {
         max-width: 120rem;
-        margin: 0 auto;
-        padding: 6rem 1rem 10rem;
+        margin: 6rem auto 10rem;
 
         @include respond(phone) {
-            padding: 6rem 1rem;
+            margin: 6rem 0;
         }
     }
 }
@@ -41,12 +40,12 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    margin: 8rem;
+    margin: 4rem 8rem 8rem;
     text-align: justify;
 
     @include respond(tab-port) {
         flex-flow: column;
-        margin: 6rem 4rem;
+        margin: 2rem 4rem 7rem;
     }
 
     @include respond(phone) {
@@ -55,11 +54,7 @@
     }
 
     &__image {
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -o-user-select: none;
-        user-select: none;
+        @include unselectable;
         pointer-events: none;
 
         overflow: hidden;
@@ -68,32 +63,30 @@
         width: 100%;
 
         @include respond(tab-port) {
-            max-width: 50%;
-            margin: 0 auto 6rem auto;
+            max-width: 40%;
+            margin: 0 auto 4rem auto;
         }
 
         @include respond(phone) {
             max-width: 80%;
-            margin: 3rem;
         }
     }
 
     &__text {
-        margin: 0 0 0 10rem;
+        margin: 0 0 0 8rem;
         font-size: 1.6rem;
         font-weight: 400;
-        color: $color-grey-dark;
+        color: $color-dark-text;
         line-height: 1.4;
         letter-spacing: .15rem;
         flex: 1;
 
         @include respond(tab-port) {
-            margin: 0 13rem;
+            margin: 0 13rem 3rem;
             font-size: 1.7rem;
         }
 
         @include respond(phone) {
-            padding: 0;
             letter-spacing: .12rem;
             margin: 3rem;
         }

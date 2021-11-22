@@ -30,22 +30,21 @@
     }
 
     &__content {
-        padding: 10rem 0;
+        margin: 10rem 0;
 
         @include respond(tab-land) {
-            padding: 12rem .2rem;
+            margin: 12rem 0;
         }
 
         @include respond(phone) {
-            padding: 8rem .2rem;
+            margin: 8rem 0;
         }
     }
 }
 
 .offer-content {
     max-width: 120rem;
-    padding: 2rem 0;
-    margin: 0 auto 2rem auto;
+    margin: 2rem auto 4rem auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -57,7 +56,7 @@
     }
 
     @include respond(phone) {
-        margin: 0 2rem;
+        margin: 0 1rem;
     }
 
     &__item {
@@ -70,11 +69,7 @@
         flex: 1;
 
         &-image {
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -o-user-select: none;
-            user-select: none;
+            @include unselectable;
 
             max-width: 18rem;
             position: relative;
@@ -94,6 +89,7 @@
             font-size: 2.2rem;
             text-transform: uppercase;
             letter-spacing: .35rem;
+            white-space: nowrap;
 
             @include respond(tab-port) {
                 letter-spacing: .15rem;

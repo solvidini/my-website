@@ -4,10 +4,6 @@
     transform: translateX(-20rem);
   }
 
-  80% {
-    transform: translateX(1rem);
-  }
-
   100% {
     opacity: 1;
     transform: translate(initial);
@@ -18,10 +14,6 @@
   0% {
     opacity: 0;
     transform: translateX(40rem);
-  }
-
-  80% {
-    transform: translateX(-1rem);
   }
 
   100% {
@@ -81,22 +73,6 @@
   100% {
     opacity: 1;
     transform: translate(initial);
-  }
-}
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(10rem);
-  }
-
-  80% {
-    transform: translateY(-1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
   }
 }
 

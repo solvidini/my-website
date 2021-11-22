@@ -15,17 +15,18 @@ $square-size: 2.5rem;
 
   &__triangle {
     &--top {
-      @include triangle($square-size, $color-main, .6rem, -47%);
+      @include triangleTop($square-size, $color-main, .6rem, -47%);
     }
 
     &--copyright {
-      @include triangle($square-size, $color-dark, .6rem, -47%);
+      @include triangleTop($square-size, $color-accent, .6rem, -50%);
     }
   }
 
   &__top {
     padding: 8rem 0 3rem 0;
     z-index: 0;
+
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -53,18 +54,19 @@ $square-size: 2.5rem;
       max-width: 30rem;
 
       @include respond(phone) {
-        max-width: 40rem;
         transform: translate(-50%, -44%);
       }
     }
 
     &-item {
       display: flex;
-      color: $color-dark;
       flex-flow: column wrap;
+
+      color: $color-dark-text;
       line-height: 2;
       font-size: 1.6rem;
       letter-spacing: .2rem;
+      min-width: 26rem;
       text-align: center;
 
       h4 {
@@ -82,7 +84,7 @@ $square-size: 2.5rem;
       a,
       a:link,
       a:visited {
-        color: $color-black;
+        color: $color-dark;
         text-decoration: none;
         transition: all .2s ease;
 
@@ -94,13 +96,8 @@ $square-size: 2.5rem;
     }
   }
 
-  &__logo {
-    width: 100%;
-    opacity: 0.08;
-  }
-
   &__social {
-    padding: 2rem;
+    margin: 2rem;
     display: flex;
     justify-content: space-evenly;
 
@@ -125,6 +122,24 @@ $square-size: 2.5rem;
         background-color: $color-white;
         transform: rotate(-15deg);
       }
+    }
+  }
+
+  &__marquee {
+    z-index: 1;
+    color: $color-dark;
+    font-size: 1.3rem;
+    background-color: $color-accent;
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+
+    a,
+    a:link,
+    a:visited {
+      color: $color-dark;
+      text-decoration: none;
     }
   }
 

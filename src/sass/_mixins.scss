@@ -13,7 +13,22 @@
     transform: translate(-50%, -50%);
 }
 
-@mixin triangle($size: 1rem, $color: $color-dark, $radius: 0, $y: -50%) {
+@mixin triangleBottom($size: 1rem, $color: $color-dark, $radius: 0, $y: -50%) {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, $y) rotate(45deg);
+
+    border-top-left-radius: $radius;
+    border-top: $size solid transparent;
+    border-left: $size solid transparent;
+    border-right: $size solid $color;
+    border-bottom: $size solid $color;
+}
+
+@mixin triangleTop($size: 1rem, $color: $color-dark, $radius: 0, $y: -50%) {
     content: "";
     position: absolute;
 
@@ -51,6 +66,14 @@
         -webkit-backdrop-filter: blur(2px);
         backdrop-filter: blur(2px);
     }
+}
+
+@mixin unselectable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 /* MEDIA QUERY MANAGER

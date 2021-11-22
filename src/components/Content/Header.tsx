@@ -30,7 +30,7 @@ const Header: FC<IHeader> = ({ children, hideCanvas, forwardedRef }) => {
             <div className="heading-paragraph">Samuel Kędziora</div>
             <ReactTypingEffect
                className="typewriter-container"
-               speed={38}
+               speed={26}
                text={words}
                eraseSpeed={11}
                eraseDelay={3000}

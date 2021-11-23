@@ -1,4 +1,5 @@
 import React from 'react'
+import { isMobile } from 'react-device-detect'
 
 interface Props {
   src: string
@@ -22,9 +23,15 @@ const Technology = (props: Props) => {
     <div
       className={classesItem.join(' ')}
       style={styles}
-      onClick={() => setIsActive(prevState => !prevState)}
-      onMouseEnter={() => setIsActive(true)}
-      onMouseLeave={() => setIsActive(false)}
+      onClick={() => {
+        setIsActive(prevState => !prevState)
+      }}
+      onMouseEnter={() => {
+        !isMobile ? setIsActive(true) : null
+      }}
+      onMouseLeave={() => {
+        setIsActive(false)
+      }}
     >
       <img className='technologies__item-image' src={src} alt={name} />
       <div className={classesLabel.join(' ')}>{name}</div>

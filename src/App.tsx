@@ -6,7 +6,8 @@ import Layout from './containers/Layout'
 import Content from './components/Content/Content'
 import logo from './assets/images/logo.png'
 
-console.log('Thanks for particles effect to: https://www.npmjs.com/package/react-tsparticles')
+// eslint-disable-next-line no-console
+console.log(':)')
 
 function App() {
   const [loading, setLoading] = useState(true)

@@ -112,8 +112,9 @@
   },
   "Footer": {
     "Contact": "Contact",
-    "OfferIcons": "Offer icons made by",
-    "AllRights": "All rights reserved."
+    "OfferIcons": "Offer icons from: ",
+    "AllRights": "All rights reserved.",
+    "Particles": "Particles effect from: "
   },
   "Cookies": [
     "Please be advised that the site uses cookies to optimize and improve its functionality for end users.",

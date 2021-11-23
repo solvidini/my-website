@@ -72,23 +72,36 @@ const Footer = () => {
         gradientWidth={150}
         speed={50}
       >
-        {t('Footer.OfferIcons')}
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://www.flaticon.com/authors/freepik'
-          title='Freepik'
-        >
-          &nbsp;Freepik&nbsp;
-        </a>
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://www.flaticon.com/'
-          title='Flaticon'
-        >
-          (www.flaticon.com)
-        </a>
+        <span className='footer__marquee-item'>
+          {t('Footer.OfferIcons')}(
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://www.flaticon.com/authors/freepik'
+            title='Freepik'
+          >
+            Freepik&nbsp;-&nbsp;
+          </a>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://www.flaticon.com/'
+            title='Flaticon'
+          >
+            www.flaticon.com)
+          </a>
+        </span>
+        <span className='footer__marquee-item'>
+          {t('Footer.Particles')}
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://www.npmjs.com/package/react-tsparticles'
+            title='Flaticon'
+          >
+            (react-tsparticles)
+          </a>
+        </span>
       </Marquee>
       <div className='footer__copyright'>
         <div className='footer__triangle footer__triangle--copyright' />

@@ -112,8 +112,9 @@
   },
   "Footer": {
     "Contact": "Contacto",
-    "OfferIcons": "Ofrecer iconos creados por",
-    "AllRights": "Reservados todos los derechos."
+    "OfferIcons": "Ofrecer iconos de:",
+    "AllRights": "Reservados todos los derechos.",
+    "Particles": "Efecto de partículas de: "
   },
   "Cookies": [
     "Tenga en cuenta que el sitio utiliza cookies para optimizar y mejorar su funcionalidad para los usuarios finales.",

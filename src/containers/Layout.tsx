@@ -114,7 +114,7 @@ const Layout: FC = ({ children }) => {
 				timeout={500}
 				classNames='arrow'
 			>
-				<div onClick={animateScroll.scrollToTop} className='arrow-top'>
+				<div onClick={() => animateScroll.scrollToTop({ duration: 1500, smooth: true })} className='arrow-top'>
 					<ArrowUp />
 				</div>
 			</CSSTransition>

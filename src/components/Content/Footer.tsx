@@ -65,7 +65,7 @@ const Footer = () => {
 					<FontAwesomeIcon icon={faGithub} />
 				</a>
 			</div>
-			<Marquee className='footer__marquee' gradient gradientColor={[17, 17, 17]} speed={50}>
+			<Marquee className='footer__marquee' gradient gradientColor={[17, 17, 17]} gradientWidth={150} speed={50}>
 				{t('Footer.OfferIcons')}
 				<a
 					target='_blank'

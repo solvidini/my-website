@@ -108,7 +108,8 @@
     "SubjectError": "Subject must be at least 2 characters. (max 30)",
     "Message": "Message",
     "MessageError": "Your message must be at least 5 characters. (max 5000)",
-    "Send": "Send"
+    "Send": "Send",
+    "Sending": "Sending..."
   },
   "Footer": {
     "Contact": "Contact",

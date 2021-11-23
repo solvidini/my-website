@@ -1,5 +1,5 @@
 {
-  "i18n-ally.localesPaths": ["D:/Programming/Commercial/my-site/src/locales"],
+  "i18n-ally.localesPaths": ["src/locales"],
   "i18n-ally.keystyle": "nested",
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "editor.codeActionsOnSave": {

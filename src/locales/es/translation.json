@@ -108,7 +108,8 @@
     "SubjectError": "El asunto debe tener al menos 2 caracteres. \n(máximo 30)",
     "Message": "Mensaje",
     "MessageError": "Su mensaje debe tener al menos 5 caracteres. \n(máximo 5000)",
-    "Send": "Enviar"
+    "Send": "Enviar",
+    "Sending": "Enviando..."
   },
   "Footer": {
     "Contact": "Contacto",

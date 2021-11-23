@@ -23,13 +23,8 @@
     }
 
     @include respond(phone) {
-      transform: rotateX(17deg) translateY(-7rem);
+      transform: rotateX(15deg) translateY(-7rem);
     }
-
-    // &:after {
-    //     content: "";
-    //     flex: auto;
-    // }
   }
 
   &__item {
@@ -41,6 +36,8 @@
     padding: 1rem;
     text-align: center;
     flex: 1 1 auto;
+
+    cursor: pointer;
 
     box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.4);
     background-color: rgba($color-dark, 0.85);
@@ -56,11 +53,10 @@
     }
 
     @include respond(phone) {
-      min-width: 13rem;
+      min-width: 11rem;
     }
 
-    &:hover,
-    &:active {
+    &--active {
       z-index: 5;
       transform: rotateX(-45deg) translateZ(30px);
 
@@ -71,19 +67,19 @@
       }
 
       @include respond(phone) {
-        transform: rotateX(-17deg) translateZ(30px);
+        transform: rotateX(-15deg) translateZ(30px);
       }
-    }
-
-    &-image {
-      transition: all 0.2s ease;
-      height: 100%;
-      border-radius: 5px;
     }
   }
 
-  &__item:hover &__item-label {
-    transform: translate(-50%, 0) scale(1);
+  &__item-image {
+    transition: all 0.2s ease;
+    height: 100%;
+    border-radius: 5px;
+
+    @include respond(phone) {
+      height: 85%;
+    }
   }
 
   &__item-label {
@@ -91,8 +87,8 @@
     top: -5rem;
     left: 50%;
     transform: translate(-50%, 0) scale(0);
-    width: auto;
 
+    width: auto;
     white-space: nowrap;
     color: $color-dark-text;
     background-color: $color-white;
@@ -101,10 +97,14 @@
     font-size: 1.6rem;
     padding: 1rem;
 
-    transition: all 0.1s ease;
+    transition: transform 0.2s ease;
 
     &::before {
       @include triangleBottom(0.9rem, $color-white, 0, 45%);
+    }
+
+    &--active {
+      transform: translate(-50%, 0) scale(1);
     }
   }
 }

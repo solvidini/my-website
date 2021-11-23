@@ -72,12 +72,12 @@
   line-height: 1;
   letter-spacing: 1rem;
   color: rgba(0, 0, 0, 0);
-  text-shadow: 0px 0px 4px rgba($color-accent, 0.6);
+  text-shadow: 0px 0px 5px rgba($color-accent, 0.7);
 
   animation: moveInLeft 3s ease-out;
 
   @include respond(phone) {
-    font-size: 6.5rem;
+    font-size: 7rem;
     letter-spacing: 0.5rem;
   }
 

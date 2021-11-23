@@ -8,14 +8,27 @@ interface Props {
 
 const Technology = (props: Props) => {
   const { src, name, styles = {} } = props
+  const [isActive, setIsActive] = React.useState<boolean>(false)
+
+  const classesItem = ['technologies__item']
+  const classesLabel = ['technologies__item-label']
+
+  if (isActive) {
+    classesItem.push('technologies__item--active')
+    classesLabel.push('technologies__item-label--active')
+  }
 
   return (
-    // <Effect>
-    <div className='technologies__item' style={styles}>
+    <div
+      className={classesItem.join(' ')}
+      style={styles}
+      onClick={() => setIsActive(prevState => !prevState)}
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
+    >
       <img className='technologies__item-image' src={src} alt={name} />
-      <div className='technologies__item-label'>{name}</div>
+      <div className={classesLabel.join(' ')}>{name}</div>
     </div>
-    // </Effect>
   )
 }
 

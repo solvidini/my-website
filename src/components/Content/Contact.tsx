@@ -40,6 +40,7 @@ const Contact: React.FC = () => {
   const [isFormValid, setisFormValid] = useState<boolean>(false)
   const [error, setError] = useState<string | undefined>(undefined)
   const [messageSent, setMessageSent] = useState<boolean>(false)
+  const [isLoading, setLoading] = useState<boolean>(false)
 
   useEffect(() => {
     if (messageSent) {
@@ -81,7 +82,7 @@ const Contact: React.FC = () => {
     setMailForm(updatedMailForm)
   }
 
-  const onSubmitHandler = (event: React.FormEvent<HTMLFormElement>) => {
+  const onSubmitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
     event?.preventDefault()
 
     if (!isFormValid) {
@@ -89,30 +90,32 @@ const Contact: React.FC = () => {
       return
     }
 
-    fetch('http://email-service.samuelk.pl:8081/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: mailForm.name.value,
-        email: mailForm.email.value,
-        subject: mailForm.subject.value,
-        message: mailForm.message.value,
-      }),
-    })
-      .then(result => {
-        if (result.status !== 200) {
-          setError(t('Contact.Incorrect'))
-          return
-        }
-        setMessageSent(true)
-        setisFormValid(false)
-        setMailForm(MAIL_FORM)
+    setLoading(true)
+    try {
+      const result = await fetch('http://email-service.samuelk.pl:8081/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: mailForm.name.value,
+          email: mailForm.email.value,
+          subject: mailForm.subject.value,
+          message: mailForm.message.value,
+        }),
       })
-      .catch(() => {
-        setError(t('Global.SomethingWentWrong'))
-      })
+      setLoading(false)
+      if (result.status !== 200) {
+        setError(t('Contact.Incorrect'))
+        return
+      }
+      setMessageSent(true)
+      setisFormValid(false)
+      setMailForm(MAIL_FORM)
+    } catch (error) {
+      setLoading(false)
+      setError(t('Global.SomethingWentWrong'))
+    }
   }
 
   const modalClosedHandler = () => {
@@ -137,7 +140,6 @@ const Contact: React.FC = () => {
           <span className='section-header__title'>{t('Contact.Title')}</span>
           <span className='section-header__sub-title'>{t('Contact.SubTitle')}</span>
         </h2>
-        {/* <Effect up> */}
         <form className='contact-form' onSubmit={onSubmitHandler}>
           <div className='contact-form__block'>E-MAIL</div>
           <div className='contact-form__group'>
@@ -209,16 +211,15 @@ const Contact: React.FC = () => {
               className={[
                 'button',
                 'button--contact',
-                !isFormValid ? 'button--disabled' : 'button--enabled',
+                !isFormValid || isLoading ? 'button--disabled' : 'button--enabled',
               ].join(' ')}
               disabled={!isFormValid}
               type='submit'
             >
-              {t('Contact.Send')}
+              {isLoading ? t('Contact.Sending') : t('Contact.Send')}
             </button>
           </div>
         </form>
-        {/* </Effect> */}
       </div>
     </section>
   )

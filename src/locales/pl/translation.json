@@ -108,7 +108,8 @@
     "SubjectError": "Temat powinien mieć co najmniej 2 znaki. (max 30)",
     "Message": "Wiadomość",
     "MessageError": "Twoja wiadomość powinna mieć co najmniej 5 znaków. (max 5000)",
-    "Send": "Wyślij"
+    "Send": "Wyślij",
+    "Sending": "Wysyłanie..."
   },
   "Footer": {
     "Contact": "Kontakt",

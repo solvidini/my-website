@@ -1,64 +1,79 @@
 {
-	"name": "ssazero-website",
-	"version": "4.0.0-alpha",
-	"author": "Samuel Kędziora <contact@samuelk.pl>",
-	"license": "UNLICENSED",
-	"private": false,
-	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^1.2.36",
-		"@fortawesome/free-brands-svg-icons": "^5.15.4",
-		"@fortawesome/free-solid-svg-icons": "^5.15.4",
-		"@fortawesome/react-fontawesome": "^0.1.16",
-		"@types/jest": "^27.0.2",
-		"@types/node": "^16.11.7",
-		"@types/react": "^17.0.34",
-		"@types/react-dom": "^17.0.11",
-		"@types/react-scroll": "^1.8.3",
-		"@types/react-transition-group": "^4.4.4",
-		"@types/react-typing-effect": "^2.0.2",
-		"gsap": "^3.8.0",
-		"i18next": "^21.4.2",
-		"i18next-browser-languagedetector": "^6.1.2",
-		"i18next-http-backend": "^1.3.1",
-		"node-sass": "^6.0.1",
-		"prop-types": "^15.7.2",
-		"react": "^17.0.2",
-		"react-country-flag": "^2.3.1",
-		"react-dom": "^17.0.2",
-		"react-fast-marquee": "^1.2.1",
-		"react-i18next": "^11.14.1",
-		"react-scripts": "^4.0.3",
-		"react-scroll": "^1.8.4",
-		"react-testing-library": "^8.0.1",
-		"react-transition-group": "^4.4.2",
-		"react-tsparticles": "^1.37.4",
-		"react-typing-effect": "^2.0.5",
-		"typescript": "^4.4.4"
-	},
-	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.4.0",
-		"@typescript-eslint/parser": "^5.4.0",
-		"eslint-plugin-react": "^7.27.1"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	}
+  "name": "ssazero-website",
+  "version": "4.0.0-alpha",
+  "author": "Samuel Kędziora <contact@samuelk.pl>",
+  "license": "UNLICENSED",
+  "private": false,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-scroll": "^1.8.3",
+    "@types/react-transition-group": "^4.4.4",
+    "@types/react-typing-effect": "^2.0.2",
+    "gsap": "^3.8.0",
+    "i18next": "^21.4.2",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "i18next-http-backend": "^1.3.1",
+    "node-sass": "^6.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-country-flag": "^2.3.1",
+    "react-dom": "^17.0.2",
+    "react-fast-marquee": "^1.2.1",
+    "react-i18next": "^11.14.1",
+    "react-scripts": "^4.0.3",
+    "react-scroll": "^1.8.4",
+    "react-testing-library": "^8.0.1",
+    "react-transition-group": "^4.4.2",
+    "react-tsparticles": "^1.37.4",
+    "react-typing-effect": "^2.0.5",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.1",
+    "prettier": "^2.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .jsx,.tsx .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
 }

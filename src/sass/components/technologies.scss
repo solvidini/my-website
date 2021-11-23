@@ -1,111 +1,110 @@
 .technologies {
-    max-width: 90rem;
-    margin   : 0 auto;
+  max-width: 90rem;
+  margin: 0 auto;
 
-    perspective: 1000px;
+  perspective: 1000px;
 
+  @include respond(tab-port) {
+    max-width: 70rem;
+  }
+
+  @include respond(phone) {
+    max-width: 38rem;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) translateY(-2rem);
 
     @include respond(tab-port) {
-        max-width: 70rem;
+      transform: rotateX(34deg) translateY(-5rem);
     }
 
     @include respond(phone) {
-        max-width: 38rem;
+      transform: rotateX(17deg) translateY(-7rem);
     }
 
-    &__skills {
-        display        : flex;
-        flex-wrap      : wrap;
-        transform-style: preserve-3d;
-        transform      : rotateX(45deg) translateY(-2rem);
+    // &:after {
+    //     content: "";
+    //     flex: auto;
+    // }
+  }
 
-        @include respond(tab-port) {
-            transform: rotateX(34deg) translateY(-5rem);
-        }
+  &__item {
+    @include unselectable;
+    position: relative;
 
-        @include respond(phone) {
-            transform: rotateX(17deg) translateY(-7rem);
-        }
+    height: 11rem;
+    min-width: 11rem;
+    padding: 1rem;
+    text-align: center;
+    flex: 1 1 auto;
 
-        // &:after {
-        //     content: "";
-        //     flex: auto;
-        // }
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.4);
+    background-color: rgba($color-dark, 0.85);
+
+    border: 2px solid $color-background;
+
+    transform-origin: bottom center;
+    backface-visibility: hidden;
+    transition: 0.6s ease transform;
+
+    @include respond(tab-port) {
+      min-width: 14rem;
     }
 
-    &__item {
-        @include unselectable;
-        position: relative;
-
-        height    : 11rem;
-        min-width : 11rem;
-        padding   : 1rem;
-        text-align: center;
-        flex      : 1 1 auto;
-
-        box-shadow      : 0 1rem 1.5rem rgba(0, 0, 0, 0.4);
-        background-color: rgba($color-dark, .85);
-
-        border: 2px solid $color-background;
-
-        transform-origin   : bottom center;
-        backface-visibility: hidden;
-        transition         : 0.6s ease transform;
-
-        @include respond(tab-port) {
-            min-width: 14rem;
-        }
-
-        @include respond(phone) {
-            min-width: 13rem;
-        }
-
-        &:hover,
-        &:active {
-            z-index  : 5;
-            transform: rotateX(-45deg) translateZ(30px);
-
-            border: 2px solid $color-accent;
-
-            @include respond(tab-port) {
-                transform: rotateX(-34deg) translateZ(30px);
-            }
-
-            @include respond(phone) {
-                transform: rotateX(-17deg) translateZ(30px);
-            }
-        }
-
-        &-image {
-            transition   : all .2s ease;
-            height       : 100%;
-            border-radius: 5px;
-        }
+    @include respond(phone) {
+      min-width: 13rem;
     }
 
-    &__item:hover &__item-label {
-        transform: translate(-50%, 0) scale(1);
+    &:hover,
+    &:active {
+      z-index: 5;
+      transform: rotateX(-45deg) translateZ(30px);
+
+      border: 2px solid $color-accent;
+
+      @include respond(tab-port) {
+        transform: rotateX(-34deg) translateZ(30px);
+      }
+
+      @include respond(phone) {
+        transform: rotateX(-17deg) translateZ(30px);
+      }
     }
 
-    &__item-label {
-        position : absolute;
-        top      : -5rem;
-        left     : 50%;
-        transform: translate(-50%, 0) scale(0);
-        width    : auto;
-
-        white-space     : nowrap;
-        color           : $color-dark-text;
-        background-color: $color-white;
-        border-radius   : .5rem;
-        text-align      : center;
-        font-size       : 1.6rem;
-        padding         : 1rem;
-
-        transition: all .1s ease;
-
-        &::before {
-            @include triangleBottom(0.9rem, $color-white, 0, 45%);
-        }
+    &-image {
+      transition: all 0.2s ease;
+      height: 100%;
+      border-radius: 5px;
     }
+  }
+
+  &__item:hover &__item-label {
+    transform: translate(-50%, 0) scale(1);
+  }
+
+  &__item-label {
+    position: absolute;
+    top: -5rem;
+    left: 50%;
+    transform: translate(-50%, 0) scale(0);
+    width: auto;
+
+    white-space: nowrap;
+    color: $color-dark-text;
+    background-color: $color-white;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 1rem;
+
+    transition: all 0.1s ease;
+
+    &::before {
+      @include triangleBottom(0.9rem, $color-white, 0, 45%);
+    }
+  }
 }

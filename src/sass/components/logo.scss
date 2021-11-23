@@ -1,28 +1,28 @@
 .logo {
-    @include unselectable;
+  @include unselectable;
 
-    position       : fixed;
-    z-index        : 210;
-    background     : url("../../assets/images/logo.png");
-    background-size: cover;
+  position: fixed;
+  z-index: 210;
+  background: url('../../assets/images/logo.png');
+  background-size: cover;
 
-    height: 3.5rem;
-    width : 3.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
 
-    padding: .25rem;
-    margin : .25rem;
+  padding: 0.25rem;
+  margin: 0.25rem;
 
-    animation: moveInLeft-delay .8s;
+  animation: moveInLeft-delay 0.8s;
 
-    @include respond(phone) {
-        height : 4.8rem;
-        width  : 4.8rem;
-        padding: .6rem;
-        margin : .6rem;
-    }
+  @include respond(phone) {
+    height: 4.8rem;
+    width: 4.8rem;
+    padding: 0.6rem;
+    margin: 0.6rem;
+  }
 }
 
 .logo-transparent {
-    background     : url("../../assets/images/logo-transparent.png");
-    background-size: cover;
+  background: url('../../assets/images/logo-transparent.png');
+  background-size: cover;
 }

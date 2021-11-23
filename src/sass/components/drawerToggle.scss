@@ -1,61 +1,61 @@
 .drawer-toggle {
-    &__button {
-        display : none;
-        position: relative;
-        padding : 0 2rem 0 2.5rem;
-        height  : 100%;
-        cursor  : pointer;
+  &__button {
+    display: none;
+    position: relative;
+    padding: 0 2rem 0 2.5rem;
+    height: 100%;
+    cursor: pointer;
 
-        @include darkMatter;
-        transition: .25s ease;
+    @include darkMatter;
+    transition: 0.25s ease;
 
-        @include respond(phone) {
-            display    : flex;
-            align-items: center;
-        }
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 200;
+
+    transition: all 0.2s ease 100ms;
+
+    &,
+    &::before,
+    &::after {
+      width: 4rem;
+      height: 2px;
+      background-color: $color-white;
+      display: block;
     }
 
-    &__icon {
-        position: relative;
-        z-index : 200;
-
-        transition: all .2s ease 100ms;
-
-        &,
-        &::before,
-        &::after {
-            width           : 4rem;
-            height          : 2px;
-            background-color: $color-white;
-            display         : block;
-        }
-
-        &::before,
-        &::after {
-            content : "";
-            position: absolute;
-        }
-
-        &::before {
-            top       : -1rem;
-            transition: all .4s ease;
-        }
-
-        &::after {
-            top       : 1rem;
-            transition: all .4s ease 100ms;
-        }
-
-        &--active {
-            background-color: transparent;
-
-            &::before {
-                transform: translateX(20rem);
-            }
-
-            &::after {
-                transform: translateX(20rem);
-            }
-        }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
     }
+
+    &::before {
+      top: -1rem;
+      transition: all 0.4s ease;
+    }
+
+    &::after {
+      top: 1rem;
+      transition: all 0.4s ease 100ms;
+    }
+
+    &--active {
+      background-color: transparent;
+
+      &::before {
+        transform: translateX(20rem);
+      }
+
+      &::after {
+        transform: translateX(20rem);
+      }
+    }
+  }
 }

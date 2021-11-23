@@ -1,79 +1,77 @@
 @mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear  : both;
-    }
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }
 
 @mixin absCenter {
-    position : absolute;
-    top      : 50%;
-    left     : 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin triangleBottom($size: 1rem, $color: $color-dark, $radius: 0, $y: -50%) {
-    content : "";
-    position: absolute;
+  content: '';
+  position: absolute;
 
-    left     : 50%;
-    bottom   : 0;
-    transform: translate(-50%, $y) rotate(45deg);
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, $y) rotate(45deg);
 
-    border-top-left-radius: $radius;
-    border-top            : $size solid transparent;
-    border-left           : $size solid transparent;
-    border-right          : $size solid $color;
-    border-bottom         : $size solid $color;
+  border-top-left-radius: $radius;
+  border-top: $size solid transparent;
+  border-left: $size solid transparent;
+  border-right: $size solid $color;
+  border-bottom: $size solid $color;
 }
 
 @mixin triangleTop($size: 1rem, $color: $color-dark, $radius: 0, $y: -50%) {
-    content : "";
-    position: absolute;
+  content: '';
+  position: absolute;
 
-    left     : 50%;
-    top      : 0;
-    transform: translate(-50%, $y) rotate(45deg);
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, $y) rotate(45deg);
 
-    border-top-left-radius: $radius;
-    border-top            : $size solid $color;
-    border-left           : $size solid $color;
-    border-right          : $size solid transparent;
-    border-bottom         : $size solid transparent;
+  border-top-left-radius: $radius;
+  border-top: $size solid $color;
+  border-left: $size solid $color;
+  border-right: $size solid transparent;
+  border-bottom: $size solid transparent;
 }
 
 @mixin glowingText($color, $outline: false, $width: 2px) {
-    @if $outline==true {
-        color                    : transparent;
-        -webkit-text-stroke-color: $color;
-        -webkit-text-stroke-width: $width;
-        text-shadow              : none;
-        filter                   : drop-shadow(0px 0px 3px $color);
-    }
-
-    @else {
-        text-shadow: 0px 0px 7px rgba($color, .9);
-        color      : rgba($color, .3);
-    }
+  @if $outline==true {
+    color: transparent;
+    -webkit-text-stroke-color: $color;
+    -webkit-text-stroke-width: $width;
+    text-shadow: none;
+    filter: drop-shadow(0px 0px 3px $color);
+  } @else {
+    text-shadow: 0px 0px 7px rgba($color, 0.9);
+    color: rgba($color, 0.3);
+  }
 }
 
 @mixin darkMatter {
-    box-shadow      : 0 .1rem .1rem rgba(0, 0, 0, 0.4);
-    background-color: rgba(0, 0, 0, .85);
+  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.85);
 
-    @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
-        -webkit-backdrop-filter: blur(2px);
-        backdrop-filter        : blur(2px);
-    }
+  @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
 }
 
 @mixin unselectable {
-    -webkit-user-select: none;
-    -khtml-user-select : none;
-    -moz-user-select   : none;
-    -o-user-select     : none;
-    user-select        : none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 /* MEDIA QUERY MANAGER
@@ -92,27 +90,27 @@ $breakpoint argument choices:
 1em = 16px
 */
 @mixin respond($breakpoint) {
-    @if $breakpoint==phone {
-        @media only screen and (max-width: 37.5em) {
-            @content;
-        }
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
     }
+  }
 
-    @if $breakpoint==tab-port {
-        @media only screen and (max-width: 56.25em) {
-            @content;
-        }
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
     }
+  }
 
-    @if $breakpoint==tab-land {
-        @media only screen and (max-width: 75em) {
-            @content;
-        }
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
     }
+  }
 
-    @if $breakpoint==big-desktop {
-        @media only screen and (min-width: 112.5em) {
-            @content;
-        }
+  @if $breakpoint==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
     }
+  }
 }

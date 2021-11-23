@@ -1,34 +1,36 @@
 .loadingScreen {
-    height  : 100vh;
-    width   : 100%;
-    position: relative;
-    background-image: linear-gradient(to right bottom,
-            rgba($color-dark, .2) 0%,
-            rgba($color-black, .95) 100%),
-        url(../../assets/images/ssazero-background-dark.jpg);
-    background-position  : bottom;
-    background-attachment: fixed;
-    background-size      : cover;
-    background-repeat    : no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-dark, 0.2) 0%,
+      rgba($color-black, 0.95) 100%
+    ),
+    url(../../assets/images/ssazero-background-dark.jpg);
+  background-position: bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    overflow       : hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 
-    &__logo {
-        height   : 60%;
-        width    : auto;
-        position : absolute;
-        opacity  : 0.1;
-        top      : 50%;
-        left     : 50%;
-        transform: translate(-50%, -50%);
+  &__logo {
+    height: 60%;
+    width: auto;
+    position: absolute;
+    opacity: 0.1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-        animation: hide 1.2s ease;
-    }
+    animation: hide 1.2s ease;
+  }
 
-    &__animate {
-        animation: shrink 1.2s ease;
-    }
+  &__animate {
+    animation: shrink 1.2s ease;
+  }
 }

@@ -1,145 +1,145 @@
 *,
 *::before,
 *::after {
-    margin                     : 0;
-    padding                    : 0;
-    box-sizing                 : inherit;
-    -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
-    font-size  : 62.5%;
-    font-weight: 400;
+  font-size: 62.5%;
+  font-weight: 400;
 
-    @include respond(big-desktop) {
-        font-size: 75%;
-    }
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 
-    @include respond(tab-land) {
-        font-size: 56.25%;
-    }
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
 
-    @include respond(tab-port) {
-        font-size: 50%;
-    }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
 }
 
 body {
-    box-sizing             : border-box;
-    font-family            : 'Lato', 'Genos', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen';
-    -webkit-font-smoothing : antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color       : $color-background;
-    overflow-x             : hidden
+  box-sizing: border-box;
+  font-family: 'Lato', 'Genos', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-background;
+  overflow-x: hidden;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 input:-webkit-autofill {
-    -webkit-text-fill-color: $color-white;
+  -webkit-text-fill-color: $color-white;
 }
 
 ::selection {
-    background-color: rgba($color-main, .8);
-    color           : $color-black;
+  background-color: rgba($color-main, 0.8);
+  color: $color-black;
 }
 
 ::-webkit-scrollbar {
-    background-color: $color-background;
-    width           : 1.2rem;
+  background-color: $color-background;
+  width: 1.2rem;
 }
 
 ::-webkit-scrollbar-track {
-    background: $color-dark;
+  background: $color-dark;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: $color-main;
-    background-image: $gradient-gold;
-    border-radius   : 2rem;
+  background-color: $color-main;
+  background-image: $gradient-gold;
+  border-radius: 2rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: $color-accent;
+  background: $color-accent;
 }
 
 .section-header {
-    text-align : center;
-    font-size  : 3rem;
-    font-weight: 400;
-    margin     : 0 3rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 0 3rem;
 
-    &__pre {
-        display       : block;
-        font-size     : 1.5rem;
-        font-weight   : 300;
-        margin-bottom : 2rem;
-        text-transform: uppercase;
-        letter-spacing: .7rem;
+  &__pre {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.7rem;
+  }
+
+  &__sub-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+
+    line-height: 1.5;
+  }
+
+  &__name {
+    font-weight: 300;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 4rem;
+
+    @include respond(phone) {
+      font-size: 3.5rem;
     }
+  }
 
-    &__sub-title {
-        display       : block;
-        font-size     : 1.5rem;
-        font-weight   : 300;
-        margin-top    : 2rem;
-        text-transform: uppercase;
-        letter-spacing: .5rem;
-
-        line-height: 1.5;
-    }
-
-    &__name {
-        font-weight: 300;
-    }
-
-    &__title {
-        text-transform: uppercase;
-        letter-spacing: .5rem;
-        font-size     : 4rem;
-
-        @include respond(phone) {
-            font-size: 3.5rem;
-        }
-    }
-
-    &--white {
-        color: $color-white;
-    }
+  &--white {
+    color: $color-white;
+  }
 }
 
 .section-drop-shadow {
-    filter: drop-shadow(0 1.5rem 1rem black);
+  filter: drop-shadow(0 1.5rem 1rem black);
 }
 
 .transparent {
-    background-color: transparent;
-    box-shadow      : none;
-    backdrop-filter : none;
+  background-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .header-particles {
-    position: relative !important;
-    top     : 0;
-    left    : 0;
-    bottom  : 0;
-    right   : 0;
-    padding : 0;
-    margin  : 0;
-    z-index : 0;
+  position: relative !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 0;
 }
 
 #header-particles {
-    width : 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }

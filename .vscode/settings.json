@@ -1,8 +1,10 @@
 {
-    "i18n-ally.localesPaths": [
-        "D:/Programming/Commercial/my-site/src/locales"
-    ],
-    "i18next.i18nPaths": "d:/Programming/Commercial/my-site/public/locales",
-    "i18n-ally.keystyle": "nested",
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+  "i18n-ally.localesPaths": ["D:/Programming/Commercial/my-site/src/locales"],
+  "i18n-ally.keystyle": "nested",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
 }

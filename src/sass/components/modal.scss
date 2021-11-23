@@ -1,44 +1,44 @@
 .modal {
-    position : fixed;
-    z-index  : 1000;
-    top      : 50%;
-    left     : 50%;
-    transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    padding         : 1rem;
-    background-color: $color-background;
-    box-shadow      : .5rem .5rem .4rem rgba($color-dark, 0.55);
-    color           : $color-white;
+  padding: 1rem;
+  background-color: $color-background;
+  box-shadow: 0.5rem 0.5rem 0.4rem rgba($color-dark, 0.55);
+  color: $color-white;
 
-    border-radius: 2rem;
+  border-radius: 2rem;
 
-    min-width: 45rem;
+  min-width: 45rem;
+
+  @include respond(phone) {
+    min-width: 0;
+    width: 85%;
+  }
+
+  &__title {
+    color: $color-white;
+    text-shadow: 0 0 0.3rem $color-white;
+    text-align: center;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+
+    &--error {
+      color: $color-accent;
+      text-shadow: 0 0 2px $color-dark;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 2rem 0 3rem;
 
     @include respond(phone) {
-        min-width: 0;
-        width    : 85%;
+      font-size: 2rem;
     }
-
-    &__title {
-        color         : $color-white;
-        text-shadow   : 0 0 .3rem $color-white;
-        text-align    : center;
-        font-size     : 2.4rem;
-        text-transform: uppercase;
-
-        &--error {
-            color      : $color-accent;
-            text-shadow: 0 0 2px $color-dark;
-        }
-    }
-
-    &__content {
-        text-align: center;
-        font-size : 1.8rem;
-        margin    : 2rem 0 3rem;
-
-        @include respond(phone) {
-            font-size: 2rem;
-        }
-    }
+  }
 }

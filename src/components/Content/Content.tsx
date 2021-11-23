@@ -7,15 +7,15 @@ import Skills from './Skills'
 import Contact from './Contact'
 
 const Content = () => {
-	return (
-		<main>
-			<About />
-			<Skills />
-			<Offer />
-			<Portfolio />
-			<Contact />
-		</main>
-	)
+  return (
+    <main>
+      <About />
+      <Skills />
+      <Offer />
+      <Portfolio />
+      <Contact />
+    </main>
+  )
 }
 
 export default Content

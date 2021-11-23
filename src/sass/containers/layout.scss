@@ -1,35 +1,35 @@
 .arrow-top {
-    position: fixed;
-    bottom  : 4rem;
-    right   : 4rem;
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
 
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    width          : 6rem;
-    height         : 6rem;
-    border-radius  : 50%;
-    z-index        : 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  z-index: 100;
 
-    @include darkMatter;
+  @include darkMatter;
 
-    transition: all .3s ease;
-    overflow  : hidden;
+  transition: all 0.3s ease;
+  overflow: hidden;
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 
-    @include respond(phone) {
-        bottom: 2rem;
-        right : 2rem;
-    }
+  @include respond(phone) {
+    bottom: 2rem;
+    right: 2rem;
+  }
 }
 
 .arrow-enter-active {
-    animation: slideIn .5s ease-in;
+  animation: slideIn 0.5s ease-in;
 }
 
 .arrow-exit-active {
-    animation: slideOut .5s ease-out;
+  animation: slideOut 0.5s ease-out;
 }

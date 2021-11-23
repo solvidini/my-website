@@ -6,12 +6,10 @@ import * as serviceWorker from './serviceWorker'
 import App from './App'
 
 ReactDOM.render(
-	// <React.StrictMode>
-	<React.Suspense fallback='loading'>
-		<App />
-	</React.Suspense>,
-	// </React.StrictMode>,
-	document.getElementById('root')
+  <React.Suspense fallback='loading'>
+    <App />
+  </React.Suspense>,
+  document.getElementById('root'),
 )
 
 // If you want your app to work offline and load faster, you can change

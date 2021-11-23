@@ -4,6 +4,8 @@
   list-style: none;
   height: 100%;
 
+  @include unselectable;
+
   @include respond(phone) {
     flex-flow: column;
     height: auto;

@@ -54,6 +54,10 @@
     font-size: 16px;
   }
 
+  &::placeholder {
+    opacity: 0.7;
+  }
+
   &:focus {
     border-color: $color-main-light;
   }

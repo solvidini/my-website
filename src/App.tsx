@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-import './sass/main.scss'
 import Spinner from './components/UI/Spinner/Spinner'
 import Layout from './containers/Layout'
 import Content from './components/Content/Content'

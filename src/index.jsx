@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './i18n'
+import './sass/root.scss'
 
 import * as serviceWorker from './serviceWorker'
 import App from './App'

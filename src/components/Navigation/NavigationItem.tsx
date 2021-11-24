@@ -19,7 +19,6 @@ const NavigationItem: React.FC<INavigationItem> = ({ children, to, onClick, isOp
       <Link
         className='navigation-item__trigger'
         to={to}
-        offset={0}
         smooth
         duration={600}
         ignoreCancelEvents={false}
@@ -29,10 +28,10 @@ const NavigationItem: React.FC<INavigationItem> = ({ children, to, onClick, isOp
         className='navigation-item__link'
         data-hover={children}
         to={to}
+        offset={-300}
         spy
         hashSpy
         isDynamic
-        offset={-300}
         activeClass='navigation-item--active'
       >
         {children}

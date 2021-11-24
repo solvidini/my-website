@@ -1,6 +1,6 @@
 .technologies {
   max-width: 90rem;
-  margin: 0 auto;
+  margin: 0 auto -2rem;
 
   perspective: 1000px;
 
@@ -9,27 +9,31 @@
   }
 
   @include respond(phone) {
-    max-width: 38rem;
+    max-width: 80%;
+    margin: 0 auto;
   }
 
   &__skills {
     display: flex;
     flex-wrap: wrap;
     transform-style: preserve-3d;
-    transform: rotateX(45deg) translateY(-2rem);
+    transform: rotateX(45deg) translateY(-3rem);
 
     @include respond(tab-port) {
       transform: rotateX(34deg) translateY(-5rem);
     }
 
     @include respond(phone) {
-      transform: rotateX(15deg) translateY(-7rem);
+      transform: rotateX(18deg) translateY(-3rem);
     }
   }
 
   &__item {
     @include unselectable;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     height: 11rem;
     min-width: 11rem;
@@ -53,7 +57,12 @@
     }
 
     @include respond(phone) {
-      min-width: 11rem;
+      height: 9rem;
+      min-width: 9rem;
+    }
+
+    &--highlight {
+      border: 2px solid $color-main;
     }
 
     &--active {
@@ -67,7 +76,7 @@
       }
 
       @include respond(phone) {
-        transform: rotateX(-15deg) translateZ(30px);
+        transform: rotateX(-18deg) translateZ(30px);
       }
     }
   }
@@ -78,7 +87,7 @@
     border-radius: 5px;
 
     @include respond(phone) {
-      height: 85%;
+      height: 90%;
     }
   }
 
@@ -106,5 +115,40 @@
     &--active {
       transform: translate(-50%, 0) scale(1);
     }
+  }
+
+  &__buttons {
+    z-index: 1;
+    position: relative;
+    margin: 2rem 3rem 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__highlight-button {
+    @include unselectable;
+    padding: 1rem;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-white;
+    font-size: 1.6rem;
+
+    &--active {
+      color: $color-main;
+    }
+  }
+
+  &__and-other {
+    @include unselectable;
+    margin: 0 3rem;
+
+    color: $color-grey;
+    opacity: 0.8;
+    font-size: 1.6rem;
+    text-align: center;
+    font-style: italic;
   }
 }

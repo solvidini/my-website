@@ -27,7 +27,9 @@
   },
   "Skills": {
     "Title": "Habilidades",
-    "SubTitle": "Mis habilidades y tecnologías que utilizo"
+    "SubTitle": "Mis habilidades y tecnologías que utilizo",
+    "Other": "Otro",
+    "AndOther": "y otra..."
   },
   "Offer": {
     "Title": "Oferta",
@@ -113,7 +115,7 @@
   },
   "Footer": {
     "Contact": "Contacto",
-    "OfferIcons": "Ofrecer iconos de:",
+    "OfferIcons": "Ofrecer iconos de: ",
     "AllRights": "Reservados todos los derechos.",
     "Particles": "Efecto de partículas de: "
   },

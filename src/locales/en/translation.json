@@ -27,7 +27,9 @@
   },
   "Skills": {
     "Title": "Skills",
-    "SubTitle": "My skills and technologies I use"
+    "SubTitle": "My skills and technologies I use",
+    "Other": "Other",
+    "AndOther": "and other..."
   },
   "Offer": {
     "Title": "Offer",

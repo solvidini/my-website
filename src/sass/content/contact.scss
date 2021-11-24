@@ -19,14 +19,20 @@
     display: block;
     top: 0;
     left: 0;
-    background-image: url(../../assets/images/tech-2.jpg);
+    background-image: radial-gradient(
+        circle,
+        rgba($color-white, 0.3) 0%,
+        rgba($color-white, 0.7) 50%,
+        rgba($color-white, 1) 100%
+      ),
+      url(../../assets/images/contact-cover.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.08;
+    // opacity: 0.1;
   }
 
   &__content {
@@ -72,7 +78,7 @@
     font-size: 2rem;
     letter-spacing: 1px;
     color: $color-white;
-    text-shadow: 0 0 0.4rem $color-white;
+    text-shadow: 0 0 0.4rem $color-accent;
 
     @include respond(phone) {
       font-size: 2.2rem;

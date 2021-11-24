@@ -27,7 +27,9 @@
   },
   "Skills": {
     "Title": "Umiejętności",
-    "SubTitle": "Moje umiejętności i technologie, które używam"
+    "SubTitle": "Moje umiejętności i technologie, które używam",
+    "Other": "Inne",
+    "AndOther": "i inne..."
   },
   "Offer": {
     "Title": "Oferta",

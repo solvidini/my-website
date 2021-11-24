@@ -48,7 +48,7 @@ const Header: FC<IHeader> = ({ children, hideCanvas, forwardedRef }) => {
         />
       </div>
       <div className='header__arrow-down'>
-        <Link to='section-about' smooth duration={1500} isDynamic ignoreCancelEvents={false}>
+        <Link to='section-about' smooth duration={1500}>
           <ArrowDown />
         </Link>
       </div>

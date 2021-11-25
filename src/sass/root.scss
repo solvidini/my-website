@@ -2,8 +2,6 @@
 @import './mixins';
 @import './animations';
 
-@import './main.scss';
-
 @import './containers/layout.scss';
 
 @import './content/portfolio.scss';
@@ -29,3 +27,5 @@
 @import './components/cookiesBar.scss';
 @import './components/itemLabel.scss';
 @import './components/button.scss';
+
+@import './main.scss';

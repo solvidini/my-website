@@ -1,16 +1,13 @@
-@mixin clearfix {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
+@mixin textDropShadow($text: light) {
+  @if $text==dark {
+    text-shadow: 0 3px 4px $color-black;
+  } @else {
+    text-shadow: 0 2px 3px rgba($color-dark, 0.25);
   }
 }
 
-@mixin absCenter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@mixin dropShadow {
+  box-shadow: 0 3px 3px rgba($color-dark, 0.8);
 }
 
 @mixin triangleBottom($size: 1rem, $color: $color-dark, $radius: 0, $y: -50%) {
@@ -49,7 +46,7 @@
     -webkit-text-stroke-color: $color;
     -webkit-text-stroke-width: $width;
     text-shadow: none;
-    filter: drop-shadow(0px 0px 3px $color);
+    //filter: drop-shadow(0px 0px 3px $color);
   } @else {
     text-shadow: 0px 0px 7px rgba($color, 0.9);
     color: rgba($color, 0.3);
@@ -57,8 +54,8 @@
 }
 
 @mixin darkMatter {
-  box-shadow: 0 0.1rem 0.1rem rgba(0, 0, 0, 0.4);
-  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 3px 3px rgba($color-black, 0.5);
+  background-color: rgba($color-black, 0.85);
 
   @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
     -webkit-backdrop-filter: blur(2px);

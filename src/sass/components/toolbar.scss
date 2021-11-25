@@ -1,10 +1,8 @@
 .toolbar {
   height: 4rem;
-  width: 100%;
   position: absolute;
   bottom: 0;
-  left: 0;
-  overflow: hidden;
+  right: 0;
 
   display: flex;
   justify-content: flex-end;
@@ -15,13 +13,11 @@
 
   @include respond(phone) {
     height: 6rem;
-    overflow: visible;
   }
 
   &--fixed {
     position: fixed;
     top: 0;
-    right: 0;
   }
 
   &__nav {

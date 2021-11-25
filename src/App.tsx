@@ -9,13 +9,24 @@ import logo from './assets/images/logo.png'
 console.log(':)')
 
 function App() {
-  const [loading, setLoading] = useState(true)
+  const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false)
     }, 1000)
   }, [])
+
+  const renderLoadingScreen = () => {
+    return (
+      <div className='loading-screen'>
+        <img className='loading-screen__logo' src={logo} alt='SS' />
+        <div className='loading-screen__spinner'>
+          <Spinner />
+        </div>
+      </div>
+    )
+  }
 
   const renderApp = () => {
     return (
@@ -25,18 +36,7 @@ function App() {
     )
   }
 
-  const renderLoadingScreen = () => {
-    return (
-      <div className='loadingScreen'>
-        <img className='loadingScreen__logo' src={logo} alt='SS' />
-        <div className='loadingScreen__animate'>
-          <Spinner />
-        </div>
-      </div>
-    )
-  }
-
-  return loading ? renderLoadingScreen() : renderApp()
+  return isLoading ? renderLoadingScreen() : renderApp()
 }
 
 export default App

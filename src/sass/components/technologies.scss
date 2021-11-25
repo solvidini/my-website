@@ -43,8 +43,8 @@
 
     cursor: pointer;
 
-    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.4);
     background-color: rgba($color-dark, 0.85);
+    box-shadow: 0 8px 8px rgba($color-dark, 0.8);
 
     border: 2px solid $color-background;
 
@@ -62,7 +62,7 @@
     }
 
     &--highlight {
-      border: 2px solid $color-main;
+      border: 2px solid $color-main-light;
     }
 
     &--active {
@@ -118,6 +118,7 @@
   }
 
   &__buttons {
+    @include textDropShadow(dark);
     z-index: 1;
     position: relative;
     margin: 2rem 3rem 0;

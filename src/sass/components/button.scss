@@ -1,6 +1,6 @@
 .button {
   cursor: pointer;
-  width: 100%;
+  width: fit-content;
   background-image: $gradient-gold;
   outline: none;
 
@@ -14,7 +14,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 
   &:focus {
     border-color: $color-main;
@@ -29,7 +29,6 @@
 
     @include respond(phone) {
       width: 100%;
-      margin: 0;
     }
   }
 
@@ -37,6 +36,10 @@
     &:hover {
       box-shadow: 0 0 0.7rem $color-main;
     }
+  }
+
+  &--modal {
+    width: 100%;
   }
 
   &--disabled,

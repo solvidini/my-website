@@ -14,7 +14,7 @@ const CookiesBar = ({ clicked }: Props) => {
         <p>{t('Cookies.0')}</p>
         <p>{t('Cookies.1')}</p>
       </div>
-      <button className='cookies-bar__button' onClick={clicked}>
+      <button className='button' onClick={clicked}>
         {t('Global.Understand')}
       </button>
     </div>

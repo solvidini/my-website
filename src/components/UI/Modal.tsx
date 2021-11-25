@@ -23,7 +23,7 @@ const Modal: FC<Props> = ({ show, onClose, isError, title, children }) => {
       <div className='modal'>
         <h1 className={!isError ? 'modal__title' : 'modal__title modal__title--error'}>{title}</h1>
         <div className='modal__content'>{children}</div>
-        <button onClick={onClose} className='button' ref={OKButtonRef}>
+        <button onClick={onClose} className='button button--modal' ref={OKButtonRef}>
           OK
         </button>
       </div>

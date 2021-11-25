@@ -65,13 +65,13 @@
       text-overflow: ellipsis;
       overflow: hidden;
       background-color: $color-white;
-      filter: drop-shadow(0 0 0.5rem $color-accent);
+      //filter: drop-shadow(0 0 0.5rem $color-accent);
       padding: 0.5rem;
 
       transition: all 0.5s ease;
 
       @include respond(tab-land) {
-        filter: drop-shadow(0 0 0.5rem $color-white);
+        //filter: drop-shadow(0 0 0.5rem $color-white);
       }
 
       @include respond(phone) {
@@ -82,7 +82,7 @@
     }
 
     &:hover &-description {
-      filter: drop-shadow(0 0 0.5rem $color-white);
+      //filter: drop-shadow(0 0 0.5rem $color-white);
     }
 
     &-drawer {

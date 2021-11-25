@@ -25,13 +25,7 @@ const Header: FC<IHeader> = ({ children, hideCanvas, forwardedRef }) => {
   return (
     <header className='header' id='top' ref={forwardedRef}>
       {!hideCanvas && (
-        <Particles
-          id='header-particles'
-          canvasClassName='header-particles'
-          params={ParticlesConfig}
-          width='100%'
-          height='100%'
-        />
+        <Particles id='header-particles' params={ParticlesConfig} width='100%' height='100%' />
       )}
       <div className='header__text-box'>
         <h1 className='heading-primary'>Web Developer</h1>

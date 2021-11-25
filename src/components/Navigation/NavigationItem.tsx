@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-scroll'
+import { isMobile } from 'react-device-detect'
 
 interface INavigationItem {
   to: string

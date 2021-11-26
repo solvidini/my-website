@@ -219,36 +219,34 @@ const Skills: React.FC = () => {
 
   return (
     <section className='section-skills' id='section-skills'>
-      <div className='section-skills__content'>
-        <h2 className='section-header section-header--white'>
-          <span className='section-header__title'>{t('Skills.Title')}</span>
-          <span className='section-header__sub-title'>{t('Skills.SubTitle')}</span>
-        </h2>
-        <div className='technologies__buttons'>
-          <div
-            className={getButtonClasses(TechnologyType.Front)}
-            onClick={() => highlightTechnologies(TechnologyType.Front)}
-          >
-            Frontend
-          </div>
-          <div
-            className={getButtonClasses(TechnologyType.Back)}
-            onClick={() => highlightTechnologies(TechnologyType.Back)}
-          >
-            Backend
-          </div>
-          <div
-            className={getButtonClasses(TechnologyType.Other)}
-            onClick={() => highlightTechnologies(TechnologyType.Other)}
-          >
-            {t('Skills.Other')}
-          </div>
+      <h2 className='section-header section-header--white'>
+        <span className='section-header__title'>{t('Skills.Title')}</span>
+        <span className='section-header__sub-title'>{t('Skills.SubTitle')}</span>
+      </h2>
+      <div className='technologies__buttons'>
+        <div
+          className={getButtonClasses(TechnologyType.Front)}
+          onClick={() => highlightTechnologies(TechnologyType.Front)}
+        >
+          Frontend
         </div>
-        <div className='technologies'>
-          <div className='technologies__skills'>{renderTechnologies(TECHNOLOGIES)}</div>
+        <div
+          className={getButtonClasses(TechnologyType.Back)}
+          onClick={() => highlightTechnologies(TechnologyType.Back)}
+        >
+          Backend
         </div>
-        <div className='technologies__and-other'>{t('Skills.AndOther')}</div>
+        <div
+          className={getButtonClasses(TechnologyType.Other)}
+          onClick={() => highlightTechnologies(TechnologyType.Other)}
+        >
+          {t('Skills.Other')}
+        </div>
       </div>
+      <div className='technologies'>
+        <div className='technologies__skills'>{renderTechnologies(TECHNOLOGIES)}</div>
+      </div>
+      <div className='technologies__and-other'>{t('Skills.AndMore')}</div>
     </section>
   )
 }

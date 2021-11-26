@@ -1,45 +1,15 @@
 .section-offer {
+  @include sectionDropShadow;
   position: relative;
+  padding: 4rem 0;
+  margin: 0 auto;
+
   background-color: $color-white;
-  overflow: hidden;
-
-  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-
-  @include respond(tab-port) {
-    clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
-  }
-
-  @include respond(phone) {
-    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    background-image: url(../../assets/images/tech-3.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.08;
-  }
-
-  &__content {
-    margin: 10rem 0;
-
-    @include respond(tab-land) {
-      margin: 12rem 0;
-    }
-
-    @include respond(phone) {
-      margin: 8rem 0;
-    }
-  }
+  background-image: radial-gradient(circle, rgba($color-white, 0.9) 0%, rgba($color-white, 1) 100%),
+    url(../../assets/images/tech-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .offer-content {
@@ -52,7 +22,7 @@
 
   @include respond(tab-port) {
     flex-flow: column wrap;
-    margin: 0 12rem;
+    margin: 0 auto;
   }
 
   @include respond(phone) {
@@ -68,6 +38,11 @@
     align-items: center;
     flex: 1;
 
+    @include respond(tab-port) {
+      align-self: center;
+      justify-content: center;
+    }
+
     &-image {
       @include unselectable;
 
@@ -79,7 +54,7 @@
       filter: brightness(110%);
 
       &:hover {
-        transform: scale(1.02);
+        transform: scale(1.05);
       }
     }
 
@@ -102,6 +77,7 @@
       line-height: 1.4;
       letter-spacing: 0.15rem;
       font-weight: 400;
+      max-width: 450px;
 
       @include respond(tab-port) {
         font-size: 1.7rem;

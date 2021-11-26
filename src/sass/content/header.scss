@@ -27,6 +27,7 @@
   }
 
   &__text-box {
+    @include unselectable;
     position: absolute;
     transform: translateY(-40%);
     text-align: center;

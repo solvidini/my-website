@@ -11,6 +11,8 @@ $square-size: 2.5rem;
   background-size: cover;
   background-repeat: no-repeat;
 
+  border-top: 3px solid $color-main-light;
+
   &__triangle {
     &--top {
       @include triangleTop($square-size, $color-main, 0.6rem, -47%);
@@ -149,7 +151,7 @@ $square-size: 2.5rem;
         position: relative;
         left: 1rem;
         color: $color-white;
-        content: '/';
+        content: '-';
       }
     }
   }

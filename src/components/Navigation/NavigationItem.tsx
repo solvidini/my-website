@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-scroll'
-import { isMobile } from 'react-device-detect'
 
 interface INavigationItem {
   to: string
@@ -29,7 +28,7 @@ const NavigationItem: React.FC<INavigationItem> = ({ children, to, onClick, isOp
         className='navigation-item__link'
         data-hover={children}
         to={to}
-        offset={-300}
+        offset={-350}
         spy
         hashSpy
         isDynamic

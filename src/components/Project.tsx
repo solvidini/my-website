@@ -62,7 +62,6 @@ const Project = ({ title, description, mobile, live, github, source }: Props) =>
   }
 
   return (
-    // <Effect>
     <div className='projects__item'>
       <div className='projects__item-drawer'>
         <h4 className='projects__item-title'>{title}</h4>
@@ -84,7 +83,6 @@ const Project = ({ title, description, mobile, live, github, source }: Props) =>
         />
       </div>
     </div>
-    // </Effect>
   )
 }
 

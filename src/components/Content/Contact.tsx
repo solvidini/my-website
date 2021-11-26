@@ -105,10 +105,12 @@ const Contact: React.FC = () => {
         }),
       })
       setLoading(false)
+
       if (result.status !== 200) {
         setError(t('Contact.Incorrect'))
         return
       }
+
       setMessageSent(true)
       setisFormValid(false)
       setMailForm(MAIL_FORM)
@@ -135,92 +137,90 @@ const Contact: React.FC = () => {
   return (
     <section className='section-contact' id='section-contact'>
       {renderError()}
-      <div className='section-contact__content'>
-        <h2 className='section-header'>
-          <span className='section-header__title'>{t('Contact.Title')}</span>
-          <span className='section-header__sub-title'>{t('Contact.SubTitle')}</span>
-        </h2>
-        <form className='contact-form' onSubmit={onSubmitHandler}>
-          <div className='contact-form__block'>E-MAIL</div>
-          <div className='contact-form__group'>
-            <Input
-              type='email'
-              id={'email'}
-              label='Email'
-              required
-              placeholder={t('Contact.EmailPH')}
-              errorMessage={t('Contact.EmailError')}
-              isValid={mailForm.email.isValid}
-              value={mailForm.email.value}
-              touched={mailForm.email.touched}
-              onChange={inputChangedHandler}
-              onBlur={onBlurHandler}
-            />
-            <Input
-              type='text'
-              id={'name'}
-              label={t('Contact.Name')}
-              placeholder={t('Contact.NamePH')}
-              isValid={mailForm.name.isValid}
-              value={mailForm.name.value}
-              touched={mailForm.name.touched}
-              onChange={inputChangedHandler}
-              onBlur={onBlurHandler}
-            />
+      <h2 className='section-header'>
+        <span className='section-header__title'>{t('Contact.Title')}</span>
+        <span className='section-header__sub-title'>{t('Contact.SubTitle')}</span>
+      </h2>
+      <form className='contact-form' onSubmit={onSubmitHandler}>
+        <div className='contact-form__block'>E-MAIL</div>
+        <div className='contact-form__group'>
+          <Input
+            type='email'
+            id={'email'}
+            label='Email'
+            required
+            placeholder={t('Contact.EmailPH')}
+            errorMessage={t('Contact.EmailError')}
+            isValid={mailForm.email.isValid}
+            value={mailForm.email.value}
+            touched={mailForm.email.touched}
+            onChange={inputChangedHandler}
+            onBlur={onBlurHandler}
+          />
+          <Input
+            type='text'
+            id={'name'}
+            label={t('Contact.Name')}
+            placeholder={t('Contact.NamePH')}
+            isValid={mailForm.name.isValid}
+            value={mailForm.name.value}
+            touched={mailForm.name.touched}
+            onChange={inputChangedHandler}
+            onBlur={onBlurHandler}
+          />
+        </div>
+        <div className='contact-form__group'>
+          <Input
+            type='text'
+            id={'subject'}
+            label={t('Contact.Subject')}
+            required
+            placeholder={t('Contact.SubjectPH')}
+            errorMessage={t('Contact.SubjectError')}
+            isValid={mailForm.subject.isValid}
+            value={mailForm.subject.value}
+            touched={mailForm.subject.touched}
+            onChange={inputChangedHandler}
+            onBlur={onBlurHandler}
+          />
+        </div>
+        <div className='contact-form__group'>
+          <Input
+            type='textarea'
+            id={'message'}
+            label={t('Contact.Message')}
+            rows={8}
+            required
+            errorMessage={t('Contact.MessageError')}
+            isValid={mailForm.message.isValid}
+            value={mailForm.message.value}
+            touched={mailForm.message.touched}
+            onChange={inputChangedHandler}
+            onBlur={onBlurHandler}
+          />
+        </div>
+        <div className='contact-form__bottom'>
+          <div
+            className={[
+              'contact-form__status',
+              messageSent ? 'contact-form__status--success' : '',
+            ].join(' ')}
+          >
+            <FontAwesomeIcon icon={faCheck} style={{ marginRight: '1rem' }} /> {t('Contact.Sent')}
           </div>
-          <div className='contact-form__group'>
-            <Input
-              type='text'
-              id={'subject'}
-              label={t('Contact.Subject')}
-              required
-              placeholder={t('Contact.SubjectPH')}
-              errorMessage={t('Contact.SubjectError')}
-              isValid={mailForm.subject.isValid}
-              value={mailForm.subject.value}
-              touched={mailForm.subject.touched}
-              onChange={inputChangedHandler}
-              onBlur={onBlurHandler}
-            />
-          </div>
-          <div className='contact-form__group'>
-            <Input
-              type='textarea'
-              id={'message'}
-              label={t('Contact.Message')}
-              rows={8}
-              required
-              errorMessage={t('Contact.MessageError')}
-              isValid={mailForm.message.isValid}
-              value={mailForm.message.value}
-              touched={mailForm.message.touched}
-              onChange={inputChangedHandler}
-              onBlur={onBlurHandler}
-            />
-          </div>
-          <div className='contact-form__bottom'>
-            <div
-              className={[
-                'contact-form__status',
-                messageSent ? 'contact-form__status--success' : '',
-              ].join(' ')}
-            >
-              <FontAwesomeIcon icon={faCheck} style={{ marginRight: '1rem' }} /> {t('Contact.Sent')}
-            </div>
-            <button
-              className={[
-                'button',
-                'button--contact',
-                !isFormValid || isLoading ? 'button--disabled' : 'button--enabled',
-              ].join(' ')}
-              disabled={!isFormValid}
-              type='submit'
-            >
-              {isLoading ? t('Contact.Sending') : t('Contact.Send')}
-            </button>
-          </div>
-        </form>
-      </div>
+          <button
+            className={[
+              'button',
+              'button--contact',
+              !isFormValid || isLoading ? 'button--disabled' : 'button--enabled',
+            ].join(' ')}
+            disabled={!isFormValid}
+            type='submit'
+          >
+            {isLoading ? t('Contact.Sending') : t('Contact.Send')}
+          </button>
+        </div>
+      </form>
     </section>
   )
 }

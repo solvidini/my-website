@@ -1,51 +1,37 @@
 .section-about {
+  @include sectionDropShadow;
   position: relative;
+  padding: 2rem 0 3rem;
+  margin: 0 auto;
+
   background-color: $color-white;
-  overflow: hidden;
-
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-
-  @include respond(phone) {
-    clip-path: polygon(0 0, 100% 0, 100% 97%, 0 100%);
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    background-image: url(../../assets/images/tech-2.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.07;
-  }
+  background-image: radial-gradient(circle, rgba($color-white, 0.9) 0%, rgba($color-white, 1) 100%),
+    url(../../assets/images/tech-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &__content {
     max-width: 120rem;
-    margin: 6rem auto 10rem;
+    margin: 2rem auto 0;
 
-    @include respond(phone) {
-      margin: 6rem 0;
+    @include respond(tab-port) {
+      margin: 2rem auto;
     }
   }
 }
 
 .about-me {
   display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  margin: 4rem 8rem 8rem;
+  margin: 4rem 8rem;
   text-align: justify;
 
   @include respond(tab-port) {
     flex-flow: column;
-    margin: 2rem 4rem 7rem;
+    max-width: 650px;
+    margin: 2rem auto 0;
   }
 
   @include respond(phone) {
@@ -64,12 +50,11 @@
 
     @include respond(tab-port) {
       max-width: 40%;
-      margin: 0 auto 4rem auto;
+      margin-bottom: 4rem;
     }
 
     @include respond(phone) {
       max-width: 70%;
-      margin: 0 auto 2rem auto;
     }
   }
 
@@ -79,17 +64,17 @@
     font-weight: 400;
     color: $color-dark-text;
     line-height: 1.4;
-    letter-spacing: 0.15rem;
+    letter-spacing: 1px;
     flex: 1;
 
     @include respond(tab-port) {
-      margin: 0 13rem 3rem;
+      margin: 0;
+      max-width: 450px;
       font-size: 1.7rem;
     }
 
     @include respond(phone) {
-      letter-spacing: 0.12rem;
-      margin: 3rem;
+      margin: 0 3rem;
     }
   }
 }

@@ -45,13 +45,13 @@ const particles: RecursivePartial<IOptions> = {
         enable: false,
       },
       enable: true,
-      speed: 0.6,
+      speed: 0.5,
     },
     number: {
       density: {
         enable: true,
       },
-      value: 120,
+      value: 100,
     },
     opacity: {
       value: {
@@ -67,12 +67,7 @@ const particles: RecursivePartial<IOptions> = {
     size: {
       value: {
         min: 0.1,
-        max: 1,
-      },
-      animation: {
-        enable: true,
-        speed: 12,
-        minimumValue: 0.1,
+        max: 0.1,
       },
     },
     twinkle: {

@@ -1,51 +1,19 @@
 .section-contact {
   position: relative;
   background-color: $color-white;
-  overflow: hidden;
+  background-image: radial-gradient(
+      circle,
+      rgba($color-white, 0.3) 0%,
+      rgba($color-white, 0.7) 50%,
+      rgba($color-white, 1) 100%
+    ),
+    url(../../assets/images/contact-cover.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-
-  @include respond(tab-port) {
-    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
-  }
-
-  @include respond(phone) {
-    clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 100%);
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    background-image: radial-gradient(
-        circle,
-        rgba($color-white, 0.3) 0%,
-        rgba($color-white, 0.7) 50%,
-        rgba($color-white, 1) 100%
-      ),
-      url(../../assets/images/contact-cover.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    // opacity: 0.1;
-  }
-
-  &__content {
-    padding: 8rem 0;
-
-    @include respond(tab-land) {
-      padding: 10rem 0;
-    }
-
-    @include respond(phone) {
-      padding: 8rem 0;
-    }
-  }
+  padding: 4rem 0 6rem;
+  margin: 0 auto;
 }
 
 .contact-form {

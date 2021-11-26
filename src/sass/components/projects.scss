@@ -4,6 +4,7 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
+  filter: drop-shadow(0 5px 5px $color-dark);
 
   @include respond(tab-land) {
     margin: 4rem auto 1rem;
@@ -59,19 +60,20 @@
       font-weight: 400;
       color: $color-dark;
       font-size: 1.6rem;
+      padding: 0.5rem;
 
       text-align: center;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
+
       background-color: $color-white;
-      //filter: drop-shadow(0 0 0.5rem $color-accent);
-      padding: 0.5rem;
+      box-shadow: 0 0 1rem $color-accent;
 
       transition: all 0.5s ease;
 
       @include respond(tab-land) {
-        //filter: drop-shadow(0 0 0.5rem $color-white);
+        box-shadow: 0 0 1rem $color-white;
       }
 
       @include respond(phone) {
@@ -82,7 +84,7 @@
     }
 
     &:hover &-description {
-      //filter: drop-shadow(0 0 0.5rem $color-white);
+      box-shadow: 0 0 1rem $color-white;
     }
 
     &-drawer {
@@ -154,6 +156,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include respond(tab-port) {
+        height: 25rem;
+      }
     }
 
     &-image {

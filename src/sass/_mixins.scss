@@ -7,7 +7,11 @@
 }
 
 @mixin dropShadow {
-  box-shadow: 0 3px 3px rgba($color-dark, 0.8);
+  box-shadow: 0 5px 5px rgba($color-dark, 0.8);
+}
+
+@mixin sectionDropShadow {
+  box-shadow: 0 1rem 2rem 1rem $color-black;
 }
 
 @mixin triangleBottom($size: 1rem, $color: $color-dark, $radius: 0, $y: -50%) {

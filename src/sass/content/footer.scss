@@ -5,7 +5,11 @@ $square-size: 2.5rem;
   position: relative;
 
   background-color: $color-main;
-  background-image: linear-gradient(7deg, rgba($color-main, 0.7) 10%, rgba($color-main, 1) 70%),
+  background-image: linear-gradient(
+      7deg,
+      rgba($color-main-light, 0.7) 10%,
+      rgba($color-main, 1) 70%
+    ),
     url(../../assets/images/tech-3.jpg);
   background-position: center;
   background-size: cover;

@@ -1,28 +1,17 @@
-.form-control {
+.field-control {
   display: flex;
   flex-direction: column;
   width: 100%;
+
   padding: 0 2%;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 
   @include respond(phone) {
     padding: 0;
   }
 
-  &__label {
-    font-size: 1.7rem;
-    font-family: 'Genos';
-    letter-spacing: 1px;
-    margin-bottom: 4px;
-    color: $color-white;
-
-    @include respond(phone) {
-      font-size: 2rem;
-    }
-  }
-
   &__error {
-    margin-top: 3px;
+    margin-top: 2px;
     text-align: center;
     font-size: 13px;
     color: $color-accent;
@@ -33,47 +22,78 @@
   }
 }
 
-.input {
-  font-family: 'lato', sans-serif;
+.text-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  padding: 1rem;
-  font-size: 14px;
-  background-color: transparent;
-  color: $color-white;
-  outline: none;
 
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  box-shadow: none;
-  border: 1px solid transparent;
-  border-radius: 5px;
+  &__label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 1.5rem;
 
-  @include respond(phone) {
-    font-size: 16px;
+    padding: 2px;
+    border-radius: 5px;
+
+    font-size: 20px;
+    font-family: 'Genos';
+    letter-spacing: 1px;
+    color: $color-white;
+
+    transition: all 0.2s ease;
   }
 
-  &::placeholder {
-    opacity: 0.7;
-  }
-
-  &:focus {
-    border-color: $color-main-light;
-  }
-
-  &--textarea {
+  &__input {
     font-family: 'lato', sans-serif;
-    resize: vertical;
-    min-height: 3.2rem;
-    max-height: 30rem;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 16px;
+    background-color: transparent;
+    color: rgba($color-white, 0.9);
+    outline: none;
+
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    &::placeholder {
+      opacity: 0;
+      transition: all 0.2s ease;
+    }
+
+    &:focus::placeholder {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      border-color: $color-main-light;
+    }
+
+    &--textarea {
+      font-family: 'lato', sans-serif;
+      resize: vertical;
+      min-height: 3.2rem;
+      max-height: 30rem;
+    }
+
+    &--valid {
+      border-color: $color-white;
+    }
+
+    &--invalid {
+      border-color: $color-accent;
+      background-color: #ff144810;
+    }
   }
 
-  &--valid {
-    border-color: $color-white;
-  }
-
-  &--invalid {
-    border-color: $color-accent;
-    background-color: #ff144812;
+  &__input:focus ~ &__label,
+  &__input:not(:placeholder-shown) + &__label {
+    top: 0;
+    background-color: $color-background;
   }
 }

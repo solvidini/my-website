@@ -31,11 +31,12 @@ const Input = (props: IInput) => {
     errorMessage,
   } = props
 
-  const validityClass = !isValid && touched ? 'input--invalid' : 'input--valid'
+  const validityClass =
+    !isValid && touched ? 'text-field__input--invalid' : 'text-field__input--valid'
 
   const renderLabel = () => {
     return (
-      <label className='form-control__label' htmlFor={id}>
+      <label className='text-field__label' htmlFor={id}>
         {label}
       </label>
     )
@@ -46,7 +47,7 @@ const Input = (props: IInput) => {
       case 'textarea':
         return (
           <textarea
-            className={['input input--textarea', validityClass].join(' ')}
+            className={['text-field__input text-field__input--textarea', validityClass].join(' ')}
             id={id}
             value={value}
             rows={rows}
@@ -59,7 +60,7 @@ const Input = (props: IInput) => {
       default:
         return (
           <input
-            className={['input', validityClass].join(' ')}
+            className={['text-field__input', validityClass].join(' ')}
             type={type ? type : 'text'}
             id={id}
             value={value}
@@ -74,15 +75,17 @@ const Input = (props: IInput) => {
 
   const renderError = () => {
     if (!isValid && touched) {
-      return <span className='form-control__error'>{errorMessage}</span>
+      return <span className='field-control__error'>{errorMessage}</span>
     }
     return null
   }
 
   return (
-    <div className='form-control'>
-      {renderLabel()}
-      {renderInput()}
+    <div className='field-control'>
+      <div className='text-field'>
+        {renderInput()}
+        {renderLabel()}
+      </div>
       {renderError()}
     </div>
   )

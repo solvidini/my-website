@@ -52,7 +52,7 @@ const LanguagePack = ({ showToggler, forwardedRef, visible }: ILanguagePack) => 
     <div
       className='language-pack'
       style={{ borderBottomRightRadius: visible ? 0 : '2.7rem' }}
-      title='ENG / PL'
+      title='EN / PL / ES'
       onClick={showToggler}
       ref={forwardedRef}
     >

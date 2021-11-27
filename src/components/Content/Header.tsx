@@ -17,7 +17,7 @@ const Header: FC<IHeader> = ({ children, hideCanvas, forwardedRef }) => {
   const { t } = useTranslation()
 
   const words = [
-    t('Header.SentenceArray.0'),
+    `${t('Header.SentenceArray.0')} 😉`,
     t('Header.SentenceArray.1'),
     t('Header.SentenceArray.2'),
   ]

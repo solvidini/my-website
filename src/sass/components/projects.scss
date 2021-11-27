@@ -4,7 +4,7 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  filter: drop-shadow(0 5px 5px $color-dark);
+  // filter: drop-shadow(0 5px 5px $color-dark);
 
   @include respond(tab-land) {
     margin: 4rem auto 1rem;
@@ -170,6 +170,9 @@
       transition: all 0.5s ease;
       object-fit: cover;
       object-position: top;
+
+      border-bottom-left-radius: 3rem;
+      border-bottom-right-radius: 3rem;
     }
 
     &-icon {

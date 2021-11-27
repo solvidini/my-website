@@ -97,3 +97,12 @@
     background-color: $color-background;
   }
 }
+
+.asterisk {
+  position: relative;
+  top: -3px;
+  right: -1px;
+
+  font-size: 18px;
+  color: #ff4573;
+}

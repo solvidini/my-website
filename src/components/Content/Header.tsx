@@ -5,7 +5,7 @@ import { Link } from 'react-scroll'
 import Particles from 'react-tsparticles'
 
 import ArrowDown from '../UI/ArrowDown/ArrowDown'
-import ParticlesConfig from '../../utils/particlesjs-config'
+import ParticlesConfig from '../../configurations/particlesjs-config'
 import { useTranslation } from 'react-i18next'
 
 interface IHeader {
@@ -16,11 +16,7 @@ interface IHeader {
 const Header: FC<IHeader> = ({ children, hideCanvas, forwardedRef }) => {
   const { t } = useTranslation()
 
-  const words = [
-    `${t('Header.SentenceArray.0')} 😉`,
-    t('Header.SentenceArray.1'),
-    t('Header.SentenceArray.2'),
-  ]
+  const words = [`${t('Header.SentenceArray.0')} 😉`, t('Header.SentenceArray.1')]
 
   return (
     <header className='header' id='top' ref={forwardedRef}>

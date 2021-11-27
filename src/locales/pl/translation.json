@@ -17,8 +17,7 @@
   "Header": {
     "SentenceArray": [
       "Witaj na mojej stronie! ",
-      "Znajdziesz tu informacje na mój temat oraz projekty, które wykonałem.",
-      "W sekcji \"Portfolio\" będą na bieżąco dodawane moje projekty."
+      "Znajdziesz tu informacje na mój temat oraz projekty, które wykonałem."
     ]
   },
   "About": {
@@ -27,7 +26,7 @@
   },
   "Skills": {
     "Title": "Umiejętności",
-    "SubTitle": "Moje umiejętności i technologie, które używam",
+    "SubTitle": "Moje umiejętności i technologie, których używam",
     "Other": "Inne",
     "AndMore": "i więcej..."
   },

@@ -6,10 +6,11 @@ interface Props {
   name: string
   styles?: React.CSSProperties
   highlight?: boolean
+  id: string
 }
 
 const Technology = (props: Props) => {
-  const { src, name, styles = {}, highlight } = props
+  const { src, name, styles = {}, highlight, id } = props
   const [isActive, setIsActive] = React.useState<boolean>(false)
 
   const classesItem = ['technologies__item']
@@ -25,6 +26,7 @@ const Technology = (props: Props) => {
 
   return (
     <div
+      id={id}
       className={classesItem.join(' ')}
       style={styles}
       onClick={() => {

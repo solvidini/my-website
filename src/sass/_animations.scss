@@ -201,3 +201,74 @@
     transform: translateY(-50%) scale(0);
   }
 }
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes noise-x {
+  $steps: 30;
+  @for $i from 1 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(100);
+      $bottom: random(101 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes noise-e {
+  $steps: 30;
+  @for $i from 1 through $steps {
+    #{percentage($i*(1/$steps))} {
+      $top: random(99);
+      $bottom: random(100 - $top);
+      clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+    }
+  }
+}
+
+@keyframes glitch {
+  1% {
+    transform: rotateX(10deg) skewX(100deg);
+  }
+  2% {
+    transform: rotateX(0deg) skewX(0deg);
+  }
+  84% {
+    transform: rotateX(0deg) skewX(0deg);
+  }
+  85% {
+    transform: rotateX(-20deg) skewX(80deg);
+  }
+  86% {
+    transform: rotateX(0deg) skewX(0deg);
+  }
+}
+
+@keyframes distortion {
+  1% {
+    transform: rotateX(10deg) translateY(10px);
+  }
+  2% {
+    transform: rotateX(0deg) translateY(0);
+  }
+  79% {
+    transform: rotate(0deg) translateY(0);
+  }
+  80% {
+    transform: rotateX(10deg) translateY(-12px);
+  }
+  85% {
+    transform: rotateX(0deg) translateY(0);
+  }
+  99% {
+    transform: rotateX(0deg) translateY(0);
+  }
+}

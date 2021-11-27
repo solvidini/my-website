@@ -51,7 +51,7 @@ const particles: RecursivePartial<IOptions> = {
       density: {
         enable: true,
       },
-      value: 100,
+      value: 80,
     },
     opacity: {
       value: {

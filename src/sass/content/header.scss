@@ -69,29 +69,41 @@
 
   font-family: 'Genos';
   font-size: 11rem;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 1;
   letter-spacing: 1rem;
-  color: rgba(0, 0, 0, 0);
+  color: $color-white;
   text-shadow: 0px 0px 5px rgba($color-accent, 0.7);
 
-  animation: moveInLeft 3s ease-out;
+  animation: appear 3s ease;
 
   @include respond(phone) {
     font-size: 7rem;
     letter-spacing: 0.5rem;
   }
 
-  &::after {
-    content: 'WEB DEVELOPER';
-    width: inherit;
+  &::before {
+    content: attr(data-text);
+    width: 100%;
     position: absolute;
+    left: 2px;
+    text-shadow: -2px 0 $color-accent;
     top: 0;
-    left: 0;
+    overflow: hidden;
+    clip-path: rect(0, 900px, 0, 0);
+    animation: noise-x 2s infinite linear alternate-reverse, glitch 4s 2s infinite;
+  }
 
-    color: $color-white;
-
-    animation: moveInRight 3s ease-out;
+  &::after {
+    content: attr(data-text);
+    width: 100%;
+    position: absolute;
+    left: -2px;
+    text-shadow: 2px 0 $color-main;
+    top: 0;
+    overflow: hidden;
+    clip-path: rect(0, 900px, 0, 0);
+    animation: noise-e 3s infinite linear alternate-reverse, distortion 5s 3s infinite;
   }
 }
 
@@ -107,7 +119,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  text-shadow: 0px 0px 10px rgba($color-main-light, 0.5);
+  text-shadow: 0px 0px 2rem rgba($color-main-light, 0.9);
   transform: translateX(4px);
 
   animation: moveInTop 3s ease-out;

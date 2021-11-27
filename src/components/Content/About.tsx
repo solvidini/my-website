@@ -11,9 +11,9 @@ const About = () => {
 
   React.useEffect(() => {
     gsap.from(aboutMeRef.current, {
-      opacity: 0,
       duration: 1.2,
-      ease: 'slow',
+      ease: 'power1',
+      autoAlpha: 0,
       scrollTrigger: {
         trigger: '#section-about',
         start: 'top center+=100',

@@ -14,13 +14,12 @@ const Skills: React.FC = () => {
   React.useEffect(() => {
     gsap.from(technologiesRef.current, {
       duration: 1,
+      ease: 'power1',
       autoAlpha: 0,
-      ease: 'slow',
       scrollTrigger: {
-        trigger: technologiesRef.current,
+        trigger: '#section-skills',
         start: 'top center',
         toggleActions: 'play none none reverse',
-        markers: true,
       },
     })
   }, [])

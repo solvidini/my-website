@@ -144,40 +144,6 @@
   }
 }
 
-@keyframes shrink {
-  0% {
-    transform: scale(1);
-    filter: grayscale(1);
-  }
-
-  50% {
-    filter: grayscale(1);
-  }
-
-  70% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(0);
-    filter: grayscale(0);
-  }
-}
-
-@keyframes hide {
-  0% {
-    opacity: 0.1;
-  }
-
-  80% {
-    opacity: 0.3;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 @keyframes lpaIn {
   0% {
     opacity: 0;

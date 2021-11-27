@@ -1,9 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
+import Image from '../UI/Image'
 import website from '../../assets/images/website-color.png'
 import responsive from '../../assets/images/responsive-color.png'
 import ui from '../../assets/images/ui-color.png'
-import { useTranslation } from 'react-i18next'
 
 const Offer: React.FC = () => {
   const { t } = useTranslation()
@@ -16,19 +17,34 @@ const Offer: React.FC = () => {
       </h2>
       <div className='offer-content'>
         <div className='offer-content__item'>
-          <img className='offer-content__item-image' src={website} alt='Kodowanie stron' />
+          <Image
+            className='offer-content__item-image'
+            src={website}
+            alt='Kodowanie stron'
+            spinnerClass='spinner-icon--offer'
+          />
           <h3 className='offer-content__item-title'>{t('Offer.MakingWebsites.Title')}</h3>
           <p className='offer-content__item-description'>{t('Offer.MakingWebsites.Description')}</p>
         </div>
         <div className='offer-content__item'>
-          <img className='offer-content__item-image' src={responsive} alt='Responsywny design' />
+          <Image
+            className='offer-content__item-image'
+            src={responsive}
+            alt='Responsywny design'
+            spinnerClass='spinner-icon--offer'
+          />
           <h3 className='offer-content__item-title'>{t('Offer.ResponsiveDesign.Title')}</h3>
           <p className='offer-content__item-description'>
             {t('Offer.ResponsiveDesign.Description')}
           </p>
         </div>
         <div className='offer-content__item'>
-          <img className='offer-content__item-image' src={ui} alt='Intuicyjny interfejs' />
+          <Image
+            className='offer-content__item-image'
+            src={ui}
+            alt='Intuicyjny interfejs'
+            spinnerClass='spinner-icon--offer'
+          />
           <h3 className='offer-content__item-title'>{t('Offer.IntuitiveInterface.Title')}</h3>
           <p className='offer-content__item-description'>
             {t('Offer.IntuitiveInterface.Description')}

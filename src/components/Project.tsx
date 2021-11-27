@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMobileAlt, faLaptop } from '@fortawesome/free-solid-svg-icons'
 import { useTranslation } from 'react-i18next'
 
+import Image from './UI/Image'
+
 interface Props {
   title: string
   description: string
@@ -75,11 +77,11 @@ const Project = ({ title, description, mobile, live, github, source }: Props) =>
       {renderGithubButton()}
       {renderPreviewButton()}
       <div className='projects__item-image-container'>
-        <img
-          draggable='false'
+        <Image
           className='projects__item-image'
           src={source}
           alt={'Project ' + title}
+          spinnerClass='spinner-icon--accent'
         />
       </div>
     </div>

@@ -129,6 +129,38 @@ input:-webkit-autofill {
   backdrop-filter: none;
 }
 
+.spinner-icon {
+  z-index: 1;
+  position: absolute;
+
+  font-size: 4rem;
+  opacity: 0.9;
+  color: $color-white;
+
+  &--dark {
+    color: $color-dark;
+  }
+
+  &--main {
+    color: $color-main-light;
+  }
+
+  &--accent {
+    color: $color-accent;
+  }
+
+  &--offer {
+    top: 20%;
+    color: $color-main;
+  }
+
+  &--about {
+    top: 5%;
+    color: $color-dark;
+    opacity: 0.2;
+  }
+}
+
 #header-particles {
   width: 100%;
   height: 100%;

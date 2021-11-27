@@ -7,6 +7,7 @@ import Particles from 'react-tsparticles'
 import ArrowDown from '../UI/ArrowDown/ArrowDown'
 import ParticlesConfig from '../../configurations/particlesjs-config'
 import { useTranslation } from 'react-i18next'
+import { ImageLoaderContext } from '../../utils/imageLoaderContext'
 
 interface IHeader {
   forwardedRef: RefObject<HTMLHeadElement>
@@ -14,12 +15,24 @@ interface IHeader {
 }
 
 const Header: FC<IHeader> = ({ children, hideCanvas, forwardedRef }) => {
+  const { images } = React.useContext(ImageLoaderContext)
   const { t } = useTranslation()
 
   const words = [`${t('Header.SentenceArray.0')} 😉`, t('Header.SentenceArray.1')]
 
+  const headerStyles = {
+    backgroundImage: `linear-gradient(
+        135deg,
+        #f5d68133 0%,
+        #1d1d204d 25%,
+        #1d1d2066 75%,
+        #ee346233 100%
+      ),
+      url(${images.headerImage})`,
+  }
+
   return (
-    <header className='header' id='top' ref={forwardedRef}>
+    <header className='header' id='top' ref={forwardedRef} style={headerStyles}>
       {!hideCanvas && (
         <Particles
           id='header-particles'

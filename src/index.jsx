@@ -5,10 +5,13 @@ import './sass/root.scss'
 
 import * as serviceWorker from './serviceWorker'
 import App from './App'
+import { ImageLoaderProvider } from './utils/imageLoaderContext'
 
 ReactDOM.render(
-  <React.Suspense fallback='loading'>
-    <App />
+  <React.Suspense fallback='Loading...'>
+    <ImageLoaderProvider>
+      <App />
+    </ImageLoaderProvider>
   </React.Suspense>,
   document.getElementById('root'),
 )

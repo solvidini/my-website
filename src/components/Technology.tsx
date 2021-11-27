@@ -1,6 +1,8 @@
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 
+import Image from './UI/Image'
+
 interface Props {
   src: string
   name: string
@@ -39,7 +41,7 @@ const Technology = (props: Props) => {
         setIsActive(false)
       }}
     >
-      <img className='technologies__item-image' src={src} alt={name} />
+      <Image className='technologies__item-image' src={src} alt={name} spinnerClass='' />
       <div className={classesLabel.join(' ')}>{name}</div>
     </div>
   )

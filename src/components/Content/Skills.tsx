@@ -10,29 +10,19 @@ const Skills: React.FC = () => {
   const { t } = useTranslation()
   const [highlightedType, setHighlightedType] = React.useState<TechnologyType>(null)
   const technologiesRef = React.useRef(null)
-  const q = gsap.utils.selector(technologiesRef)
 
   React.useEffect(() => {
-    // gsap.from(technologiesRef.current, {
-    //   duration: 1,
-    //   autoAlpha: 0,
-    //   ease: 'slow',
-    //   scrollTrigger: {
-    //     trigger: '.technologies__item',
-    //     start: 'top center',
-    //     markers: true,
-    //   },
-    // })
-    // gsap.from(q('.technologies__item'), {
-    //   y: 200,
-    //   duration: 2,
-    //   delay: 1,
-    //   scrollTrigger: {
-    //     trigger: q('.technologies_item'),
-    //     start: 'top center',
-    //     // markers: true,
-    //   },
-    // })
+    gsap.from(technologiesRef.current, {
+      duration: 1,
+      autoAlpha: 0,
+      ease: 'slow',
+      scrollTrigger: {
+        trigger: technologiesRef.current,
+        start: 'top center',
+        toggleActions: 'play none none reverse',
+        markers: true,
+      },
+    })
   }, [])
 
   const renderTechnologies = (techData: ITechnology[]) =>

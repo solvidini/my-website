@@ -29,6 +29,7 @@
   width: 100%;
 
   &__label {
+    @include unselectable;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -37,18 +38,21 @@
     padding: 2px;
     border-radius: 5px;
 
-    font-size: 20px;
-    font-family: 'Genos';
+    font-size: 16px;
     letter-spacing: 1px;
     color: $color-white;
 
     transition: all 0.2s ease;
+
+    @include respond(phone) {
+      font-size: 16px;
+    }
   }
 
   &__input {
     font-family: 'lato', sans-serif;
     width: 100%;
-    padding: 1.5rem;
+    padding: 1.3rem;
     font-size: 16px;
     background-color: transparent;
     color: rgba($color-white, 0.9);
@@ -62,6 +66,7 @@
     border-radius: 5px;
 
     &::placeholder {
+      @include unselectable;
       opacity: 0;
       transition: all 0.2s ease;
     }
@@ -95,13 +100,18 @@
   &__input:not(:placeholder-shown) + &__label {
     top: 0;
     background-color: $color-background;
+    font-size: 14px;
+
+    @include respond(phone) {
+      font-size: 13px;
+    }
   }
 }
 
 .asterisk {
   position: relative;
-  top: -3px;
-  right: -1px;
+  top: 1px;
+  right: -2px;
 
   font-size: 18px;
   color: #ff4573;

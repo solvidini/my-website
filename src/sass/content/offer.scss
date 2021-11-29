@@ -13,17 +13,17 @@
   background-repeat: no-repeat;
 }
 
-.offer-content {
-  max-width: 120rem;
-  margin: 2rem auto 4rem auto;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.offer-grid {
+  max-width: 140rem;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
   color: $color-dark;
 
-  @include respond(tab-port) {
-    flex-flow: column wrap;
-    margin: 0 auto;
+  @include respond(tab-land) {
+    grid-template-columns: 1fr;
+    margin: 2rem auto 0;
   }
 
   @include respond(phone) {
@@ -32,17 +32,15 @@
 
   &__item {
     position: relative;
-    align-self: flex-start;
     margin: 2rem;
     display: flex;
-    flex-flow: column;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     flex: 1;
 
-    @include respond(tab-port) {
-      align-self: center;
-      justify-content: center;
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
     }
 
     &-image {
@@ -50,7 +48,7 @@
 
       max-width: 18rem;
       position: relative;
-      margin: 1rem;
+      margin: 1rem 3rem 1rem 1rem;
       transition: transform 0.3s ease;
 
       filter: brightness(110%);
@@ -58,15 +56,25 @@
       &:hover {
         transform: scale(1.05);
       }
+
+      @include respond(phone) {
+        margin: 1rem;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
     }
 
     &-title {
       margin: 1.5rem;
 
-      font-size: 2.2rem;
+      font-size: 2rem;
       text-transform: uppercase;
       letter-spacing: 0.35rem;
-      white-space: nowrap;
+      text-align: center;
 
       @include respond(tab-port) {
         letter-spacing: 0.15rem;
@@ -79,7 +87,6 @@
       line-height: 1.4;
       letter-spacing: 0.15rem;
       font-weight: 400;
-      max-width: 450px;
 
       @include respond(tab-port) {
         font-size: 1.7rem;

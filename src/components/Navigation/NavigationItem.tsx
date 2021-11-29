@@ -28,7 +28,7 @@ const NavigationItem: React.FC<INavigationItem> = ({ children, to, onClick, isOp
         className='navigation-item__link'
         data-hover={children}
         to={to}
-        offset={-350}
+        offset={-300}
         spy
         hashSpy
         isDynamic

@@ -31,11 +31,7 @@ const Toolbar = ({
 
   return (
     <div className={toolbarClasses.join(' ')} ref={forwardedRef}>
-      <DrawerToggle
-        sideDrawerIsVisible={sideDrawerIsVisible}
-        onClick={sideDrawerToggleClicked}
-        styles={navStyles}
-      />
+      <DrawerToggle sideDrawerIsVisible={sideDrawerIsVisible} onClick={sideDrawerToggleClicked} />
       <nav className='toolbar__nav desktop-only' style={navStyles}>
         <NavigationItems />
       </nav>

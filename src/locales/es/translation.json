@@ -22,7 +22,7 @@
   },
   "About": {
     "Header": "Unas palabras sobre mi",
-    "Content": "Soy un desarrollador de software que desarrolla mis capacidades en cada paso posible. \nEstoy interesado en las últimas tendencias en el campo de la creación de sitios web, aplicaciones web, blogs, juegos, etc. Como desarrollador, me concentro en la interfaz de usuario, los problemas de UX y me aseguro de que los sitios web funcionen sin problemas y estén adaptados para mostrarse en cualquier dispositivo. \nAl desarrollar mis competencias, me concentro tanto en las tecnologías front-end como en las back-end. \nMe acerco a cada proyecto de forma individual. \nMe enfoco en la comunicación con el cliente, buscando las mejores soluciones que se adapten a sus necesidades y siempre entrego el proyecto a tiempo."
+    "Content": "Me apasiona la programación y cada día amplío mis horizontes. \nEstoy interesado en las últimas tendencias en el campo de la creación de sitios web, aplicaciones web, blogs, juegos, etc. Como desarrollador, me centro en los problemas de UI y UX y me aseguro de que los sitios web funcionen sin problemas y estén adaptados para mostrarse en cualquier \ndispositivo. \nMe especializo en JavaScript y otras tecnologías front-end, pero en el desarrollo de mis competencias también me concentro en tecnologías de servidor. \nMe acerco a cada proyecto de forma individual. \nMe enfoco en la comunicación con el cliente mientras encuentro las mejores soluciones posibles. \nTambién tengo muchos otros intereses, uno de los cuales es crear música electrónica que puedas escuchar en mi SoundCloud."
   },
   "Skills": {
     "Title": "Habilidades",
@@ -44,6 +44,10 @@
     "IntuitiveInterface": {
       "Title": "Interfaz intuitiva",
       "Description": "Ordeno todos los elementos de la página de una manera intuitiva para que el usuario haga que navegar por el sitio independientemente del dispositivo sea simple y agradable. \nAdemás, ofrezco un aspecto moderno e interesante y me ocupo de todos los detalles relacionados con la animación de elementos para que el uso sea claro y comprensible."
+    },
+    "ServerAdministration": {
+      "Title": "Administración del servidor",
+      "Description": "Me ocupo del mantenimiento de los proyectos terminados y de la rápida implementación de las correcciones en el servidor que arriendo."
     }
   },
   "Portfolio": {

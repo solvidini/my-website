@@ -2,12 +2,56 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import Image from '../UI/Image'
-import website from '../../assets/images/website-color.png'
-import responsive from '../../assets/images/responsive-color.png'
-import ui from '../../assets/images/ui-color.png'
+import website from '../../assets/images/website.png'
+import responsive from '../../assets/images/responsive.png'
+import ui from '../../assets/images/ui.png'
+import server from '../../assets/images/server.png'
 
 const Offer: React.FC = () => {
   const { t } = useTranslation()
+
+  const offerItems = [
+    {
+      id: 'offer_creating_websites',
+      src: website,
+      title: t('Offer.MakingWebsites.Title'),
+      description: t('Offer.MakingWebsites.Description'),
+    },
+    {
+      id: 'offer_responsive_design',
+      src: responsive,
+      title: t('Offer.ResponsiveDesign.Title'),
+      description: t('Offer.ResponsiveDesign.Description'),
+    },
+    {
+      id: 'offer_intuitive_interface',
+      src: ui,
+      title: t('Offer.IntuitiveInterface.Title'),
+      description: t('Offer.IntuitiveInterface.Description'),
+    },
+    {
+      id: 'offer_server_administration',
+      src: server,
+      title: t('Offer.ServerAdministration.Title'),
+      description: t('Offer.ServerAdministration.Description'),
+    },
+  ]
+
+  const renderOfferItems = () =>
+    offerItems.map(item => (
+      <div className='offer-grid__item' key={item.id}>
+        <Image
+          className='offer-grid__item-image'
+          src={item.src}
+          alt='Kodowanie stron'
+          spinnerClass='spinner-icon--offer'
+        />
+        <div className='offer-grid__item-content'>
+          <h3 className='offer-grid__item-title'>{item.title}</h3>
+          <p className='offer-grid__item-description'>{item.description}</p>
+        </div>
+      </div>
+    ))
 
   return (
     <section className='section-offer' id='section-offer'>
@@ -15,42 +59,7 @@ const Offer: React.FC = () => {
         <span className='section-header__title'>{t('Offer.Title')}</span>
         <span className='section-header__sub-title'>{t('Offer.SubTitle')}</span>
       </h2>
-      <div className='offer-content'>
-        <div className='offer-content__item'>
-          <Image
-            className='offer-content__item-image'
-            src={website}
-            alt='Kodowanie stron'
-            spinnerClass='spinner-icon--offer'
-          />
-          <h3 className='offer-content__item-title'>{t('Offer.MakingWebsites.Title')}</h3>
-          <p className='offer-content__item-description'>{t('Offer.MakingWebsites.Description')}</p>
-        </div>
-        <div className='offer-content__item'>
-          <Image
-            className='offer-content__item-image'
-            src={responsive}
-            alt='Responsywny design'
-            spinnerClass='spinner-icon--offer'
-          />
-          <h3 className='offer-content__item-title'>{t('Offer.ResponsiveDesign.Title')}</h3>
-          <p className='offer-content__item-description'>
-            {t('Offer.ResponsiveDesign.Description')}
-          </p>
-        </div>
-        <div className='offer-content__item'>
-          <Image
-            className='offer-content__item-image'
-            src={ui}
-            alt='Intuicyjny interfejs'
-            spinnerClass='spinner-icon--offer'
-          />
-          <h3 className='offer-content__item-title'>{t('Offer.IntuitiveInterface.Title')}</h3>
-          <p className='offer-content__item-description'>
-            {t('Offer.IntuitiveInterface.Description')}
-          </p>
-        </div>
-      </div>
+      <div className='offer-grid'>{renderOfferItems()}</div>
     </section>
   )
 }

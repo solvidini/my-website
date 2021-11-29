@@ -16,7 +16,6 @@
     position: relative;
     height: 100%;
     width: 100%;
-    padding: 0 0.7rem;
     text-transform: uppercase;
     font-size: 1.4rem;
     font-weight: 400;
@@ -37,10 +36,16 @@
     &__link:visited {
       border-bottom: 2px solid transparent;
       position: relative;
-      color: $color-white;
       display: block;
       text-decoration: none;
-      padding: 1rem 0.7rem;
+      height: 100%;
+      line-height: 4rem;
+      width: auto;
+      padding: 0 1.3rem;
+
+      font-weight: 600;
+      color: transparent;
+
       transition: all 0.4s ease;
       pointer-events: none;
 
@@ -48,30 +53,39 @@
         width: 100%;
         border-bottom: none;
         border-left: 1.5rem solid transparent;
-        transform: translateX(-1.1rem);
+        color: $color-white;
+        font-weight: 300;
+        height: 6rem;
+        line-height: 6rem;
       }
     }
 
-    &__link:after {
+    &__link:before {
       position: absolute;
-      top: 0.7rem;
+      top: 0;
       height: 100%;
-
-      content: attr(data-hover);
-      color: $color-white;
+      overflow: hidden;
       display: block;
-      text-decoration: none;
-      transform: translateY(-100%);
+      content: attr(data-hover);
 
-      font-weight: 600;
+      color: $color-white;
+      font-weight: 400;
+      text-decoration: none;
+
+      transition: all 0.2s ease;
 
       @include respond(phone) {
         display: none;
       }
     }
 
+    &:hover &__link:before {
+      color: transparent;
+      transform: scale(2);
+    }
+
     &:hover &__link {
-      transform: translateY(100%);
+      color: $color-white;
 
       @include respond(phone) {
         border-bottom: none;

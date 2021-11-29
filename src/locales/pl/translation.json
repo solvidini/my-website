@@ -22,7 +22,7 @@
   },
   "About": {
     "Header": "Kilka słów o mnie",
-    "Content": "Jestem programistą rozwijającym swoje możliwości na każdym możliwym kroku. Interesuję się najnowszymi trendami z zakresu tworzenia stron www, aplikacji webowych, blogów, gier etc. Jako deweloper skupiam się na zagadnieniach UI, UX oraz dbam o to, aby strony działały płynnie i były dostosowane do wyświetlania na każdym urządzeniu. W rozwijaniu swoich kompetencji koncentruję się zarówno na technologiach front-endowych jak i back-endowych. Do każdego projektu podchodzę indywidualnie. Stawiam na komunikację z klientem, znajdując najlepsze rozwiązania, spełniające jego potrzeby i umożliwiając dostarczenie projektu na czas."
+    "Content": "Jestem pasjonatem programowania, który codziennie poszerza swoje horyzonty. Interesuję się najnowszymi trendami z zakresu tworzenia stron www, aplikacji webowych, blogów, gier etc. Jako developer skupiam się na zagadnieniach UI, UX oraz dbam o to, aby strony działały płynnie i były dostosowane do wyświetlania na każdym urządzeniu. Specjalizuję się w języku JavaScript i innych technologiach front-endowych, natomiast w rozwijaniu swoich kompetencji koncentruję się również na technologiach serwerowych. Do każdego projektu podchodzę indywidualnie. Stawiam na komunikację z klientem, znajdując przy tym najlepsze możliwe rozwiązania. Posiadam również wiele innych zainteresowań, a jednym z nich jest tworzenie muzyki elektronicznej, którą można posłuchać na moim SoundCloudzie."
   },
   "Skills": {
     "Title": "Umiejętności",
@@ -35,7 +35,7 @@
     "SubTitle": "Co oferuję i na co zwracam uwagę",
     "MakingWebsites": {
       "Title": "Tworzenie stron",
-      "Description": "Do tworzenia stron używam najnowszych rozwiązań oraz technologii. Kieruję się współczesnymi trendami, spełniając przy tym wszelkie obecne standardy. Zarówno wygląd jak i układ stron opieram o intuicyjny, ładny interfejs jak i responsywny design."
+      "Description": "Do tworzenia stron używam najnowszych rozwiązań oraz technologii. Kieruję się współczesnymi trendami, spełniając przy tym wszelkie obecne standardy. Zarówno wygląd jak i układ stron opieram o intuicyjny, ładny interfejs oraz responsywny design."
     },
     "ResponsiveDesign": {
       "Title": "Responsywny design",
@@ -43,7 +43,11 @@
     },
     "IntuitiveInterface": {
       "Title": "Intuicyjny interfejs",
-      "Description": "Wszelkie elementy strony rozmieszczam w sposób intuicyjny dla użytkownika, aby poruszanie się po stronie niezależnie od urządzenia było proste i przyjemne. Ponadto oferuję nowoczesny, ciekawy wygląd jak i dbam o wszelkie detale dotyczące m.in. animacji elementów, by sposób użytkowania był jasny i zrozumiały."
+      "Description": "Wszelkie elementy strony rozmieszczam w sposób intuicyjny dla użytkownika, aby poruszanie się po stronie niezależnie od urządzenia było proste i przyjemne. Ponadto oferuję nowoczesny, ciekawy wygląd oraz dbam o wszelkie detale dotyczące m.in. animacji elementów, by sposób użytkowania był jasny i zrozumiały."
+    },
+    "ServerAdministration": {
+      "Title": "Administracja serwerem",
+      "Description": "Zajmuję się konserwacją wykonanych projektów oraz szybkim wprowadzaniem ewentualnych poprawek na dzierżawionym przeze mnie serwerze."
     }
   },
   "Portfolio": {

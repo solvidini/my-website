@@ -24,7 +24,7 @@ const Skills: React.FC = () => {
         scrollTrigger: {
           id: 'section-skills',
           trigger: technologiesRef.current,
-          start: 'top center+=150',
+          start: 'top center+=110',
           toggleActions: 'play none none reverse',
         },
       },

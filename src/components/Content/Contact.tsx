@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
 
     setLoading(true)
     try {
-      const result = await fetch('https://email-service.samuelk.pl:8081/send', {
+      const result = await fetch('https://samuelk.pl:8081', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -170,7 +170,8 @@ const Contact: React.FC = () => {
         <div className='contact-form__group'>
           <Input
             type='email'
-            id={'email'}
+            id='email'
+            name='email'
             label='Email'
             required
             placeholder={t('Contact.EmailPH')}
@@ -183,7 +184,8 @@ const Contact: React.FC = () => {
           />
           <Input
             type='text'
-            id={'name'}
+            id='name'
+            name='name'
             label={t('Contact.Name')}
             placeholder={t('Contact.NamePH')}
             isValid={mailForm.name.isValid}
@@ -196,7 +198,8 @@ const Contact: React.FC = () => {
         <div className='contact-form__group'>
           <Input
             type='text'
-            id={'subject'}
+            id='subject'
+            name='subject'
             label={t('Contact.Subject')}
             required
             placeholder={t('Contact.SubjectPH')}
@@ -211,7 +214,8 @@ const Contact: React.FC = () => {
         <div className='contact-form__group'>
           <Input
             type='textarea'
-            id={'message'}
+            id='message'
+            name='message'
             label={t('Contact.Message')}
             rows={8}
             required

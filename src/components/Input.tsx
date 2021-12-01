@@ -2,6 +2,7 @@ import React from 'react'
 
 interface IInput {
   id: string
+  name: string
   type: string
   isValid: boolean
   label: string
@@ -29,6 +30,7 @@ const Input = (props: IInput) => {
     onBlur,
     label,
     errorMessage,
+    name,
   } = props
 
   const validityClass =
@@ -50,6 +52,7 @@ const Input = (props: IInput) => {
           <textarea
             className={['text-field__input text-field__input--textarea', validityClass].join(' ')}
             id={id}
+            name={name}
             value={value}
             rows={rows}
             placeholder={placeholder}
@@ -64,6 +67,7 @@ const Input = (props: IInput) => {
             className={['text-field__input', validityClass].join(' ')}
             type={type ? type : 'text'}
             id={id}
+            name={name}
             value={value}
             placeholder={placeholder}
             required={required}

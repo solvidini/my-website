@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import gsap from 'gsap'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Input from '../Input'
 import * as vali from '../../utils/validators'
 import Modal from '../UI/Modal'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const MAIL_FORM = {
   name: {
@@ -36,11 +37,34 @@ const MAIL_FORM = {
 
 const Contact: React.FC = () => {
   const { t } = useTranslation()
+  const formRef = React.useRef(null)
   const [mailForm, setMailForm] = useState<typeof MAIL_FORM>(MAIL_FORM)
   const [isFormValid, setisFormValid] = useState<boolean>(false)
   const [error, setError] = useState<string | undefined>(undefined)
   const [messageSent, setMessageSent] = useState<boolean>(false)
   const [isLoading, setLoading] = useState<boolean>(false)
+
+  React.useEffect(() => {
+    gsap.fromTo(
+      formRef.current,
+      {
+        autoAlpha: 0,
+        y: 300,
+      },
+      {
+        duration: 1,
+        ease: 'power1',
+        autoAlpha: 1,
+        y: 0,
+        scrollTrigger: {
+          id: 'section-contact',
+          trigger: formRef.current,
+          start: 'top center+=400',
+          toggleActions: 'play none none reverse',
+        },
+      },
+    )
+  }, [])
 
   useEffect(() => {
     if (messageSent) {
@@ -141,7 +165,7 @@ const Contact: React.FC = () => {
         <span className='section-header__title'>{t('Contact.Title')}</span>
         <span className='section-header__sub-title'>{t('Contact.SubTitle')}</span>
       </h2>
-      <form className='contact-form' onSubmit={onSubmitHandler}>
+      <form className='contact-form' onSubmit={onSubmitHandler} ref={formRef}>
         <div className='contact-form__block'>E-MAIL</div>
         <div className='contact-form__group'>
           <Input

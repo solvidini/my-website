@@ -12,6 +12,8 @@
   transition: 0.5s ease;
 
   @include respond(phone) {
+    top: 0;
+    position: fixed;
     height: 6rem;
   }
 

@@ -1,9 +1,9 @@
 import React from 'react'
+import Marquee from 'react-fast-marquee'
+import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faAddressCard } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { useTranslation } from 'react-i18next'
-import Marquee from 'react-fast-marquee'
 
 const Footer = () => {
   const { t } = useTranslation()

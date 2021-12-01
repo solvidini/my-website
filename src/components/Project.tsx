@@ -12,9 +12,10 @@ interface Props {
   live?: string
   github?: string
   source: string
+  projectRef: (el: HTMLDivElement) => void
 }
 
-const Project = ({ title, description, mobile, live, github, source }: Props) => {
+const Project = ({ title, description, mobile, live, github, source, projectRef }: Props) => {
   const { t } = useTranslation()
 
   const renderGithubButton = () => {
@@ -64,7 +65,7 @@ const Project = ({ title, description, mobile, live, github, source }: Props) =>
   }
 
   return (
-    <div className='projects__item'>
+    <div className='projects__item' ref={projectRef}>
       <div className='projects__item-drawer'>
         <h4 className='projects__item-title'>{title}</h4>
         <p className='projects__item-description'>{description}</p>

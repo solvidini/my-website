@@ -67,16 +67,16 @@
 
     &--active {
       z-index: 5;
-      transform: rotateX(-45deg) translateZ(30px);
+      transform: rotateX(-45deg) translateZ(5px);
 
       border: 2px solid $color-accent;
 
       @include respond(tab-port) {
-        transform: rotateX(-34deg) translateZ(30px);
+        transform: rotateX(-34deg) translateZ(5px);
       }
 
       @include respond(phone) {
-        transform: rotateX(-18deg) translateZ(30px);
+        transform: rotateX(-18deg) translateZ(5px);
       }
     }
   }

@@ -8,20 +8,27 @@ import Technology from '../Technology'
 
 const Skills: React.FC = () => {
   const { t } = useTranslation()
-  const [highlightedType, setHighlightedType] = React.useState<TechnologyType>(null)
   const technologiesRef = React.useRef(null)
+  const [highlightedType, setHighlightedType] = React.useState<TechnologyType>(null)
 
   React.useEffect(() => {
-    gsap.from(technologiesRef.current, {
-      duration: 1,
-      ease: 'power1',
-      autoAlpha: 0,
-      scrollTrigger: {
-        trigger: '#section-skills',
-        start: 'top center',
-        toggleActions: 'play none none reverse',
+    gsap.fromTo(
+      technologiesRef.current,
+      {
+        autoAlpha: 0,
       },
-    })
+      {
+        duration: 1,
+        ease: 'power1',
+        autoAlpha: 1,
+        scrollTrigger: {
+          id: 'section-skills',
+          trigger: technologiesRef.current,
+          start: 'top center+=100',
+          toggleActions: 'play none none reverse',
+        },
+      },
+    )
   }, [])
 
   const renderTechnologies = (techData: ITechnology[]) =>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import gsap from 'gsap'
 
 import Image from '../UI/Image'
 import website from '../../assets/images/website.png'
@@ -9,8 +10,9 @@ import server from '../../assets/images/server.png'
 
 const Offer: React.FC = () => {
   const { t } = useTranslation()
+  const offerRefs = React.useRef<HTMLDivElement[]>([])
 
-  const offerItems = [
+  const offers = [
     {
       id: 'offer_creating_websites',
       src: website,
@@ -37,9 +39,46 @@ const Offer: React.FC = () => {
     },
   ]
 
+  React.useEffect(() => {
+    offerRefs.current.forEach((el, index) => {
+      let xPosition: number
+      if ((index + 1) % 2 === 0) {
+        xPosition = 500
+      } else {
+        xPosition = -500
+      }
+
+      gsap.fromTo(
+        el,
+        {
+          autoAlpha: 0,
+          x: xPosition,
+        },
+        {
+          duration: 1,
+          ease: 'power1',
+          autoAlpha: 1,
+          x: 0,
+          scrollTrigger: {
+            id: 'section-offer',
+            trigger: el,
+            start: 'top center+=100',
+            toggleActions: 'play none none reverse',
+          },
+        },
+      )
+    })
+  }, [])
+
+  const addToRefs = (el: HTMLDivElement) => {
+    if (el && !offerRefs.current.includes(el)) {
+      offerRefs.current.push(el)
+    }
+  }
+
   const renderOfferItems = () =>
-    offerItems.map(item => (
-      <div className='offer-grid__item' key={item.id}>
+    offers.map(item => (
+      <div className='offer-grid__item' key={item.id} ref={addToRefs}>
         <Image
           className='offer-grid__item-image'
           src={item.src}

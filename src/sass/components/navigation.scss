@@ -43,7 +43,7 @@
       width: auto;
       padding: 0 1.3rem;
 
-      font-weight: 600;
+      font-weight: 400;
       color: transparent;
 
       transition: all 0.4s ease;
@@ -53,6 +53,7 @@
         width: 100%;
         border-bottom: none;
         border-left: 1.5rem solid transparent;
+        padding: 0 2.8rem 0 1.3rem;
         color: $color-white;
         font-weight: 300;
         height: 6rem;
@@ -69,10 +70,7 @@
       content: attr(data-hover);
 
       color: $color-white;
-      font-weight: 400;
-      text-decoration: none;
-
-      transition: all 0.2s ease;
+      transition: all 0.4s ease;
 
       @include respond(phone) {
         display: none;
@@ -81,11 +79,11 @@
 
     &:hover &__link:before {
       color: transparent;
-      transform: scale(2);
+      transform: scale(1.5);
     }
 
     &:hover &__link {
-      color: $color-white;
+      color: $color-main-light;
 
       @include respond(phone) {
         border-bottom: none;

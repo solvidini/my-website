@@ -21,6 +21,7 @@
   max-width: 70rem;
 
   background-color: $color-background;
+  @include dropShadow;
   border-radius: 1rem;
 
   padding: 1rem;

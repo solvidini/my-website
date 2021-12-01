@@ -69,7 +69,7 @@
       "Description": "Application - The division of household duties"
     },
     "MySite": {
-      "Description": "Website - Own portfolio"
+      "Description": "My own portfolio"
     },
     "Fotobudka": {
       "Description": "Website - Company card"
@@ -97,7 +97,8 @@
     },
     "ANNSR": {
       "Description": "Artificial neural network symbol recognition"
-    }
+    },
+    "Title": "Portfolio"
   },
   "Contact": {
     "Title": "Contact",

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import justMe from '../../assets/images/me.png'
 import Image from '../UI/Image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCodepen, faGithub, faLinkedin, faSoundcloud } from '@fortawesome/free-brands-svg-icons'
+import { faCodepen, faGithub, faLinkedinIn, faSoundcloud } from '@fortawesome/free-brands-svg-icons'
 
 const About = () => {
   const { t } = useTranslation()
@@ -69,7 +69,7 @@ const About = () => {
                 href='https://www.linkedin.com/in/ssazero/'
                 title='LinkedIn'
               >
-                <FontAwesomeIcon icon={faLinkedin} />
+                <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
               <a
                 target='_blank'

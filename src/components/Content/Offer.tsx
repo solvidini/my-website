@@ -62,7 +62,7 @@ const Offer: React.FC = () => {
           scrollTrigger: {
             id: 'section-offer',
             trigger: el,
-            start: 'top center+=100',
+            start: 'top center+=150',
             toggleActions: 'play none none reverse',
           },
         },

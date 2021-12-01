@@ -69,7 +69,7 @@
       "Description": "Aplikacja - Podział obowiązków domowych"
     },
     "MySite": {
-      "Description": "Strona - Portfolio własne"
+      "Description": "Moje własne portfolio"
     },
     "Fotobudka": {
       "Description": "Strona - Wizytówka firmy"
@@ -97,7 +97,8 @@
     },
     "ANNSR": {
       "Description": "Sztuczna sieć neuronowa do rozpoznawania symboli"
-    }
+    },
+    "Title": "Portfolio"
   },
   "Contact": {
     "Title": "Kontakt",

@@ -13,7 +13,7 @@ import dailyTasks from '../../assets/images/projects/project-daily-tasks.jpg'
 import canvasBubbles from '../../assets/images/projects/project-canvas-1.gif'
 import swpiu from '../../assets/images/projects/project-swpiu.gif'
 import button from '../../assets/images/projects/project-button.gif'
-import calculator from '../../assets/images/projects/project-calculator.png'
+import calculator from '../../assets/images/projects/project-calculator.jpg'
 import mot from '../../assets/images/projects/project-mot.gif'
 import annsr from '../../assets/images/projects/project-annsr.gif'
 
@@ -128,7 +128,7 @@ const Portfolio: React.FC = () => {
           scrollTrigger: {
             id: 'section-portfolio',
             trigger: el,
-            start: 'top center+=100',
+            start: 'top center+=150',
             toggleActions: 'play none none reverse',
           },
         },
@@ -145,7 +145,7 @@ const Portfolio: React.FC = () => {
   return (
     <section className='section-portfolio' id='section-portfolio'>
       <h2 className='section-header section-header--white'>
-        <span className='section-header__title'>Portfolio</span>
+        <span className='section-header__title'>{t('Portfolio.Title')}</span>
         <span className='section-header__sub-title'>{t('Portfolio.SubTitle')}</span>
       </h2>
       <div className='projects'>

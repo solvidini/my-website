@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
 
     setLoading(true)
     try {
-      const result = await fetch('http://email-service.samuelk.pl:8081/send', {
+      const result = await fetch('https://email-service.samuelk.pl:8081/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

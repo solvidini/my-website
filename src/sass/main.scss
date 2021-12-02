@@ -163,10 +163,9 @@ select:-webkit-autofill:focus {
     }
   }
 
-  &--about {
-    top: 5%;
-    color: $color-dark;
-    opacity: 0.2;
+  &--x {
+    color: $color-main-light;
+    opacity: 0.8;
   }
 }
 

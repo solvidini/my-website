@@ -148,9 +148,14 @@
       position: relative;
       @include unselectable;
 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       background-color: $color-dark;
       border-top: 1px solid $color-background;
 
+      min-height: 22rem;
       height: auto;
       width: 100%;
     }

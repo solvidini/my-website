@@ -82,7 +82,7 @@ const Project = ({ title, description, mobile, live, github, source, projectRef 
           className='projects__item-image'
           src={source}
           alt={'Project ' + title}
-          spinnerClass='spinner-icon--accent'
+          spinnerClass='spinner-icon--x'
         />
       </div>
     </div>

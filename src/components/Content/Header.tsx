@@ -7,7 +7,7 @@ import Particles from 'react-tsparticles'
 import ArrowDown from '../UI/ArrowDown/ArrowDown'
 import ParticlesConfig from '../../configurations/particlesjs-config'
 import { useTranslation } from 'react-i18next'
-import { ImageLoaderContext } from '../../utils/imageLoaderContext'
+import { ImageLoaderContext } from '../../utils/ImageLoaderContext'
 
 interface IHeader {
   forwardedRef: RefObject<HTMLHeadElement>

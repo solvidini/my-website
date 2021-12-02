@@ -6,7 +6,7 @@ import Spinner from './components/UI/Spinner/Spinner'
 import Layout from './containers/Layout'
 import Content from './components/Content/Content'
 import logo from './assets/images/logo.png'
-import { ImageLoaderContext } from './utils/imageLoaderContext'
+import { ImageLoaderContext } from './utils/ImageLoaderContext'
 
 gsap.registerPlugin(ScrollTrigger)
 

@@ -5,7 +5,7 @@ import './sass/root.scss'
 
 import * as serviceWorker from './serviceWorker'
 import App from './App'
-import { ImageLoaderProvider } from './utils/imageLoaderContext'
+import { ImageLoaderProvider } from './utils/ImageLoaderContext'
 
 ReactDOM.render(
   <React.Suspense fallback='Loading...'>

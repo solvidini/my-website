@@ -1,13 +1,14 @@
 import React from 'react'
 import gsap from 'gsap'
 import { useTranslation } from 'react-i18next'
-
-import justMe from '../../assets/images/me.png'
-import Image from '../UI/Image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodepen, faGithub, faLinkedinIn, faSoundcloud } from '@fortawesome/free-brands-svg-icons'
 
+import Image from '../UI/Image'
+import { ImageLoaderContext } from '../../utils/ImageLoaderContext'
+
 const About = () => {
+  const { images } = React.useContext(ImageLoaderContext)
   const { t } = useTranslation()
   const aboutMeRef = React.useRef(null)
 
@@ -35,12 +36,7 @@ const About = () => {
           <span style={{ fontSize: '3rem' }}> Frontend&nbsp;Engineer</span>
         </h2>
         <div className='about-me' ref={aboutMeRef}>
-          <Image
-            className='about-me__image'
-            src={justMe}
-            alt='Just me'
-            spinnerClass='spinner-icon--about'
-          />
+          <Image className='about-me__image' src={images.justMe} alt='Just me' />
           <div className='about-me__info'>
             <p className='about-me__info-paragraph'>{t('About.Content')}</p>
             <div className='about-me__links'>

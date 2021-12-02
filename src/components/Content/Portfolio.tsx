@@ -4,7 +4,7 @@ import gsap from 'gsap'
 
 import Project from '../Project'
 
-import mySite from '../../assets/images/projects/project-my-site.gif'
+import myWebsite from '../../assets/images/projects/project-my-website.gif'
 import yourTurn from '../../assets/images/projects/project-your-turn.jpg'
 import projectW from '../../assets/images/projects/project-projektw.gif'
 import pizzaBuilder from '../../assets/images/projects/project-pizza-builder.gif'
@@ -26,7 +26,7 @@ const Portfolio: React.FC = () => {
 
   const projects = [
     {
-      title: t('Portfolio.ProjectW.Title'),
+      title: 'Projekt W',
       description: t('Portfolio.ProjectW.Description'),
       live: 'https://projektw.pl',
       source: projectW,
@@ -88,10 +88,10 @@ const Portfolio: React.FC = () => {
     },
     {
       title: 'My Website',
-      description: t('Portfolio.MySite.Description'),
+      description: t('Portfolio.MyWebsite.Description'),
       github: 'https://github.com/ssazero/my-site',
       live: '/',
-      source: mySite,
+      source: myWebsite,
     },
     {
       title: 'Your Turn',

@@ -43,8 +43,8 @@ const Header: FC<IHeader> = ({ children, hideCanvas, forwardedRef }) => {
         />
       )}
       <div className='header__text-box'>
-        <h1 className='heading-primary' data-text='WEB DEVELOPER'>
-          WEB DEVELOPER
+        <h1 className='heading-primary' data-text='FRONTEND ENGINEER'>
+          FRONTEND ENGINEER
         </h1>
         <div className='heading-paragraph'>Samuel Kędziora</div>
         <ReactTypingEffect

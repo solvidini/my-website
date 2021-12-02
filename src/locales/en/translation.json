@@ -59,7 +59,6 @@
       "Install": "Download"
     },
     "ProjectW": {
-      "Title": "Projekt W",
       "Description": "Website - Company's portfolio"
     },
     "PizzaBuilder": {
@@ -68,7 +67,7 @@
     "YourTurn": {
       "Description": "Application - The division of household duties"
     },
-    "MySite": {
+    "MyWebsite": {
       "Description": "My own portfolio"
     },
     "Fotobudka": {

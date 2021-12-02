@@ -32,7 +32,7 @@ const About = () => {
           <span className='section-header__name' style={{ fontSize: '3rem' }}>
             Samuel Kędziora -
           </span>
-          <span style={{ fontSize: '3rem' }}> Web&nbsp;Developer</span>
+          <span style={{ fontSize: '3rem' }}> Frontend&nbsp;Engineer</span>
         </h2>
         <div className='about-me' ref={aboutMeRef}>
           <Image

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
 
-import Spinner from './components/UI/Spinner/Spinner'
-import Layout from './containers/Layout'
-import Content from './components/Content/Content'
-import logo from './assets/images/logo.png'
-import { ImageLoaderContext } from './utils/ImageLoaderContext'
+import Spinner from 'src/components/ui/Spinner/Spinner'
+import Layout from 'src/containers/Layout'
+import Content from 'src/components/content/Content'
+import logo from 'src/assets/images/logo.png'
+import { ImageLoaderContext } from 'src/utils/ImageLoaderContext'
 
 gsap.registerPlugin(ScrollTrigger)
 

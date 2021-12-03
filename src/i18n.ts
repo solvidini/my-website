@@ -2,9 +2,9 @@ import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 
-import english from './locales/en/translation.json'
-import polish from './locales/pl/translation.json'
-import spanish from './locales/es/translation.json'
+import english from 'src/locales/en/translation.json'
+import polish from 'src/locales/pl/translation.json'
+import spanish from 'src/locales/es/translation.json'
 
 const resources = {
   en: {

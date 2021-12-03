@@ -1,9 +1,9 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMobileAlt, faLaptop } from '@fortawesome/free-solid-svg-icons'
-import { useTranslation } from 'react-i18next'
 
-import Image from './UI/Image'
+import Image from 'src/components/ui/Image'
 
 interface Props {
   title: string

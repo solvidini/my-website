@@ -1,7 +1,7 @@
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 
-import Image from './UI/Image'
+import Image from 'src/components/ui/Image'
 
 interface Props {
   src: string

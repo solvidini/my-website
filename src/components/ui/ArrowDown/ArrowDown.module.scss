@@ -1,0 +1,40 @@
+@import '../../../sass/variables';
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+}
+
+.arrow {
+  width: 3rem;
+  height: 3rem;
+  border: 0.4rem solid;
+  border-color: $color-main-light $color-main-light transparent transparent;
+  transform: rotate(135deg);
+}
+
+.arrow-slide-effect {
+  opacity: 0;
+  position: absolute;
+  animation: slide 2s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-2rem);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: translateY(-2rem);
+  }
+}

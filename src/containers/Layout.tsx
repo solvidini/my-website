@@ -3,14 +3,14 @@ import React, { useState, useEffect, useRef, FC } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { animateScroll } from 'react-scroll'
 
-import Toolbar from '../components/Navigation/Toolbar'
-import SideDrawer from '../components/Navigation/SideDrawer'
-import Header from '../components/Content/Header'
-import Footer from '../components/Content/Footer'
-import ArrowUp from '../components/UI/ArrowUp/ArrowUp'
-import Logo from '../components/Logo'
-import CookiesBar from '../components/CookiesBar'
-import LanguagePack from '../components/LanguagePack'
+import Toolbar from 'src/components/navigation/Toolbar'
+import SideDrawer from 'src/components/navigation/SideDrawer'
+import Header from 'src/components/content/Header'
+import Footer from 'src/components/content/Footer'
+import ArrowUp from 'src/components/ui/ArrowUp/ArrowUp'
+import Logo from 'src/components/Logo'
+import CookiesBar from 'src/components/CookiesBar'
+import LanguagePack from 'src/components/LanguagePack'
 
 const Layout: FC = ({ children }) => {
   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false)

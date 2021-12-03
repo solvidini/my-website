@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './i18n'
-import './sass/root.scss'
+import 'src/i18n'
+import 'src/sass/root.scss'
 
-import * as serviceWorker from './serviceWorker'
-import App from './App'
-import { ImageLoaderProvider } from './utils/ImageLoaderContext'
+import * as serviceWorker from 'src/serviceWorker'
+import App from 'src/App'
+import { ImageLoaderProvider } from 'src/utils/ImageLoaderContext'
 
 ReactDOM.render(
   <React.Suspense fallback='Loading...'>

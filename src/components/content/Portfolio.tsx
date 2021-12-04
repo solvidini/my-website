@@ -10,7 +10,7 @@ import projectW from 'src/assets/images/projects/project-projektw.gif'
 import pizzaBuilder from 'src/assets/images/projects/project-pizza-builder.gif'
 import bregulaInsurances from 'src/assets/images/projects/project-bregula-insurances.gif'
 import dailyTasks from 'src/assets/images/projects/project-daily-tasks.jpg'
-import canvasBubbles from 'src/assets/images/projects/project-canvas-1.gif'
+import canvasBubbles from 'src/assets/images/projects/canvas-bubbles.gif'
 import swpiu from 'src/assets/images/projects/project-swpiu.gif'
 import button from 'src/assets/images/projects/project-button.gif'
 import calculator from 'src/assets/images/projects/project-calculator.jpg'
@@ -100,10 +100,10 @@ const Portfolio: React.FC = () => {
       source: yourTurn,
     },
     {
-      title: 'Canvas Animation',
+      title: 'Canvas Bubbles',
       description: t('Portfolio.CanvasBubbles.Description'),
-      github: 'https://github.com/ssazero/canvas-project-one',
-      live: 'https://ssazero.github.io/canvas-project-one/',
+      github: 'https://github.com/ssazero/canvas-bubbles',
+      live: 'https://ssazero.github.io/canvas-bubbles',
       source: canvasBubbles,
     },
     // {

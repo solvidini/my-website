@@ -12,6 +12,7 @@ interface IInput {
   value: string
   rows?: number
   required?: boolean
+  testId?: string
   onChange: (id: string, value: string) => void
   onBlur: (id: string) => void
 }
@@ -31,6 +32,7 @@ const Input = (props: IInput) => {
     label,
     errorMessage,
     name,
+    testId = '',
   } = props
 
   const validityClass =
@@ -50,6 +52,7 @@ const Input = (props: IInput) => {
       case 'textarea':
         return (
           <textarea
+            data-testid={testId}
             className={['text-field__input text-field__input--textarea', validityClass].join(' ')}
             id={id}
             name={name}
@@ -64,6 +67,7 @@ const Input = (props: IInput) => {
       default:
         return (
           <input
+            data-testid={testId}
             className={['text-field__input', validityClass].join(' ')}
             type={type ? type : 'text'}
             id={id}

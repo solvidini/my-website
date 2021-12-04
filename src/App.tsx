@@ -78,7 +78,7 @@ function App() {
 
   const renderLoadingScreen = () => {
     return (
-      <div className='loading-screen'>
+      <div data-testid='loading-screen' className='loading-screen'>
         <img className='loading-screen__logo' src={logo} alt='SS' ref={lsLogoRef} />
         <div ref={lsSpinnerRef}>
           <Spinner />

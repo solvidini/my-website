@@ -9,6 +9,7 @@
   @include respond(phone) {
     flex-flow: column;
     height: auto;
+    max-height: 100%;
     width: 100%;
   }
 
@@ -28,7 +29,7 @@
     @include respond(phone) {
       font-size: 3rem;
       font-weight: 300;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
     }
 
     &__link,
@@ -106,8 +107,7 @@
     }
 
     &--show-on {
-      transform: translateX(-100%);
-      animation: navItemSlide 0.7s forwards;
+      animation: navItemSlide 0.7s both ease;
 
       &:nth-child(2) {
         animation-delay: 50ms;

@@ -35,7 +35,7 @@ const MAIL_FORM = {
   },
 }
 
-const Contact: React.FC = () => {
+const Contact: React.FC<{ disableGsap?: boolean }> = ({ disableGsap }) => {
   const { t } = useTranslation()
   const formRef = React.useRef(null)
   const [mailForm, setMailForm] = useState<typeof MAIL_FORM>(MAIL_FORM)
@@ -45,25 +45,27 @@ const Contact: React.FC = () => {
   const [isLoading, setLoading] = useState<boolean>(false)
 
   React.useEffect(() => {
-    gsap.fromTo(
-      formRef.current,
-      {
-        autoAlpha: 0,
-        y: 300,
-      },
-      {
-        duration: 1,
-        ease: 'power1',
-        autoAlpha: 1,
-        y: 0,
-        scrollTrigger: {
-          id: 'section-contact',
-          trigger: formRef.current,
-          start: 'top center+=400',
-          toggleActions: 'play none none reverse',
+    if (!disableGsap) {
+      gsap.fromTo(
+        formRef.current,
+        {
+          autoAlpha: 0,
+          y: 300,
         },
-      },
-    )
+        {
+          duration: 1,
+          ease: 'power1',
+          autoAlpha: 1,
+          y: 0,
+          scrollTrigger: {
+            id: 'section-contact',
+            trigger: formRef.current,
+            start: 'top center+=400',
+            toggleActions: 'play none none reverse',
+          },
+        },
+      )
+    }
   }, [])
 
   useEffect(() => {
@@ -165,10 +167,11 @@ const Contact: React.FC = () => {
         <span className='section-header__title'>{t('Contact.Title')}</span>
         <span className='section-header__sub-title'>{t('Contact.SubTitle')}</span>
       </h2>
-      <form className='contact-form' onSubmit={onSubmitHandler} ref={formRef}>
+      <form aria-label='form' className='contact-form' onSubmit={onSubmitHandler} ref={formRef}>
         <div className='contact-form__block'>E-MAIL</div>
         <div className='contact-form__group'>
           <Input
+            testId='email'
             type='email'
             id='email'
             name='email'
@@ -197,6 +200,7 @@ const Contact: React.FC = () => {
         </div>
         <div className='contact-form__group'>
           <Input
+            testId='subject'
             type='text'
             id='subject'
             name='subject'
@@ -213,6 +217,7 @@ const Contact: React.FC = () => {
         </div>
         <div className='contact-form__group'>
           <Input
+            testId='message'
             type='textarea'
             id='message'
             name='message'

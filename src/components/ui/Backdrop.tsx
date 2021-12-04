@@ -5,13 +5,18 @@ interface IBackdrop {
   show: boolean
   notVisible?: boolean
   onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
+  isSideDrawer?: boolean
 }
 
-const Backdrop = ({ show, notVisible, onClick }: IBackdrop) =>
+const Backdrop = ({ show, notVisible, onClick, isSideDrawer }: IBackdrop) =>
   ReactDOM.createPortal(
     show ? (
       <div
-        className={notVisible ? 'backdrop' : 'backdrop backdrop--visible'}
+        className={[
+          'backdrop',
+          !notVisible ? 'backdrop--visible' : '',
+          isSideDrawer ? 'backdrop--sideDrawer' : '',
+        ].join(' ')}
         onClick={onClick}
       ></div>
     ) : null,

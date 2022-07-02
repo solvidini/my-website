@@ -97,7 +97,10 @@
     "ANNSR": {
       "Description": "Sztuczna sieć neuronowa do rozpoznawania symboli"
     },
-    "Title": "Portfolio"
+    "Title": "Portfolio",
+    "MiniYT": {
+      "Description": "Mini wersja YouTube"
+    }
   },
   "Contact": {
     "Title": "Kontakt",

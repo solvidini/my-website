@@ -1,34 +1,12 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import gsap from 'gsap'
 
 import { TECHNOLOGIES, TechnologyType, ITechnology } from 'src/configurations/technologies'
 import Technology from 'src/components/Technology'
 
 const Skills: React.FC = () => {
   const { t } = useTranslation()
-  const technologiesRef = React.useRef(null)
   const [highlightedType, setHighlightedType] = React.useState<TechnologyType>(null)
-
-  React.useEffect(() => {
-    gsap.fromTo(
-      technologiesRef.current,
-      {
-        autoAlpha: 0,
-      },
-      {
-        duration: 1,
-        ease: 'power1',
-        autoAlpha: 1,
-        scrollTrigger: {
-          id: 'section-skills',
-          trigger: technologiesRef.current,
-          start: 'top center+=110',
-          toggleActions: 'play none none reverse',
-        },
-      },
-    )
-  }, [])
 
   const renderTechnologies = (techData: ITechnology[]) =>
     techData.map(({ id, src, name, styles, type }) => (
@@ -81,9 +59,7 @@ const Skills: React.FC = () => {
         </div>
       </div>
       <div className='technologies'>
-        <div ref={technologiesRef} className='technologies__skills'>
-          {renderTechnologies(TECHNOLOGIES)}
-        </div>
+        <div className='technologies__skills'>{renderTechnologies(TECHNOLOGIES)}</div>
       </div>
       <div className='technologies__and-other'>{t('Skills.AndMore')}</div>
     </section>

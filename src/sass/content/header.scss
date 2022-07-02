@@ -63,7 +63,7 @@
   display: inline-block;
 
   font-family: 'Genos';
-  font-size: 11rem;
+  font-size: 14rem;
   font-weight: 200;
   line-height: 1;
   letter-spacing: 1rem;
@@ -73,7 +73,7 @@
   animation: appear 3s ease;
 
   @include respond(phone) {
-    font-size: 7rem;
+    font-size: 9rem;
     letter-spacing: 0.5rem;
   }
 

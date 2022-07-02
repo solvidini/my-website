@@ -97,7 +97,10 @@
     "ANNSR": {
       "Description": "Artificial neural network symbol recognition"
     },
-    "Title": "Portfolio"
+    "Title": "Portfolio",
+    "MiniYT": {
+      "Description": "Mini version of YouTube"
+    }
   },
   "Contact": {
     "Title": "Contact",

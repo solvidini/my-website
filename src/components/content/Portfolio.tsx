@@ -16,6 +16,7 @@ import button from 'src/assets/images/projects/project-button.gif'
 import calculator from 'src/assets/images/projects/project-calculator.jpg'
 import mot from 'src/assets/images/projects/project-mot.gif'
 import annsr from 'src/assets/images/projects/project-annsr.gif'
+import miniYT from 'src/assets/images/projects/project-mini-youtube.gif'
 
 // import fotobudka from 'src/assets/images/projects/project-fotobudka.gif'
 
@@ -39,11 +40,11 @@ const Portfolio: React.FC = () => {
       source: swpiu,
     },
     {
-      title: 'Pizza Builder',
-      description: t('Portfolio.PizzaBuilder.Description'),
-      github: 'https://github.com/ssazero/pizza-builder',
-      live: 'https://pizza-builder-6412e.web.app/',
-      source: pizzaBuilder,
+      title: 'Mini YouTube',
+      description: t('Portfolio.MiniYT.Description'),
+      github: 'https://github.com/ssazero/mini-youtube',
+      live: 'https://ssazero.github.io/mini-youtube/#/',
+      source: miniYT,
     },
     {
       title: 'Tapicernia Button',
@@ -57,6 +58,13 @@ const Portfolio: React.FC = () => {
       github: 'https://github.com/ssazero/multiple-object-tracking',
       live: 'https://ssazero.github.io/multiple-object-tracking/',
       source: mot,
+    },
+    {
+      title: 'Pizza Builder',
+      description: t('Portfolio.PizzaBuilder.Description'),
+      github: 'https://github.com/ssazero/pizza-builder',
+      live: 'https://pizza-builder-6412e.web.app/',
+      source: pizzaBuilder,
     },
     {
       title: 'Calculator',

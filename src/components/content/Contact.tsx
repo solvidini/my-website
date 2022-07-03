@@ -118,7 +118,7 @@ const Contact: React.FC<{ disableGsap?: boolean }> = ({ disableGsap }) => {
 
     setLoading(true)
     try {
-      const result = await fetch('https://samuelk.pl:8081/send', {
+      const result = await fetch('https://front-up.pro:8081/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

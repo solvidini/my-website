@@ -36,7 +36,7 @@ const Portfolio: React.FC = () => {
       title: 'SWPIU',
       description: t('Portfolio.SWPIU.Description'),
       github: 'https://github.com/ssazero/eng-proj-client',
-      live: 'http://swpiu.samuelk.pl/',
+      live: 'http://swpiu.front-up.pro/',
       source: swpiu,
     },
     {

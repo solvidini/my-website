@@ -19,8 +19,8 @@ const Footer = () => {
           <h4>
             {t('Footer.Contact')} <FontAwesomeIcon icon={faEnvelope} />
           </h4>
-          <a target='_blank' rel='noopener noreferrer' href='mailto:contact@samuelk.pl'>
-            contact@samuelk.pl
+          <a target='_blank' rel='noopener noreferrer' href='mailto:samuel@front-up.pro'>
+            samuel@front-up.pro
           </a>
           <a target='_blank' rel='noopener noreferrer' href='mailto:samukedo@gmail.com'>
             samukedo@gmail.com

@@ -17,7 +17,7 @@ Main technologies I used to create this website:
 
 ## Live
 
-https://samuelk.pl/
+https://front-up.pro/
 
 ## Author
 

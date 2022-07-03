@@ -25,7 +25,7 @@ describe('<Contact />', () => {
 
   test('Tests form submitting', async () => {
     const { getByTestId, getByText } = render(<Contact disableGsap />)
-    const submitRequest = nock('https://samuelk.pl:8081')
+    const submitRequest = nock('https://front-up.pro:8081')
       .persist()
       .post('/send', {
         name: '',

@@ -98,6 +98,7 @@ const Offer: React.FC = () => {
         <span className='section-header__title'>{t('Offer.Title')}</span>
         <span className='section-header__sub-title'>{t('Offer.SubTitle')}</span>
       </h2>
+      <div className='section-warning'>{t('Offer.Warning')}</div>
       <div className='offer-grid'>{renderOfferItems()}</div>
     </section>
   )

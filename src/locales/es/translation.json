@@ -48,7 +48,8 @@
     "ServerAdministration": {
       "Title": "Administración del servidor",
       "Description": "Me ocupo del mantenimiento de proyectos terminados y la rápida implementación de cambios y posibles correcciones en el servidor que arriendo."
-    }
+    },
+    "Warning": "No acepto pedidos privados."
   },
   "Portfolio": {
     "SubTitle": "Mis creaciones",

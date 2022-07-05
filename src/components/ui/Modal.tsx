@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom'
 import Backdrop from './Backdrop'
 
 interface Props {
+  children: React.ReactNode
   show: boolean
   onClose: (event: React.MouseEvent<HTMLDivElement | HTMLButtonElement, MouseEvent>) => void
   isError?: boolean

@@ -12,13 +12,14 @@ import Logo from 'src/components/Logo'
 import CookiesBar from 'src/components/CookiesBar'
 import LanguagePack from 'src/components/LanguagePack'
 
-const Layout: FC = ({ children }) => {
+const Layout: FC<{
+  children: React.ReactNode
+}> = ({ children }) => {
   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false)
   const [languageDropdownIsVisible, setLanguageDropdownIsVisible] = useState(false)
   const [cookiesBarIsVisible, setCookiesBarIsVisible] = useState(false)
   const [scrollY, setScrollY] = useState(0)
   const [stickyToolbar, setStickyToolbar] = useState(false)
-  const [hideHeaderCanvas, setHideHeaderCanvas] = useState(false)
   const headerRef = useRef<HTMLHeadElement>(null)
   const toolbarRef = useRef<HTMLDivElement>(null)
   const languagePackRef = useRef<HTMLDivElement>(null)
@@ -55,10 +56,8 @@ const Layout: FC = ({ children }) => {
 
     if (scrollY > height) {
       setStickyToolbar(true)
-      setHideHeaderCanvas(true)
     } else {
       setStickyToolbar(false)
-      setHideHeaderCanvas(false)
     }
   }, [setStickyToolbar, scrollY])
 
@@ -100,7 +99,7 @@ const Layout: FC = ({ children }) => {
         </>
       )}
       {cookiesBarIsVisible && <CookiesBar clicked={acceptedCookiesHandler} />}
-      <Header forwardedRef={headerRef} hideCanvas={hideHeaderCanvas}>
+      <Header forwardedRef={headerRef}>
         <Toolbar
           forwardedRef={toolbarRef}
           sideDrawerToggleClicked={sideDrawerToggleHandler}

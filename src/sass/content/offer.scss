@@ -1,4 +1,5 @@
 .section-offer {
+  z-index: 2;
   @include sectionDropShadow;
   @include perspectivetrick;
   position: relative;

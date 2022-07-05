@@ -2,7 +2,7 @@
   "short_name": "Portfolio Website",
   "name": "Front Up! Samuel Kędziora",
   "default_locale": "pl",
-  "description": "(En) Portfolio website. It was made to show my programming and website design skills. (Pl) Strona typu portfolio. Została wykonana z myślą o pokazaniu moich umiejętności programowania jak i projektowania stron.",
+  "description": "Portfolio website. It was made to show my programming and website design skills.",
   "icons": [
     {
       "src": "ssicon.ico",

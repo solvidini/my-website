@@ -3,19 +3,27 @@ import { useTranslation } from 'react-i18next'
 import ReactTypingEffect from 'react-typing-effect'
 import { Link } from 'react-scroll'
 import Particles from 'react-tsparticles'
+import { loadFull } from 'tsparticles'
 
 import ArrowDown from 'src/components/ui/ArrowDown/ArrowDown'
 import ParticlesConfig from 'src/configurations/particlesjs-config'
 import { ImageLoaderContext } from 'src/utils/ImageLoaderContext'
 
 interface IHeader {
+  children: React.ReactNode
   forwardedRef: RefObject<HTMLHeadElement>
-  hideCanvas: boolean
 }
 
-const Header: FC<IHeader> = ({ children, hideCanvas, forwardedRef }) => {
+const Header: FC<IHeader> = ({ children, forwardedRef }) => {
   const { images } = React.useContext(ImageLoaderContext)
   const { t } = useTranslation()
+
+  const particlesInit = React.useCallback(async main => {
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(main)
+  }, [])
 
   const words = [`${t('Header.SentenceArray.0')} 😉`, t('Header.SentenceArray.1')]
 
@@ -32,15 +40,13 @@ const Header: FC<IHeader> = ({ children, hideCanvas, forwardedRef }) => {
 
   return (
     <header className='header' id='top' ref={forwardedRef} style={headerStyles}>
-      {!hideCanvas && (
-        <Particles
-          id='header-particles'
-          canvasClassName='header-particles'
-          params={ParticlesConfig}
-          width='100%'
-          height='100%'
-        />
-      )}
+      <Particles
+        id='header-particles'
+        init={particlesInit}
+        options={ParticlesConfig}
+        width='100%'
+        height='100%'
+      />
       <div className='header__text-box'>
         <h1 className='heading-primary' data-text='FRONT UP!'>
           FRONT UP!

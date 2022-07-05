@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-scroll'
 
 interface INavigationItem {
+  children: React.ReactNode
   to: string
   offset?: number
   onClick: (() => void) & React.MouseEventHandler<HTMLButtonElement>

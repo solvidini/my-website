@@ -1,6 +1,11 @@
-import { RecursivePartial, IOptions } from 'react-tsparticles'
-
-const particles: RecursivePartial<IOptions> = {
+const particles = {
+  style: {
+    position: 'relative',
+    width: '100%',
+    height: '100%',
+  },
+  fullScreen: true,
+  detectRetina: true,
   pauseOnOutsideViewport: true,
   interactivity: {
     events: {

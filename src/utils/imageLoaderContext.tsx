@@ -33,7 +33,7 @@ const preloadImages = [
   },
 ]
 
-export const ImageLoaderProvider: React.FC = ({ children }) => {
+export const ImageLoaderProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [areImagesLoaded, setImagesLoaded] = React.useState<boolean>(false)
   const [numberOfImagesLoaded, setNumberOfImagesLoaded] = React.useState<number>(0)
   const [images, setImages] = React.useState<IImages>({})

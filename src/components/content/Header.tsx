@@ -7,7 +7,7 @@ import { loadFull } from 'tsparticles'
 
 import ArrowDown from 'src/components/ui/ArrowDown/ArrowDown'
 import ParticlesConfig from 'src/configurations/particlesjs-config'
-import { ImageLoaderContext } from 'src/utils/ImageLoaderContext'
+import { ImageLoaderContext } from 'src/utils/image-loader-context'
 
 interface IHeader {
   children: React.ReactNode

@@ -5,7 +5,7 @@ import 'src/sass/root.scss'
 
 import * as serviceWorker from 'src/serviceWorker'
 import App from 'src/App'
-import { ImageLoaderProvider } from 'src/utils/ImageLoaderContext'
+import { ImageLoaderProvider } from 'src/utils/image-loader-context'
 
 const container = document.getElementById('root')
 const root = createRoot(container)

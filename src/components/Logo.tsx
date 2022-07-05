@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ImageLoaderContext } from 'src/utils/ImageLoaderContext'
+import { ImageLoaderContext } from 'src/utils/image-loader-context'
 
 const Logo: React.FC<{ styles?: React.CSSProperties; transparent?: boolean }> = ({
   styles = {},

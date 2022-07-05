@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodepen, faGithub, faLinkedinIn, faSoundcloud } from '@fortawesome/free-brands-svg-icons'
 
 import Image from 'src/components/ui/Image'
-import { ImageLoaderContext } from 'src/utils/ImageLoaderContext'
+import { ImageLoaderContext } from 'src/utils/image-loader-context'
 
 const About = () => {
   const { images } = React.useContext(ImageLoaderContext)

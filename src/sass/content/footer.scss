@@ -28,7 +28,7 @@ $square-size: 2.5rem;
   }
 
   &__top {
-    padding: 8rem 0 3rem 0;
+    padding: 5rem 0 2rem 0;
     z-index: 0;
 
     display: flex;
@@ -39,7 +39,7 @@ $square-size: 2.5rem;
     @include respond(phone) {
       flex-flow: column wrap;
       align-items: center;
-      padding: 3rem 0;
+      padding: 2rem 0 3rem;
     }
 
     &-logo {
@@ -53,12 +53,14 @@ $square-size: 2.5rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -30%);
-      width: 110%;
-      height: 110%;
+      width: 120%;
+      height: 120%;
       max-width: 30rem;
 
       @include respond(phone) {
         transform: translate(-50%, -44%);
+        width: 95%;
+        height: 95%;
       }
     }
 
@@ -67,7 +69,7 @@ $square-size: 2.5rem;
       flex-flow: column wrap;
 
       color: $color-dark-text;
-      line-height: 2;
+      line-height: 1.8;
       font-size: 1.6rem;
       letter-spacing: 0.2rem;
       min-width: 26rem;

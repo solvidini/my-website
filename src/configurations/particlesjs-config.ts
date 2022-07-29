@@ -1,11 +1,13 @@
 const particles = {
   style: {
     position: 'relative',
-    width: '100%',
-    height: '100%',
+    width: '70%',
+    height: '70%',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
   },
   fullScreen: true,
-  detectRetina: true,
   pauseOnOutsideViewport: true,
   interactivity: {
     events: {
@@ -16,19 +18,11 @@ const particles = {
     },
     modes: {
       connect: {
-        distance: 200,
+        distance: 300,
         links: {
           opacity: 0.7,
         },
         radius: 90,
-      },
-      grab: {
-        distance: 200,
-        links: {
-          blink: true,
-          consent: true,
-          opacity: 0.4,
-        },
       },
     },
   },
@@ -38,25 +32,16 @@ const particles = {
     },
     links: {
       blink: true,
-      color: {
-        value: '#ffffff',
-      },
-      distance: 150,
+      distance: 100,
       enable: true,
-      opacity: 0.3,
+      opacity: 0.2,
     },
     move: {
-      spin: {
-        enable: false,
-      },
       enable: true,
-      speed: 0.5,
+      speed: 0.4,
     },
     number: {
-      density: {
-        enable: true,
-      },
-      value: 80,
+      value: 35,
     },
     opacity: {
       value: {
@@ -65,29 +50,8 @@ const particles = {
       },
       animation: {
         enable: true,
-        speed: 3,
-        minimumValue: 0.1,
-      },
-    },
-    size: {
-      value: {
-        min: 0.1,
-        max: 0.1,
-      },
-    },
-    twinkle: {
-      lines: {
-        enable: false,
-        frequency: 0.005,
-        opacity: 0.6,
-        color: {
-          value: '#f1c532',
-        },
-      },
-      particles: {
-        color: {
-          value: '#ffff00',
-        },
+        speed: 2,
+        minimumValue: 0.2,
       },
     },
   },

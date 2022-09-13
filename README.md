@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-This is my personal portfolio - my own website. You can also find some of my projects here.
+This is my personal portfolio. You can find some of my private projects here.
 
 ## Technologies
 

@@ -90,7 +90,7 @@ const Layout: FC<{
     <>
       {!sideDrawerIsVisible && (
         <>
-          <Logo transparent />
+          <Logo />
           <LanguagePack
             visible={languageDropdownIsVisible}
             showToggler={languagePackToggleHandler}

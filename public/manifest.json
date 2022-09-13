@@ -5,8 +5,8 @@
   "description": "Portfolio website. It was made to show my programming and website design skills.",
   "icons": [
     {
-      "src": "ssicon.ico",
-      "sizes": "64x64 48x48 32x32 16x16",
+      "src": "fuicon.ico",
+      "sizes": "256x256 128x128 64x64 48x48 32x32 16x16",
       "type": "image/x-icon"
     }
   ],

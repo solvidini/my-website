@@ -44,23 +44,24 @@ $square-size: 2.5rem;
 
     &-logo {
       z-index: -1;
-      background-image: url('../../assets/images/logo.png');
+      background-image: url('../../assets/images/logo-transparent-dark.png');
       background-position: center;
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
-      opacity: 0.1;
+      opacity: 0.4;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -30%);
-      width: 120%;
-      height: 120%;
+      width: 110%;
+      height: 110%;
       max-width: 30rem;
 
       @include respond(phone) {
         transform: translate(-50%, -44%);
-        width: 95%;
-        height: 95%;
+        opacity: 0.2;
+        width: 85%;
+        height: 85%;
       }
     }
 

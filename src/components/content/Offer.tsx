@@ -60,7 +60,7 @@ const Offer: React.FC = () => {
           autoAlpha: 1,
           x: 0,
           scrollTrigger: {
-            id: 'section-offer',
+            id: 'offer',
             trigger: el,
             start: 'top center+=110',
             toggleActions: 'play none none reverse',
@@ -93,7 +93,7 @@ const Offer: React.FC = () => {
     ))
 
   return (
-    <section className='section-offer' id='section-offer'>
+    <section className='section-offer' id='offer'>
       <h2 className='section-header'>
         <span className='section-header__title'>{t('Offer.Title')}</span>
         <span className='section-header__sub-title'>{t('Offer.SubTitle')}</span>

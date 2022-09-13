@@ -64,7 +64,7 @@ const Header: FC<IHeader> = ({ children, forwardedRef }) => {
         />
       </div>
       <div className='header__arrow-down'>
-        <Link to='section-about' smooth duration={1500}>
+        <Link to='about-me' smooth duration={1500}>
           <ArrowDown />
         </Link>
       </div>

@@ -16,19 +16,19 @@ const NavigationItems = ({ isOpened = false, onClick = () => undefined }: INavig
       <NavigationItem to='top' isOpened={isOpened} onClick={onClick}>
         {t('Nav.Home')}
       </NavigationItem>
-      <NavigationItem to='section-about' isOpened={isOpened} onClick={onClick}>
+      <NavigationItem to='about-me' isOpened={isOpened} onClick={onClick}>
         {t('Nav.About')}
       </NavigationItem>
-      <NavigationItem to='section-skills' isOpened={isOpened} onClick={onClick}>
+      <NavigationItem to='skills' isOpened={isOpened} onClick={onClick}>
         {t('Nav.Skills')}
       </NavigationItem>
-      <NavigationItem to='section-offer' isOpened={isOpened} onClick={onClick}>
+      <NavigationItem to='offer' isOpened={isOpened} onClick={onClick}>
         {t('Nav.Offer')}
       </NavigationItem>
-      <NavigationItem to='section-portfolio' isOpened={isOpened} onClick={onClick}>
+      <NavigationItem to='portfolio' isOpened={isOpened} onClick={onClick}>
         {t('Nav.Portfolio')}
       </NavigationItem>
-      <NavigationItem to='section-contact' isOpened={isOpened} onClick={onClick}>
+      <NavigationItem to='contact' isOpened={isOpened} onClick={onClick}>
         {t('Nav.Contact')}
       </NavigationItem>
     </ul>

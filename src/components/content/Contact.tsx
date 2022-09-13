@@ -58,7 +58,7 @@ const Contact: React.FC<{ disableGsap?: boolean }> = ({ disableGsap }) => {
           autoAlpha: 1,
           y: 0,
           scrollTrigger: {
-            id: 'section-contact',
+            id: 'contact',
             trigger: formRef.current,
             start: 'top center+=400',
             toggleActions: 'play none none reverse',
@@ -161,7 +161,7 @@ const Contact: React.FC<{ disableGsap?: boolean }> = ({ disableGsap }) => {
   }
 
   return (
-    <section className='section-contact' id='section-contact'>
+    <section className='section-contact' id='contact'>
       {renderError()}
       <h2 className='section-header'>
         <span className='section-header__title'>{t('Contact.Title')}</span>

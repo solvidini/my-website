@@ -18,7 +18,7 @@ const About = () => {
       ease: 'power1',
       autoAlpha: 0,
       scrollTrigger: {
-        trigger: '#section-about',
+        trigger: '#about-me',
         start: 'top center+=100',
         toggleActions: 'play none none reverse',
       },
@@ -26,7 +26,7 @@ const About = () => {
   }, [])
 
   return (
-    <section className='section-about' id='section-about'>
+    <section className='section-about' id='about-me'>
       <div className='section-about__content'>
         <h2 className='section-header'>
           <span className='section-header__pre'>{t('About.Header')}</span>

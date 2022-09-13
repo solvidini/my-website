@@ -134,7 +134,7 @@ const Portfolio: React.FC = () => {
           ease: 'power1',
           autoAlpha: 1,
           scrollTrigger: {
-            id: 'section-portfolio',
+            id: 'portfolio',
             trigger: el,
             start: 'top center+=110',
             toggleActions: 'play none none reverse',
@@ -151,7 +151,7 @@ const Portfolio: React.FC = () => {
   }
 
   return (
-    <section className='section-portfolio' id='section-portfolio'>
+    <section className='section-portfolio' id='portfolio'>
       <h2 className='section-header section-header--white'>
         <span className='section-header__title'>{t('Portfolio.Title')}</span>
         <span className='section-header__sub-title'>{t('Portfolio.SubTitle')}</span>

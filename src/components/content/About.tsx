@@ -44,7 +44,7 @@ const About = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='about-me__link'
-                href='https://soundcloud.com/ssazero'
+                href='https://soundcloud.com/solvidi'
                 title='SoundCloud'
               >
                 <FontAwesomeIcon icon={faSoundcloud} />
@@ -62,7 +62,7 @@ const About = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='about-me__link'
-                href='https://www.linkedin.com/in/ssazero/'
+                href='https://www.linkedin.com/in/samuelkedziora/'
                 title='LinkedIn'
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
@@ -71,7 +71,7 @@ const About = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='about-me__link'
-                href='https://codepen.io/ssazero'
+                href='https://codepen.io/solvidi'
                 title='CodePen'
               >
                 <FontAwesomeIcon icon={faCodepen} />

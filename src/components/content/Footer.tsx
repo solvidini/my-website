@@ -33,14 +33,6 @@ const Footer = () => {
           <a
             target='_blank'
             rel='noopener noreferrer'
-            href='https://drive.google.com/file/d/1xP9JN5og8rnONDwM8AJlnhGHyrsU2Q1p/view'
-            title='Curriculum vitae PL'
-          >
-            Resume (PL)
-          </a>
-          <a
-            target='_blank'
-            rel='noopener noreferrer'
             href='https://drive.google.com/file/d/1JPlq5PQlUYPhNXDbvKRrTA3TA-WTPeVA/view'
             title='Curriculum vitae ENG'
           >
@@ -53,7 +45,7 @@ const Footer = () => {
           target='_blank'
           rel='noopener noreferrer'
           className='footer__social-link'
-          href='https://www.linkedin.com/in/ssazero/'
+          href='https://www.linkedin.com/in/samuelkedziora/'
         >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </a>

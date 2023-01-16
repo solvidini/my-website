@@ -1,6 +1,6 @@
 import React from 'react'
 
-import headerImageSrc from '../assets/images/ssazero-background-dark.jpg'
+import headerImageSrc from '../assets/images/solvidi-background-dark.jpg'
 import transparentLogoSrc from '../assets/images/logo-transparent.png'
 import justMeSrc from '../assets/images/me.png'
 

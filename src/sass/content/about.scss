@@ -26,20 +26,29 @@
 .about-me {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 4rem 8rem;
   text-align: justify;
 
   @include respond(tab-port) {
-    flex-flow: column;
     max-width: 650px;
     margin: 2rem auto 0;
   }
 
   @include respond(phone) {
-    flex-flow: column;
     margin: 2.5rem 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-port) {
+      flex-flow: column;
+    }
   }
 
   &__image {
@@ -87,10 +96,15 @@
   }
 
   &__links {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: calc(70% - 8rem);
     margin-top: 2rem;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       margin-top: 4rem;
+      align-self: center;
     }
   }
 

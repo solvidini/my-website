@@ -17,12 +17,12 @@
   "Header": {
     "SentenceArray": [
       "¡Bienvenido a mi página! ",
-      "Aquí encontrarás información sobre mí y también los proyectos que realicé."
+      "Aquí encontrarás información sobre mí y mi cartera de proyectos."
     ]
   },
   "About": {
     "Header": "Unas palabras sobre mi",
-    "Content": "Me apasiona la programación y cada día amplío mis horizontes. \nEstoy interesado en las últimas tendencias en el campo de la creación de sitios web, aplicaciones web, blogs, juegos, etc. Como desarrollador, me centro en los problemas de UI y UX y me aseguro de que los sitios web funcionen sin problemas y estén adaptados para mostrarse en cualquier \ndispositivo. \nMe especializo en JavaScript y otras tecnologías front-end, pero en el desarrollo de mis competencias también me concentro en tecnologías de servidor. \nMe acerco a cada proyecto de forma individual. \nMe enfoco en la comunicación con el cliente mientras encuentro las mejores soluciones posibles. \nTambién tengo muchos otros intereses, uno de los cuales es crear música electrónica que puedas escuchar en mi SoundCloud."
+    "Content": "Soy un desarrollador frontend experimentado que ama la programación y se esfuerza constantemente por ampliar sus conocimientos y habilidades. Sigo las últimas tendencias en la creación de sitios web, aplicaciones web, blogs y juegos. Mi tarea principal es brindar a los usuarios una experiencia fluida y agradable prestando atención a los detalles de la UI y la UX para que las aplicaciones funcionen de manera óptima en diferentes dispositivos. Soy especialista en JavaScript y otras tecnologías frontend modernas, pero también trato de mejorar mis habilidades relacionadas con las tecnologías de servidor. Además de las actividades profesionales, desarrollo activamente varios intereses, como la creación de música electrónica, que puedes escuchar en mi perfil de SoundCloud."
   },
   "Skills": {
     "Title": "Habilidades",

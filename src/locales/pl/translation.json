@@ -17,12 +17,12 @@
   "Header": {
     "SentenceArray": [
       "Witaj na mojej stronie! ",
-      "Znajdziesz tu informacje na mój temat oraz projekty, które wykonałem."
+      "Znajdziesz tutaj informacje o mnie oraz portfolio moich projektów."
     ]
   },
   "About": {
     "Header": "Kilka słów o mnie",
-    "Content": "Jestem pasjonatem programowania, który codziennie poszerza swoje horyzonty. Interesuję się najnowszymi trendami z zakresu tworzenia stron www, aplikacji webowych, blogów, gier etc. Jako developer skupiam się na zagadnieniach UI, UX oraz dbam o to, aby strony działały płynnie i były dostosowane do wyświetlania na każdym urządzeniu. Specjalizuję się w języku JavaScript i innych technologiach front-endowych, natomiast w rozwijaniu swoich kompetencji koncentruję się również na technologiach serwerowych. Do każdego projektu podchodzę indywidualnie. Stawiam na komunikację z klientem, znajdując przy tym najlepsze możliwe rozwiązania. Posiadam również wiele innych zainteresowań, a jednym z nich jest tworzenie muzyki elektronicznej, którą można posłuchać na moim SoundCloudzie."
+    "Content": "Jestem doświadczonym Frontend Developerem, który uwielbia programowanie oraz stale dąży do poszerzania swojej wiedzy i umiejętności. Śledzę najnowsze trendy w tworzeniu stron internetowych, aplikacji internetowych, blogów i gier. Moje główne zadanie to zapewnienie użytkownikom płynnych i przyjemnych doświadczeń poprzez dbałość o detale UI i UX, tak aby aplikacje działały optymalnie na różnych urządzeniach. Jestem specjalistą w dziedzinie JavaScript i innych nowoczesnych technologii frontendowych, ale także staram się doskonalić umiejętności związane z obszarami serwerowymi. Poza zajęciami zawodowymi aktywnie rozwijam różnorodne zainteresowania, takie jak tworzenie muzyki elektronicznej, którą można posłuchać na moim profilu SoundCloud."
   },
   "Skills": {
     "Title": "Umiejętności",

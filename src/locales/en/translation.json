@@ -17,12 +17,12 @@
   "Header": {
     "SentenceArray": [
       "Welcome to my page! ",
-      "You will find here information about me and also projects I made."
+      "This is where you can find information about me and browse through my project portfolio."
     ]
   },
   "About": {
     "Header": "A few words about myself",
-    "Content": "I am passionate about programming and I broaden my horizons every day. I am interested in the latest trends in the field of creating websites, web applications, blogs, games, etc. As a developer, I focus on UI and UX issues and make sure that the websites run smoothly and are adapted to be displayed on any device. I specialize in JavaScript and other front-end technologies, but in developing my competencies I also focus on server technologies. I approach each project individually. I focus on communication with the customer while finding the best possible solutions. I also have many other interests, one of which is creating electronic music that you can listen to on my SoundCloud."
+    "Content": "As a seasoned Frontend Developer, I possess an unwavering passion for programming and strive to continuously expand my knowledge and skills. I remain deeply engrossed in the latest trends shaping the realm of website, web application, blog, and game development. My expertise lies in driving seamless user experiences by meticulously addressing UI and UX details, ensuring optimal performance across all devices. While specializing in JavaScript and other cutting-edge front-end technologies, I also dedicate myself to honing my proficiency in server technologies. Beyond my professional pursuits, I cultivate diverse interests, including the creation of electronic music, which can be explored on my SoundCloud profile."
   },
   "Skills": {
     "Title": "Skills",

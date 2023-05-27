@@ -36,47 +36,49 @@ const About = () => {
           <span style={{ fontSize: '3rem' }}> Frontend&nbsp;Engineer</span>
         </h2>
         <div className='about-me' ref={aboutMeRef}>
-          <Image className='about-me__image' src={images.justMe} alt='Just me' />
-          <div className='about-me__info'>
-            <p className='about-me__info-paragraph'>{t('About.Content')}</p>
-            <div className='about-me__links'>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                className='about-me__link'
-                href='https://soundcloud.com/solvidi'
-                title='SoundCloud'
-              >
-                <FontAwesomeIcon icon={faSoundcloud} />
-              </a>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                className='about-me__link'
-                href='https://github.com/ssazero'
-                title='GitHub'
-              >
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                className='about-me__link'
-                href='https://www.linkedin.com/in/samuelkedziora/'
-                title='LinkedIn'
-              >
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </a>
-              <a
-                target='_blank'
-                rel='noopener noreferrer'
-                className='about-me__link'
-                href='https://codepen.io/solvidi'
-                title='CodePen'
-              >
-                <FontAwesomeIcon icon={faCodepen} />
-              </a>
+          <div className='about-me__content'>
+            <Image className='about-me__image' src={images.justMe} alt='Just me' />
+            <div className='about-me__info'>
+              <p className='about-me__info-paragraph'>{t('About.Content')}</p>
             </div>
+          </div>
+          <div className='about-me__links'>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              className='about-me__link'
+              href='https://soundcloud.com/solvidi'
+              title='SoundCloud'
+            >
+              <FontAwesomeIcon icon={faSoundcloud} />
+            </a>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              className='about-me__link'
+              href='https://github.com/ssazero'
+              title='GitHub'
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              className='about-me__link'
+              href='https://www.linkedin.com/in/samuelkedziora/'
+              title='LinkedIn'
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              className='about-me__link'
+              href='https://codepen.io/solvidi'
+              title='CodePen'
+            >
+              <FontAwesomeIcon icon={faCodepen} />
+            </a>
           </div>
         </div>
       </div>

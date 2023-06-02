@@ -136,7 +136,7 @@ const Portfolio: React.FC = () => {
           scrollTrigger: {
             id: 'portfolio',
             trigger: el,
-            start: 'top center+=110',
+            start: 'top center+=200',
             toggleActions: 'play none none reverse',
           },
         },

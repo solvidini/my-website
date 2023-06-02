@@ -1,11 +1,14 @@
 import React from 'react'
 import gsap from 'gsap'
+import { isMobile } from 'react-device-detect'
 import { Trans, useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodepen, faGithub, faLinkedinIn, faSoundcloud } from '@fortawesome/free-brands-svg-icons'
 
 import Image from 'src/components/ui/Image'
 import { ImageLoaderContext } from 'src/utils/image-loader-context'
+import { AudioPlayer } from '../AudioPlayer'
+import classNames from 'classnames'
 
 const About = () => {
   const { images } = React.useContext(ImageLoaderContext)
@@ -19,7 +22,7 @@ const About = () => {
       autoAlpha: 0,
       scrollTrigger: {
         trigger: '#about-me',
-        start: 'top center+=100',
+        start: 'top center+=200',
         toggleActions: 'play none none reverse',
       },
     })
@@ -92,6 +95,9 @@ const About = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className={classNames('audio', isMobile && 'audio--mobile')}>
+        <AudioPlayer />
       </div>
     </section>
   )

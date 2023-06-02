@@ -197,3 +197,39 @@ select:-webkit-autofill:focus {
     text-decoration: underline;
   }
 }
+
+.audio {
+  margin: 0 5rem;
+  transform: translateY(3rem);
+  display: flex;
+  justify-content: center;
+
+  background-color: $color-background;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  padding: 0 1px;
+
+  &--mobile {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  @include respond(phone) {
+    margin: 0 3rem;
+  }
+
+  audio {
+    height: 5rem;
+    width: 100%;
+  }
+
+  audio::-webkit-media-controls-panel {
+    padding: 0 4px;
+    background: $color-white;
+  }
+
+  audio::-webkit-media-controls {
+    padding: 4px;
+  }
+}

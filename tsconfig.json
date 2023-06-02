@@ -16,7 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
-    "suppressImplicitAnyIndexErrors": true // !TODO just for now, when some packages are still React v17
   },
   "include": ["src"]
 }

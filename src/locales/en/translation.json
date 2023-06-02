@@ -22,7 +22,7 @@
   },
   "About": {
     "Header": "A few words about myself",
-    "Content": "As a seasoned Frontend Developer, I possess an unwavering passion for programming and strive to continuously expand my knowledge and skills. I remain deeply engrossed in the latest trends shaping the realm of website, web application, blog, and game development. My expertise lies in driving seamless user experiences by meticulously addressing UI and UX details, ensuring optimal performance across all devices. While specializing in JavaScript and other cutting-edge front-end technologies, I also dedicate myself to honing my proficiency in server technologies. Beyond my professional pursuits, I cultivate diverse interests, including the creation of electronic music, which can be explored on my SoundCloud profile."
+    "Content": "As a seasoned Frontend Developer, I possess an unwavering passion for programming and strive to continuously expand my knowledge and skills. I remain deeply engrossed in the latest trends shaping the realm of website, web application, blog, and game development. My expertise lies in driving seamless user experiences by meticulously addressing UI and UX details, ensuring optimal performance across all devices. While specializing in JavaScript and other cutting-edge front-end technologies, I also dedicate myself to honing my proficiency in server technologies. Beyond my professional pursuits, I cultivate diverse interests, including the creation of electronic music, which can be explored on my <0>SoundCloud</0> profile."
   },
   "Skills": {
     "Title": "Skills",

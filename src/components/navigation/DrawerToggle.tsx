@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import React from 'react'
 
 interface IDrawerToggle {
@@ -5,20 +6,20 @@ interface IDrawerToggle {
   onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
 }
 
-const DrawerToggle = ({ sideDrawerIsVisible, onClick }: IDrawerToggle) => {
-  const iconClasses = ['drawer-toggle__icon']
-  if (sideDrawerIsVisible) {
-    iconClasses.push('drawer-toggle__icon--active')
-  }
-
-  return (
+const DrawerToggle = ({ sideDrawerIsVisible, onClick }: IDrawerToggle) => (
+  <div
+    onClick={onClick}
+    className={classNames('drawer-toggle__button', sideDrawerIsVisible && 'transparent')}
+  >
     <div
-      onClick={onClick}
-      className={`drawer-toggle__button${sideDrawerIsVisible ? ' transparent' : ''}`}
+      className={classNames(
+        'drawer-toggle__icon',
+        sideDrawerIsVisible && 'drawer-toggle__icon--active',
+      )}
     >
-      <div className={iconClasses.join(' ')}>&nbsp;</div>
+      &nbsp;
     </div>
-  )
-}
+  </div>
+)
 
 export default DrawerToggle

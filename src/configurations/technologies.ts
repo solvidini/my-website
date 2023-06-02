@@ -12,14 +12,13 @@ import react from 'src/assets/images/technologies/react.png'
 import redux from 'src/assets/images/technologies/redux.png'
 import sass from 'src/assets/images/technologies/sass.png'
 import i18next from 'src/assets/images/technologies/i18next.png'
-import symfony from 'src/assets/images/technologies/symfony.png'
+import tailwind from 'src/assets/images/technologies/tailwind.png'
 import vsc from 'src/assets/images/technologies/vsc.png'
-import webstorm from 'src/assets/images/technologies/webstorm.png'
-import gatsby from 'src/assets/images/technologies/gatsby.png'
+import nextjs from 'src/assets/images/technologies/nextjs.png'
 import firebase from 'src/assets/images/technologies/firebase.png'
-import npm from 'src/assets/images/technologies/npm.png'
+import express from 'src/assets/images/technologies/expressjs.png'
 import gql from 'src/assets/images/technologies/graphql.png'
-import gs from 'src/assets/images/technologies/greensock.png'
+import mobx from 'src/assets/images/technologies/mobx.png'
 import materialui from 'src/assets/images/technologies/material-ui.png'
 import rtl from 'src/assets/images/technologies/testing-library.png'
 
@@ -45,12 +44,6 @@ export const TECHNOLOGIES: ITechnology[] = [
     type: TechnologyType.Front,
   },
   {
-    id: 'gatsby',
-    src: gatsby,
-    name: 'Gatsby (React based framework)',
-    type: TechnologyType.Front,
-  },
-  {
     id: 'js',
     src: js,
     name: 'JavaScript ES5, ES6+',
@@ -60,6 +53,18 @@ export const TECHNOLOGIES: ITechnology[] = [
     id: 'ts',
     src: ts,
     name: 'TypeScript',
+    type: TechnologyType.Front,
+  },
+  {
+    id: 'mobx',
+    src: mobx,
+    name: 'MobX',
+    type: TechnologyType.Front,
+  },
+  {
+    id: 'nextjs',
+    src: nextjs,
+    name: 'Next JS',
     type: TechnologyType.Front,
   },
   {
@@ -87,23 +92,23 @@ export const TECHNOLOGIES: ITechnology[] = [
     type: TechnologyType.Front,
   },
   {
+    id: 'rtl',
+    src: rtl,
+    name: 'Testing Library',
+    type: TechnologyType.Other,
+  },
+  {
     id: 'material-ui',
     src: materialui,
-    name: 'Material-UI',
+    name: 'Material UI',
     type: TechnologyType.Front,
   },
   {
-    id: 'gsap',
-    src: gs,
-    name: 'GreenSock',
-    type: TechnologyType.Front,
-  },
-  {
-    id: 'npm',
-    src: npm,
-    name: 'npm / yarn',
+    id: 'expressjs',
+    src: express,
+    name: 'Express JS',
     styles: { padding: '2rem' },
-    type: TechnologyType.Other,
+    type: TechnologyType.Back,
   },
   {
     id: 'rn',
@@ -120,13 +125,19 @@ export const TECHNOLOGIES: ITechnology[] = [
   {
     id: 'i18next',
     src: i18next,
-    name: 'i18ext',
+    name: 'i18next',
     type: TechnologyType.Front,
   },
   {
-    id: 'symfony',
-    src: symfony,
-    name: 'Symfony 4 / php',
+    id: 'tailwind',
+    src: tailwind,
+    name: 'Tailwind',
+    type: TechnologyType.Front,
+  },
+  {
+    id: 'mongodb',
+    src: mongodb,
+    name: 'MongoDB',
     type: TechnologyType.Back,
   },
   {
@@ -136,16 +147,16 @@ export const TECHNOLOGIES: ITechnology[] = [
     type: TechnologyType.Other,
   },
   {
-    id: 'mongodb',
-    src: mongodb,
-    name: 'MongoDB',
-    type: TechnologyType.Back,
-  },
-  {
     id: 'git',
     src: git,
     name: 'Git',
     type: TechnologyType.Other,
+  },
+  {
+    id: 'nodejs',
+    src: nodejs,
+    name: 'Node.js',
+    type: TechnologyType.Back,
   },
   {
     id: 'fb',
@@ -154,27 +165,9 @@ export const TECHNOLOGIES: ITechnology[] = [
     type: TechnologyType.Other,
   },
   {
-    id: 'nodejs',
-    src: nodejs,
-    name: 'Node.js / Express.js',
-    type: TechnologyType.Back,
-  },
-  {
-    id: 'rtl',
-    src: rtl,
-    name: 'Testing Library',
-    type: TechnologyType.Other,
-  },
-  {
     id: 'vsc',
     src: vsc,
     name: 'Visual Studio Code',
-    type: TechnologyType.Other,
-  },
-  {
-    id: 'ws',
-    src: webstorm,
-    name: 'Webstorm',
     type: TechnologyType.Other,
   },
   {

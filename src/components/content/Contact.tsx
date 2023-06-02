@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import gsap from 'gsap'
+import classNames from 'classnames'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -234,19 +235,19 @@ const Contact: React.FC<{ disableGsap?: boolean }> = ({ disableGsap }) => {
         </div>
         <div className='contact-form__bottom'>
           <div
-            className={[
+            className={classNames(
               'contact-form__status',
-              messageSent ? 'contact-form__status--success' : '',
-            ].join(' ')}
+              messageSent && 'contact-form__status--success',
+            )}
           >
             <FontAwesomeIcon icon={faCheck} style={{ marginRight: '1rem' }} /> {t('Contact.Sent')}
           </div>
           <button
-            className={[
+            className={classNames(
               'button',
               'button--contact',
-              !isFormValid || isLoading ? 'button--disabled' : 'button--enabled',
-            ].join(' ')}
+              (!isFormValid || isLoading) && 'button--disabled',
+            )}
             disabled={!isFormValid}
             type='submit'
           >

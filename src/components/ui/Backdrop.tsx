@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -12,11 +13,11 @@ const Backdrop = ({ show, notVisible, onClick, isSideDrawer }: IBackdrop) =>
   ReactDOM.createPortal(
     show ? (
       <div
-        className={[
+        className={classNames(
           'backdrop',
-          !notVisible ? 'backdrop--visible' : '',
-          isSideDrawer ? 'backdrop--sideDrawer' : '',
-        ].join(' ')}
+          !notVisible && 'backdrop--visible',
+          isSideDrawer && 'backdrop--sideDrawer',
+        )}
         onClick={onClick}
       ></div>
     ) : null,

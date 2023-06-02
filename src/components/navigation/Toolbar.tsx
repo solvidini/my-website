@@ -2,6 +2,7 @@ import React, { RefObject } from 'react'
 
 import NavigationItems from './NavigationItems'
 import DrawerToggle from './DrawerToggle'
+import classNames from 'classnames'
 
 interface IToolbar {
   forwardedRef: RefObject<HTMLDivElement>
@@ -16,11 +17,6 @@ const Toolbar = ({
   sideDrawerIsVisible,
   sideDrawerToggleClicked,
 }: IToolbar) => {
-  const toolbarClasses = ['toolbar']
-  if (sticky) {
-    toolbarClasses.push('toolbar--fixed')
-  }
-
   const navStyles = sticky
     ? {
         borderBottomLeftRadius: '2.7rem',
@@ -30,7 +26,7 @@ const Toolbar = ({
       }
 
   return (
-    <div className={toolbarClasses.join(' ')} ref={forwardedRef}>
+    <div className={classNames('toolbar', sticky && 'toolbar--fixed')} ref={forwardedRef}>
       <DrawerToggle sideDrawerIsVisible={sideDrawerIsVisible} onClick={sideDrawerToggleClicked} />
       <nav className='toolbar__nav desktop-only' style={navStyles}>
         <NavigationItems />

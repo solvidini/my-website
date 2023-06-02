@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import React from 'react'
 
 interface IInput {
@@ -35,9 +36,6 @@ const Input = (props: IInput) => {
     testId = '',
   } = props
 
-  const validityClass =
-    !isValid && touched ? 'text-field__input--invalid' : 'text-field__input--valid'
-
   const renderLabel = () => {
     return (
       <label className='text-field__label' htmlFor={id}>
@@ -53,7 +51,10 @@ const Input = (props: IInput) => {
         return (
           <textarea
             data-testid={testId}
-            className={['text-field__input text-field__input--textarea', validityClass].join(' ')}
+            className={classNames(
+              'text-field__input text-field__input--textarea',
+              !isValid && touched ? 'text-field__input--invalid' : 'text-field__input--valid',
+            )}
             id={id}
             name={name}
             value={value}
@@ -68,7 +69,10 @@ const Input = (props: IInput) => {
         return (
           <input
             data-testid={testId}
-            className={['text-field__input', validityClass].join(' ')}
+            className={classNames(
+              'text-field__input',
+              !isValid && touched ? 'text-field__input--invalid' : 'text-field__input--valid',
+            )}
             type={type ? type : 'text'}
             id={id}
             name={name}

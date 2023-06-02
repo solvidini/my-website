@@ -1,6 +1,6 @@
 import React from 'react'
 import gsap from 'gsap'
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodepen, faGithub, faLinkedinIn, faSoundcloud } from '@fortawesome/free-brands-svg-icons'
 
@@ -39,7 +39,18 @@ const About = () => {
           <div className='about-me__content'>
             <Image className='about-me__image' src={images.justMe} alt='Just me' />
             <div className='about-me__info'>
-              <p className='about-me__info-paragraph'>{t('About.Content')}</p>
+              <p className='about-me__info-paragraph'>
+                <Trans i18nKey='About.Content'>
+                  <a
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href='https://soundcloud.com/solvidi'
+                    className='link'
+                  >
+                    SoundCloud
+                  </a>
+                </Trans>
+              </p>
             </div>
           </div>
           <div className='about-me__links'>

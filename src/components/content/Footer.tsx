@@ -22,9 +22,6 @@ const Footer = () => {
           <a target='_blank' rel='noopener noreferrer' href='mailto:samuel@front-up.pro'>
             samuel@front-up.pro
           </a>
-          {/* <a target='_blank' rel='noopener noreferrer' href='mailto:samukedo@gmail.com'>
-            samukedo@gmail.com
-          </a> */}
         </div>
         <div className='footer__top-item'>
           <h4>

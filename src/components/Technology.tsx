@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 
@@ -15,21 +16,14 @@ const Technology = (props: Props) => {
   const { src, name, styles = {}, highlight, id } = props
   const [isActive, setIsActive] = React.useState<boolean>(false)
 
-  const classesItem = ['technologies__item']
-  const classesLabel = ['technologies__item-label']
-
-  if (highlight) {
-    classesItem.push('technologies__item--highlight')
-  }
-  if (isActive) {
-    classesItem.push('technologies__item--active')
-    classesLabel.push('technologies__item-label--active')
-  }
-
   return (
     <div
       id={id}
-      className={classesItem.join(' ')}
+      className={classNames(
+        'technologies__item',
+        highlight && 'technologies__item--highlight',
+        isActive && 'technologies__item--active',
+      )}
       style={styles}
       onClick={() => {
         setIsActive(prevState => !prevState)
@@ -42,7 +36,14 @@ const Technology = (props: Props) => {
       }}
     >
       <Image className='technologies__item-image' src={src} alt={name} spinnerClass='' />
-      <div className={classesLabel.join(' ')}>{name}</div>
+      <div
+        className={classNames(
+          'technologies__item-label',
+          isActive && 'technologies__item-label--active',
+        )}
+      >
+        {name}
+      </div>
     </div>
   )
 }

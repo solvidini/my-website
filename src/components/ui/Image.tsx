@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import classNames from 'classnames'
 
 interface IImage {
   src: string
@@ -17,7 +18,7 @@ const Image = ({
   className = '',
   style = {},
   draggable = false,
-  spinnerClass = '',
+  spinnerClass,
 }: IImage) => {
   const [isLoaded, setLoaded] = React.useState(false)
 
@@ -37,7 +38,7 @@ const Image = ({
       />
       {!isLoaded && (
         <FontAwesomeIcon
-          className={['spinner-icon', spinnerClass].join(' ')}
+          className={classNames('spinner-icon', spinnerClass)}
           icon={faSpinner}
           spin
         />

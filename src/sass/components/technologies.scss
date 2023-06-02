@@ -6,11 +6,11 @@
   filter: drop-shadow(0 5px 5px $color-dark);
 
   @include respond(tab-port) {
-    max-width: 70rem;
+    max-width: 65rem;
   }
 
   @include respond(phone) {
-    max-width: 80%;
+    max-width: 35rem;
     margin: 0 auto 2rem;
   }
 
@@ -32,12 +32,11 @@
   &__item {
     @include unselectable;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
 
     height: 11rem;
     min-width: 11rem;
+    width: auto;
     padding: 1rem;
     text-align: center;
     flex: 1 1 auto;
@@ -84,7 +83,6 @@
   &__item-image {
     transition: all 0.2s ease;
     height: 100%;
-    border-radius: 5px;
 
     @include respond(phone) {
       height: 90%;
@@ -109,7 +107,7 @@
     transition: transform 0.2s ease;
 
     &::before {
-      @include triangleBottom(0.9rem, $color-white, 0, 45%);
+      @include triangleBottom(7px, $color-white, 0, 45%);
     }
 
     &--active {

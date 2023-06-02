@@ -14,6 +14,7 @@ const About = () => {
   const { images } = React.useContext(ImageLoaderContext)
   const { t } = useTranslation()
   const aboutMeRef = React.useRef(null)
+  const userAgent = navigator.userAgent
 
   React.useEffect(() => {
     gsap.from(aboutMeRef.current, {
@@ -96,7 +97,14 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className={classNames('audio', isMobile && 'audio--mobile')}>
+      <div
+        className={classNames(
+          'audio',
+          userAgent.includes('Chrome') && 'audio--chrome',
+          userAgent.includes('Safari') && 'audio--safari',
+          userAgent.includes('Firefox') && 'audio--firefox',
+        )}
+      >
         <AudioPlayer />
       </div>
     </section>

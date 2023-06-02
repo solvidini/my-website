@@ -205,14 +205,26 @@ select:-webkit-autofill:focus {
   justify-content: center;
 
   background-color: $color-background;
-  border-top-left-radius: 2.5rem;
-  border-top-right-radius: 2.5rem;
-  padding: 0 1px;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  padding: 0 1rem;
 
-  &--mobile {
+  &--safari {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     padding: 0 1rem;
+  }
+
+  &--chrome {
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    padding: 0 1px;
+  }
+
+  &--firefox {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 0 2rem;
   }
 
   @include respond(phone) {

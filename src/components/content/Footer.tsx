@@ -50,7 +50,7 @@ const Footer = () => {
           target='_blank'
           rel='noopener noreferrer'
           className='footer__social-link'
-          href='https://github.com/ssazero'
+          href='https://github.com/solvidini'
         >
           <FontAwesomeIcon icon={faGithub} />
         </a>

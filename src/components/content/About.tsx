@@ -71,7 +71,7 @@ const About = () => {
               target='_blank'
               rel='noopener noreferrer'
               className='about-me__link'
-              href='https://github.com/ssazero'
+              href='https://github.com/solvidini'
               title='GitHub'
             >
               <FontAwesomeIcon icon={faGithub} />

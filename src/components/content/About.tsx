@@ -1,6 +1,5 @@
 import React from 'react'
 import gsap from 'gsap'
-import { isMobile } from 'react-device-detect'
 import { Trans, useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodepen, faGithub, faLinkedinIn, faSoundcloud } from '@fortawesome/free-brands-svg-icons'

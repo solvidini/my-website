@@ -38,7 +38,10 @@ const Input = (props: IInput) => {
 
   const renderLabel = () => {
     return (
-      <label className='text-field__label' htmlFor={id}>
+      <label
+        className={classNames('text-field__label', required && 'text-field__label--asterisk')}
+        htmlFor={id}
+      >
         {label}
         {required && <span className='asterisk'>*</span>}
       </label>

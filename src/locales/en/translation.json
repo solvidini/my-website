@@ -59,6 +59,9 @@
       "NoGithubLink": "Repository private",
       "Install": "Download"
     },
+    "SeishinDreams": {
+      "Description": "Brand portfolio in Next.js"
+    },
     "ProjectW": {
       "Description": "Website - Company's portfolio"
     },
@@ -70,9 +73,6 @@
     },
     "MyWebsite": {
       "Description": "My own portfolio"
-    },
-    "Fotobudka": {
-      "Description": "Website - Company card"
     },
     "Bregula": {
       "Description": "Website - Company card"

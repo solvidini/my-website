@@ -17,8 +17,7 @@ import calculator from 'src/assets/images/projects/project-calculator.jpg'
 import mot from 'src/assets/images/projects/project-mot.gif'
 import annsr from 'src/assets/images/projects/project-annsr.gif'
 import miniYT from 'src/assets/images/projects/project-mini-youtube.gif'
-
-// import fotobudka from 'src/assets/images/projects/project-fotobudka.gif'
+import seishinDreams from 'src/assets/images/projects/project-seishin-dreams.jpeg'
 
 const Portfolio: React.FC = () => {
   const { t } = useTranslation()
@@ -26,6 +25,13 @@ const Portfolio: React.FC = () => {
   projectRefs.current = []
 
   const projects = [
+    {
+      title: 'Seishin Dreams',
+      description: t('Portfolio.SeishinDreams.Description'),
+      github: 'https://github.com/solvidini/seishin-dreams',
+      live: 'https://seishindreams.com',
+      source: seishinDreams,
+    },
     {
       title: 'Projekt W',
       description: t('Portfolio.ProjectW.Description'),

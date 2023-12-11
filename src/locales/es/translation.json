@@ -59,6 +59,9 @@
       "NoGithubLink": "Repositorio privado",
       "Install": "Descargar"
     },
+    "SeishinDreams": {
+      "Description": "Portafolio de marcas en Next.js"
+    },
     "ProjectW": {
       "Description": "Sitio web: cartera de la empresa"
     },
@@ -70,9 +73,6 @@
     },
     "MyWebsite": {
       "Description": "Mi propio portafolio"
-    },
-    "Fotobudka": {
-      "Description": "Sitio web - Tarjeta de empresa"
     },
     "Bregula": {
       "Description": "Sitio web - Tarjeta de empresa"

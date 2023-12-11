@@ -59,6 +59,9 @@
       "NoGithubLink": "Repozytorium prywatne",
       "Install": "Pobierz"
     },
+    "SeishinDreams": {
+      "Description": "Portfolio marki w Next.js"
+    },
     "ProjectW": {
       "Description": "Strona - Portfolio firmy"
     },
@@ -70,9 +73,6 @@
     },
     "MyWebsite": {
       "Description": "Moje własne portfolio"
-    },
-    "Fotobudka": {
-      "Description": "Strona - Wizytówka firmy"
     },
     "Bregula": {
       "Description": "Strona - Wizytówka firmy"

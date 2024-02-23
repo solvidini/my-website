@@ -30,7 +30,7 @@ const Footer = () => {
           <a
             target='_blank'
             rel='noopener noreferrer'
-            href='https://drive.google.com/file/d/1JPlq5PQlUYPhNXDbvKRrTA3TA-WTPeVA/view'
+            href='/contact-me-about-one'
             title='Curriculum vitae ENG'
           >
             Resume (ENG)
